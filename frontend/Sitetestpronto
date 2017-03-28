@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+  <head>
+    <title>asd</title>
+    <link href="Sitetestpronto.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+  	<div class="container">
+  		<h1>Seja Bem Vindo</h1>
+<h2>Matrícula WEB</h2>
+  	  <a class="btn" href="#">Entrar</a>
+  	</div>
+  </body>
+</html>
