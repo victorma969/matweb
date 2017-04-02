@@ -20,7 +20,7 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 720,
+				"buffer_size": 711,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -95,17 +95,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/home/lalves/Documentos/UnB/AED/matweb",
-		"/home/lalves/Documentos/UnB/AED/matweb/backend",
-		"/home/lalves/Documentos/UnB/AED/matweb/backend/Database",
-		"/home/lalves/Documentos/UnB/AED/matweb/backend/Database/Controllers",
-		"/home/lalves/Documentos/UnB/AED/matweb/backend/Database/Models",
-		"/home/lalves/Documentos/UnB/AED/matweb/backend/Framework",
-		"/home/lalves/Documentos/UnB/AED/matweb/backend/Models",
-		"/home/lalves/Documentos/UnB/AED/matweb/backend/Models/Usuario"
-	],
 	"file_history":
 	[
 		"/home/lalves/Documentos/UnB/AED/matweb/backend/Models/LoginResponse.py",
@@ -188,15 +177,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 720,
+						"buffer_size": 711,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								210,
-								210
+								0,
+								0
 							]
 						],
 						"settings":
