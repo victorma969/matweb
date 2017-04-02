@@ -26,4 +26,9 @@ Estrutura de Diretórios
   	- Database (Classes para interação com o banco de dados)
      		- Models (Representa a estrutura do banco de dados)
      		- Controllers (Realiza operações no banco de dados)
+		
+Executar Servidor da API
+-------------
+
+> uwsgi --http-socket :8080 --module backend:application
 
