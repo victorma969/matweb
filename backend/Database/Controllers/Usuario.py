@@ -1,8 +1,6 @@
 
-class Usuario(Object):
+def getUsuarioPeloLogin(login):
+	pass
 
-	def getUsuarioPeloLogin(self,login):
-		pass
-
-	def setUsuarioPeloID(self,id,usuario):
-		pass
+def setUsuarioPeloID(id,usuario):
+	pass

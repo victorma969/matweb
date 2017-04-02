@@ -1,11 +1,15 @@
 
 from Database.Controllers.Usuario import Usuario as BDUsuario
 
-class Usuario(object):
+def temAcesso(metodo):
+	return metodo
 	
-	def Entrar(self,pedido_entrar):
-		usuario = BDUsuario.getUsuarioPeloLogin(pedido_entrar.login)
-		if(usuario.senha == pedido_entrar.senha):
-			return RespostaEntrar(true)
-		else:
-			return RespostaEntrar(false)
+def Entrar(self,pedido_entrar):
+	usuario = BDUsuario.getUsuarioPeloLogin(pedido_entrar.usuario)
+	if(usuario.senha == pedido_entrar.senha):
+		return RespostaEntrar(true)
+	else:
+		return RespostaEntrar(false)
+
+def Sair(pedido_sair):
+	pass

@@ -6,8 +6,9 @@ class PontoDeInicio(object):
 		self.variaveis_do_ambiente = variaveis_do_ambiente
 		try:
 			self.realizarChecagens()
-		except:
-
+			self.executar()
+		except ErroNoHTTP as erro_no_http:
+			self.resposta = erro_no_http
 
 	def checarMetodo(self):
 		if(self.variaveis_do_ambiente['REQUEST_METHOD'] != "POST"):
@@ -24,13 +25,13 @@ class PontoDeInicio(object):
 		self.checarTamanhoDoCorpoDoPedido()
 
 	def executar(self):
-		
+
 
 	def getStatusDaResposta(self):
-		return self.resposta.status
+		return self.resposta.getStatus()
 
 	def getCorpoDaResposta(self):
-		return self.resposta.corpo
+		return self.resposta.getCorpo()
 
 	def getCabecalhoDaResposta(self):
-		return self.resposta.cabecalho_da_resposta
+		return self.resposta.getCabecalho()
