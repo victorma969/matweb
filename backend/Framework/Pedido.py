@@ -1,6 +1,6 @@
 import json
 
-class Pedido(Object):
+class Pedido(object):
 
 	def __init__(self,variaveis_do_ambiente):
 		self.variaveis_do_ambiente = variaveis_do_ambiente

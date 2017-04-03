@@ -1,1 +1,228 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ex",
+				"except"
+			],
+			[
+				"ch",
+				"checarTamanhoDoCorpoDoPedido"
+			],
+			[
+				"che",
+				"checarTipoDeConteudo"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				"Syntax Check"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"File: Close All"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/lalves/Documentos/UnB/AED/matweb",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Controllers",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Database",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Database/Controllers",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Database/Models",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Framework",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Models",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Models/Usuario"
+	],
+	"file_history":
+	[
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/__init__.py",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Framework/PontoDeInicio.py",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Controllers/Usuario.py",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Database/Controllers/Usuario.py",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Database/Models/Usuario.py",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Models/Usuario/PedidoEntrar.py",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Models/Usuario/RespostaEntrar.py",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Framework/Resposta.py",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Framework/Pedido.py",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Models/LoginResponse.py",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Models/LoginRequest.py",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Models/LoginRequest",
+		"/home/lalves/Documentos/UnB/AED/matweb/.sublime-project",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Models/__init__.py",
+		"/home/lalves/Documentos/UnB/AED/matweb/backend/Controllers/__init__.py",
+		"/home/lalves/matweb/frontend/css/bootstrap.css"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "matweb.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 316.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

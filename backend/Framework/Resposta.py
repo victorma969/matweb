@@ -1,7 +1,4 @@
-class Resposta(Object):
-
-	def __init__(self):
-		pass
+class Resposta(object):
 
 	def getStatus(self):
 		return "200 OK"
