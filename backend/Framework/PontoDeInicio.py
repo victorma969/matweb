@@ -58,6 +58,7 @@ class PontoDeInicio(object):
 		try:
 			controle = getattr(importlib.import_module("Controllers.{}".format(self.funcao['modulo'])), self.funcao['controle'])()
 		except ImportError:
+			traceback.print_exc(file=sys.stdout)
 			raise ErroNoHTTP(404)
 		self.resposta = controle.executar(self.funcao,self.variaveis_do_ambiente)
 

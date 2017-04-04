@@ -10,7 +10,7 @@ class Usuario(Controller):
 	def Entrar(self,pedido_entrar):
 		usuario = BDUsuario.getUsuarioPeloMatricula(pedido_entrar.getLoginDoUsuario())
 		# if(bcrypt.hashpw(pedido_entrar.getSenhaDoUsuario(), usuario.getSenhaHashed()) == usuario.getSenhaHashed()):
-		if(usuario.getSenhaHashed() == pedido_entrar.getSenhaDoUsuario())
+		if(usuario.getSenhaHashed() == pedido_entrar.getSenhaDoUsuario()):
 			return RespostaEntrar(true,"Biscoito")
 		else:
 			return RespostaEntrar(false)
