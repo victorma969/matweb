@@ -2,7 +2,7 @@ from Framework.Controller import Controller
 from Database.Controllers.Usuario import Usuario as BDUsuario
 from Database.Controllers.TokenDeAcesso import TokenDeAcesso
 
-class Usuario(Controller)
+class Usuario(Controller):
 
 	def temAcesso(metodo):
 		return metodo
