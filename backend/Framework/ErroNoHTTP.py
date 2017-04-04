@@ -1,6 +1,7 @@
 class ErroNoHTTP(BaseException):
 
 	mensagem = {
+		400 : "Bad Request",
 		404 : "Not Found",
 		405 : "Method Not Allowed",
 		411 : "Length Required",

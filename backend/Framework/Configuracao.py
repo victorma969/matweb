@@ -1,4 +1,13 @@
 import yaml
 
-with open("configuracao.yml", 'r') as ymlfile:
-    configuracao = yaml.load(ymlfile)
+class Configuracao(object):
+
+	configuracao = None
+
+	def __init__(self):
+		if Configuracao.configuracao == None
+			with open("configuracao.yml", 'r') as ymlfile:
+    			Configuracao.configuracao = yaml.load(ymlfile)
+
+    def getConfiguracao(self,nome):
+    	return Configuracao.configuracao[nome]

@@ -1,4 +1,5 @@
 from ErroNoHTTP import ErroNoHTTP
+import importlib
 import sys, traceback
 
 class PontoDeInicio(object):
@@ -9,6 +10,7 @@ class PontoDeInicio(object):
 			self.realizarChecagens()
 			self.executar()
 		except ErroNoHTTP as erro_no_http:
+			traceback.print_exc(file=sys.stdout)
 			self.resposta = erro_no_http
 
 	def checarMetodo(self):
@@ -34,33 +36,30 @@ class PontoDeInicio(object):
 		if(len(caminho) < 4):
 			raise ErroNoHTTP(404)
 
-	def checarSeControllerEMetodoExistem(self,erro,caminho,metodo):
-		traceback.print_exc(file=sys.stdout)
-		if(str(erro) == ("'module' object has no attribute '"+metodo+"'") or str(erro) == ("No module named Controllers."+caminho)):
-			raise ErroNoHTTP(404)
-		else:
-			raise ErroNoHTTP(500) 
-
 	def realizarChecagens(self):
 		self.checarMetodo()
 		self.checarTipoDeConteudo()
 		self.checarTamanhoDoCorpoDoPedido()
 
+	def getFuncao(self):
+		self.funcao = {}
+		caminho = self.variaveis_do_ambiente['PATH_INFO'].split('/')
+		self.ChecarTamanhoDaURL(caminho)
+		self.funcao['metodo'] = caminho[-1]
+		self.funcao['controle'] = caminho[-2]
+		self.checarURL(caminho[1])
+		del caminho[-1]
+		del caminho[1]
+		del caminho[0]
+		self.funcao['modulo'] = ".".join(caminho)
+
 	def executar(self):
+		self.getFuncao()
 		try:
-			caminho = self.variaveis_do_ambiente['PATH_INFO'].split('/')
-			self.ChecarTamanhoDaURL(caminho)
-			metodo = caminho[-1]
-			controller = caminho[-2]
-			self.checarURL(caminho[1])
-			del caminho[-1]
-			del caminho[1]
-			del caminho[0]
-			caminho = ".".join(caminho)
-			print(caminho+" "+metodo)
-			self.resposta = getattr(getattr(__import__('Controllers.'+caminho), controller)(), metodo)(getattr(__import__('Models.'+caminho+'.Pedido'+metodo), 'Pedido'+metodo)(self.variaveis_do_ambiente))
-		except (ImportError, AttributeError) as erro:
-			self.checarSeControllerEMetodoExistem(erro,caminho,metodo)
+			controle = getattr(importlib.import_module("Controllers.{}".format(self.funcao['modulo'])), self.funcao['controle'])()
+		except ImportError:
+			raise ErroNoHTTP(404)
+		self.resposta = controle.executar(self.funcao,self.variaveis_do_ambiente)
 
 	def getStatusDaResposta(self):
 		return self.resposta.getStatus()
