@@ -3,6 +3,10 @@ from Database.Usuario import Usuario
 
 class Usuario(object):
 		
-	def getUsuarioPeloMatricula(self,matricula):
+	def getUsuarioPeloMatriculaOuCPF(self,matricula_cpf):
 		banco_de_dados = BancoDeDados()
-		return Usuario(banco_de_dados.query(sql.SQL("SELECT * FROM usuario WHERE matricula = {}").format(sql.Identifier(matricula))[0])
+		usuario = banco_de_dados.query(BancoDeDados.SQL("SELECT * FROM usuario WHERE matricula = %s OR cpf = %s",[matricula_cpf,matricula_cpf]))
+		if usuario:
+			return Usuario(usuario[0])
+		else:
+			return None

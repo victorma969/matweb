@@ -2,7 +2,7 @@ from ErroNoHTTP import ErroNoHTTP
 import importlib
 import sys, traceback
 
-class PontoDeInicio(object):
+class Roteador(object):
 
 	def __init__(self,variaveis_do_ambiente):
 		self.variaveis_do_ambiente = variaveis_do_ambiente

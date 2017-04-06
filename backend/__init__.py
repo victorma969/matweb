@@ -1,9 +1,9 @@
 import sys, traceback
-from Framework.PontoDeInicio import PontoDeInicio
+from Framework.Roteador import Roteador
 
 def application ( variaveis_do_ambiente, iniciar_resposta):
     try:
-        resposta = PontoDeInicio(variaveis_do_ambiente)
+        resposta = Roteador(variaveis_do_ambiente)
         corpo_da_resposta = resposta.getCorpoDaResposta()
         status_da_resposta = resposta.getStatusDaResposta()
         cabecalho_da_resposta = resposta.getCabecalhoDaResposta()

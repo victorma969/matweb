@@ -20,3 +20,18 @@ class Usuario(object):
 
 	def getSenhaHashed():
 		return self.senha
+
+	def setSenhaHashed():
+		return self.senha
+
+	def setNome(nome):
+		self.nome = nome
+
+	def getNome():
+		return self.nome
+
+	def setNome(nome):
+		self.nome = nome
+
+	def getNome():
+		return self.nome
