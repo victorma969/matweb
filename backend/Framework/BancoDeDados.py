@@ -13,12 +13,12 @@ class BancoDeDados(object):
 		self.cursor.execute(SQL)
 		return self.cursor.fetchall()
 	
-	def query_with_args(self,SQL, data):
+	def query_with_args(self, SQL, data):
 		self.cursor.execute(SQL %data)
 		return self.cursor.fetchone()
 			
-	def execute(self,query):
-		self.cursor.execute(query)
+	def execute(self, SQL, data):
+		self.cursor.execute(SQL %data)
 		self.conexao.commit()
 	
 	def __del__(self):

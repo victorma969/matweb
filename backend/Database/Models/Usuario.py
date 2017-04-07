@@ -1,8 +1,14 @@
 class Usuario(object):
 
+# O array com os dados do usuario devem seguir a seguinte ordem de parametros
+#      dados = ['<id>','<matricula>','<nome>','<cpf>','<perfil>','<senha>']
+#
+# Para inclusao de usuarios, substituir '<id>' por None
+
 
 	def __init__(self,dados):
-		self.id = dados[0]
+		if dados[0] is not None:
+			self.id = dados[0]
 		self.matricula = dados[1]
 		self.nome = dados[2]
 		self.cpf = dados[3]
