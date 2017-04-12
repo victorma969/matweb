@@ -1,6 +1,7 @@
 from Configuracao import Configuracao
 import atexit
 import psycopg2
+import psycopg2.extras
 
 
 class BancoDeDados(object):
