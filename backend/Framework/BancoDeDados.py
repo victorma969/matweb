@@ -36,6 +36,6 @@ class BancoDeDados(object):
 		return BancoDeDados.cursor.fetchone()[0]
 
 	@atexit.register
-	def fechar(self):
+	def fechar():
 		BancoDeDados.cursor.close()
 		BancoDeDados.conexao.close()
