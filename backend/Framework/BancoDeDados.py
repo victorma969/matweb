@@ -12,10 +12,10 @@ class BancoDeDados(object):
 		if(BancoDeDados.conexao == None or BancoDeDados.cursor == None):
 			self.abrir()
 		elif(BancoDeDados.cursor.closed or conexao.closed != 0):
+			self.fechar()
 			self.abrir()
 
 	def abrir(self):
-			self.fechar()
 			BancoDeDados.conexao = psycopg2.connect(Configuracao.getConfiguracao('BancoDeDados')['StringDeConexao'])
 			BancoDeDados.cursor = BancoDeDados.conexao.cursor()
 
