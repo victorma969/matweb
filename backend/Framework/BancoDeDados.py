@@ -5,22 +5,30 @@ import psycopg2
 
 class BancoDeDados(object):
 	
+	conexao = None
+	cursor = None
+
 	def __init__(self):
-		conf = Configuracao()
-		self.conexao = psycopg2.connect(conf.configuracao['BancoDeDados']['StringDeConexao'])
-		self.cursor = self.conexao.cursor()
+		if(BancoDeDados.cursor.closed or conexao.closed != 0)
+			self.fechar()
+			BancoDeDados.conexao = psycopg2.connect(Configuracao.getConfiguracao('BancoDeDados')['StringDeConexao'])
+			BancoDeDados.cursor = BancoDeDados.conexao.cursor()
 
-	def query(self,SQL):
-		self.cursor.execute(SQL)
-		return self.cursor.fetchall()
+	def consultarUnico(self,SQL,dados):
+		BancoDeDados.cursor.execute(SQL,dados)
+		return BancoDeDados.cursor.fetchall()
 	
-	def query_with_args(self, SQL, data):
-		self.cursor.execute(SQL %data)
-		return self.cursor.fetchone()
+	def consultarMultiplos(self, SQL, dados):
+		BancoDeDados.cursor.execute(SQL,dados)
+		return BancoDeDados.cursor.fetchone()
 			
-	def execute(self, SQL, data):
-		self.cursor.execute(SQL %data)
-		self.conexao.commit()
+	def executar(self, SQL, dados):
+		BancoDeDados.cursor.execute(SQL,dados)
+		BancoDeDados.conexao.commit()
 
-	def __del__(self):
-		self.conexao.close()	
+	def pegarUltimoIDInserido(self):
+		return BancoDeDados.cursor.fetchone()[0]
+
+	def fechar():
+		BancoDeDados.cursor.close()
+		BancoDeDados.conexao.close()

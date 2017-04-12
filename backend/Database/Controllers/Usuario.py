@@ -1,32 +1,26 @@
 from Framework.BancoDeDados import BancoDeDados
-from Database.Models.Usuario import Usuario as DBUsuario
+from Database.Models.Usuario import Usuario as ModelUsuario
 
 
 class Usuario(object):
 		
-	def getUsuarioPelaMatricula(self, matricula):
-		banco = BancoDeDados()
-		SQL = "SELECT * FROM usuario WHERE matricula = '%s'"
-		user = DBUsuario(banco.query_with_args(SQL,matricula))
-		return user
+	def pegarUsuarios(self, condicao, valores, inicio=0, quantidade=0):
+		usuarios = []
+		for usuario in BancoDeDados().consultarMultiplos("SELECT * FROM usuario WHERE %s" % (condicao), valores)
+			usuarios[] = ModelUsuario(usuario)
+		return usuarios
 	
-	def getUsuario(self, parametro, valor):
-		banco = BancoDeDados()
-		SQL = "SELECT * FROM usuario WHERE %s = '%s'"
-		user = DBUsuario(banco.query_with_args(SQL, (parametro,valor)))
-		return user
+	def pegarUsuario(self, condicao, valores):
+		return ModelUsuario(BancoDeDados().consultarUnico("SELECT * FROM usuario WHERE %s" % (condicao), valores))
 	
-	def insertUsuario(self, user):
-		banco = BancoDeDados()
-		SQL = "INSERT INTO usuario (matricula, nome, cpf, perfil, senha) VALUES ('%s','%s','%s','%s','%s')"
-		banco.execute(SQL, (user.matricula, user.nome, user.cpf, user.perfil, user.senha))
+	def inserirUsuario(self, usuario):
+		BancoDeDados().execute("INSERT INTO usuario (matricula, nome, cpf, perfil, senha) VALUES (%s,%s,%s,%s,%s) RETURNING id", (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha))
+		usuario.id = BancoDeDados().pegarUltimoIDInserido()
+		return usuario
 		
-	def removeUsuario(self, user):
-		banco = BancoDeDados()
-		SQL = "DELETE FROM usuario WHERE id = %s"
-		banco.execute(SQL, (user.id))
+	def removerUsuario(self, user):
+		BancoDeDados().execute("DELETE FROM usuario WHERE id = %s", (user.id))
 		
-	def alteraUsuario(self, user, parametro, valor):
-		banco = BancoDeDados()
-		SQL = "UPDATE usuario SET %s = '%s' WHERE id = %s"
-		banco.execute(SQL, (parametro, valor, user.id))
+	def alterarUsuario(self, usuario):
+		SQL = "UPDATE usuario SET matricula = %s, nome = %s, cpf = %s, perfil = %s, senha = %s WHERE id = %s"
+		BancoDeDados().execute(SQL, (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha, usuario.id))

@@ -9,5 +9,6 @@ class Configuracao(object):
 			with open("Configuracao/configuracao.yml", 'r') as ymlfile:
 				Configuracao.configuracao = yaml.load(ymlfile)
 
+	@staticmethod
 	def getConfiguracao(self,nome):
 		return Configuracao.configuracao[nome]
