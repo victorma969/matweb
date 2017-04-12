@@ -35,6 +35,7 @@ class BancoDeDados(object):
 	def pegarUltimoIDInserido(self):
 		return BancoDeDados.cursor.fetchone()[0]
 
+	@atexit.register
 	def fechar(self):
 		BancoDeDados.cursor.close()
 		BancoDeDados.conexao.close()
