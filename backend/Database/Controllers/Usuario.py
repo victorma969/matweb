@@ -19,7 +19,7 @@ class Usuario(object):
 		return usuario
 		
 	def removerUsuario(self, usuario):
-		BancoDeDados().executar("DELETE FROM usuario WHERE id = %s", (str(usuario.id))
+		BancoDeDados().executar("DELETE FROM usuario WHERE id = %s", (str(usuario.id)))
 		
 	def alterarUsuario(self, usuario):
 		SQL = "UPDATE usuario SET matricula = %s, nome = %s, cpf = %s, perfil = %s, senha = %s WHERE id = %s"
