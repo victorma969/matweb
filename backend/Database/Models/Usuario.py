@@ -1,61 +1,43 @@
 class Usuario(object):
 
-# O array com os dados do usuario devem seguir a seguinte ordem de parametros
-#      dados = ['<id>','<matricula>','<nome>','<cpf>','<perfil>','<senha>']
-#
-# Para inclusao de usuarios, substituir '<id>' por None
-
-
 	def __init__(self,dados=None):
 		if dados is not None:
-			self.id = dados[0]
-			self.matricula = dados[1]
-			self.nome = dados[2]
-			self.cpf = dados[3]
-			self.perfil = dados[4]
-			self.senha = dados[5]
+			self.id = dados['id']
+			self.matricula = dados['matricula']
+			self.nome = dados['nome']
+			self.cpf = dados['cpf']
+			self.perfil = dados['perfil']
+			self.senha = dados['senha']
 
-	def getId():
+	def getId(self):
 		return self.id
 
-	def setCpf(cpf):
+	def setCpf(self,cpf):
 		self.cpf = cpf
 		
-	def getCpf():
+	def getCpf(self):
 		return self.cpf
 
-	def setMatricula(matricula):
+	def setMatricula(self,matricula):
 		self.matricula = matricula
 		
-	def getMatricula():
+	def getMatricula(self):
 		return self.matricula
 
-	def setPerfil (perfil):
+	def setPerfil (self,perfil):
 		self.perfil = perfil
 		
-	def getPerfil ():
+	def getPerfil (self):
 		self.perfil
 
-	def setNome(nome):
+	def setNome(self,nome):
 		self.nome = nome
 
-	def getNome():
+	def getNome(self):
 		return self.nome
 
-	def getSenhaHashed():
+	def getSenhaHashed(self):
 		return self.senha
 
-	def setSenhaHashed():
-		return self.senha
-
-	def setNome(nome):
-		self.nome = nome
-
-	def getNome():
-		return self.nome
-
-	def setNome(nome):
-		self.nome = nome
-
-	def getNome():
-		return self.nome
+	def setSenhaHashed(self,senha):
+		self.senha = senha
