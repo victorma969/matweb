@@ -632,6 +632,8 @@ SELECT pg_catalog.setval('ass_disc_pre_id_seq', 1, false);
 --
 
 COPY ass_tuma_sala_horario (id, id_sala, id_horario, id_turma) FROM stdin;
+1	\N	1	1
+2	\N	2	1
 \.
 
 
@@ -639,7 +641,7 @@ COPY ass_tuma_sala_horario (id, id_sala, id_horario, id_turma) FROM stdin;
 -- Name: ass_tuma_sala_horario_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('ass_tuma_sala_horario_id_seq', 1, false);
+SELECT pg_catalog.setval('ass_tuma_sala_horario_id_seq', 2, true);
 
 
 --
@@ -1599,7 +1601,8 @@ SELECT pg_catalog.setval('disciplina_id_seq', 789, true);
 --
 
 COPY horario (id, turno, inicio, fim, dia) FROM stdin;
-1	Diurno	08:00:00	09:50:00	ter-qui
+1	Diurno	08:00:00	09:50:00	Terça
+2	Diurno	08:00:00	09:50:00	Quinta
 \.
 
 
@@ -1607,7 +1610,7 @@ COPY horario (id, turno, inicio, fim, dia) FROM stdin;
 -- Name: horario_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('horario_id_seq', 1, true);
+SELECT pg_catalog.setval('horario_id_seq', 2, true);
 
 
 --
