@@ -14,13 +14,13 @@ class Usuario(object):
 		return ModelUsuario(BancoDeDados().consultarUnico("SELECT * FROM usuario WHERE %s" % (condicao), valores))
 	
 	def inserirUsuario(self, usuario):
-		BancoDeDados().execute("INSERT INTO usuario (matricula, nome, cpf, perfil, senha) VALUES (%s,%s,%s,%s,%s) RETURNING id", (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha))
+		BancoDeDados().executar("INSERT INTO usuario (matricula, nome, cpf, perfil, senha) VALUES (%s,%s,%s,%s,%s) RETURNING id", (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha))
 		usuario.id = BancoDeDados().pegarUltimoIDInserido()
 		return usuario
 		
 	def removerUsuario(self, user):
-		BancoDeDados().execute("DELETE FROM usuario WHERE id = %s", (user.id))
+		BancoDeDados().executar("DELETE FROM usuario WHERE id = %s", (user.id))
 		
 	def alterarUsuario(self, usuario):
 		SQL = "UPDATE usuario SET matricula = %s, nome = %s, cpf = %s, perfil = %s, senha = %s WHERE id = %s"
-		BancoDeDados().execute(SQL, (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha, usuario.id))
+		BancoDeDados().executar(SQL, (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha, usuario.id))
