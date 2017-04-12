@@ -14,7 +14,6 @@ class Usuario(object):
 			self.cpf = dados[3]
 			self.perfil = dados[4]
 			self.senha = dados[5]
-		pass
 
 	def getId():
 		return self.id

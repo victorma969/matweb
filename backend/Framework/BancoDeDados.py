@@ -17,15 +17,15 @@ class BancoDeDados(object):
 
 	def abrir(self):
 			BancoDeDados.conexao = psycopg2.connect(Configuracao().getConfiguracao('BancoDeDados')['StringDeConexao'])
-			BancoDeDados.cursor = BancoDeDados.conexao.cursor()
+			BancoDeDados.cursor = BancoDeDados.conexao.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
 	def consultarUnico(self,SQL,dados):
 		BancoDeDados.cursor.execute(SQL,dados)
-		return BancoDeDados.cursor.fetchall()
+		return BancoDeDados.cursor.fetch()
 	
 	def consultarMultiplos(self, SQL, dados):
 		BancoDeDados.cursor.execute(SQL,dados)
-		return BancoDeDados.cursor.fetchone()
+		return BancoDeDados.cursor.fetchall()
 			
 	def executar(self, SQL, dados):
 		BancoDeDados.cursor.execute(SQL,dados)
