@@ -11,7 +11,7 @@ class BancoDeDados(object):
 	def __init__(self):
 		if(BancoDeDados.conexao == None or BancoDeDados.cursor == None):
 			self.abrir()
-		elif(BancoDeDados.cursor.closed or conexao.closed != 0):
+		elif(BancoDeDados.cursor.closed or BancoDeDados.conexao.closed != 0):
 			self.fechar()
 			self.abrir()
 

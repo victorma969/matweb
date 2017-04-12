@@ -6,14 +6,14 @@ class Usuario(object):
 # Para inclusao de usuarios, substituir '<id>' por None
 
 
-	def __init__(self,dados):
-		if dados[0] is not None:
+	def __init__(self,dados=None):
+		if dados is not None:
 			self.id = dados[0]
-		self.matricula = dados[1]
-		self.nome = dados[2]
-		self.cpf = dados[3]
-		self.perfil = dados[4]
-		self.senha = dados[5]
+			self.matricula = dados[1]
+			self.nome = dados[2]
+			self.cpf = dados[3]
+			self.perfil = dados[4]
+			self.senha = dados[5]
 		pass
 
 	def getId():
