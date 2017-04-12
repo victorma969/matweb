@@ -7,7 +7,7 @@ class Usuario(object):
 	def pegarUsuarios(self, condicao, valores, inicio=0, quantidade=0):
 		usuarios = []
 		for usuario in BancoDeDados().consultarMultiplos("SELECT * FROM usuario WHERE %s" % (condicao), valores):
-			usuarios[] = ModelUsuario(usuario)
+			usuarios.append(ModelUsuario(usuario))
 		return usuarios
 	
 	def pegarUsuario(self, condicao, valores):
