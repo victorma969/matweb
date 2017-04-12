@@ -22,7 +22,7 @@ class BancoDeDados(object):
 
 	def consultarUnico(self,SQL,dados):
 		BancoDeDados.cursor.execute(SQL,dados)
-		return BancoDeDados.cursor.fetch()
+		return BancoDeDados.cursor.fetchone()
 	
 	def consultarMultiplos(self, SQL, dados):
 		BancoDeDados.cursor.execute(SQL,dados)
