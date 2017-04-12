@@ -16,7 +16,7 @@ class BancoDeDados(object):
 			self.abrir()
 
 	def abrir(self):
-			BancoDeDados.conexao = psycopg2.connect(Configuracao.getConfiguracao('BancoDeDados')['StringDeConexao'])
+			BancoDeDados.conexao = psycopg2.connect(Configuracao().getConfiguracao('BancoDeDados')['StringDeConexao'])
 			BancoDeDados.cursor = BancoDeDados.conexao.cursor()
 
 	def consultarUnico(self,SQL,dados):
