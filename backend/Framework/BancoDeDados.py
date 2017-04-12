@@ -9,7 +9,7 @@ class BancoDeDados(object):
 	cursor = None
 
 	def __init__(self):
-		if(BancoDeDados.cursor.closed or conexao.closed != 0)
+		if(BancoDeDados.cursor.closed or conexao.closed != 0):
 			self.fechar()
 			BancoDeDados.conexao = psycopg2.connect(Configuracao.getConfiguracao('BancoDeDados')['StringDeConexao'])
 			BancoDeDados.cursor = BancoDeDados.conexao.cursor()
