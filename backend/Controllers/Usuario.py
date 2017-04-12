@@ -1,4 +1,4 @@
-from Framework.Controller import Controller
+
 from Database.Controllers.Usuario import Usuario as BDUsuario
 from Database.Controllers.TokenDeAcesso import TokenDeAcesso
 
@@ -20,5 +20,5 @@ class Usuario(Controller):
 	def __gerarToken(self,usuario):
 		pass
 
-	def Sair(pedido_sair):
-		pass
+def Sair(pedido_sair):
+	pass

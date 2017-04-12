@@ -4,24 +4,23 @@ import psycopg2
 
 
 class BancoDeDados(object):
-
-	conexao = None
-	cursor = None
-	SQL = sql.SQL
-
-	def __init__(self):
-		if conexao == None
-			conexao = psycopg2.connect(Configuracao.getConfiguracao(['BancoDeDados'])['StringDeConexao'])
-			cursor = conexao.cursor()
-		
-	def query(self,query):
-		conexao.execute(query)
-		return cursor.fetchall()
 	
-	def execute(self,query):
-		self.cursor.execute(query)
-		self.connection.commit()
-		
-	@atexit.register
-	def fechar():
-		conexao.close()
+	def __init__(self):
+		conf = Configuracao()
+		self.conexao = psycopg2.connect(conf.configuracao['BancoDeDados']['StringDeConexao'])
+		self.cursor = self.conexao.cursor()
+
+	def query(self,SQL):
+		self.cursor.execute(SQL)
+		return self.cursor.fetchall()
+	
+	def query_with_args(self, SQL, data):
+		self.cursor.execute(SQL %data)
+		return self.cursor.fetchone()
+			
+	def execute(self, SQL, data):
+		self.cursor.execute(SQL %data)
+		self.conexao.commit()
+
+	def __del__(self):
+		self.conexao.close()	
