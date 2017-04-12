@@ -10,5 +10,5 @@ class Configuracao(object):
 				Configuracao.configuracao = yaml.load(ymlfile)
 
 	@staticmethod
-	def getConfiguracao(self,nome):
+	def getConfiguracao(nome):
 		return Configuracao.configuracao[nome]
