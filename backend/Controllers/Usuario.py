@@ -12,14 +12,14 @@ class Usuario(Controller):
 		usuario = BDUsuario().pegarUsuario("matricula = %s OR cpf = %s",(pedido_entrar.getLoginDoUsuario(),pedido_entrar.getLoginDoUsuario()))
 		if usuario is not None:
 			if(bcrypt.hashpw(pedido_entrar.getSenhaDoUsuario(), usuario.getSenhaHashed()) == usuario.getSenhaHashed()):
-				return RespostaEntrar(true,"",self.__gerarToken(usuario),usuario)
+				return RespostaEntrar(true,"",self.__gerarToken(usuario),{ 'nome': usuario.getNome(),'matricula': usuario.getMatricula(),'perfil': usuario.getPerfil(),'cpf': usuario.getCpf(),'id': usuario.getId(), })
 			else:
 				return RespostaEntrar(false,"Senha inválida!")
 		else:
 			RespostaEntrar(false,"Usuário não encontrado!")
 
 	def __gerarToken(self,usuario):
-		pass
+		return "Biscoito"
 
 def Sair(pedido_sair):
 	pass
