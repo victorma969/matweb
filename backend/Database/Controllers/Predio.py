@@ -14,7 +14,7 @@ class Predio(object):
 		return ModelPredio(BancoDeDados().consultarUnico("SELECT * FROM predio WHERE %s" % (condicao), valores))
 	
 	def inserirPredio(self, predio):
-		BancoDeDados().executar("INSERT INTO predio (nome,sigla,latitude,longitude,id_campus) VALUES (%s,%s,%s,%s,%s) RETURNING id", (predio.nome,predio.sigla,predio.latitude,predio.longitude,predio.id_campus))
+		BancoDeDados().executar("INSERT INTO predio (nome, sigla, latitude, longitude, id_campus) VALUES (%s,%s,%s,%s,%s) RETURNING id", (predio.nome,predio.sigla,predio.latitude,predio.longitude,predio.id_campus))
 		predio.id = BancoDeDados().pegarUltimoIDInserido()
 		return predio
 		
