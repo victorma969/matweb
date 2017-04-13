@@ -1,7 +1,6 @@
 MATWEB
 ===================
 
-
 Este é um software opensource em MVC de administração acadêmica que roda na web.
 
 Dependências
@@ -11,7 +10,9 @@ Dependências
 	- Bootstrap CSS ()
  - Servidor da API 
 	 - Python (2.7)
-	 - uwsgi
+	 - uWSGI (2.0.15)
+	 - bcrypt (3.1.3)
+	 - psycopg2 (2.7.1)
  - Banco de Dados
 	 - PostgreSQL
 
@@ -24,11 +25,12 @@ Estrutura de Diretórios
   	- Models (Representa as requisições da API e as resposta da mesma)
   	- Controllers (Processa as requisições da API)
   	- Database (Classes para interação com o banco de dados)
-     		- Models (Representa a estrutura do banco de dados)
-     		- Controllers (Realiza operações no banco de dados)
+    	- Models (Representa a estrutura do banco de dados)
+	   	- Controllers (Realiza operações no banco de dados)
 		
 Executar Servidor da API
 -------------
 
-> uwsgi --http-socket :8080 --module backend:application
+> Dentro da pasta backend, execute:
+> uwsgi --http-socket :8080 --module __init__:application
 
