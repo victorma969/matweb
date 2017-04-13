@@ -19,8 +19,8 @@ class Disciplina(object):
 		return disciplina
 		
 	def removerDisciplina(self, disciplina):
-		BancoDeDados().executar("DELETE FROM disciplina WHERE id = %s", (str(disciplina.id)))
+		BancoDeDados().executar("DELETE FROM disciplina WHERE id = %s", (str(disciplina.id),))
 		
 	def alterarDisciplina(self, disciplina):
 		SQL = "UPDATE disciplina SET nome = %s, codigo = %s, id_departamento = %s WHERE id = %s"
-		BancoDeDados().executar(SQL, (disciplina.nome,disciplina.codigo,disciplina.id))
+		BancoDeDados().executar(SQL, (disciplina.nome,disciplina.codigo,disciplina.id_departamento,disciplina.id))
