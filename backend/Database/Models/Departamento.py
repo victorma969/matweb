@@ -35,5 +35,8 @@ class Departamento(object):
 		self.id_campus = (Campus().pegarCampus('nome = %s',(campus,))).getId() 
 		
 	def getId_campus(self):
+		return self.id_campus
+		
+	def getCampus(self):
 		return  (Campus().pegarCampus('id = %s',(self.id_campus,))).getNome()
 	
