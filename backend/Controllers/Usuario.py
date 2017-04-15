@@ -17,7 +17,7 @@ class Usuario(Controller):
 			else:
 				return RespostaEntrar(False,"Senha inválida!")
 		else:
-			RespostaEntrar(False,"Usuário não encontrado!")
+			return RespostaEntrar(False,"Usuário não encontrado!")
 
 	def __gerarToken(self,usuario):
 		return "Biscoito"
