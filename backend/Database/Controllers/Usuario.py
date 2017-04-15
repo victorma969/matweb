@@ -14,7 +14,7 @@ class Usuario(object):
 		usuario = BancoDeDados().consultarUnico("SELECT * FROM usuario WHERE %s" % (condicao), valores)
 		if usuario is not None:
 			return ModelUsuario(usuario)
-		else
+		else:
 			return None
 	
 	def inserirUsuario(self, usuario):
