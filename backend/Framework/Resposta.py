@@ -1,4 +1,5 @@
 import json
+from Framework.ModelParaJson import ModelParaJson
 
 class Resposta(object):
 
@@ -9,4 +10,4 @@ class Resposta(object):
 		return [('Content-Type', 'application/json; charset=UTF-8'),('Content-Length', str(len(self.getCorpo())))]
 
 	def getCorpo(self):
-		return json.dumps(self.__dict__)
+		return json.dumps(self, cls=ModelParaJson)
