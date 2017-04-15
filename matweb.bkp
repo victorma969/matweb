@@ -63,10 +63,10 @@ ALTER SEQUENCE ass_disc_pre_id_seq OWNED BY ass_disc_pre.id;
 
 
 --
--- Name: ass_tuma_sala_horario; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+-- Name: ass_turma_sala_horario; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
 --
 
-CREATE TABLE ass_tuma_sala_horario (
+CREATE TABLE ass_turma_sala_horario (
     id integer NOT NULL,
     id_sala integer,
     id_horario integer,
@@ -74,7 +74,7 @@ CREATE TABLE ass_tuma_sala_horario (
 );
 
 
-ALTER TABLE public.ass_tuma_sala_horario OWNER TO postgres;
+ALTER TABLE public.ass_turma_sala_horario OWNER TO postgres;
 
 --
 -- Name: ass_tuma_sala_horario_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -94,7 +94,7 @@ ALTER TABLE public.ass_tuma_sala_horario_id_seq OWNER TO postgres;
 -- Name: ass_tuma_sala_horario_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE ass_tuma_sala_horario_id_seq OWNED BY ass_tuma_sala_horario.id;
+ALTER SEQUENCE ass_tuma_sala_horario_id_seq OWNED BY ass_turma_sala_horario.id;
 
 
 --
@@ -279,8 +279,8 @@ CREATE TABLE predio (
     id integer NOT NULL,
     nome character varying(80) NOT NULL,
     sigla character varying(4) NOT NULL,
-    latitute numeric,
-    longitude numeric,
+    latitute character varying(10),
+    longitude character varying(10),
     id_campus integer
 );
 
@@ -525,14 +525,14 @@ ALTER TABLE ONLY ass_disc_pre ALTER COLUMN id SET DEFAULT nextval('ass_disc_pre_
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY ass_tuma_sala_horario ALTER COLUMN id SET DEFAULT nextval('ass_tuma_sala_horario_id_seq'::regclass);
+ALTER TABLE ONLY ass_turma_prof ALTER COLUMN id SET DEFAULT nextval('ass_turma_prof_id_seq'::regclass);
 
 
 --
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY ass_turma_prof ALTER COLUMN id SET DEFAULT nextval('ass_turma_prof_id_seq'::regclass);
+ALTER TABLE ONLY ass_turma_sala_horario ALTER COLUMN id SET DEFAULT nextval('ass_tuma_sala_horario_id_seq'::regclass);
 
 
 --
@@ -628,16 +628,6 @@ SELECT pg_catalog.setval('ass_disc_pre_id_seq', 1, false);
 
 
 --
--- Data for Name: ass_tuma_sala_horario; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY ass_tuma_sala_horario (id, id_sala, id_horario, id_turma) FROM stdin;
-1	\N	1	1
-2	\N	2	1
-\.
-
-
---
 -- Name: ass_tuma_sala_horario_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -658,6 +648,16 @@ COPY ass_turma_prof (id, id_turma, id_prof) FROM stdin;
 --
 
 SELECT pg_catalog.setval('ass_turma_prof_id_seq', 1, true);
+
+
+--
+-- Data for Name: ass_turma_sala_horario; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY ass_turma_sala_horario (id, id_sala, id_horario, id_turma) FROM stdin;
+1	\N	1	1
+2	\N	2	1
+\.
 
 
 --
@@ -1732,7 +1732,7 @@ ALTER TABLE ONLY ass_disc_pre
 -- Name: ass_tuma_sala_horario_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
-ALTER TABLE ONLY ass_tuma_sala_horario
+ALTER TABLE ONLY ass_turma_sala_horario
     ADD CONSTRAINT ass_tuma_sala_horario_pkey PRIMARY KEY (id);
 
 
@@ -1852,7 +1852,7 @@ ALTER TABLE ONLY ass_disc_pre
 -- Name: ass_tuma_sala_horario_id_horario_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY ass_tuma_sala_horario
+ALTER TABLE ONLY ass_turma_sala_horario
     ADD CONSTRAINT ass_tuma_sala_horario_id_horario_fkey FOREIGN KEY (id_horario) REFERENCES horario(id) ON DELETE CASCADE;
 
 
@@ -1860,7 +1860,7 @@ ALTER TABLE ONLY ass_tuma_sala_horario
 -- Name: ass_tuma_sala_horario_id_sala_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY ass_tuma_sala_horario
+ALTER TABLE ONLY ass_turma_sala_horario
     ADD CONSTRAINT ass_tuma_sala_horario_id_sala_fkey FOREIGN KEY (id_sala) REFERENCES sala(id) ON DELETE CASCADE;
 
 
@@ -1868,7 +1868,7 @@ ALTER TABLE ONLY ass_tuma_sala_horario
 -- Name: ass_tuma_sala_horario_id_turma_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY ass_tuma_sala_horario
+ALTER TABLE ONLY ass_turma_sala_horario
     ADD CONSTRAINT ass_tuma_sala_horario_id_turma_fkey FOREIGN KEY (id_turma) REFERENCES turma(id) ON DELETE CASCADE;
 
 
