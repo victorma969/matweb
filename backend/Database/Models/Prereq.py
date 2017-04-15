@@ -1,3 +1,5 @@
+from Database.Controllers.Disciplina import Disciplina
+
 class Prereq(object):
 
 	def __init__(self,dados=None):
@@ -15,8 +17,11 @@ class Prereq(object):
 	def getGrupo(self):
 		return self.grupo
 		
-	def setId_disc_pre(self,id_disc_pre):
-		self.id_disc_pre = id_disc_pre
+	def setId_disc_pre(self,disc_pre):
+		self.id_disc_pre = (Disciplina().pegarDisciplina('nome = %s',(disc_pre,))).getId()
 	
 	def getId_disc_pre(self):
 		return self.id_disc_pre
+		
+	def getDisc_pre(self):
+		return (Disciplina().pegarDisciplina('id = %s',(self.id_disc_pre,))).getNome()

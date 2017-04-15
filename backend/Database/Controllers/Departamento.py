@@ -19,8 +19,8 @@ class Departamento(object):
 		return departamento
 		
 	def removerDepartamento(self, departamento):
-		BancoDeDados().executar("DELETE FROM departamento WHERE id = %s", (str(departamento.id)))
+		BancoDeDados().executar("DELETE FROM departamento WHERE id = %s", (str(departamento.id),))
 		
 	def alterarDepartamento(self, departamento):
 		SQL = "UPDATE departamento SET nome = %s, codigo = %s, sigla = %s, id_campus = %s WHERE id = %s"
-		BancoDeDados().executar(SQL, (departamento.nome,departamento.codigo,departamento.sigla,departamento.id))
+		BancoDeDados().executar(SQL, (departamento.nome,departamento.codigo,departamento.sigla,departamento.id_campus,departamento.id))

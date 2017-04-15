@@ -1,3 +1,5 @@
+from Database.Controllers.Campus import Campus
+
 class Departamento(object):
 
 	def __init__(self,dados=None):
@@ -29,9 +31,12 @@ class Departamento(object):
 	def getSigla(self):
 		return self.sigla
 		
-	def setId_campus(self,id_campus):
-		self.id_campus = id_campus
+	def setId_campus(self,campus):
+		self.id_campus = (Campus().pegarCampus('nome = %s',(campus,))).getId() 
 		
 	def getId_campus(self):
 		return self.id_campus
+		
+	def getCampus(self):
+		return  (Campus().pegarCampus('id = %s',(self.id_campus,))).getNome()
 	

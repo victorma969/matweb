@@ -1,3 +1,5 @@
+from Database.Controllers.Disciplina import Disciplina
+
 class Turma(object):
 
 	def __init__(self,dados=None):
@@ -15,8 +17,11 @@ class Turma(object):
 	def getLetra(self):
 		return self.letra
 		
-	def setId_disciplina(self,id_disciplina):
-		self.id_disciplina = id_disciplina
+	def setId_disciplina(self,disciplina):
+		self.id_disciplina = (Disciplina().pegarDisciplina('nome = %s',(disciplina,))).getId()
 	
 	def getId_disciplina(self):
 		return self.id_disciplina
+		
+	def getDisciplina(self):
+		return (Disciplina().pegarDisciplina('id = %s',(self.id_disciplina,))).getNome()
