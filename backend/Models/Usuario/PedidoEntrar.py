@@ -11,8 +11,8 @@ class PedidoEntrar(Pedido):
 		except:
 			raise ErroNoHTTP(400)
 
-	def getLoginDoUsuario():
+	def getLoginDoUsuario(self):
 		return self.usuario
 
-	def getSenhaDoUsuario():
+	def getSenhaDoUsuario(self):
 		return self.senha
