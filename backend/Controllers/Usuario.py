@@ -1,6 +1,7 @@
 # coding=utf-8
 from Framework.Controller import Controller
 from Database.Controllers.Usuario import Usuario as BDUsuario
+from Models.Usuario.RespostaEntrar import RespostaEntrar
 import bcrypt
 
 class Usuario(Controller):
