@@ -11,7 +11,7 @@ class Ass_turma_sala_horario(object):
 		return associacoes
 	
 	def pegarAss_turma_sala_horario(self, condicao, valores):
-		return ModelAss_turma_sala_horario(BancoDeDados().consultarUnico("SELECT * FROM sala WHERE %s" % (condicao), valores))
+		return ModelAss_turma_sala_horario(BancoDeDados().consultarUnico("SELECT * FROM ass_turma_sala_horario WHERE %s" % (condicao), valores))
 	
 	def inserirAss_turma_sala_horario(self, associacao):
 		BancoDeDados().executar("INSERT INTO ass_turma_sala_horario (id_turma,id_sala,id_horario) VALUES (%s,%s,%s) RETURNING id", (associacao.id_turma,associacao.id_sala,associacao.id_horario))
