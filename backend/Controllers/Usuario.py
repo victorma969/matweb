@@ -1,7 +1,6 @@
 
 from Database.Controllers.Usuario import Usuario as BDUsuario
 from Database.Controllers.TokenDeAcesso import TokenDeAcesso
-from Models.Usuario.Usuario 
 
 class Usuario(Controller):
 
