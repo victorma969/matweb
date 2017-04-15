@@ -1,6 +1,5 @@
 # coding=utf-8
 from Database.Controllers.Usuario import Usuario as BDUsuario
-from Database.Controllers.TokenDeAcesso import TokenDeAcesso
 
 class Usuario(Controller):
 
