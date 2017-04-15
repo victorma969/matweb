@@ -1,4 +1,5 @@
 # coding=utf-8
+from Framework.Controller import Controller
 from Database.Controllers.Usuario import Usuario as BDUsuario
 
 class Usuario(Controller):
