@@ -1,4 +1,4 @@
-from Framework import Resposta
+from Framework.Resposta import Resposta
 
 class RespostaEntrar(Resposta):
 
