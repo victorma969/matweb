@@ -12,7 +12,10 @@ class Usuario(object):
 	
 	def pegarUsuario(self, condicao, valores):
 		usuario = BancoDeDados().consultarUnico("SELECT * FROM usuario WHERE %s" % (condicao), valores)
-		return (usuario is None) ? None : ModelUsuario(usuario)
+		if usuario is not None:
+			return ModelUsuario(usuario)
+		else
+			return None
 	
 	def inserirUsuario(self, usuario):
 		BancoDeDados().executar("INSERT INTO usuario (matricula, nome, cpf, perfil, senha) VALUES (%s,%s,%s,%s,%s) RETURNING id", (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha))
