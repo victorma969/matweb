@@ -1,7 +1,8 @@
-
+# coding=utf-8
+from Framework.Controller import Controller
 from Database.Controllers.Usuario import Usuario as BDUsuario
-from Database.Controllers.TokenDeAcesso import TokenDeAcesso
-from Models.Usuario.Usuario 
+from Models.Usuario.RespostaEntrar import RespostaEntrar
+import bcrypt
 
 class Usuario(Controller):
 
@@ -11,15 +12,15 @@ class Usuario(Controller):
 	def Entrar(self,pedido_entrar):
 		usuario = BDUsuario().pegarUsuario("matricula = %s OR cpf = %s",(pedido_entrar.getLoginDoUsuario(),pedido_entrar.getLoginDoUsuario()))
 		if usuario is not None:
-			if(bcrypt.hashpw(pedido_entrar.getSenhaDoUsuario(), usuario.getSenhaHashed()) == usuario.getSenhaHashed()):
-				return RespostaEntrar(true,"",self.__gerarToken(usuario),usuario)
+			if(bcrypt.hashpw(pedido_entrar.getSenhaDoUsuario().encode('utf-8'), usuario.getSenhaHashed().encode('utf-8')) == usuario.getSenhaHashed().encode('utf-8')):
+				return RespostaEntrar(True,"",self.__gerarToken(usuario),{ 'nome': usuario.getNome(),'matricula': usuario.getMatricula(),'perfil': usuario.getPerfil(),'cpf': usuario.getCpf(),'id': usuario.getId(), })
 			else:
-				return RespostaEntrar(false,"Senha inválida!")
+				return RespostaEntrar(False,"Senha inválida!")
 		else:
-			RespostaEntrar(false,"Usuário não encontrado!")
+			return RespostaEntrar(False,"Usuário não encontrado!")
 
 	def __gerarToken(self,usuario):
-		pass
+		return "Biscoito"
 
 def Sair(pedido_sair):
 	pass
