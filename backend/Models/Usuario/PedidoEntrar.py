@@ -1,4 +1,4 @@
-from Framework import Pedido
+from Framework.Pedido import Pedido
 from Framework.ErroNoHTTP import ErroNoHTTP
 
 class PedidoEntrar(Pedido):
