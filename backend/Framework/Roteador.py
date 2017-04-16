@@ -10,8 +10,6 @@ class Roteador(object):
 			self.realizarChecagens()
 			self.executar()
 		except ErroNoHTTP as erro_no_http:
-			traceback.print_exc(file=open("/var/www/html/log.txt",'w'))
-			traceback.print_exc(file=sys.stdout)
 			self.resposta = erro_no_http
 
 	def checarMetodo(self):
