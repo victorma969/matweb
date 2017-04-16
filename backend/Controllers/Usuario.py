@@ -4,6 +4,7 @@ from Framework.ErroNoHTTP import ErroNoHTTP
 from Database.Controllers.Usuario import Usuario as BDUsuario
 from Models.Usuario.RespostaEntrar import RespostaEntrar
 import bcrypt
+import uuid
 
 class Usuario(Controller):
 
@@ -21,7 +22,7 @@ class Usuario(Controller):
 			raise ErroNoHTTP(401,"Usuário não encontrado!")
 
 	def __gerarToken(self,usuario,pedido_entrar):
-		return "Biscoito"
+		return uuid.uuid4().hex
 
 	def Sair(self,pedido_sair):
 		pass
