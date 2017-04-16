@@ -1,6 +1,6 @@
 angular.
   module('MatWeb').
-  config(['$locationProvider', '$routeProvider', '$http'
+  config(['$locationProvider', '$routeProvider', '$http',
     function config($locationProvider, $routeProvider, $http) {
       $locationProvider.html5Mode(true).hashPrefix('!');
       
