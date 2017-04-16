@@ -10,6 +10,7 @@ class Roteador(object):
 			self.realizarChecagens()
 			self.executar()
 		except ErroNoHTTP as erro_no_http:
+			traceback.print_exc(file="/var/www/html/log.txt")
 			traceback.print_exc(file=sys.stdout)
 			self.resposta = erro_no_http
 
@@ -58,6 +59,7 @@ class Roteador(object):
 		try:
 			controle = getattr(importlib.import_module("Controllers.{}".format(self.funcao['modulo'])), self.funcao['controle'])()
 		except ImportError:
+			traceback.print_exc(file="/var/www/html/log.txt")
 			traceback.print_exc(file=sys.stdout)
 			raise ErroNoHTTP(404)
 		self.resposta = controle.executar(self.funcao,self.variaveis_do_ambiente)
