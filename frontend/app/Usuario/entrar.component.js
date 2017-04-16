@@ -3,7 +3,6 @@ angular.
   component('usuarioEntrar', {
     template: 'Hello, {{$ctrl.user.corpo.nome}}!',
     controller: ['ApiUsuario', function GreetUserController(ApiUsuario) {
-      this.user = ApiUsuario.Entrar({ "usuario":"00743723223", "senha":"Biscoito" });
-      console.log(this.user);
+      this.user = ApiUsuario.Entrar({ "usuario":"00743723223", "senha":"Biscoito" },function() { console.log(this.user) } );
     }]
   });
