@@ -11,14 +11,14 @@ class Usuario(Controller):
 		return metodo
 		
 	def Entrar(self,pedido_entrar):
-		usuario = BDUsuario().pegarUsuario("matricula = %s OR cpf = %s",(pedido_entrar.getLoginDoUsuario(),pedido_entrar.getLoginDoUsuario()))
+		usuario = BDUsuario().pegarUsuario("WHERE matricula = %s OR cpf = %s",(pedido_entrar.getLoginDoUsuario(),pedido_entrar.getLoginDoUsuario()))
 		if usuario is not None:
 			if(bcrypt.hashpw(pedido_entrar.getSenhaDoUsuario().encode('utf-8'), usuario.getSenhaHashed().encode('utf-8')) == usuario.getSenhaHashed().encode('utf-8')):
-				return RespostaEntrar(True,"",self.__gerarToken(usuario,pedido_entrar),{ 'nome': usuario.getNome(),'matricula': usuario.getMatricula(),'perfil': usuario.getPerfil(),'cpf': usuario.getCpf(),'id': usuario.getId(), })
+				return RespostaEntrar(self.__gerarToken(usuario,pedido_entrar),{ 'nome': usuario.getNome(),'matricula': usuario.getMatricula(),'perfil': usuario.getPerfil(),'cpf': usuario.getCpf(),'id': usuario.getId(), })
 			else:
-				return RespostaEntrar(False,"Senha inválida!")
+				raise ErroNoHTTP(401,"Senha inválida!")
 		else:
-			return RespostaEntrar(False,"Usuário não encontrado!")
+			raise ErroNoHTTP(401,"Usuário não encontrado!")
 
 	def __gerarToken(self,usuario,pedido_entrar):
 		return "Biscoito"
@@ -27,17 +27,17 @@ class Usuario(Controller):
 		pass
 
 	def Listar(pedido_listar):
-		usuarios = BDUsuario().pegarUsuario("id = %s",(pedido_ver.getId()))
+		usuarios = BDUsuario().pegarUsuario("WHERE id = %s",(pedido_ver.getId()))
 
 	def Ver(pedido_ver):
-		usuario = BDUsuario().pegarUsuario("id = %s",(pedido_ver.getId()))
+		usuario = BDUsuario().pegarUsuario("WHERE id = %s",(pedido_ver.getId()))
 		if usuario is not None:
 			return None
 		else:
 			raise ErroNoHTTP(404,"Usuário inexistente!")
 
 	def Editar(pedido_editar):
-		usuario = BDUsuario().pegarUsuario("id = %s",(pedido_editar.getId()))
+		usuario = BDUsuario().pegarUsuario("WHERE id = %s",(pedido_editar.getId()))
 		if usuario is not None:
 			usuario.set()
 			BDUsuario().alterarUsuario(usuario)
@@ -45,7 +45,7 @@ class Usuario(Controller):
 			raise ErroNoHTTP(404,"Usuário inexistente!")
 
 	def AlterarSenha(pedido_alterar_senha):
-		usuario = BDUsuario().pegarUsuario("id = %s",(pedido_alterar_senha.getId()))
+		usuario = BDUsuario().pegarUsuario("WHERE id = %s",(pedido_alterar_senha.getId()))
 		if usuario is not None:
 			usuario.setSenhaHashed(bcrypt.hashpw(pedido_alterar_senha.getNovaSenha().encode('utf-8'), bcrypt.gensalt()))
 			BDUsuario().alterarUsuario(usuario)
