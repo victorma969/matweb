@@ -1,1 +1,4 @@
-angular.module('Usuario', []);
+angular.module('Usuario', [
+	'ngResource',
+	'ngRoute',
+	]);
