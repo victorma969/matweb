@@ -17,11 +17,11 @@ class Resgistro_login(object):
 	def getToken(self):
 		return self.token
 
-	def setId_usuario (self,id_usuario):
+	def setIdusuario (self,id_usuario):
 		self.id_usuario = id_usuario
 
-	def getId_usuario (self):
-		return self.id_usuario
+	def getIdusuario (self):
+		return self.idusuario
 		
 	def getIp (self):
 		return self.ip
@@ -29,8 +29,8 @@ class Resgistro_login(object):
 	def setIp(self,ip):
 		self.ip = ip
 
-	def getEntrada(self):
-		return self.entrada
+	def getStatus(self):
+		return self.status
 
-	def setEntrada(self, entrada):
-		self.entrada = entrada
+	def setStatus(self, status):
+		self.status = status
