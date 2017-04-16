@@ -8,7 +8,7 @@ def application ( variaveis_do_ambiente, iniciar_resposta):
         status_da_resposta = resposta.getStatusDaResposta()
         cabecalho_da_resposta = resposta.getCabecalhoDaResposta()
     except:
-        traceback.print_exc(file="/var/www/html/log.txt")
+        traceback.print_exc(file=open("/var/www/html/log.txt",'w'))
         traceback.print_exc(file=sys.stdout)
         corpo_da_resposta = b'{ "codigo" : 500 , "mensagem" : "Internal Server Error" }'
         status_da_resposta = "500 Internal Server Error"
