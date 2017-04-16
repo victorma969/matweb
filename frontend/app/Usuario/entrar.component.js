@@ -6,6 +6,7 @@ angular.
       this.user = "Lucas";
       var resultado = ApiUsuario.Entrar({ "usuario":"00743723223", "senha":"Biscoito" },function() {
        				$http.defaults.headers.common.Authorization = resultado.corpo.token;
+       				window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
        				console.log(resultado.corpo.token)
    				} );
     }]
