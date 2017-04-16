@@ -9,6 +9,10 @@ angular.
 
       $routeProvider.when('/Usuario/Entrar', {
           template: '<usuario-entrar></usuario-entrar>'
-        }).otherwise('/');
+        })
+      .when('/Usuario/Entrar2', {
+          template: '<usuario-entrar></usuario-entrar>'
+        })
+      .otherwise('/');
     }
   ]);
