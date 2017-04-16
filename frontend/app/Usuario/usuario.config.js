@@ -1,5 +1,5 @@
 angular.
-  module('MatWeb').
+  module('Usuario').
   config(['$routeProvider',
     function config($routeProvider) {
       $routeProvider.
