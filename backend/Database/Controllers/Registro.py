@@ -4,7 +4,7 @@ from Database.Models.Registro import Registro as ModelRegistro
 
 class Registro(object):
 		
-	def pegarRegistro(self, condicao, valores, inicio=0, quantidade=0):
+	def pegarRegistro(self, condicao, valores):
 		registro = []
 		for registro in BancoDeDados().consultarMultiplos("SELECT * FROM registro %s" % (condicao), valores):
 			registro.append(ModelRegistro(registro))
