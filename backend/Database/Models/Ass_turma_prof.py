@@ -1,5 +1,5 @@
 from Database.Controllers.Turma import Turma
-from Database.Controllers.Professor import Professor
+from Database.Controllers.Usuario import Usuario
 from Database.Controllers.Disciplina import Disciplina
 
 class Ass_turma_prof(object):
@@ -24,12 +24,12 @@ class Ass_turma_prof(object):
 		return (Turma().pegarTurma('id = %s',(self.id_turma,))).getLetra()
 
 	def setId_prof(self,professor):
-		self.id_prof = (Professor().pegarProfessor('nome = %s',(professor,))).getId()
+		self.id_prof = (Usuario().pegarUsuario('nome = %s',(professor,))).getId()
 		
 	def getId_prof(self):
 		return self.id_prof
 	
-	def getProfessor(self):
-		return (Professor().pegarProfessor('id = %s',(self.id_prof,))).getNome()
+	def getUsuario(self):
+		return (Usuario().pegarUsuario('id = %s',(self.id_prof,))).getNome()
 		
 	
