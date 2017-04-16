@@ -7,6 +7,8 @@ angular.
       $httpProvider.defaults.headers.common.Authorization = ""
       $httpProvider.defaults.headers.post = { 'Content-Type' : 'application/json; charset=UTF-8' }
 
-      $routeProvider.otherwise('/');
+      $routeProvider.when('/Usuario/Entrar', {
+          template: '<usuario-entrar></usuario-entrar>'
+        }).otherwise('/');
     }
   ]);
