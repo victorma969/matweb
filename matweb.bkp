@@ -343,22 +343,25 @@ ALTER SEQUENCE prereq_id_seq OWNED BY prereq.id;
 
 
 --
--- Name: professor; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+-- Name: registro_login; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
 --
 
-CREATE TABLE professor (
+CREATE TABLE registro_login (
     id integer NOT NULL,
-    nome character varying(80) NOT NULL
+    token character varying(32) NOT NULL,
+    ip character varying(45) NOT NULL,
+    id_usuario integer,
+    entrada timestamp without time zone DEFAULT now()
 );
 
 
-ALTER TABLE public.professor OWNER TO postgres;
+ALTER TABLE public.registro_login OWNER TO postgres;
 
 --
--- Name: professor_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: registro_login_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE professor_id_seq
+CREATE SEQUENCE registro_login_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -366,13 +369,13 @@ CREATE SEQUENCE professor_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.professor_id_seq OWNER TO postgres;
+ALTER TABLE public.registro_login_id_seq OWNER TO postgres;
 
 --
--- Name: professor_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: registro_login_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE professor_id_seq OWNED BY professor.id;
+ALTER SEQUENCE registro_login_id_seq OWNED BY registro_login.id;
 
 
 --
@@ -581,7 +584,7 @@ ALTER TABLE ONLY prereq ALTER COLUMN id SET DEFAULT nextval('prereq_id_seq'::reg
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY professor ALTER COLUMN id SET DEFAULT nextval('professor_id_seq'::regclass);
+ALTER TABLE ONLY registro_login ALTER COLUMN id SET DEFAULT nextval('registro_login_id_seq'::regclass);
 
 
 --
@@ -1644,19 +1647,18 @@ SELECT pg_catalog.setval('prereq_id_seq', 1, false);
 
 
 --
--- Data for Name: professor; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: registro_login; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY professor (id, nome) FROM stdin;
-1	LUCIANA DE OLIVEIRA MIRANDA
+COPY registro_login (id, token, ip, id_usuario, entrada) FROM stdin;
 \.
 
 
 --
--- Name: professor_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: registro_login_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('professor_id_seq', 1, true);
+SELECT pg_catalog.setval('registro_login_id_seq', 1, false);
 
 
 --
@@ -1710,6 +1712,7 @@ SELECT pg_catalog.setval('turma_id_seq', 1, true);
 --
 
 COPY usuario (id, matricula, nome, cpf, perfil, senha) FROM stdin;
+1	000000000	Administrador	00000000000	admin	Senha123
 \.
 
 
@@ -1717,7 +1720,7 @@ COPY usuario (id, matricula, nome, cpf, perfil, senha) FROM stdin;
 -- Name: usuario_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('usuario_id_seq', 1, false);
+SELECT pg_catalog.setval('usuario_id_seq', 1, true);
 
 
 --
@@ -1793,11 +1796,11 @@ ALTER TABLE ONLY prereq
 
 
 --
--- Name: professor_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: registro_login_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
-ALTER TABLE ONLY professor
-    ADD CONSTRAINT professor_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY registro_login
+    ADD CONSTRAINT registro_login_pkey PRIMARY KEY (id);
 
 
 --
@@ -1877,7 +1880,7 @@ ALTER TABLE ONLY ass_turma_sala_horario
 --
 
 ALTER TABLE ONLY ass_turma_prof
-    ADD CONSTRAINT ass_turma_prof_id_prof_fkey FOREIGN KEY (id_prof) REFERENCES professor(id) ON DELETE CASCADE;
+    ADD CONSTRAINT ass_turma_prof_id_prof_fkey FOREIGN KEY (id_prof) REFERENCES usuario(id) ON DELETE CASCADE;
 
 
 --
@@ -1918,6 +1921,14 @@ ALTER TABLE ONLY predio
 
 ALTER TABLE ONLY prereq
     ADD CONSTRAINT prereq_id_disc_pre_fkey FOREIGN KEY (id_disc_pre) REFERENCES disciplina(id) ON DELETE CASCADE;
+
+
+--
+-- Name: registro_login_id_usuario_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY registro_login
+    ADD CONSTRAINT registro_login_id_usuario_fkey FOREIGN KEY (id_usuario) REFERENCES usuario(id) ON DELETE CASCADE;
 
 
 --
