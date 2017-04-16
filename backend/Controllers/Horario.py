@@ -5,5 +5,5 @@ from Models.Horario.RespostaListar import RespostaListar
 
 class Horario(Controller):
 
-	def Listar(pedido_listar):
+	def Listar(self,pedido_listar):
 		return RespostaListar(BDHorario().pegarHorarios("",None))
