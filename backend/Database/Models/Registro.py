@@ -1,11 +1,11 @@
-class Resgistro(object):
+class Resgistro_login(object):
 		def __init__ (self.dados):
 		if dados is not None:
 			self.id = dados['id']
 			self.token = dados['token']
-			self.idusuario = dados['idsuario']
+			self.idusuario = dados['id_usuario']
 			self.ip = dados['ip']
-			self.status = dados['status']
+			self.entrada = dados['entrada']
 			pass
 		
 	def getId(self):
@@ -17,11 +17,11 @@ class Resgistro(object):
 	def getToken(self):
 		return self.token
 
-	def setIdusuario (self,idusuario):
-		self.idusuario = idusuario
+	def setId_usuario (self,id_usuario):
+		self.id_usuario = id_usuario
 
-	def getIdusuario (self):
-		return self.idusuario
+	def getId_usuario (self):
+		return self.id_usuario
 		
 	def getIp (self):
 		return self.ip
@@ -29,8 +29,8 @@ class Resgistro(object):
 	def setIp(self,ip):
 		self.ip = ip
 
-	def getStatus(self):
-		return self.status
+	def getEntrada(self):
+		return self.entrada
 
-	def setStatus(self, status):
-		self.status = status
+	def setEntrada(self, entrada):
+		self.entrada = entrada
