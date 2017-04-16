@@ -1,7 +1,7 @@
 angular.
-  module('MatWeb').
+  module('Usuario').
   config(['$routeProvider',
-    function config($locationProvider, $routeProvider, $http) {
+    function config($routeProvider) {
       $routeProvider.
         when('/Usuario/Entrar', {
           template: '<usuario-entrar></usuario-entrar>'
