@@ -4,14 +4,14 @@ from Database.Models.Prereq import Prereq as ModelPrereq
 
 class Prereq(object):
 		
-	def pegarPrereqs(self, condicao, valores, inicio=0, quantidade=0):
+	def pegarPrereqs(self, condicao, valores):
 		prereqs = []
-		for prereq in BancoDeDados().consultarMultiplos("SELECT * FROM prereq WHERE %s" % (condicao), valores):
+		for prereq in BancoDeDados().consultarMultiplos("SELECT * FROM prereq %s" % (condicao), valores):
 			prereqs.append(ModelPrereq(prereq))
 		return prereqs
 	
 	def pegarPrereq(self, condicao, valores):
-		return ModelPrereq(BancoDeDados().consultarUnico("SELECT * FROM prereq WHERE %s" % (condicao), valores))
+		return ModelPrereq(BancoDeDados().consultarUnico("SELECT * FROM prereq %s" % (condicao), valores))
 	
 	def inserirPrereq(self, prereq):
 		BancoDeDados().executar("INSERT INTO prereq (grupo, id_disc_pre ) VALUES (%s,%s) RETURNING id", (prereq.grupo,prereq.id_disc_pre))

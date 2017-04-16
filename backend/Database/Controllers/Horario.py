@@ -4,14 +4,14 @@ from Database.Models.Horario import Horario as ModelHorario
 
 class Horario(object):
 		
-	def pegarHorarios(self, condicao, valores, inicio=0, quantidade=0):
+	def pegarHorarios(self, condicao, valores):
 		horarios = []
-		for horario in BancoDeDados().consultarMultiplos("SELECT * FROM horario WHERE %s" % (condicao), valores):
+		for horario in BancoDeDados().consultarMultiplos("SELECT * FROM horario %s" % (condicao), valores):
 			horarios.append(ModelHorario(horario))
 		return horarios
 	
 	def pegarHorario(self, condicao, valores):
-		return ModelHorario(BancoDeDados().consultarUnico("SELECT * FROM horario WHERE %s" % (condicao), valores))
+		return ModelHorario(BancoDeDados().consultarUnico("SELECT * FROM horario %s" % (condicao), valores))
 	
 	def inserirHorario(self, horario):
 		BancoDeDados().executar("INSERT INTO horario (turno,inicio,fim,dia) VALUES (%s,%s,%s,%s) RETURNING id", (horario.turno,horario.inicio,horario.fim,horario.dia))

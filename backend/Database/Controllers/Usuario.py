@@ -4,14 +4,14 @@ from Database.Models.Usuario import Usuario as ModelUsuario
 
 class Usuario(object):
 		
-	def pegarUsuarios(self, condicao, valores, inicio=0, quantidade=0):
+	def pegarUsuarios(self, condicao, valores):
 		usuarios = []
-		for usuario in BancoDeDados().consultarMultiplos("SELECT * FROM usuario WHERE %s" % (condicao), valores):
+		for usuario in BancoDeDados().consultarMultiplos("SELECT * FROM usuario %s" % (condicao), valores):
 			usuarios.append(ModelUsuario(usuario))
 		return usuarios
 	
 	def pegarUsuario(self, condicao, valores):
-		usuario = BancoDeDados().consultarUnico("SELECT * FROM usuario WHERE %s" % (condicao), valores)
+		usuario = BancoDeDados().consultarUnico("SELECT * FROM usuario %s" % (condicao), valores)
 		if usuario is not None:
 			return ModelUsuario(usuario)
 		else:

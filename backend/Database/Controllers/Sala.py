@@ -4,14 +4,14 @@ from Database.Models.Sala import Sala as ModelSala
 
 class Sala(object):
 		
-	def pegarSalas(self, condicao, valores, inicio=0, quantidade=0):
+	def pegarSalas(self, condicao, valores):
 		salas = []
-		for sala in BancoDeDados().consultarMultiplos("SELECT * FROM sala WHERE %s" % (condicao), valores):
+		for sala in BancoDeDados().consultarMultiplos("SELECT * FROM sala %s" % (condicao), valores):
 			salas.append(ModelSala(sala))
 		return salas
 	
 	def pegarSala(self, condicao, valores):
-		return ModelSala(BancoDeDados().consultarUnico("SELECT * FROM sala WHERE %s" % (condicao), valores))
+		return ModelSala(BancoDeDados().consultarUnico("SELECT * FROM sala %s" % (condicao), valores))
 	
 	def inserirSala(self, sala):
 		BancoDeDados().executar("INSERT INTO sala (id_resp_sala,codigo,id_predio) VALUES (%s,%s,%s) RETURNING id", (sala.id_resp_sala,sala.codigo,sala.id_predio))

@@ -4,14 +4,14 @@ from Database.Models.Professor import Professor as ModelProfessor
 
 class Professor(object):
 		
-	def pegarProfessores(self, condicao, valores, inicio=0, quantidade=0):
+	def pegarProfessores(self, condicao, valores):
 		professores = []
-		for professor in BancoDeDados().consultarMultiplos("SELECT * FROM professor WHERE %s" % (condicao), valores):
+		for professor in BancoDeDados().consultarMultiplos("SELECT * FROM professor %s" % (condicao), valores):
 			professores.append(ModelProfessor(professor))
 		return professores
 	
 	def pegarProfessor(self, condicao, valores):
-		return ModelProfessor(BancoDeDados().consultarUnico("SELECT * FROM professor WHERE %s" % (condicao), valores))
+		return ModelProfessor(BancoDeDados().consultarUnico("SELECT * FROM professor %s" % (condicao), valores))
 	
 	def inserirProfessor(self, professor):
 		BancoDeDados().executar("INSERT INTO professor ( nome ) VALUES ( %s ) RETURNING id", (professor.nome,))

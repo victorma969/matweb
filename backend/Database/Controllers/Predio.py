@@ -4,14 +4,14 @@ from Database.Models.Predio import Predio as ModelPredio
 
 class Predio(object):
 		
-	def pegarPredios(self, condicao, valores, inicio=0, quantidade=0):
+	def pegarPredios(self, condicao, valores):
 		predios = []
-		for predio in BancoDeDados().consultarMultiplos("SELECT * FROM predio WHERE %s" % (condicao), valores):
+		for predio in BancoDeDados().consultarMultiplos("SELECT * FROM predio %s" % (condicao), valores):
 			predios.append(ModelPredio(predio))
 		return predios
 	
 	def pegarPredio(self, condicao, valores):
-		return ModelPredio(BancoDeDados().consultarUnico("SELECT * FROM predio WHERE %s" % (condicao), valores))
+		return ModelPredio(BancoDeDados().consultarUnico("SELECT * FROM predio %s" % (condicao), valores))
 	
 	def inserirPredio(self, predio):
 		BancoDeDados().executar("INSERT INTO predio (nome, sigla, latitude, longitude, id_campus) VALUES (%s,%s,%s,%s,%s) RETURNING id", (predio.nome,predio.sigla,predio.latitude,predio.longitude,predio.id_campus))

@@ -4,14 +4,14 @@ from Database.Models.Turma import Turma as ModelTurma
 
 class Turma(object):
 		
-	def pegarTurmas(self, condicao, valores, inicio=0, quantidade=0):
+	def pegarTurmas(self, condicao, valores):
 		turmas = []
-		for turma in BancoDeDados().consultarMultiplos("SELECT * FROM turma WHERE %s" % (condicao), valores):
+		for turma in BancoDeDados().consultarMultiplos("SELECT * FROM turma %s" % (condicao), valores):
 			turmas.append(ModelTurma(turma))
 		return turmas
 	
 	def pegarTurma(self, condicao, valores):
-		return ModelTurma(BancoDeDados().consultarUnico("SELECT * FROM turma WHERE %s" % (condicao), valores))
+		return ModelTurma(BancoDeDados().consultarUnico("SELECT * FROM turma %s" % (condicao), valores))
 	
 	def inserirTurma(self, turma):
 		BancoDeDados().executar("INSERT INTO turma (letra, id_disciplina ) VALUES (%s,%s) RETURNING id", (turma.letra,turma.id_disciplina))

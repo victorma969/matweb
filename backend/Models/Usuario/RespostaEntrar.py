@@ -2,8 +2,6 @@ from Framework.Resposta import Resposta
 
 class RespostaEntrar(Resposta):
 
-	def __init__(self,sucesso=False,mensagem=None,token=None,usuario=None):
-		self.sucesso = sucesso
+	def __init__(self,token=None,usuario=None):
 		self.token = token
-		self.mensagem = mensagem
 		self.usuario = usuario

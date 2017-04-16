@@ -4,14 +4,14 @@ from Database.Models.Ass_disc_pre import Ass_disc_pre as ModelAss_disc_pre
 
 class Ass_disc_pre(object):
 		
-	def pegarAss_disc_pres(self, condicao, valores, inicio=0, quantidade=0):
+	def pegarAss_disc_pres(self, condicao, valores):
 		associacoes = []
-		for associacao in BancoDeDados().consultarMultiplos("SELECT * FROM ass_disc_pre WHERE %s" % (condicao), valores):
+		for associacao in BancoDeDados().consultarMultiplos("SELECT * FROM ass_disc_pre %s" % (condicao), valores):
 			associacoes.append(ModelAss_disc_pre(associacao))
 		return associacoes
 	
 	def pegarAss_disc_pre(self, condicao, valores):
-		return ModelAss_disc_pre(BancoDeDados().consultarUnico("SELECT * FROM ass_disc_pre WHERE %s" % (condicao), valores))
+		return ModelAss_disc_pre(BancoDeDados().consultarUnico("SELECT * FROM ass_disc_pre %s" % (condicao), valores))
 	
 	def inserirAss_disc_pre(self, associacao):
 		BancoDeDados().executar("INSERT INTO ass_disc_pre (id_disciplina,id_prereq) VALUES (%s,%s) RETURNING id", (associacao.id_disciplina,associacao.id_prereq))

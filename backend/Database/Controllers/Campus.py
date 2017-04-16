@@ -4,14 +4,14 @@ from Database.Models.Campus import Campus as ModelCampus
 
 class Campus(object):
 		
-	def pegarMultiplosCampus(self, condicao, valores, inicio=0, quantidade=0):
+	def pegarMultiplosCampus(self, condicao, valores):
 		campus = []
-		for campi in BancoDeDados().consultarMultiplos("SELECT * FROM campus WHERE %s" % (condicao), valores):
+		for campi in BancoDeDados().consultarMultiplos("SELECT * FROM campus %s" % (condicao), valores):
 			campus.append(ModelCampus(campi))
 		return campus
 	
 	def pegarCampus(self, condicao, valores):
-		return ModelCampus(BancoDeDados().consultarUnico("SELECT * FROM campus WHERE %s" % (condicao), valores))
+		return ModelCampus(BancoDeDados().consultarUnico("SELECT * FROM campus %s" % (condicao), valores))
 	
 	def inserirCampus(self, campus):
 		BancoDeDados().executar("INSERT INTO campus ( nome ) VALUES ( %s ) RETURNING id", (campus.nome,))
