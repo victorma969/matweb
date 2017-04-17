@@ -3,11 +3,13 @@ angular.
   component('usuarioEntrar', {
     templateUrl: '/app/Usuario/entrar.template.html',
     controller: ['ApiUsuario','$http','$location', 'MatWebGlobals',function Entrar(ApiUsuario,$http,$location,MatWebGlobals) {
-      this.user = "Lucas";
+      if($http.defaults.headers.common.Authorization != null)
+      {
+        $location.path("/")
+      }
       this.formulario = {'usuario':'','senha':''};
       this.entrar = function(teste)
       {
-      	console.log(this.form)
        	ApiUsuario.Entrar(this.form,function(resultado) {
           MatWebGlobals.usuarioLogado = resultado.corpo.usuario;
        		$http.defaults.headers.common.Authorization = resultado.corpo.token;
