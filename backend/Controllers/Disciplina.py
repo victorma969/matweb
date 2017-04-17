@@ -6,4 +6,4 @@ from Models.Disciplina.RespostaListar import RespostaListar
 class Disciplina(Controller):
 
 	def Listar(self,pedido_listar):
-		return RespostaListar(BDDisciplina().pegarDisciplinas("WHERE id_departamento = %d, nome = %s LIMIT %d OFFSET %d",(pedido_listar.getIdDepartamento(),pedido_listar.getNome().replace(' ','%'),pedido_listar.getQuantidade(),(pedido_listar.getQuantidade()*pedido_listar.getPagina()))))
+		return RespostaListar(BDDisciplina().pegarDisciplinas("WHERE id_departamento = %s, nome = %s LIMIT %s OFFSET %s",(str(pedido_listar.getIdDepartamento()),pedido_listar.getNome().replace(' ','%'),str(pedido_listar.getQuantidade()),(str(pedido_listar.getQuantidade()*pedido_listar.getPagina()))))
