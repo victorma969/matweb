@@ -2,16 +2,13 @@ angular.
   module('Oferta').
   component('ofertaCursos', {
     templateUrl: '/app/Oferta/oferta.template.html',
-    controller: ['ApiUsuario','$http','$location', 'MatWebGlobals',function Entrar(ApiUsuario,$http,$location,MatWebGlobals) {
-      this.formulario = {'usuario':'','senha':''};
-      this.entrar = function()
+    controller: ['ApiOferta', 'MatWebGlobals',function Entrar(ApiOferta,MatWebGlobals) {
+      this.nome_disciplina = "";
+      this.pesquisar = function()
       {
-       	ApiUsuario.Entrar(this.formulario,function(resultado) {
-          MatWebGlobals.usuarioLogado = resultado.corpo.usuario;
-       		$http.defaults.headers.common.Authorization = resultado.corpo.token;
-       		window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
-       		$location.path("/")
-   		}, function(erro){
+       	ApiUsuario.Listar({id_departamento: 95 , nome: this.nome_disciplina, pagina: 0, quantidade: 1000 },function(resultado) {
+		          this.disciplinas = resultado.corpo
+		}, function(erro){
    			this.erro = erro.data.mensagem
    		} );
    	  }
