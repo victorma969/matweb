@@ -4,6 +4,7 @@ from Framework.ErroNoHTTP import ErroNoHTTP
 from Database.Controllers.Usuario import Usuario as BDUsuario
 from Database.Controllers.Usuario import Usuario as BDUsuario
 from Models.Usuario.RespostaEntrar import RespostaEntrar
+from Models.Usuario.Usuario import Usuario as ModelUsuario
 import bcrypt
 import uuid
 
@@ -23,7 +24,7 @@ class Usuario(Controller):
 		usuario = BDUsuario().pegarUsuario("WHERE matricula = %s OR cpf = %s",(pedido_entrar.getLoginDoUsuario(),pedido_entrar.getLoginDoUsuario()))
 		if usuario is not None:
 			if(bcrypt.hashpw(pedido_entrar.getSenhaDoUsuario().encode('utf-8'), usuario.getSenhaHashed().encode('utf-8')) == usuario.getSenhaHashed().encode('utf-8')):
-				return RespostaEntrar(self.__gerarToken(usuario,pedido_entrar),{ 'nome': usuario.getNome(),'matricula': usuario.getMatricula(),'perfil': usuario.getPerfil(),'cpf': usuario.getCpf(),'id': usuario.getId(), })
+				return RespostaEntrar(self.__gerarToken(usuario,pedido_entrar),ModelUsuario(usuario))
 			else:
 				raise ErroNoHTTP(401,"Senha inválida!")
 		else:
