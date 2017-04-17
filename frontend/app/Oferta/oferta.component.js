@@ -5,10 +5,10 @@ angular.
     controller: ['ApiOferta', 'MatWebGlobals',function Entrar(ApiOferta,MatWebGlobals) {
       this.nome_disciplina = "";
 	var ctrl = this;
-	ctrl.disciplinas = [{id: "1",nome:"Biscoioto"}];
+	ctrl.disciplinas = [];
       this.pesquisar = function()
       {
-       	ApiOferta.Listar({id_departamento: 95 , nome: this.nome_disciplina, pagina: 0, quantidade: 1000 },function(resultado) {
+       	ApiOferta.Listar({id_departamento: 95 , nome: ctrl.nome_disciplina, pagina: 0, quantidade: 1000 },function(resultado) {
 		          ctrl.disciplinas = resultado.corpo
 			console.log(ctrl.disciplinas)
 		}, function(erro){
