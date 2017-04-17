@@ -13,8 +13,9 @@ class Usuario(Controller):
 			def metodo_com_acesso(self,pedido)
 				usuario = Usuario.__getUsuarioPeloToken(pedido.variaveis_do_ambiente["AUTHORIZATION"])
 				if():
-					
-				return metodo(self,pedido,)
+					ErroNoHTTP(403,"Acesso Negado!")
+				else
+					return metodo(self,pedido,)
 		return metodo_com_acesso
 		
 	def Entrar(self,pedido_entrar):
