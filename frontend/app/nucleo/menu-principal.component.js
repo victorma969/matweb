@@ -2,7 +2,7 @@ angular.
   module('nucleo').
   component('menuPrincipal', {
     templateUrl: '/app/nucleo/menu-principal.template.html',
-    controller: ['usuarioLogado', function Menu(usuarioLogado) {
-      console.log(this.usuarioLogado)
+    controller: ['MatWebGlobals', function Menu(MatWebGlobals) {
+      console.log(this.MatWebGlobals)
     }]
   });

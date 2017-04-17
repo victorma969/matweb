@@ -11,5 +11,4 @@ angular.
         Excluir: { method: 'POST' },
       });
     }
-  ])
-  .value('usuarioLogado', {});;
+  ]);
