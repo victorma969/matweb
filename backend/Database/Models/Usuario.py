@@ -28,7 +28,7 @@ class Usuario(object):
 		self.perfil = perfil
 		
 	def getPerfil (self):
-		self.perfil
+		return self.perfil
 
 	def setNome(self,nome):
 		self.nome = nome
