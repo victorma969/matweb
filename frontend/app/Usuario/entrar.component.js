@@ -9,8 +9,9 @@ angular.
        				window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
        				console.log(resultado.corpo.token)
    				} );
-      this.entrar = function()
+      this.entrar = function(teste)
       {
+      		console.log(teste);
       		console.log($scope);
       }
     }]
