@@ -14,7 +14,7 @@ class PedidoListar(Pedido):
 			raise ErroNoHTTP(400)
 
 	def getIdCampus(self):
-		self.id_campus
+		return self.id_campus
 
 	def getNome(self):
 		return self.nome
