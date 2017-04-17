@@ -8,11 +8,12 @@ angular.
       this.entrar = function(teste)
       {
       	console.log(this.form)
-       	var resultado = ApiUsuario.Entrar(this.form,function() {
+       	var resultado = ApiUsuario.Entrar(this.form,function(result) {
+       		console.log(result)
        		$http.defaults.headers.common.Authorization = resultado.corpo.token;
        		window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
-   		}, function(error){
-   			console.log(error)
+   		}, function(erro){
+   			console.log(erro.data.mensagem)
    		} );
    	  }
     }]
