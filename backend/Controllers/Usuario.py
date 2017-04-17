@@ -34,7 +34,7 @@ class Usuario(Controller):
 
 	@staticmethod
 	def __getUsuarioPeloToken(token)
-		registro_login = BDRegistroLogin().pegarRegistro("WHERE token = % AND ",(token))
+		registro_login = BDRegistroLogin().pegarRegistro("WHERE token = % AND entrada ",(token))
 			if registro_login is None:
 				ErroNoHTTP(401,"Você não está logado, ou sua sessão expirou!")
 			else:
