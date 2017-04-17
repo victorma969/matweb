@@ -2,7 +2,7 @@ angular.
   module('Usuario').
   component('usuarioEntrar', {
     templateUrl: '/app/Usuario/entrar.template.html',
-    controller: ['ApiUsuario','$http','$location' function Entrar(ApiUsuario,$http,$location) {
+    controller: ['ApiUsuario','$http','$location', function Entrar(ApiUsuario,$http,$location) {
       this.user = "Lucas";
       this.formulario = {'usuario':'','senha':''};
       this.entrar = function(teste)
