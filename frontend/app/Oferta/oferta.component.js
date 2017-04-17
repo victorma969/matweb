@@ -1,6 +1,6 @@
 angular.
   module('Oferta').
-  component('usuarioEntrar', {
+  component('ofertaCursos', {
     templateUrl: '/app/Oferta/oferta.template.html',
     controller: ['ApiUsuario','$http','$location', 'MatWebGlobals',function Entrar(ApiUsuario,$http,$location,MatWebGlobals) {
       this.formulario = {'usuario':'','senha':''};
