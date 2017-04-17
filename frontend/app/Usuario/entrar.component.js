@@ -3,10 +3,6 @@ angular.
   component('usuarioEntrar', {
     templateUrl: '/app/Usuario/entrar.template.html',
     controller: ['ApiUsuario','$http','$location', 'MatWebGlobals',function Entrar(ApiUsuario,$http,$location,MatWebGlobals) {
-      if($http.defaults.headers.common.Authorization != null)
-      {
-        $location.path("/")
-      }
       this.formulario = {'usuario':'','senha':''};
       this.entrar = function(teste)
       {

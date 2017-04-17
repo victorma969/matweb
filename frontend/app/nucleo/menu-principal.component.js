@@ -8,6 +8,5 @@ angular.
       }else{
         this.perfil = ""
       }
-       console.log(this.perfil)
     }]
   });
