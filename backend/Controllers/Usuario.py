@@ -11,7 +11,7 @@ class Usuario(Controller):
 
 	@staticmethod
 	def temAcesso(metodo,perfis):
-			def metodo_com_acesso(self,pedido)
+			def metodo_com_acesso(self,pedido):
 				usuario = Usuario.__getUsuarioPeloToken(pedido.variaveis_do_ambiente["AUTHORIZATION"])
 				if usuario.getPerfil() in perfis:
 					return metodo(self,pedido,usuario)
