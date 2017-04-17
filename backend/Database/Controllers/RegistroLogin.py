@@ -1,5 +1,5 @@
 from Framework.BancoDeDados import BancoDeDados
-from Database.Models.Registro import RegistroLogin as ModelRegistroLogin
+from Database.Models.RegistroLogin import RegistroLogin as ModelRegistroLogin
 
 
 class RegistroLogin(object):
