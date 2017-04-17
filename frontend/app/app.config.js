@@ -13,6 +13,9 @@ angular.
       $routeProvider.when('/', {
           template: '<tela-principal></tela-principal>'
         })
+      $routeProvider.when('/Oferta', {
+          template: '<oferta-cursos></oferta-cursos>'
+        })
       .otherwise('/');
     }
   ]).value('MatWebGlobals', {});
