@@ -9,6 +9,5 @@ angular.
         this.perfil = ""
       }
        console.log(this.perfil)
-      }
     }]
   });
