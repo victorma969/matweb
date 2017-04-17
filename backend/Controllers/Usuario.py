@@ -9,9 +9,11 @@ import uuid
 class Usuario(Controller):
 
 	@staticmethod
-	def temAcesso(metodo,perfil,eh_administrador):
+	def temAcesso(metodo,perfil):
 			def metodo_com_acesso(self,pedido)
-				pedido.variaveis_do_ambiente[""]
+				usuario = Usuario.__getUsuarioPeloToken(pedido.variaveis_do_ambiente["AUTHORIZATION"])
+				if():
+					
 				return metodo(self,pedido,)
 		return metodo_com_acesso
 		
@@ -27,6 +29,10 @@ class Usuario(Controller):
 
 	def __gerarToken(self,usuario,pedido_entrar):
 		return uuid.uuid4().hex
+
+	@staticmethod
+	def __getUsuarioPeloToken(token)
+		return BDUsuario().pegarUsuario("WHERE id = %s",(id))
 
 	def Sair(self,pedido_sair):
 		pass
