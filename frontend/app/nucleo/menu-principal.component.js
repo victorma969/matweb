@@ -3,6 +3,6 @@ angular.
   component('menuPrincipal', {
     templateUrl: '/app/nucleo/menu-principal.template.html',
     controller: ['MatWebGlobals', function Menu(MatWebGlobals) {
-      console.log(this.MatWebGlobals)
+      console.log(MatWebGlobals)
     }]
   });
