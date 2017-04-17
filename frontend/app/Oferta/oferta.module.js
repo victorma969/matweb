@@ -1,3 +1,3 @@
-angular.module('Usuario', [
+angular.module('Oferta', [
 	'ngResource',
 	]);
