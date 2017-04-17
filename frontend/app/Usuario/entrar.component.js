@@ -4,15 +4,15 @@ angular.
     templateUrl: '/app/Usuario/entrar.template.html',
     controller: ['ApiUsuario','$http', function Entrar(ApiUsuario,$http,$scope) {
       this.user = "Lucas";
-      this.form = {};
+      this.form = {'usuario':'','senha':''};
       this.entrar = function(teste)
       {
       	console.log(this.form)
        	var resultado = ApiUsuario.Entrar(this.form,function() {
        		$http.defaults.headers.common.Authorization = resultado.corpo.token;
        		window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
-   		}, function(){
-   			console.log(resultado)
+   		}, function(error){
+   			console.log(error)
    		} );
    	  }
     }]
