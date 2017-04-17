@@ -4,7 +4,7 @@ angular.
     templateUrl: '/app/Oferta/oferta.template.html',
     controller: ['ApiOferta', 'MatWebGlobals',function Entrar(ApiOferta,MatWebGlobals) {
       this.nome_disciplina = "";
-	this.disciplinas = [];
+	this.disciplinas = [{id: "1",nome:"Biscoioto"}];
       this.pesquisar = function()
       {
        	ApiOferta.Listar({id_departamento: 95 , nome: this.nome_disciplina, pagina: 0, quantidade: 1000 },function(resultado) {
