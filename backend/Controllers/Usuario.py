@@ -9,8 +9,11 @@ import uuid
 class Usuario(Controller):
 
 	@staticmethod
-	def temAcesso(metodo):
-		return metodo
+	def temAcesso(metodo,perfil,eh_administrador):
+			def metodo_com_acesso(self,pedido)
+				pedido.variaveis_do_ambiente[""]
+				return metodo(self,pedido,)
+		return metodo_com_acesso
 		
 	def Entrar(self,pedido_entrar):
 		usuario = BDUsuario().pegarUsuario("WHERE matricula = %s OR cpf = %s",(pedido_entrar.getLoginDoUsuario(),pedido_entrar.getLoginDoUsuario()))
