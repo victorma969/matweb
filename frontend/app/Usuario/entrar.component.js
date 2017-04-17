@@ -1,7 +1,7 @@
 angular.
   module('Usuario').
   component('usuarioEntrar', {
-    template: 'Hello, {{$ctrl.user}}!',
+    templateUrl: '/app/Usuario/entrar.template.html',
     controller: ['ApiUsuario','$http', function GreetUserController(ApiUsuario,$http) {
       this.user = "Lucas";
       var resultado = ApiUsuario.Entrar({ "usuario":"00743723223", "senha":"Biscoito" },function() {
