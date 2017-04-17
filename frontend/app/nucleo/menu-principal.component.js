@@ -3,6 +3,7 @@ angular.
   component('menuPrincipal', {
     templateUrl: '/app/nucleo/menu-principal.template.html',
     controller: ['MatWebGlobals', function Menu(MatWebGlobals) {
-       this.usuario_logado = MatWebGlobals.usuario;
+       this.perfil = MatWebGlobals.usuario.perfil;
+       console.log(this.perfil)
     }]
   });
