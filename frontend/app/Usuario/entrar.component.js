@@ -2,18 +2,18 @@ angular.
   module('Usuario').
   component('usuarioEntrar', {
     templateUrl: '/app/Usuario/entrar.template.html',
-    controller: ['ApiUsuario','$http', function Entrar(ApiUsuario,$http,$scope) {
+    controller: ['ApiUsuario','$http','$location' function Entrar(ApiUsuario,$http,$location) {
       this.user = "Lucas";
-      this.form = {'usuario':'','senha':''};
+      this.formulario = {'usuario':'','senha':''};
       this.entrar = function(teste)
       {
       	console.log(this.form)
-       	var resultado = ApiUsuario.Entrar(this.form,function(result) {
-       		console.log(result)
+       	ApiUsuario.Entrar(this.form,function(resultado) {
        		$http.defaults.headers.common.Authorization = resultado.corpo.token;
        		window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
+       		$location.path("/")
    		}, function(erro){
-   			console.log(erro.data.mensagem)
+   			this.erro = erro.data.mensagem
    		} );
    	  }
     }]
