@@ -11,12 +11,12 @@ class Usuario(Controller):
 
 	@staticmethod
 	def temAcesso(metodo,perfis):
-			def metodo_com_acesso(self,pedido):
-				usuario = Usuario.__getUsuarioPeloToken(pedido.variaveis_do_ambiente["AUTHORIZATION"])
-				if usuario.getPerfil() in perfis:
-					return metodo(self,pedido,usuario)
-				else:
-					ErroNoHTTP(403,"Acesso Negado!")
+		def metodo_com_acesso(self,pedido):
+			usuario = Usuario.__getUsuarioPeloToken(pedido.variaveis_do_ambiente["AUTHORIZATION"])
+			if usuario.getPerfil() in perfis:
+				return metodo(self,pedido,usuario)
+			else:
+				ErroNoHTTP(403,"Acesso Negado!")
 		return metodo_com_acesso
 		
 	def Entrar(self,pedido_entrar):
