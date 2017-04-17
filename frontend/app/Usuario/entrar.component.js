@@ -4,16 +4,15 @@ angular.
     templateUrl: '/app/Usuario/entrar.template.html',
     controller: ['ApiUsuario','$http', function Entrar(ApiUsuario,$http,$scope) {
       this.user = "Lucas";
-      this.usuario = "";
-      this.senha = "";
-      var resultado = ApiUsuario.Entrar({ "usuario":"00743723223", "senha":"Biscoito" },function() {
-       				$http.defaults.headers.common.Authorization = resultado.corpo.token;
-       				window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
-       				console.log(resultado.corpo.token)
-   				} );
+      this.form = {};
       this.entrar = function(teste)
       {
-      		console.log(this);
-      }
+      	console.log(this.form);
+      	var resultado = ApiUsuario.Entrar({ "usuario":"00743723223", "senha":"Biscoito" },function() {
+       		$http.defaults.headers.common.Authorization = resultado.corpo.token;
+       		window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
+       		console.log(resultado.corpo.token)
+   		} );
+   	  }
     }]
   });
