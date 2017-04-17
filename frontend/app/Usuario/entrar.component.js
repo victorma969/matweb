@@ -11,7 +11,7 @@ angular.
    				} );
       this.entrar = function()
       {
-
+      		console.log(this);
       }
     }]
   });
