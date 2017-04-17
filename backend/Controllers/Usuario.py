@@ -15,7 +15,7 @@ class Usuario(Controller):
 				usuario = Usuario.__getUsuarioPeloToken(pedido.variaveis_do_ambiente["AUTHORIZATION"])
 				if usuario.getPerfil() in perfis:
 					return metodo(self,pedido,usuario)
-				else
+				else:
 					ErroNoHTTP(403,"Acesso Negado!")
 		return metodo_com_acesso
 		
