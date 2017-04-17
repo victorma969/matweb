@@ -16,7 +16,7 @@ class Usuario(Controller):
 				if():
 					ErroNoHTTP(403,"Acesso Negado!")
 				else
-					return metodo(self,pedido,)
+					return metodo(self,pedido,usuario)
 		return metodo_com_acesso
 		
 	def Entrar(self,pedido_entrar):
