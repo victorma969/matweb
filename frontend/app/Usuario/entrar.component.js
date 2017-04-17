@@ -2,7 +2,7 @@ angular.
   module('Usuario').
   component('usuarioEntrar', {
     templateUrl: '/app/Usuario/entrar.template.html',
-    controller: ['ApiUsuario','$http','$scope', function Entrar(ApiUsuario,$http,$scope) {
+    controller: ['ApiUsuario','$http', function Entrar(ApiUsuario,$http,$scope) {
       this.user = "Lucas";
       var resultado = ApiUsuario.Entrar({ "usuario":"00743723223", "senha":"Biscoito" },function() {
        				$http.defaults.headers.common.Authorization = resultado.corpo.token;
@@ -11,8 +11,7 @@ angular.
    				} );
       this.entrar = function(teste)
       {
-      		console.log(teste);
-      		console.log($scope);
+      		console.log(this);
       }
     }]
   });
