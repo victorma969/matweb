@@ -7,11 +7,11 @@ angular.
       this.form = {};
       this.entrar = function(teste)
       {
-      	console.log(this.form);
-      	var resultado = ApiUsuario.Entrar({ "usuario":"00743723223", "senha":"Biscoito" },function() {
+       	var resultado = ApiUsuario.Entrar(this.form,function() {
        		$http.defaults.headers.common.Authorization = resultado.corpo.token;
        		window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
-       		console.log(resultado.corpo.token)
+   		}, function(){
+   			alert(resultado.mensagem);
    		} );
    	  }
     }]
