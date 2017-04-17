@@ -5,4 +5,3 @@ class Usuario(object):
         self.nome = usuario.getNome()
         self.cpf = usuario.getCpf()
         self.perfil = usuario.getPerfil()
-        self.senha = usuario.getSenha()
