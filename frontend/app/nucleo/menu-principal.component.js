@@ -3,9 +3,8 @@ angular.
   component('menuPrincipal', {
     templateUrl: '/app/nucleo/menu-principal.template.html',
     controller: ['MatWebGlobals', function Menu(MatWebGlobals) {
-      console.log(typeof MatWebGlobals.usuario)
-      if (typeof MatWebGlobals.usuario !== 'undefined') {
-        this.perfil = MatWebGlobals.usuario;
+      if (typeof MatWebGlobals.usuarioLogado !== 'undefined') {
+        this.perfil = MatWebGlobals.usuarioLogado.perfil;
       }else{
         this.perfil = ""
       }
