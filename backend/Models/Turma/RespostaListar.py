@@ -1,8 +1,8 @@
 from Framework.Resposta import Resposta
-from Models.Horario.Horario import Horario as ModelHorario
+from Models.Turma.Turma import Turma as ModelTurma
 class RespostaListar(Resposta):
 
-	def __init__(self,horarios):
+	def __init__(self,turmas):
 		self.corpo = []
-		for horario in horarios:
-			self.corpo.append(ModelHorario(horario))
+		for turma in turmas:
+			self.corpo.append(ModelTurma(turma))
