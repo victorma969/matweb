@@ -10,9 +10,6 @@ angular.
       $routeProvider.when('/Usuario/Entrar', {
           template: '<usuario-entrar></usuario-entrar>'
         })
-      .when('/Usuario/Entrar2', {
-          template: '<usuario-entrar></usuario-entrar>'
-        })
       .otherwise('/');
     }
   ]).value('MatWebGlobals', {});
