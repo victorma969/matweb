@@ -1,5 +1,5 @@
 from Framework.Resposta import Resposta
-from Models.Disciplina.Disciplina import Disciplina as ModelDisciplina
+from Models.Sala.Sala import Sala as ModelSala
 class RespostaListar(Resposta):
 
 	def __init__(self,sala):
