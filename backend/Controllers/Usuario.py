@@ -2,6 +2,7 @@
 from Framework.Controller import Controller
 from Framework.ErroNoHTTP import ErroNoHTTP
 from Database.Controllers.Usuario import Usuario as BDUsuario
+from Database.Controllers.Usuario import Usuario as BDUsuario
 from Models.Usuario.RespostaEntrar import RespostaEntrar
 import bcrypt
 import uuid
@@ -9,7 +10,7 @@ import uuid
 class Usuario(Controller):
 
 	@staticmethod
-	def temAcesso(metodo,perfil):
+	def temAcesso(metodo,perfis):
 			def metodo_com_acesso(self,pedido)
 				usuario = Usuario.__getUsuarioPeloToken(pedido.variaveis_do_ambiente["AUTHORIZATION"])
 				if():
@@ -33,7 +34,11 @@ class Usuario(Controller):
 
 	@staticmethod
 	def __getUsuarioPeloToken(token)
-		return BDUsuario().pegarUsuario("WHERE id = %s",(id))
+		registro_login = BDRegistroLogin().pegarRegistro("WHERE token = %",(token))
+			if registro_login is None:
+				ErroNoHTTP(401,"Você não está logado, ou sua sessão expirou!")
+			else:
+				return BDUsuario().pegarUsuario("WHERE id = %s",(id))
 
 	def Sair(self,pedido_sair):
 		pass
