@@ -8,6 +8,7 @@ import uuid
 
 class Usuario(Controller):
 
+	@staticmethod
 	def temAcesso(metodo):
 		return metodo
 		
