@@ -10,16 +10,7 @@ import bcrypt
 
 class Usuario(Controller):
 
-	@staticmethod
-	def temAcesso(metodo,perfis):
-		def metodo_com_acesso(self,pedido):
-			usuario = Usuario.__getUsuarioPeloToken(pedido.variaveis_do_ambiente["AUTHORIZATION"])
-			if usuario.getPerfil() in perfis:
-				return metodo(self,pedido,usuario)
-			else:
-				ErroNoHTTP(403,"Acesso Negado!")
-		return metodo_com_acesso
-		
+
 	def Entrar(self,pedido_entrar):
 		usuario = BDUsuario().pegarUsuario("WHERE matricula = %s OR cpf = %s",(pedido_entrar.getLoginDoUsuario(),pedido_entrar.getLoginDoUsuario()))
 		if usuario is not None:
@@ -32,14 +23,6 @@ class Usuario(Controller):
 
 	def __gerarToken(self,usuario,pedido_entrar):
 		return uuid.uuid4().hex
-
-	@staticmethod
-	def __getUsuarioPeloToken(token):
-		registro_login = BDRegistroLogin().pegarRegistro("WHERE token = % AND entrada ",(token))
-		if registro_login is None:
-			ErroNoHTTP(401,"Você não está logado, ou sua sessão expirou!")
-		else:
-			return BDUsuario().pegarUsuario("WHERE id = %s",(id))
 
 	def Sair(self,pedido_sair):
 		pass
