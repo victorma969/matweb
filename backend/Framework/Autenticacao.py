@@ -9,7 +9,7 @@ class Autenticacao(object):
 		token = DBRegistroLogin().pegarRegistro("WHERE token = %s AND ip = %s",(token,ip))
 		if token is not None:
 			return token.getUsuario()
-		else
+		else:
 			return None
 
 	@staticmethod
@@ -19,6 +19,7 @@ class Autenticacao(object):
 		token.setToken(uuid.uuid4().hex)
 		token.setIp(ip)
 		token = DBRegistroLogin().inserirRegistro(token)
+		return token.getToken()
 
 	@staticmethod
 	def temAcesso(metodo,perfis):
