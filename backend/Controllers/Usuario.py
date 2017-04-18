@@ -53,7 +53,7 @@ class Usuario(Controller):
 		usuario.setMatricula(pedido_cadastrar.getMatricula())
 		usuario.setCpf(pedido_cadastrar.getCpf())
 		usuario.setPerfil(pedido_cadastrar.getPerfil())
-		usuario.setSenhaHashed(pedido_cadastrar.getSenha())
+		usuario.setSenhaHashed(bcrypt.hashpw(pedido_cadastrar.getSenha().encode('utf-8'), bcrypt.gensalt()))
 		return RespostaCadastrar(BDUsuario().inserirUsuario(usuario))
 
 
