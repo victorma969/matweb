@@ -5,8 +5,8 @@ from Database.Controllers.Usuario import Usuario as BDUsuario
 from Models.Usuario.RespostaEntrar import RespostaEntrar
 from Models.Usuario.RespostaCadastrar import RespostaCadastrar
 from Database.Models.Usuario import Usuario as ModelUsuario
+from Framework.Autenticacao import Autenticacao
 import bcrypt
-import uuid
 
 class Usuario(Controller):
 
@@ -24,7 +24,7 @@ class Usuario(Controller):
 		usuario = BDUsuario().pegarUsuario("WHERE matricula = %s OR cpf = %s",(pedido_entrar.getLoginDoUsuario(),pedido_entrar.getLoginDoUsuario()))
 		if usuario is not None:
 			if(bcrypt.hashpw(pedido_entrar.getSenhaDoUsuario().encode('utf-8'), usuario.getSenhaHashed().encode('utf-8')) == usuario.getSenhaHashed().encode('utf-8')):
-				return RespostaEntrar(self.__gerarToken(usuario,pedido_entrar),usuario)
+				return RespostaEntrar(Autenticacao.gerarToken(usuario,pedido_entrar.variaveis_do_ambiente["AUTHORIZATION"]),usuario)
 			else:
 				raise ErroNoHTTP(401,"Senha inválida!")
 		else:
