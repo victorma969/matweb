@@ -14,7 +14,7 @@ class RegistroLogin(object):
 		return ModelRegistro(BancoDeDados().consultarUnico("SELECT * FROM registro_login %s" % (condicao), valores))
 	
 	def inserirRegistro(self, registro):
-		BancoDeDados().executar("INSERT INTO registro_login (token, id_usuario, ip) VALUES (%s,%s,%s,%s,%s) RETURNING id", (registro.token, registro.id_usuario, registro.ip))
+		BancoDeDados().executar("INSERT INTO registro_login (token, id_usuario, ip) VALUES (%s,%s,%s) RETURNING id", (registro.token, registro.id_usuario, registro.ip))
 		registro.id = BancoDeDados().pegarUltimoIDInserido()
 		return registro
 		
