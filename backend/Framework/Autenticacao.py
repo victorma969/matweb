@@ -6,4 +6,4 @@ class Autenticacao(object):
 
 	@staticmethod
 	def getUsuarioPeloTokenEIpEValido(token,ip):
-		DBRegistroLogin().
+		DBRegistroLogin().pegarRegistro("WHERE token = %s AND ip = %s AND ")
