@@ -47,6 +47,9 @@ class Usuario(Controller):
 	def Listar(self,pedido_listar):
 		usuarios = BDUsuario().pegarUsuario("WHERE id = %s",(pedido_ver.getId()))
 
+	def Cadastrar(self,pedido_cadastrar):
+		
+
 	def Ver(self,pedido_ver):
 		usuario = BDUsuario().pegarUsuario("WHERE id = %s",(pedido_ver.getId()))
 		if usuario is not None:
