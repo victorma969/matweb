@@ -24,7 +24,7 @@ class Usuario(Controller):
 		usuario = BDUsuario().pegarUsuario("WHERE matricula = %s OR cpf = %s",(pedido_entrar.getLoginDoUsuario(),pedido_entrar.getLoginDoUsuario()))
 		if usuario is not None:
 			if(bcrypt.hashpw(pedido_entrar.getSenhaDoUsuario().encode('utf-8'), usuario.getSenhaHashed().encode('utf-8')) == usuario.getSenhaHashed().encode('utf-8')):
-				return RespostaEntrar(Autenticacao.gerarToken(usuario,pedido_entrar.variaveis_do_ambiente["AUTHORIZATION"]),usuario)
+				return RespostaEntrar(Autenticacao.gerarToken(usuario,pedido_entrar.variaveis_do_ambiente["REMOTE_ADDR"]),usuario)
 			else:
 				raise ErroNoHTTP(401,"Senha inválida!")
 		else:
