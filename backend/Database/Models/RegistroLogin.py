@@ -3,10 +3,9 @@ class ResgistroLogin(object):
 		if dados is not None:
 			self.id = dados['id']
 			self.token = dados['token']
-			self.idusuario = dados['id_usuario']
+			self.id_usuario = dados['id_usuario']
 			self.ip = dados['ip']
 			self.entrada = dados['entrada']
-			pass
 		
 	def getId(self):
 		return self.id
