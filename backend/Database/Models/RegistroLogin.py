@@ -1,6 +1,6 @@
 class RegistroLogin(object):
 	
-	def __init__ (self,dados):
+	def __init__ (self,dados=None):
 		if dados is not None:
 			self.id = dados['id']
 			self.token = dados['token']
