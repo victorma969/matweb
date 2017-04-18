@@ -1,4 +1,4 @@
-class ResgistroLogin(object):
+class RegistroLogin(object):
 	
 	def __init__ (self,dados):
 		if dados is not None:
