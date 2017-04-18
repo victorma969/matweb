@@ -11,7 +11,7 @@ class Usuario(object):
 		return usuarios
 	
 	def pegarUsuario(self, condicao, valores):
-		usuario = BancoDeDados().consultarUnico("SELECT * FROM usuario %s" % (condicao), valores);
+		usuario = BancoDeDados().consultarUnico("SELECT * FROM usuario %s" % (condicao), valores)
 		if usuario is not None:
 			return ModelUsuario(usuario)
 		else:
