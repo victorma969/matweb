@@ -28,6 +28,15 @@ body {
   padding: 0 15px;
   min-height: 568px;
   background-color: red;
+ .Imagem {background: url(css/2816.jpg) no-repeat;}
+
+ 
+
+body {margin: 0 auto;background: url(../css/2816.jpg) repeat-x;}
+
+ 
+
+a img{border: 0px none;}
 }
 @media (min-width: 768px) {
   #page-wrapper {
