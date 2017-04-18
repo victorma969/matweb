@@ -9,6 +9,7 @@ class Usuario(object):
 		for usuario in BancoDeDados().consultarMultiplos("SELECT * FROM usuario %s" % (condicao), valores):
 			usuarios.append(ModelUsuario(usuario))
 		return usuarios
+		b
 	
 	def pegarUsuario(self, condicao, valores):
 		usuario = BancoDeDados().consultarUnico("SELECT * FROM usuario %s" % (condicao), valores)
