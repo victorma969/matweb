@@ -1,4 +1,4 @@
-URL: /api/Campus/listar
+URL: /api/Campus/Listar
 Função: Listar os campus, se o parametro nome não é informado, lista todos
 PEDIDO:
 
@@ -43,7 +43,7 @@ RESPOSTA EM CASO DE NADA ENCONTRADO:
 	"corpo": []
 }
 
-URL: /api/Departamento/listar
+URL: /api/Departamento/Listar
 Função: Listar os departamentos de um campos, se o parametro nome não é informado, lista todos
 PEDIDO:
 
@@ -89,7 +89,7 @@ RESPOSTA EM CASO DE NADA ENCONTRADO:
 	"corpo": []
 }
 
-URL: /api/Disciplinas/listar
+URL: /api/Disciplinas/Listar
 Função: Listar as disciplinas, se o parametro nome não é informado, lista todos
 PEDIDO:
 
@@ -136,7 +136,7 @@ RESPOSTA EM CASO DE NADA ENCONTRADO:
 }
 
 
-URL: /api/Horarios/listar
+URL: /api/Horarios/Listar
 Função: Listar as disciplinas
 PEDIDO:
 
@@ -189,7 +189,7 @@ RESPOSTA EM CASO DE NADA ENCONTRADO:
 	"corpo": []
 }
 
-URL: /api/Turma/listar
+URL: /api/Turma/Listar
 Função: Listar as turmas
 PEDIDO:
 
