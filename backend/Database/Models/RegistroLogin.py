@@ -1,11 +1,12 @@
 class ResgistroLogin(object):
-		def __init__ (self,dados):
-			if dados is not None:
-				self.id = dados['id']
-				self.token = dados['token']
-				self.id_usuario = dados['id_usuario']
-				self.ip = dados['ip']
-				self.entrada = dados['entrada']
+	
+	def __init__ (self,dados):
+		if dados is not None:
+			self.id = dados['id']
+			self.token = dados['token']
+			self.id_usuario = dados['id_usuario']
+			self.ip = dados['ip']
+			self.entrada = dados['entrada']
 		
 	def getId(self):
 		return self.id
