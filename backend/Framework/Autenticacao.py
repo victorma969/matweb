@@ -13,9 +13,19 @@ class Autenticacao(object):
 			return None
 
 	@staticmethod
-	def criarToken(usuario,ip):
+	def gerarToken(usuario,ip):
 		token = ModelRegistroLogin()
 		token.setUsuario(usuario)
 		token.setToken(uuid.uuid4().hex)
 		token.setIp(ip)
 		token = DBRegistroLogin().inserirRegistro(token)
+
+	@staticmethod
+	def temAcesso(metodo,perfis):
+		def metodo_com_acesso(self,pedido):
+			usuario = Autenticacao.getUsuarioPeloTokenEIpEValido(pedido.variaveis_do_ambiente["AUTHORIZATION"])
+			if usuario.getPerfil() in perfis:
+				return metodo(self,pedido,usuario)
+			else:
+				ErroNoHTTP(403,"Acesso Negado!")
+		return metodo_com_acesso
