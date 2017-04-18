@@ -20,8 +20,14 @@ class ResgistroLogin(object):
 	def setId_usuario (self,id_usuario):
 		self.id_usuario = id_usuario
 
+	def setUsuario(self,usuario):
+		self.id_usuario = usuario.getId()
+
 	def getId_usuario (self):
 		return self.id_usuario
+
+	def getUsuario(self):
+		pass
 		
 	def getIp (self):
 		return self.ip
