@@ -2,9 +2,9 @@
 from Framework.Controller import Controller
 from Framework.ErroNoHTTP import ErroNoHTTP
 from Database.Controllers.Usuario import Usuario as BDUsuario
-from Database.Controllers.Usuario import Usuario as BDUsuario
 from Models.Usuario.RespostaEntrar import RespostaEntrar
-from Models.Usuario.Usuario import Usuario as ModelUsuario
+from Models.Usuario.RespostaCadastrar import RespostaCadastrar
+from Database.Models.Usuario import Usuario as ModelUsuario
 import bcrypt
 import uuid
 
@@ -24,7 +24,7 @@ class Usuario(Controller):
 		usuario = BDUsuario().pegarUsuario("WHERE matricula = %s OR cpf = %s",(pedido_entrar.getLoginDoUsuario(),pedido_entrar.getLoginDoUsuario()))
 		if usuario is not None:
 			if(bcrypt.hashpw(pedido_entrar.getSenhaDoUsuario().encode('utf-8'), usuario.getSenhaHashed().encode('utf-8')) == usuario.getSenhaHashed().encode('utf-8')):
-				return RespostaEntrar(self.__gerarToken(usuario,pedido_entrar),ModelUsuario(usuario))
+				return RespostaEntrar(self.__gerarToken(usuario,pedido_entrar),usuario)
 			else:
 				raise ErroNoHTTP(401,"Senha inválida!")
 		else:
@@ -48,7 +48,14 @@ class Usuario(Controller):
 		usuarios = BDUsuario().pegarUsuario("WHERE id = %s",(pedido_ver.getId()))
 
 	def Cadastrar(self,pedido_cadastrar):
-		
+		usuario = ModelUsuario()
+		usuario.setNome(pedido_cadastrar.getNome())
+		usuario.setMatricula(pedido_cadastrar.getMatricula())
+		usuario.setCpf(pedido_cadastrar.getCpf())
+		usuario.setPerfil(pedido_cadastrar.getPerfil())
+		usuario.setSenhaHashed(pedido_cadastrar.getSenha())
+		return RespostaCadastrar(BDUsuario().inserirUsuario(usuario))
+
 
 	def Ver(self,pedido_ver):
 		usuario = BDUsuario().pegarUsuario("WHERE id = %s",(pedido_ver.getId()))
