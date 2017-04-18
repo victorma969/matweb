@@ -28,11 +28,11 @@ body {
   padding: 0 15px;
   min-height: 568px;
   background-color: red;
- .Imagem {background: url(css/2816.jpg) no-repeat;}
+ .Imagem {background: url(frontend/css/2816.jpg) no-repeat;}
 
  
 
-body {margin: 0 auto;background: url(../css/2816.jpg) repeat-x;}
+body {margin: 0 auto;background: url(frontend/css/2816.jpg) repeat-x;}
 
  
 
