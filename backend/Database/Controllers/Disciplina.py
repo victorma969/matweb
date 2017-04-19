@@ -6,7 +6,7 @@ class Disciplina(object):
 		
 	def pegarDisciplinas(self, condicao, valores):
 		disciplinas = []
-		for disciplina in BancoDeDados().consultarMultiplos("SELECT * FROM disciplina WHERE LOWER(name) = LOWER(name) %s" % (condicao), valores):
+		for disciplina in BancoDeDados().consultarMultiplos("SELECT * FROM disciplina WHERE %s" % (condicao), valores):
 			disciplinas.append(ModelDisciplina(disciplina))
 		return disciplinas
 	
