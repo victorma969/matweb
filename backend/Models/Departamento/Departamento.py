@@ -1,4 +1,5 @@
 class Departamento(object):
-	def __init__(self,campus):
-		self.id = campus.getId()
-		self.nome = campus.getNome()
+	def __init__(self,departamento):
+		self.id = departamento.getId()
+		self.id_campus = departamento.getIdCampus()
+		self.nome = departamento.getNome()
