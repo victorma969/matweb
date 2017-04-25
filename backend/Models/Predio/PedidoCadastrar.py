@@ -8,6 +8,9 @@ class PedidoCadastrar(Pedido):
 		try:
 			self.id = self.corpo['id']
 			self.nome = self.corpo['nome']
+			self.sigla = self.corpo['sigla']
+			self.latitude = self.corpo['latitude']
+			self.longitude = self.corpo['longitude']
 		except:
 			raise ErroNoHTTP(400)
 		
@@ -19,3 +22,21 @@ class PedidoCadastrar(Pedido):
 
 	def getNome(self):
 		return self.nome
+
+	def setSigla(self,sigla):
+		self.sigla = sigla
+		
+	def getSigla(self):
+		return self.sigla
+		
+	def setLatitude(self,latitude):
+		self.latitude = latitude
+	
+	def getLatitude(self):
+		return self.latitude
+		
+	def setLongitude(self,longitude):
+		self.longitude = longitude
+	
+	def getLongitude(self):
+		return self.longitude
