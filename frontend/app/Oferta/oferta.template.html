@@ -16,7 +16,7 @@
                             </fieldset>
                         </form>
 <ul>
-	<li ng-repeat="disciplina in $ctrl.disciplinas">
+	<li ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
 		  <p>{{disciplina.id}}</p>
 		  <p>{{disciplina.nome}}</p>
 	</li>
