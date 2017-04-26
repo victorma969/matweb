@@ -1,6 +1,7 @@
 from Framework.Controller import Controller
 from Database.Controllers.Predio import Predio as BDPredio
 from Models.Predio.RespostaListar import RespostaListar
+from Database.Models.Predio import Predio as ModelPredio
 
 class Predio(Controller):
 
