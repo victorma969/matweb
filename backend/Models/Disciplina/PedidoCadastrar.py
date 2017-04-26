@@ -8,7 +8,7 @@ class PedidoCadastrar(Pedido):
 		try:
 			self.id = self.corpo['id']
 			self.nome = self.corpo['nome']
-      self.codigo = self.corpo['codigo']
+                        self.codigo = self.corpo['codigo']
 		except:
 			raise ErroNoHTTP(400)
 		
@@ -20,9 +20,9 @@ class PedidoCadastrar(Pedido):
 
 	def getNome(self):
 		return self.nome
-   
-  def setCodigo(self,codigo):
-    self.codigo = codigo
-    
-  def getCodigo(self):
-    return self.codigo
+
+        def setCodigo(self,codigo):
+                self.codigo = codigo
+		
+	def getCodigo(self):
+                return self.codigo	
