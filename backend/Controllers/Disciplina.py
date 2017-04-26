@@ -2,6 +2,7 @@
 from Framework.Controller import Controller
 from Database.Controllers.Disciplina import Disciplina as BDDisciplina
 from Models.Disciplina.RespostaListar import RespostaListar
+from Database.Models.Disciplina import Disciplina as ModelDisciplina
 
 class Disciplina(Controller):
 
