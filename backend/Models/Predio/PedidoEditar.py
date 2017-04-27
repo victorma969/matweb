@@ -13,30 +13,17 @@ class PedidoEditar(Pedido):
 			self.longitude = self.corpo['longitude']
 		except:
 			raise ErroNoHTTP(400)
-		
 	def getId(self):
 		return self.id
-
-	def setNome(self,nome):
-		self.nome = nome
-
+		
 	def getNome(self):
 		return self.nome
 		
 	def getSigla(self):
 		return self.sigla
 		
-	def setLatitude(self,latitude):
-		self.latitude = latitude
-	
 	def getLatitude(self):
-		return self.latitude
-		
-	def setLongitude(self,longitude):
-		self.longitude = longitude
-		
-	def setSigla(self,sigla):
-		self.sigla = sigla	
+		return self.latitude	
 	
 	def getLongitude(self):
 		return self.longitude
