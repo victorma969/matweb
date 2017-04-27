@@ -2,6 +2,10 @@
 from Framework.Controller import Controller
 from Database.Controllers.Campus import Campus as BDCampus
 from Models.Campus.RespostaListar import RespostaListar
+from Models.Campus.RespostaCadastrar import RespostaCadastrar
+from Models.Campus.RespostaEditar import RespostaEditar
+from Models.Campus.RespostaVer import RespostaVer
+from Models.Campus.RespostaDeletar import RespostaDeletar
 from Database.Models.Campus import Campus as ModelCampus
 
 class Campus(Controller):
