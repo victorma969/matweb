@@ -3,5 +3,7 @@ angular.
   factory('ApiCampus', ['$resource',
     function($resource) {
       return $resource('/api/Campus', {}, {});
+              Listar: { method: 'POST' },
+  ]);
     }
   ]);
