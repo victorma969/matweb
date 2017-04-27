@@ -10,6 +10,7 @@ class PedidoCadastrar(Pedido):
 			self.sigla = self.corpo['sigla']
 			self.latitude = self.corpo['latitude']
 			self.longitude = self.corpo['longitude']
+			self.id_campus =self.corpo['id_campus']
 		except:
 			raise ErroNoHTTP(400)
 
@@ -24,3 +25,6 @@ class PedidoCadastrar(Pedido):
 	
 	def getLongitude(self):
 		return self.longitude
+	
+	def getId_campus(self):
+		return self.id_campus
