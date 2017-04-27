@@ -5,9 +5,7 @@ class PedidoCadastrar(Pedido):
 
 	def __init__(self,variaveis_do_ambiente):
 		super(PedidoCadastrar, self).__init__(variaveis_do_ambiente)
-		try:
-			if dados is not None:
-			
+		try:						
 			self.turno = dados ['turno']
 			self.inicio = dados ['inicio']
 			self.fim = dados ['fim']
