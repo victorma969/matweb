@@ -3,5 +3,5 @@ from Models.Departamento.Departamento import Departamento as ModelDepartamento
 
 class RespostaVer(Resposta):
 
-	def __init__(self,campus):
-		self.corpo = ModelCampus(campus)
+	def __init__(self,departamento):
+		self.corpo = ModelCampus(departamento)
