@@ -5,3 +5,4 @@ class Predio(object):
                 self.sigla = predio.getSigla()
 		self.latitude = predio.getLatitude()
 		self.longitude = predio.getLongitude()
+		self.id_campus = predio.getId_campus()
