@@ -165,6 +165,130 @@ ALTER SEQUENCE campus_id_seq OWNED BY campus.id;
 
 
 --
+-- Name: curriculo; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE curriculo (
+    id integer NOT NULL,
+    mec character(1),
+    credito_periodo_minimo integer,
+    credito_periodo_maximo integer,
+    limite_permanencia_minimo integer,
+    limite_permanencia_maximo integer,
+    creditos_exigidos integer,
+    creditos_exigidos_em_teste integer,
+    creditos_exigidos_tc integer,
+    creditos_exigidos_ac integer,
+    creditos_exigidos_dc integer,
+    id_curso integer,
+    id_opcao integer,
+    id_nivel integer
+);
+
+
+ALTER TABLE public.curriculo OWNER TO postgres;
+
+--
+-- Name: curriculo_disciplina; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE curriculo_disciplina (
+    id integer NOT NULL,
+    obrigatorio character(1),
+    ciclo character varying(6),
+    grupo character varying(6),
+    id_disciplina integer,
+    id_curriculo integer
+);
+
+
+ALTER TABLE public.curriculo_disciplina OWNER TO postgres;
+
+--
+-- Name: curriculo_disciplina_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE curriculo_disciplina_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.curriculo_disciplina_id_seq OWNER TO postgres;
+
+--
+-- Name: curriculo_disciplina_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE curriculo_disciplina_id_seq OWNED BY curriculo_disciplina.id;
+
+
+--
+-- Name: curriculo_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE curriculo_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.curriculo_id_seq OWNER TO postgres;
+
+--
+-- Name: curriculo_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE curriculo_id_seq OWNED BY curriculo.id;
+
+
+--
+-- Name: curso; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE curso (
+    id integer NOT NULL,
+    nome character varying(80) NOT NULL,
+    codigo character varying(4) NOT NULL,
+    permanencia_minima integer,
+    permanencia_maxima integer,
+    creditos_formatura integer,
+    creditos_optativos_concentracao integer,
+    creditos_optativos_conexa integer,
+    creditos_livres_maximo integer,
+    id_campus integer,
+    id_grau integer
+);
+
+
+ALTER TABLE public.curso OWNER TO postgres;
+
+--
+-- Name: curso_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE curso_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.curso_id_seq OWNER TO postgres;
+
+--
+-- Name: curso_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE curso_id_seq OWNED BY curso.id;
+
+
+--
 -- Name: departamento; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -236,6 +360,75 @@ ALTER SEQUENCE disciplina_id_seq OWNED BY disciplina.id;
 
 
 --
+-- Name: fluxo; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE fluxo (
+    id integer NOT NULL,
+    periodo_inicio character varying(7) NOT NULL,
+    periodo_fim character varying(7),
+    id_curso integer,
+    id_opcao integer
+);
+
+
+ALTER TABLE public.fluxo OWNER TO postgres;
+
+--
+-- Name: fluxo_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE fluxo_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.fluxo_id_seq OWNER TO postgres;
+
+--
+-- Name: fluxo_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE fluxo_id_seq OWNED BY fluxo.id;
+
+
+--
+-- Name: grau; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE grau (
+    id integer NOT NULL,
+    nome character varying(80) NOT NULL
+);
+
+
+ALTER TABLE public.grau OWNER TO postgres;
+
+--
+-- Name: grau_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE grau_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.grau_id_seq OWNER TO postgres;
+
+--
+-- Name: grau_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE grau_id_seq OWNED BY grau.id;
+
+
+--
 -- Name: horario; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -269,6 +462,108 @@ ALTER TABLE public.horario_id_seq OWNER TO postgres;
 --
 
 ALTER SEQUENCE horario_id_seq OWNED BY horario.id;
+
+
+--
+-- Name: nivel; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE nivel (
+    id integer NOT NULL,
+    nome character varying(80) NOT NULL
+);
+
+
+ALTER TABLE public.nivel OWNER TO postgres;
+
+--
+-- Name: nivel_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE nivel_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.nivel_id_seq OWNER TO postgres;
+
+--
+-- Name: nivel_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE nivel_id_seq OWNED BY nivel.id;
+
+
+--
+-- Name: opcao; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE opcao (
+    id integer NOT NULL,
+    nome character varying(80) NOT NULL,
+    id_curso integer
+);
+
+
+ALTER TABLE public.opcao OWNER TO postgres;
+
+--
+-- Name: opcao_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE opcao_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.opcao_id_seq OWNER TO postgres;
+
+--
+-- Name: opcao_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE opcao_id_seq OWNED BY opcao.id;
+
+
+--
+-- Name: periodo_fluxo_disciplina; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE periodo_fluxo_disciplina (
+    id integer NOT NULL,
+    periodo integer NOT NULL,
+    id_disciplina integer,
+    id_fluxo integer
+);
+
+
+ALTER TABLE public.periodo_fluxo_disciplina OWNER TO postgres;
+
+--
+-- Name: periodo_fluxo_disciplina_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE periodo_fluxo_disciplina_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.periodo_fluxo_disciplina_id_seq OWNER TO postgres;
+
+--
+-- Name: periodo_fluxo_disciplina_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE periodo_fluxo_disciplina_id_seq OWNED BY periodo_fluxo_disciplina.id;
 
 
 --
@@ -549,6 +844,27 @@ ALTER TABLE ONLY campus ALTER COLUMN id SET DEFAULT nextval('campus_id_seq'::reg
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
+ALTER TABLE ONLY curriculo ALTER COLUMN id SET DEFAULT nextval('curriculo_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY curriculo_disciplina ALTER COLUMN id SET DEFAULT nextval('curriculo_disciplina_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY curso ALTER COLUMN id SET DEFAULT nextval('curso_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
 ALTER TABLE ONLY departamento ALTER COLUMN id SET DEFAULT nextval('departamento_id_seq'::regclass);
 
 
@@ -563,7 +879,42 @@ ALTER TABLE ONLY disciplina ALTER COLUMN id SET DEFAULT nextval('disciplina_id_s
 -- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
+ALTER TABLE ONLY fluxo ALTER COLUMN id SET DEFAULT nextval('fluxo_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY grau ALTER COLUMN id SET DEFAULT nextval('grau_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
 ALTER TABLE ONLY horario ALTER COLUMN id SET DEFAULT nextval('horario_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY nivel ALTER COLUMN id SET DEFAULT nextval('nivel_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY opcao ALTER COLUMN id SET DEFAULT nextval('opcao_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY periodo_fluxo_disciplina ALTER COLUMN id SET DEFAULT nextval('periodo_fluxo_disciplina_id_seq'::regclass);
 
 
 --
@@ -680,6 +1031,51 @@ COPY campus (id, nome) FROM stdin;
 --
 
 SELECT pg_catalog.setval('campus_id_seq', 4, true);
+
+
+--
+-- Data for Name: curriculo; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY curriculo (id, mec, credito_periodo_minimo, credito_periodo_maximo, limite_permanencia_minimo, limite_permanencia_maximo, creditos_exigidos, creditos_exigidos_em_teste, creditos_exigidos_tc, creditos_exigidos_ac, creditos_exigidos_dc, id_curso, id_opcao, id_nivel) FROM stdin;
+\.
+
+
+--
+-- Data for Name: curriculo_disciplina; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY curriculo_disciplina (id, obrigatorio, ciclo, grupo, id_disciplina, id_curriculo) FROM stdin;
+\.
+
+
+--
+-- Name: curriculo_disciplina_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('curriculo_disciplina_id_seq', 1, false);
+
+
+--
+-- Name: curriculo_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('curriculo_id_seq', 1, false);
+
+
+--
+-- Data for Name: curso; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY curso (id, nome, codigo, permanencia_minima, permanencia_maxima, creditos_formatura, creditos_optativos_concentracao, creditos_optativos_conexa, creditos_livres_maximo, id_campus, id_grau) FROM stdin;
+\.
+
+
+--
+-- Name: curso_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('curso_id_seq', 1, false);
 
 
 --
@@ -1600,6 +1996,36 @@ SELECT pg_catalog.setval('disciplina_id_seq', 789, true);
 
 
 --
+-- Data for Name: fluxo; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY fluxo (id, periodo_inicio, periodo_fim, id_curso, id_opcao) FROM stdin;
+\.
+
+
+--
+-- Name: fluxo_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('fluxo_id_seq', 1, false);
+
+
+--
+-- Data for Name: grau; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY grau (id, nome) FROM stdin;
+\.
+
+
+--
+-- Name: grau_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('grau_id_seq', 1, false);
+
+
+--
 -- Data for Name: horario; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1614,6 +2040,51 @@ COPY horario (id, turno, inicio, fim, dia) FROM stdin;
 --
 
 SELECT pg_catalog.setval('horario_id_seq', 2, true);
+
+
+--
+-- Data for Name: nivel; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY nivel (id, nome) FROM stdin;
+\.
+
+
+--
+-- Name: nivel_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('nivel_id_seq', 1, false);
+
+
+--
+-- Data for Name: opcao; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY opcao (id, nome, id_curso) FROM stdin;
+\.
+
+
+--
+-- Name: opcao_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('opcao_id_seq', 1, false);
+
+
+--
+-- Data for Name: periodo_fluxo_disciplina; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY periodo_fluxo_disciplina (id, periodo, id_disciplina, id_fluxo) FROM stdin;
+\.
+
+
+--
+-- Name: periodo_fluxo_disciplina_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('periodo_fluxo_disciplina_id_seq', 1, false);
 
 
 --
@@ -1756,6 +2227,30 @@ ALTER TABLE ONLY campus
 
 
 --
+-- Name: curriculo_disciplina_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY curriculo_disciplina
+    ADD CONSTRAINT curriculo_disciplina_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: curriculo_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY curriculo
+    ADD CONSTRAINT curriculo_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: curso_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY curso
+    ADD CONSTRAINT curso_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: departamento_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
@@ -1772,11 +2267,51 @@ ALTER TABLE ONLY disciplina
 
 
 --
+-- Name: fluxo_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY fluxo
+    ADD CONSTRAINT fluxo_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: grau_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY grau
+    ADD CONSTRAINT grau_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: horario_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
 --
 
 ALTER TABLE ONLY horario
     ADD CONSTRAINT horario_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: nivel_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY nivel
+    ADD CONSTRAINT nivel_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: opcao_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY opcao
+    ADD CONSTRAINT opcao_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: periodo_fluxo_disciplina_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY periodo_fluxo_disciplina
+    ADD CONSTRAINT periodo_fluxo_disciplina_pkey PRIMARY KEY (id);
 
 
 --
@@ -1892,6 +2427,62 @@ ALTER TABLE ONLY ass_turma_prof
 
 
 --
+-- Name: curriculo_disciplina_id_curriculo_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY curriculo_disciplina
+    ADD CONSTRAINT curriculo_disciplina_id_curriculo_fkey FOREIGN KEY (id_curriculo) REFERENCES curriculo(id) ON DELETE CASCADE;
+
+
+--
+-- Name: curriculo_disciplina_id_disciplina_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY curriculo_disciplina
+    ADD CONSTRAINT curriculo_disciplina_id_disciplina_fkey FOREIGN KEY (id_disciplina) REFERENCES disciplina(id) ON DELETE CASCADE;
+
+
+--
+-- Name: curriculo_id_curso_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY curriculo
+    ADD CONSTRAINT curriculo_id_curso_fkey FOREIGN KEY (id_curso) REFERENCES curso(id) ON DELETE CASCADE;
+
+
+--
+-- Name: curriculo_id_nivel_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY curriculo
+    ADD CONSTRAINT curriculo_id_nivel_fkey FOREIGN KEY (id_nivel) REFERENCES nivel(id) ON DELETE CASCADE;
+
+
+--
+-- Name: curriculo_id_opcao_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY curriculo
+    ADD CONSTRAINT curriculo_id_opcao_fkey FOREIGN KEY (id_opcao) REFERENCES opcao(id) ON DELETE CASCADE;
+
+
+--
+-- Name: curso_id_campus_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY curso
+    ADD CONSTRAINT curso_id_campus_fkey FOREIGN KEY (id_campus) REFERENCES campus(id) ON DELETE CASCADE;
+
+
+--
+-- Name: curso_id_grau_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY curso
+    ADD CONSTRAINT curso_id_grau_fkey FOREIGN KEY (id_grau) REFERENCES grau(id) ON DELETE CASCADE;
+
+
+--
 -- Name: departamento_id_campus_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -1905,6 +2496,46 @@ ALTER TABLE ONLY departamento
 
 ALTER TABLE ONLY disciplina
     ADD CONSTRAINT disciplina_id_departamento_fkey FOREIGN KEY (id_departamento) REFERENCES departamento(id) ON DELETE CASCADE;
+
+
+--
+-- Name: fluxo_id_curso_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY fluxo
+    ADD CONSTRAINT fluxo_id_curso_fkey FOREIGN KEY (id_curso) REFERENCES curso(id) ON DELETE CASCADE;
+
+
+--
+-- Name: fluxo_id_opcao_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY fluxo
+    ADD CONSTRAINT fluxo_id_opcao_fkey FOREIGN KEY (id_opcao) REFERENCES opcao(id) ON DELETE CASCADE;
+
+
+--
+-- Name: opcao_id_curso_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY opcao
+    ADD CONSTRAINT opcao_id_curso_fkey FOREIGN KEY (id_curso) REFERENCES curso(id) ON DELETE CASCADE;
+
+
+--
+-- Name: periodo_fluxo_disciplina_id_disciplina_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY periodo_fluxo_disciplina
+    ADD CONSTRAINT periodo_fluxo_disciplina_id_disciplina_fkey FOREIGN KEY (id_disciplina) REFERENCES disciplina(id) ON DELETE CASCADE;
+
+
+--
+-- Name: periodo_fluxo_disciplina_id_fluxo_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY periodo_fluxo_disciplina
+    ADD CONSTRAINT periodo_fluxo_disciplina_id_fluxo_fkey FOREIGN KEY (id_fluxo) REFERENCES fluxo(id) ON DELETE CASCADE;
 
 
 --
