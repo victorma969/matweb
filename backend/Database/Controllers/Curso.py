@@ -4,7 +4,7 @@ from Database.Models.Curso import Curso as ModelCurso
 
 class Curso(object):
 	
-	def pegarCurso(self, condicao, valores):
+	def pegarCursos(self, condicao, valores):
 		cursos = []
 		for curso in BancoDeDados().consultarMultiplos("SELECT * FROM curso %s" % (condicao), valores):
 			cursos.append(ModelCurso(curso))
