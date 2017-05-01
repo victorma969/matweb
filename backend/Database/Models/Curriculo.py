@@ -7,6 +7,7 @@ class Curriculo(object):
 	def __init__(self,dados=None):
 		if dados is not None:
 			self.id = dados ['id']
+			self.mec = dados['mec']
 			self.credito_periodo_minimo = dados['credito_periodo_minimo']
 			self.credito_periodo_maximo = dados['credito_periodo_maximo']
 			self.limite_permanencia_minimo = dados['limite_permanencia_minimo']
@@ -23,6 +24,12 @@ class Curriculo(object):
 				
 	def getId(self):
 		return self.id
+		
+	def setMec(self,mec):
+		self.mec = mec
+	
+	def getMec(self):
+		return self.mec
 
 	def setCredito_periodo_minimo(self,credito_periodo_minimo):
 		self.credito_periodo_minimo = credito_periodo_minimo
