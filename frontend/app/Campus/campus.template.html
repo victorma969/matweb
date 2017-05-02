@@ -8,18 +8,18 @@
                     </div>
                     <div class="panel-body">
                         <form role="form" ng-submit="$ctrl.pesquisar()">
-                            <fieldset>  
+                            <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Nome da disciplina" ng-model="$ctrl.nome_campus" type="text" autofocus>
+                                    <input class="form-control" placeholder="Nome da disciplina" ng-model="$ctrl.nome_disciplina" type="text" autofocus>
                                 </div>
                                 <button class="btn btn-lg btn-success btn-block">Pesquisar</button>
                             </fieldset>
                         </form>
 
 <ul>
-    <li ng-repeat="um_campus in $ctrl.campus | filter: $ctrl.nome_campus">
-          <p>{{um_campus.id}}</p>
-          <p>{{um_campus.nome}}</p>
+    <li ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
+          <p>{{disciplina.id}}</p>
+          <p>{{disciplina.nome}}</p>
     </li>
 </ul>
 
