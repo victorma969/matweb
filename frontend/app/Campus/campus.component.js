@@ -2,7 +2,7 @@ angular.
   module('Campus').
   component('ofertaCampus', {
     templateUrl: '/app/Campus/campus.template.html',
-    controller: ['ApiOferta', 'MatWebGlobals',function Entrar(ApiOferta,MatWebGlobals) {
+    controller: ['ApiCampus', 'MatWebGlobals',function Entrar(ApiCampus,MatWebGlobals) {
       this.nome_campus = "";
   var ctrl = this;
   ctrl.campus = [];
