@@ -17,9 +17,9 @@
                         </form>
 
 <ul>
-    <li ng-repeat="campus_dois in $ctrl.campus | filter: $ctrl.nome_campus">
-          <p>{{campus_dois.id}}</p>
-          <p>{{campus_dois.nome}}</p>
+    <li ng-repeat="campus in $ctrl.campus | filter: $ctrl.nome_campus">
+          <p>{{campus.id}}</p>
+          <p>{{campus.nome}}</p>
     </li>
 </ul>
 
