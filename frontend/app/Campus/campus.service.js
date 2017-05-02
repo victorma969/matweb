@@ -2,8 +2,9 @@ angular.
   module('Campus').
   factory('ApiCampus', ['$resource',
     function($resource) {
-return $resource('/api/Campus/Listar', {}, {
+	return $resource('/api/Disciplina/Listar', {}, {
         Listar: { method: 'POST' },
+
       });
     }
   ]);
