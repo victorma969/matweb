@@ -19,7 +19,6 @@
 <table class = "table table-bordered">
     <thead>
             <tr>
-            
                 <th> {{num}}</th>
                 <th> {{materias}}</th>
             </tr>
@@ -28,6 +27,7 @@
         <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
         <td> {{disciplina.id}} </td>
         <td> {{disciplina.nome}} </td>
+        </tr>
     </tbody>
 </table>
                     </div>
