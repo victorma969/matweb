@@ -8,7 +8,7 @@ angular.
   ctrl.horario = [];
       this.pesquisar = function()
       {
-        ApiHorario.Listar({id_horario: 95 , nome: ctrl.nome_horario, pagina: 0, quantidade: 1000 },function(resultado) {
+        ApiHorario.Listar({},function(resultado) {
               ctrl.horario = resultado.corpo
       console.log(ctrl.horario)
     }, function(erro){

@@ -15,12 +15,21 @@
                                 <button class="btn btn-lg btn-success btn-block">Pesquisar</button>
                             </fieldset>
                         </form>
-<ul>
-	<li ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
-		  <p>{{disciplina.id}}</p>
-		  <p>{{disciplina.nome}}</p>
-	</li>
-</ul>
+
+<table class = "table table-bordered">
+    <thead>
+            <tr>
+                <th> {{num}}</th>
+                <th> {{materias}}</th>
+            </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
+        <td> {{disciplina.id}} </td>
+        <td> {{disciplina.nome}} </td>
+        </tr>
+    </tbody>
+</table>
                     </div>
                 </div>
             </div>

@@ -10,17 +10,19 @@
                         <form role="form" ng-submit="$ctrl.pesquisar()">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Nome da disciplina" ng-model="$ctrl.campus" type="text" autofocus>
+                                    <input class="form-control" placeholder="Nome da disciplina" ng-model="$ctrl.nome_campus" type="text" autofocus>
                                 </div>
                                 <button class="btn btn-lg btn-success btn-block">Pesquisar</button>
                             </fieldset>
                         </form>
+
 <ul>
-	<li ng-repeat="campus in $ctrl.campus | filter: $ctrl.campus">
-		  <p>{{campus.id}}</p>
-		  <p>{{campus.nome}}</p>
-	</li>
+    <li ng-repeat="campus in $ctrl.campus | filter: $ctrl.nome_campus">
+          <p>{{campus.id}}</p>
+          <p>{{campus.nome}}</p>
+    </li>
 </ul>
+
                     </div>
                 </div>
             </div>
