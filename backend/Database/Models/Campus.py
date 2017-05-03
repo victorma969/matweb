@@ -4,7 +4,7 @@ class Campus(object):
 		if dados is not None:
 			self.id = dados ['id']
 			self.nome = dados ['nome']
-			self.codigo = codigo ['codigo']
+			self.codigo = dados ['codigo']
 			
 	def getId(self):
 		return self.id
