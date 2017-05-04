@@ -15,7 +15,7 @@ class Departamento(Controller):
 		return RespostaListar(BDDepartamento().pegarDepartamentos("WHERE id_campus = %s AND nome LIKE %s LIMIT %s OFFSET %s",(str(pedido_listar.getIdCampus()),"%"+pedido_listar.getNome().replace(' ','%')+"%",str(pedido_listar.getQuantidade()),(str(pedido_listar.getQuantidade()*pedido_listar.getPagina())))))
 
 	def Ver(self, pedido_ver):
-		return RespostaVer(BDDepartamento().pegarDepartamentos("WHERE id = %s ", (pedido_ver.getId())))
+		return RespostaVer(BDDepartamento().pegarDepartamento("WHERE id = %s ", (pedido_ver.getId())))
 
 	def Cadastrar(self,pedido_cadastrar):
 		departamento = ModelDepartamento()
@@ -26,7 +26,7 @@ class Departamento(Controller):
 		return RespostaCadastrar(BDDepartamento().inserirDepartamento(departamento))
 
 	def Editar(self,pedido_editar):
-		departamento = BDDepartamento().pegarDepartamentos("WHERE id = %s ", (pedido_editar.getId()))
+		departamento = BDDepartamento().pegarDepartamento("WHERE id = %s ", (pedido_editar.getId()))
 		departamento.setNome(pedido_editar.getNome())
 		departamento.setCodigo(pedido_editar.getCodigo())
 		departamento.setSigla(pedido_editar.getSigla())
@@ -35,7 +35,7 @@ class Departamento(Controller):
 		return RespostaEditar("Departamento Editado com sucesso!")
 
 	def Deletar(self,pedido_deletar):
-		departamento = BDDepartamento().pegarDepartamentos("WHERE id = %s ", (pedido_deletar.getId()))		
+		departamento = BDDepartamento().pegarDepartamento("WHERE id = %s ", (pedido_deletar.getId()))		
 		BDDepartamento().removerDepartamento(departamento)
 		return RespostaDeletar("Departamento Removido com sucesso!")
 
