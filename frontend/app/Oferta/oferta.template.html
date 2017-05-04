@@ -20,6 +20,8 @@
     <table class = "table table-bordered table-striped table-hover">
         <tbody>
             <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
+                <th> {{$ctrl.nume}}</th>
+                <th> {{$ctrl.mat}}</th>
                 <td> {{disciplina.id}} </td>
                 <td> {{disciplina.nome}} </td>
             </tr>
