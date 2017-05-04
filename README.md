@@ -33,4 +33,5 @@ Executar Servidor da API
 
 > Dentro da pasta backend, execute:
 > uwsgi --http-socket :8080 --module __init__:application
+>
 
