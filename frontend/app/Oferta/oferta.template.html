@@ -19,9 +19,9 @@
 <div class="table-responsive">
     <table class = "table table-bordered table-striped table-hover">
         <tbody>
-            <tr> {{$ctrl.nume}}</tr>
-            <tr> {{$ctrl.mat}}</tr>
             <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
+                <tr> {{$ctrl.nume}}</tr>
+                <tr> {{$ctrl.mat}}</tr>
                 <td> {{disciplina.id}} </td>
                 <td> {{disciplina.nome}} </td>
             </tr>
