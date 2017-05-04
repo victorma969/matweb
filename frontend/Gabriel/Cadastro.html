@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>
+
+
+<head>
+	<title>Cadastro</title>
+
+</head>
+<style>
+h1 {
+    text-align: center;
+}
+ 
+</style>
+
+    <header class="w3-container w3-teal">
+     <h1>Cadastro do Aluno</h1>
+    </header>
+
+<html lang="en">
+<head>
+  
+
+</head>
+<body>
+
+<div class="container">
+  <h2></h2>
+  <form class="form-horizontal" action="/action_page.php">
+    <div class="form-group">
+      
+      <label class="control-label col-sm-2" for="nome">Nome Completo:</label >
+      <div class="col-sm-4" >
+        <input type="text" class="form-control" id="nome">
+      </div>
+    </div>
+    <div class="form-group">
+
+
+      <label class="control-label col-sm-2" for="email">Matricula:</label>
+      <div class="col-sm-4">
+        <input type="matricula" class="form-control" id="matricula" maxlength=9>
+      </div>
+    </div>
+    <div class="form-group">
+     
+      <label class="control-label col-sm-2" for="email">CPF:</label>
+      <div class="col-sm-4">
+        <input type="cpf" class="form-control" id="cpf" maxlength=11>
+      </div>
+    </div>
+    <div class="form-group"> 
+
+       <label class="control-label col-sm-2" for="identidade">Identidade:</label>
+      <div class="col-sm-4">
+        <input type="identidade" class="form-control" id="identidade" maxlength=7>
+      </div>
+    </div>
+    <div class="form-group">    
+
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="email">
+      </div>
+    </div>
+    <div class="form-group">
+     
+
+<!--	   <label class="control-label col-sm-2" for="data de nascimento">Data De Nascimento:</label>
+  		<div class="col-sm-4">
+   		 <input class="form-control" type="date" id="data de nascimento" maxlength=8>
+  		</div>
+    </div>
+    <div class="form-group">
+
+    	  <label class=" control-label col-sm-2" for="example-tel-input">Telefone:</label>
+  		<div class="col-sm-4">
+   		 <input class="form-control" type="tel" value="" id="example-tel-input" maxlength=11>
+ 		</div>
+	</div>
+	<div class="form-group">
+-->
+
+    
+           <label class=" control-label col-sm-2" for="Sexo">Sexo:</label>
+           <div class="col-sm-4">
+      <label><input type="radio" name="optsexo">Masculino</label>
+      <label><input type="radio" name="optsexo">Feminino</label>
+    </div>
+  </div>
+  <div class="form-group">
+
+
+        <label class=" control-label col-sm-2" for="example-tel-input">UF:</label>
+      <div class="col-sm-4">
+       <input class="form-control" type="uf" value="" id="uf" maxlength=2>
+    </div>
+  </div>
+  <div class="form-group">
+
+
+
+  
+   <label class=" control-label col-sm-2" for="Raça/cor">Raça/cor:</label>
+  <div class="col-sm-4">
+   <select class="w3-select" name="option">
+    <option value="" disabled selected>Raça/cor:</option>
+    <option value="2">Amarela</option>
+    <option value="3">Branca</option>
+    <option value="4">Indigena</option>
+    <option value="5">Parda</option>
+    <option value="6">Não declarar</option>
+  </select>
+    </div>
+  </div>
+  <div class="form-group">
+
+     
+
+        <label class=" control-label col-sm-2" for="nivelt">Nivel:</label>
+      <div class="col-sm-4">
+       <input class="form-control" type="text"  id="uf">
+    </div>
+  </div>
+  <div class="form-group">
+
+        <label class=" control-label col-sm-2" for="example-tel-input">Ano de conclusão do ensino médio:</label>
+      <div class="col-sm-4">
+       <input class="form-control" type="conclusao" id="conclusao" maxlength=4>
+    </div>
+  </div>
+  <div class="form-group">
+
+        <label class=" control-label col-sm-2" for="nome do pai">Nome do pai:</label>
+      <div class="col-sm-4">
+       <input class="form-control" type="text"  id="nome">
+    </div>
+  </div>
+  <div class="form-group">
+
+        <label class=" control-label col-sm-2" for="nome da mãe">Nome da mãe:</label>
+      <div class="col-sm-4">
+       <input class="form-control" type="text" id="nome">
+    </div>
+  </div>
+  <div class="form-group">
+  
+    
+  
+       <label class="control-label col-sm-2" for="pwd">Password:</label>
+    	  <div class="col-sm-4">          
+       		 <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      </div>
+    <div class="form-group">    
+         
+     
+    </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+      <button class="w3-button w3-white w3-border">Cadastrar</button>
+
+      </div>
+    </div>
+  </form>
+</div>
+
