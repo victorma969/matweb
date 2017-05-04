@@ -1,7 +1,7 @@
 angular.
   module('Curso').
   component('ofertaCurso', {
-    templateUrl: '/app/Curso/curso.template.html',
+    templateUrl: '/app/Curso/registrar.template.html',
     controller: ['ApiCurso', 'MatWebGlobals',function Entrar(ApiCurso,MatWebGlobals) {
       this.nome_curso = "";
 	var ctrl = this;
@@ -18,3 +18,4 @@ angular.
    	  }
     }]
   });
+
