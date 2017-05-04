@@ -5,7 +5,7 @@ angular.
     controller: ['ApiOferta', 'MatWebGlobals',function Entrar(ApiOferta,MatWebGlobals) {
       this.nome_disciplina = "";
       this.nume = "ID das disciplinas";
-      this.mat = "Disciplina";
+      this.mat = "Máteria";
 	var ctrl = this;
 	ctrl.disciplinas = [];
       this.pesquisar = function()

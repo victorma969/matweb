@@ -18,14 +18,10 @@
 
 <div class="table-responsive">
     <table class = "table table-bordered table-striped table-hover">
-        <thead>
-                <tr>
-                    <th> {{$ctrl.nume}}</th>
-                    <th>  porra </th>
-                </tr>
-        </thead>
         <tbody>
             <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
+                <td> {{$ctrl.nume}}</td>
+                <td> {{$ctrl.mat}}</td>
                 <td> {{disciplina.id}} </td>
                 <td> {{disciplina.nome}} </td>
             </tr>
