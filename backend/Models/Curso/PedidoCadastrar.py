@@ -11,12 +11,12 @@ class PedidoCadastrar(Pedido):
 			self.codigo = self.corpo['codigo']
 			self.id_grau = self.corpo['id_grau']
 			self.id_campus = self.corpo['id_campus']
-      self.permanencia_minima = self.corpo['permanencia_minima']
-      self.permanencia_maxima = self.corpo['permanencia_maxima']
-      self.creditos_formatura = self.corpo['creditos_formatura']
-      self.creditos_optativos_concentracao = self.corpo['creditos_optativos_concentracao']
-      self.creditos_optativos_conexa = self.corpo['creditos_optativos_conexa']
-      self.creditos_livres_maximo = self.corpo['creditos_livres_maximo']
+                        self.permanencia_minima = self.corpo['permanencia_minima']
+                        self.permanencia_maxima = self.corpo['permanencia_maxima']
+                        self.creditos_formatura = self.corpo['creditos_formatura']
+                        self.creditos_optativos_concentracao = self.corpo['creditos_optativos_concentracao']
+                        self.creditos_optativos_conexa = self.corpo['creditos_optativos_conexa']
+                        self.creditos_livres_maximo = self.corpo['creditos_livres_maximo']
 		except:
 			raise ErroNoHTTP(400)
 	
@@ -31,22 +31,22 @@ class PedidoCadastrar(Pedido):
 		
 	def getId_campus(self):
 		return self.id_campus
-    
-  def getPermanencia_minima(self):
-    return self.permanencia_minima
-    
-  def getPermanencia_maxima(self):
-    return self.permanencia_maxima
-    
-  def getCreditos_formatura(self):
-    return self.creditos_formatura
-    
-  def getCreditos_optativos_concentracao(self):
-    return self.creditos_optativos_concentracao
-    
-  def getCreditos_optativos_conexa(self):
-    return self.creditos_optativos_conexa
-    
-  def getCreditos_livres_maximo(self):
-    return self.creditos_livres_maximo 
+	
+	def getPermanencia_minima(self):
+                return self.permanencia_minima
+	
+	def getPermanencia_maxima(self):
+                return self.permanencia_maxima
+        
+	def getCreditos_formatura(self):
+                return self.creditos_formatura
+	
+	def getCreditos_optativos_concentracao(self):
+                return self.creditos_optativos_concentracao
+        
+	def getCreditos_optativos_conexa(self):
+                return self.creditos_optativos_conexa
+        
+	def getCreditos_livres_maximo(self):
+                return self.creditos_livres_maximo 
 		
