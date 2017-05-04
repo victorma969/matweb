@@ -4,7 +4,7 @@ angular.
     templateUrl: '/app/Oferta/oferta.template.html',
     controller: ['ApiOferta', 'MatWebGlobals',function Entrar(ApiOferta,MatWebGlobals) {
       this.nome_disciplina = "";
-      this.num = "ID das disciplinas";
+      this.nume = "ID das disciplinas";
       this.materias = "Disciplina";
 	var ctrl = this;
 	ctrl.disciplinas = [];
