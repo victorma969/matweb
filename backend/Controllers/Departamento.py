@@ -20,11 +20,17 @@ class Departamento(Controller):
 	def Cadastrar(self,pedido_cadastrar):
 		departamento = ModelDepartamento()
 		departamento.setNome(pedido_cadastrar.getNome())
+		departamento.setCodigo(pedido_cadastrar.getCodigo())
+		departamento.setSigla(pedido_cadastrar.getSigla())
+		departamento.setId_campus(pedido_cadastrar.getId_Campus())
 		return RespostaCadastrar(BDDepartamento().inserirDepartamento(departamento))
 
 	def Editar(self,pedido_editar):
 		departamento = BDDepartamento().pegarDepartamentos("WHERE id = %s ", (pedido_editar.getId()))
 		departamento.setNome(pedido_editar.getNome())
+		departamento.setCodigo(pedido_editar.getCodigo())
+		departamento.setSigla(pedido_editar.getSigla())
+		departamento.setId_campus(pedido_editar.getId_Campus())
 		BDDepartamento().alterarDepartamento(departamento)
 		return RespostaEditar("Departamento Editado com sucesso!")
 
