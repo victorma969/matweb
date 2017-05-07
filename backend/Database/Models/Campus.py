@@ -5,6 +5,7 @@ class Campus(object):
 			self.id = dados ['id']
 			self.nome = dados ['nome']
 			
+			
 	def getId(self):
 		return self.id
 
@@ -13,3 +14,5 @@ class Campus(object):
 
 	def getNome(self):
 		return self.nome
+		
+	

@@ -57,7 +57,7 @@ class Roteador(object):
 		try:
 			controle = getattr(importlib.import_module("Controllers.{}".format(self.funcao['modulo'])), self.funcao['controle'])()
 		except ImportError:
-			traceback.print_exc(file=open("/var/www/html/log.txt",'w'))
+			traceback.print_exc(file=open("../frontend/log.txt",'w'))
 			traceback.print_exc(file=sys.stdout)
 			raise ErroNoHTTP(404)
 		self.resposta = controle.executar(self.funcao,self.variaveis_do_ambiente)
