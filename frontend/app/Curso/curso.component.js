@@ -4,6 +4,9 @@ angular.
     templateUrl: '/app/Curso/curso.template.html',
     controller: ['ApiCurso', 'MatWebGlobals',function Entrar(ApiCurso,MatWebGlobals) {
       this.nome_curso = "";
+      this.num = "ID do curso";
+      this.departamento = "Departamento";
+      this.cursos = "Cursos";
 	var ctrl = this;
 	ctrl.cursos = [];
       this.pesquisar = function()
@@ -18,3 +21,4 @@ angular.
    	  }
     }]
   });
+

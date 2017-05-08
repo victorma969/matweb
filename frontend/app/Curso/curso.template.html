@@ -6,12 +6,31 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Cursos</h3>
                     </div>
-<ul>
-	<li ng-repeat="cursos in $ctrl.cursos">
-		  <p>{{curso.id}}</p>
-		  <p>{{curso.nome}}</p>
-	</li>
-</ul>
+                    <div class="panel-body">
+                        <form role="form" ng-submit="$ctrl.pesquisar()">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nome do curso" ng-model="$ctrl.nome_curso" type="text" autofocus>
+                                </div>
+                                <button class="btn btn-lg btn-success btn-block">Pesquisar</button>
+                            </fieldset>
+                        </form>
+<div class="table-responsive">
+    <table class = "table table-bordered table table-striped table table-hover">
+        <thead>
+                <tr>
+                    <th> {{$ctrl.num}}</th>
+                    <th> {{$crtl.cursos}}</th>
+                </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="curso in $ctrl.curso | filter: $ctrl.nome_curso">
+                <td> {{curso.id}} </td>
+                <td> {{curso.nome}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
                     </div>
                 </div>
             </div>
