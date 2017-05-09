@@ -13,8 +13,8 @@ class PedidoCadastrar(Pedido):
 		except:
 			raise ErroNoHTTP(400)
 		
-	def getId(self):
-		return self.id
+	def getId_departamento(self):
+		return self.id_departamento
 
 	def getNome(self):
 		return self.nome    
