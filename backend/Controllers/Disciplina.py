@@ -14,7 +14,7 @@ class Disciplina(Controller):
 		return RespostaListar(BDDisciplina().pegarDisciplinas("WHERE id_departamento = %s AND nome LIKE %s LIMIT %s OFFSET %s",(str(pedido_listar.getIdDepartamento()),"%"+pedido_listar.getNome().replace(' ','%')+"%",str(pedido_listar.getQuantidade()),(str(pedido_listar.getQuantidade()*pedido_listar.getPagina())))))
 	
 	def Ver(self, pedido_ver):
-		return RespostaVer(BDDisciplina().pegarDiscina("WHERE id = %s ", (str(pedido_ver.getId()),)))
+		return RespostaVer(BDDisciplina().pegarDisciplina("WHERE id = %s ", (str(pedido_ver.getId()),)))
 	
 	def Cadastrar(self,pedido_cadastrar):
 		disciplina = ModelDisciplina()
