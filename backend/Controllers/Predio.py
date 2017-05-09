@@ -10,7 +10,7 @@ from Database.Models.Predio import Predio as ModelPredio
 class Predio(Controller):
 
 	def Listar(self,pedido_listar):
-		return RespostaListar(BDPredio().pegarPredios("WHERE id_campus = %s AND nome LIKE %s LIMIT %s OFFSET %s",(pedido_listar.getIdCampus(),"%".pedido_listar.getNome().replace(' ','%')."%",pedido_listar.getQuantidade(),(pedido_listar.getQuantidade()*pedido_listar.getPagina()))))
+		return RespostaListar(BDPredio().pegarPredios("WHERE id_campus = %s AND nome LIKE %s LIMIT %s OFFSET %s",(pedido_listar.getIdCampus(),"%"+pedido_listar.getNome().replace(' ','%')+"%",pedido_listar.getQuantidade(),(pedido_listar.getQuantidade()*pedido_listar.getPagina()))))
 
 	def Ver(self, pedido_ver):     
 		return RespostaVer(BDPredio().pegarPredio("WHERE id = %s ", (pedido_ver.getId())))
