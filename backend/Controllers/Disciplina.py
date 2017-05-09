@@ -13,7 +13,7 @@ class Disciplina(Controller):
 		return RespostaVer(BDDisciplina().pegarDiscina("WHERE id = %s ", (str(pedido_ver.getId()),)))
 	
 	def Cadastrar(self,pedido_cadastrar):
-		disciplina = ModelDisciplin()
+		disciplina = ModelDisciplina()
 		disciplina.setNome(pedido_cadastrar.getNome())
 		disciplina.setCodigo(pedido_cadastrar.getCodigo())
 		return RespostaCadastrar(BDDisciplina().inserirDisciplina(disciplina))
