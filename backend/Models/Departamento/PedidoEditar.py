@@ -12,9 +12,6 @@ class PedidoEditar(Pedido):
 			self.id_campus = self.corpo['id_campus']
 		except:
 			raise ErroNoHTTP(400)
-		
-	def getId(self):
-		return self.id
 
 	
 	def getNome(self):
