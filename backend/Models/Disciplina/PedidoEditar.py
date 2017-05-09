@@ -6,8 +6,10 @@ class PedidoEditar(Pedido):
 	def __init__(self,variaveis_do_ambiente):
 		super(PedidoEditar, self).__init__(variaveis_do_ambiente)
 		try:
+			self.id = self.corpo['id']
+			self.id_departamento= self.corpo['id_departamento']
 			self.nome = self.corpo['nome']
-                        self.codigo = self.codigo['codigo']
+			self.codigo = self.corpo['codigo']
 		except:
 			raise ErroNoHTTP(400)
 
