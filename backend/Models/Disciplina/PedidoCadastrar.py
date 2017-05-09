@@ -17,7 +17,7 @@ class PedidoCadastrar(Pedido):
 		return self.id_departamento
 
 	def getNome(self):
-		return self.nome    
+		return self.nome
 		
 	def getCodigo(self):
-		return self.codigo	
+		return self.codigo

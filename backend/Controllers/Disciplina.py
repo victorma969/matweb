@@ -20,6 +20,7 @@ class Disciplina(Controller):
 		disciplina = ModelDisciplina()
 		disciplina.setNome(pedido_cadastrar.getNome())
 		disciplina.setCodigo(pedido_cadastrar.getCodigo())
+		disciplina.setId_departamento(pedido_cadastrar.getId_departamento())
 		return RespostaCadastrar(BDDisciplina().inserirDisciplina(disciplina))
 	
 	def Editar(self,pedido_editar):
