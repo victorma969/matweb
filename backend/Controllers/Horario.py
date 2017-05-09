@@ -14,7 +14,7 @@ class Horario(Controller):
 		return RespostaListar(BDHorario().pegarHorarios("",None))
 
 	def Ver(self, pedido_ver):
-		return RespostaVer(BDHorario().pegarHorarios("WHERE id = %s ", (str(pedido_ver.getId()),)))
+		return RespostaVer(BDHorario().pegarHorario("WHERE id = %s ", (str(pedido_ver.getId()),)))
 
 	def Cadastrar(self,pedido_cadastrar):
 		horario = ModelHorario()
