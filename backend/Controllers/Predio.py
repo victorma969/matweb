@@ -21,6 +21,7 @@ class Predio(Controller):
 		predio.setSigla(pedido_cadastrar.getSigla())
 		predio.setLatitude(pedido_cadastrar.getLatitude())
 		predio.setLongitude(pedido_cadastrar.getLongitude())
+		predio.setId_campus(pedido_cadastrar.getId_campus())
 		return RespostaCadastrar(BDPredio().inserirPredio(predio))
 
 	def Editar(self,pedido_editar):
