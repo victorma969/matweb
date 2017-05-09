@@ -16,19 +16,19 @@ class Predio(Controller):
 		return RespostaVer(BDPredio().pegarPredio("WHERE id = %s ", (pedido_ver.getId())))
 
 	def Cadastrar(self,pedido_cadastrar):
-		campus = ModelPredio()
-		campus.setNome(pedido_cadastrar.getNome())
-		campus.setSigla(pedido_cadastrar.getSigla())
-		campus.setLatitude(pedido_cadastrar.getLatitude())
-		campus.setLongitude(pedido_cadastrar.getLongitude())
+		predio = ModelPredio()
+		predio.setNome(pedido_cadastrar.getNome())
+		predio.setSigla(pedido_cadastrar.getSigla())
+		predio.setLatitude(pedido_cadastrar.getLatitude())
+		predio.setLongitude(pedido_cadastrar.getLongitude())
 		return RespostaCadastrar(BDPredio().inserirPredio(predio))
 
 	def Editar(self,pedido_editar):
-		campus = BDPredio().pegarPredio("WHERE id = %s ", (pedido_editar.getId()))
-		campus.setNome(pedido_editar.getNome())
-		campus.setSigla(pedido_cadastrar.getSigla())
-		campus.setLatitude(pedido_cadastrar.getLatitude())
-		campus.setLongitude(pedido_cadastrar.getLongitude())
+		predio = BDPredio().pegarPredio("WHERE id = %s ", (pedido_editar.getId()))
+		predio.setNome(pedido_editar.getNome())
+		predio.setSigla(pedido_cadastrar.getSigla())
+		predio.setLatitude(pedido_cadastrar.getLatitude())
+		predio.setLongitude(pedido_cadastrar.getLongitude())
 		BDPredio().alterarPredio(predio)
 		return RespostaEditar("Predio Editado com sucesso!")
 
