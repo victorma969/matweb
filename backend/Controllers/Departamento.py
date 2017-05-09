@@ -26,7 +26,7 @@ class Departamento(Controller):
 		return RespostaCadastrar(BDDepartamento().inserirDepartamento(departamento))
 
 	def Editar(self,pedido_editar):
-		departamento = BDDepartamento().pegarDepartamento("WHERE id = %s ", (pedido_editar.getId()))
+		departamento = BDDepartamento().pegarDepartamento("WHERE id = %s ", (str(pedido_editar.getId()),))
 		departamento.setNome(pedido_editar.getNome())
 		departamento.setCodigo(pedido_editar.getCodigo())
 		departamento.setSigla(pedido_editar.getSigla())
