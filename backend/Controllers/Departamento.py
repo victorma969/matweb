@@ -35,7 +35,7 @@ class Departamento(Controller):
 		return RespostaEditar("Departamento Editado com sucesso!")
 
 	def Deletar(self,pedido_deletar):
-		departamento = BDDepartamento().pegarDepartamento("WHERE id = %s ", (pedido_deletar.getId()))		
+		departamento = BDDepartamento().pegarDepartamento("WHERE id = %s ", (str(pedido_deletar.getId()),))		
 		BDDepartamento().removerDepartamento(departamento)
 		return RespostaDeletar("Departamento Removido com sucesso!")
 
