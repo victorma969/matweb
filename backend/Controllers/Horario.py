@@ -18,7 +18,10 @@ class Horario(Controller):
 
 	def Cadastrar(self,pedido_cadastrar):
 		horario = ModelHorario()
-		horario.setNome(pedido_cadastrar.getNome())
+		horario.setTurno(pedido_cadastrar.getTurno())
+		horario.setInicio(pedido_cadastrar.getInicio())
+		horario.setFim(pedido_cadastrar.getFim())
+		horario.setDia(pedido_cadastrar.getDia())
 		return RespostaCadastrar(BDHorario().inserirHorario(horario))
 
 	def Editar(self,pedido_editar):
