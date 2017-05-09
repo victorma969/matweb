@@ -3,3 +3,5 @@ class Departamento(object):
 		self.id = departamento.getId()
 		self.nome = departamento.getNome()
 		self.id_campus = departamento.getId_campus()
+		self.codigo = departamento.getCodigo()
+		self.sigla = departamento.getSigla()
