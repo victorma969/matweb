@@ -10,7 +10,7 @@ class Disciplina(Controller):
 		return RespostaListar(BDDisciplina().pegarDisciplinas("WHERE id_departamento = %s AND nome LIKE %s LIMIT %s OFFSET %s",(str(pedido_listar.getIdDepartamento()),"%"+pedido_listar.getNome().replace(' ','%')+"%",str(pedido_listar.getQuantidade()),(str(pedido_listar.getQuantidade()*pedido_listar.getPagina())))))
 	
 	def Ver(self, pedido_ver):
-		return RespostaVer(BDDisciplina().pegarDiscina("WHERE id = %s ", (pedido_ver.getId())))
+		return RespostaVer(BDDisciplina().pegarDiscina("WHERE id = %s ", (str(pedido_ver.getId()),)))
 	
 	def Cadastrar(self,pedido_cadastrar):
 		disciplina = ModelDisciplin()
@@ -19,13 +19,13 @@ class Disciplina(Controller):
 		return RespostaCadastrar(BDDisciplina().inserirDisciplina(disciplina))
 	
 	def Editar(self,pedido_editar):
-		disciplina = BDDisciplina().pegarDisciplina("WHERE id = %s ", (pedido_editar.getId()))
+		disciplina = BDDisciplina().pegarDisciplina("WHERE id = %s ", (str(pedido_editar.getId()),))
 		disciplina.setNome(pedido_editar.getNome())
 		disciplina.setCodigo(pedido_editar.getCodigo())
 		BDDisciplina().alterarDisciplina(disciplina)
 		return RespostaEditar("Disciplina Editado com sucesso!")
 	
 	def Deletar(self,pedido_deletar):
-		disciplina = BDDisciplina().pegarDisciplina("WHERE id = %s ", (pedido_deletar.getId()))		
+		disciplina = BDDisciplina().pegarDisciplina("WHERE id = %s ", (str(pedido_deletar.getId()),))		
 		BDDisciplina().removerDisciplina(disciplina)
 		return RespostaDeletar("Disciplina Removido com sucesso!")
