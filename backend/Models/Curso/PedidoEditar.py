@@ -35,3 +35,26 @@ class PedidoEditar(Pedido):
 	def getId_campus(self):
 		return self.id_campus
 		
+		
+	def getPermanencia_minima(self):
+		return self.permanencia_minima
+	
+	
+	def getPermanencia_maxima(self):
+	        return self.permanencia_maxima
+	
+	
+	def getCreditos_formatura(self):
+		return self.creditos_formatura
+	
+	
+	def getCreditos_optativos_conexa(self)
+	        return self.creditos_optativos_conexa
+	
+	
+        def getCreditos_optativos_concentracao(self)
+	        return self.creditos_optativos_concentracao
+	
+	
+	def getCreditos_livres_maximo(self)
+	        return self.creditos_livres_maximo
