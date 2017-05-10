@@ -1,8 +1,8 @@
 angular.
-  module('Disciplina').
-  factory('ApiDisciplina', ['$resource',
+  module('CadastroDisciplina').
+  factory('ApiCadastroDisciplina', ['$resource',
     function($resource) {
-      return $resource('/api/Disciplina/:operacao', {}, {
+      return $resource('/api/xxxxxxxx/:operacao', {}, {
         CadastrarDisciplinas: { method: 'POST', params: {'operacao': "CadastrarDisciplinas"} }
       });
     }
