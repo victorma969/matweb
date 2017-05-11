@@ -1,3 +1,3 @@
-angular.module('Sala', [
+angular.module('Registrodesala', [
 	'ngResource',
 	]);
