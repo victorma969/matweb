@@ -13,6 +13,5 @@ angular.
             ctrl.mensagem = "ERRO";
           });
    		};
-   	  }
     }]
 });
