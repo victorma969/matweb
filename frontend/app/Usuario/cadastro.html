@@ -93,7 +93,7 @@ h1 {
   
    <label class=" control-label col-sm-2" for="Raça/cor">Raça/cor:</label>
   <div class="col-sm-4">
-   <select class="w3-select" name="option">
+   <select class="w3-select" name="option" ng-model="$ctrl.formulario.cor">
     <option value="" disabled selected>Raça/cor:</option>
     <option value="2">Amarela</option>
     <option value="3">Branca</option>
@@ -123,14 +123,14 @@ h1 {
 
         <label class=" control-label col-sm-2" for="nome do pai">Nome do pai:</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.nome do pai" placeholder="Nome do pai">
+        <input type="text" class="form-control" ng-model="$ctrl.formulario.nomepai" placeholder="Nome do pai">
       </div>
     </div>
   <div class="form-group">
 
         <label class=" control-label col-sm-2" for="nome da mãe">Nome da mãe:</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.nome da mae" placeholder="Nome da Mãe">
+        <input type="text" class="form-control" ng-model="$ctrl.formulario.nomemae" placeholder="Nome da Mãe">
     </div>
   </div>
   <div class="form-group">
