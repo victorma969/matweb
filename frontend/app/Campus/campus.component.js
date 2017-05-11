@@ -6,15 +6,12 @@ angular.
       this.nome_campus = "";
   var ctrl = this;
   ctrl.campus = [];
-      this.pesquisar = function()
-      {
-        ApiCampus.Listar({ nome: ctrl.nome_campus, pagina: 0, quantidade: 1000 },function(resultado) {
+        ApiCampus.Listar({ nome: "", pagina: 0, quantidade: 1000 },function(resultado) {
               ctrl.campus = resultado.corpo
       console.log(ctrl.campus)
     }, function(erro){
         ctrl.erro = erro.data.mensagem
       console.log(ctrl.erro)
       } );
-      }
     }]
   });
