@@ -1,9 +1,10 @@
 angular.
-  module('Curso').
+  module('Curso')
   factory('ApiCurso', ['$resource',
     function($resource) {
       return $resource('/api/Curso/:operacao', {}, {
-        Cadastrar: { method: 'POST', params: {'operacao' : "Cadastrar"} },
+        Listar: { method: 'POST' },
+        Cadastrar: { method: 'POST', params: {'operacao': "Cadastrar"} },
       });
     }
-  ]); 
+  ]);

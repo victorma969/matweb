@@ -1,6 +1,6 @@
 angular.
-  module('Curso').
-  component('cursoRegistrar', {
+  module('CadastrarCurso').
+  component('cadastrarCurso', {
     templateUrl: '/app/Curso/cadastrar.template.html',
     controller: ['ApiCurso','$http','$location', 'MatWebGlobals',function Registrar(ApiCurso,$http,$location,MatWebGlobals) {
       var ctrl = this;
@@ -17,7 +17,7 @@ angular.
     }]
   }); 
 
-      self.id = curso.getId()
+/*      self.id = curso.getId()
     self.nome = curso.getNome()
     self.id_campus = curso.getId_campus()
                 self.id_grau = curso.getId_grau()
@@ -27,4 +27,4 @@ angular.
                 self.creditos_formatura = curso.getCreditos_formatura()
                 self.creditos_optativos_concentracao = curso.getCreditos_optativos_concentracao()
                 self.creditos_optativos_conexa = curso.getCreditos_optativos_conexa()
-                self.creditos_livres_maximo = curso.getCreditos_livres_maximo()
+                self.creditos_livres_maximo = curso.getCreditos_livres_maximo() */

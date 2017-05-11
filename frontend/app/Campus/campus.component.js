@@ -1,11 +1,9 @@
 angular.
   module('Campus').
-  component('ofertaCampus', {
+  component('listarCampus', {
     templateUrl: '/app/Campus/campus.template.html',
-    controller: ['ApiCampus', 'MatWebGlobals',function Entrar(ApiOferta,MatWebGlobals) {
+    controller: ['ApiCampus', 'MatWebGlobals',function Entrar(ApiCampus,MatWebGlobals) {
       this.nome_campus = "";
-      this.num = "ID do Campus";
-      this.materias = "Voyage";
   var ctrl = this;
   ctrl.campus = [];
       this.pesquisar = function()
