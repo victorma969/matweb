@@ -12,7 +12,7 @@
     <table class = "table table-bordered table-striped table-hover">
         <tbody>
             <tr ng-repeat="campus in $ctrl.campus | filter: $ctrl.nome_campus">
-                <td> {{campus.id}} </td>
+                <td><a ng-href="#/app/Oferta/{{disciplina.nome}}">{{campus.id}}</a> </td>
                 <td> {{campus.nome}} </td>
             </tr>
         </tbody>
