@@ -1,7 +1,7 @@
 angular.
   module('CadrastoDisciplina').
   component('cadastrarDisciplina', {
-    templateUrl: 'app/CadastroDisciplina/disciplina.template.html',
+    templateUrl: '/app/CadastroDisciplina/disciplina.template.html',
     controller: ['ApiCadastroDisciplina','$http','$location', 'MatWebGlobals',function Cadastro(ApiCadastroDisciplina,$http,$location,MatWebGlobals) 
 {
   
