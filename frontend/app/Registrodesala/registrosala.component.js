@@ -12,6 +12,6 @@ angular.
           },function(data){
             ctrl.mensagem = "ERRO";
           });
-   		};
+   	};
     }]
 });
