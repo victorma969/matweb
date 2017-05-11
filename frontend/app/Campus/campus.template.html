@@ -7,14 +7,6 @@
                         <h3 class="panel-title">Campus</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" ng-submit="$ctrl.pesquisar()">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Campus" ng-model="$ctrl.nome_campus" type="text" autofocus>
-                                </div>
-                                <button class="btn btn-lg btn-success btn-block">Pesquisar</button>
-                            </fieldset>
-                        </form>
 
 <ul>
     <li ng-repeat="campus in $ctrl.campus | filter: $ctrl.nome_campus">
