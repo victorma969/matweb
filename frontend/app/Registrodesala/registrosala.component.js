@@ -1,5 +1,5 @@
 angular.
-  module('Sala').
+  module('Registrodesala').
   component('salaRegistrar', {
     templateUrl: '/app/Sala/cadastrarsala.template.html',
     controller: ['ApiSala','$http','$location', 'MatWebGlobals',function Registrar(ApiAluno,$http,$location,MatWebGlobals) {
