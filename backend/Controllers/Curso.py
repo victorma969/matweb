@@ -48,4 +48,4 @@ class Curso(Controller):
 	def Deletar(self,pedido_deletar):
 		curso = BDCurso().pegarCurso("WHERE id = %s ", (pedido_deletar.getId()))		
 		BDCurso().removerCurso(curso)
-    return RespostaDeletar("Curso Removido com sucesso!")
+                return RespostaDeletar("Curso Removido com sucesso!")
