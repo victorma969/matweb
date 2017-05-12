@@ -26,7 +26,7 @@ class Departamento(Controller):
 		return RespostaCadastrar(BDDepartamento().inserirDepartamento(departamento))
 
 	def Editar(self,pedido_editar):
-		departamento = BDDepartamento().pegarDepartamento("WHERE id = %s ", (pedido_editar.getId()))
+		departamento = BDDepartamento().pegarDepartamento("WHERE id = %s ", (str(pedido_editar.getId()),))
 		departamento.setNome(pedido_editar.getNome())
 		departamento.setCodigo(pedido_editar.getCodigo())
 		departamento.setSigla(pedido_editar.getSigla())
@@ -35,7 +35,7 @@ class Departamento(Controller):
 		return RespostaEditar("Departamento Editado com sucesso!")
 
 	def Deletar(self,pedido_deletar):
-		departamento = BDDepartamento().pegarDepartamento("WHERE id = %s ", (pedido_deletar.getId()))		
+		departamento = BDDepartamento().pegarDepartamento("WHERE id = %s ", (str(pedido_deletar.getId()),))		
 		BDDepartamento().removerDepartamento(departamento)
 		return RespostaDeletar("Departamento Removido com sucesso!")
 

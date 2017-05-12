@@ -17,17 +17,11 @@
                         </form>
 
 <div class="table-responsive">
-    <table class = "table table-bordered table table-striped table table-hover">
-        <thead>
-                <tr>
-                    <th> {{$ctrl.num}}</th>
-                    <th> {{$crtl.materias}}</th>
-                </tr>
-        </thead>
+    <table class = "table table-bordered table-striped table-hover">
         <tbody>
             <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
-                <td> {{disciplina.id}} </td>
-                <td> {{disciplina.nome}} </td>
+                <td> {{$crtl.nume}} {{disciplina.id}} </td>
+                <td> {{$crtl.mat}} {{disciplina.nome}} </td>
             </tr>
         </tbody>
     </table>

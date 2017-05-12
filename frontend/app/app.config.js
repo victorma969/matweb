@@ -17,7 +17,13 @@ angular.
           template: '<oferta-cursos></oferta-cursos>'
         })
       $routeProvider.when('/Campus', {
-          template: '<oferta-campus></oferta-campus>'
+          template: '<listar-campus></listar-campus>'
+        })
+      $routeProvider.when('/Curso', {
+          template: '<curso-listar></curso-listar>'
+        })
+      $routeProvider.when('/Curso/Registrar', {
+          template: '<curso-registrar></curso-registrar>'
         })
       $routeProvider.when('/Aluno/Registrar', {
           template: '<aluno-registrar></aluno-registrar>'
