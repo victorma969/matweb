@@ -28,3 +28,5 @@ class PedidoListar(Pedido):
 	
         def getQuantidade(self)
 	        return self.quantidade
+
+	
