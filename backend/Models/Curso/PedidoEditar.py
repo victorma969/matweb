@@ -19,6 +19,7 @@ class PedidoEditar(Pedido):
 			self.creditos_livres_maximo = self.corpo['creditos_livres_maximo']
 		except:
 			raise ErroNoHTTP(400)
+			
 
 	def getId(self):
 		return self.id
