@@ -6,7 +6,7 @@ class PedidoEditar(Pedido):
 	def __init__(self,variaveis_do_ambiente):
 		super(PedidoEditar, self).__init__(variaveis_do_ambiente)
 		try:
-		  self.id = self.corpo['id']
+		        self.id = self.corpo['id']
 			self.nome = self.corpo['nome']
 			self.codigo = self.corpo['codigo']
 			self.id_grau = self.corpo['id_grau']
@@ -21,7 +21,7 @@ class PedidoEditar(Pedido):
 			raise ErroNoHTTP(400)
 
 	
-  def getId(self):
+        def getId(self):
 		return self.id
 	
 	
@@ -46,7 +46,7 @@ class PedidoEditar(Pedido):
 	
 	
 	def getPermanencia_maxima(self):
-	  return self.permanencia_maxima
+	        return self.permanencia_maxima
 	
 	
 	def getCreditos_formatura(self):
@@ -54,12 +54,12 @@ class PedidoEditar(Pedido):
 	
 	
 	def getCreditos_optativos_conexa(self)
-	  return self.creditos_optativos_conexa
+	        return self.creditos_optativos_conexa
 	
 	
-  def getCreditos_optativos_concentracao(self)
-	  return self.creditos_optativos_concentracao
+        def getCreditos_optativos_concentracao(self)
+	        return self.creditos_optativos_concentracao
 	
 	
 	def getCreditos_livres_maximo(self)
-    return self.creditos_livres_maximo
+                return self.creditos_livres_maximo
