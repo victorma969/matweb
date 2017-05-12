@@ -241,9 +241,13 @@
                                 <li>
                                     <a href="/Oferta">Oferta</a>
                                 </li>
+				<li>
+                                    <a href="/Registrodesala">Registrar Sala(teste)</a>
+                                </li>
                                  <li>
                                     <a href="/Campus">Campus</a>
                                 </li>
+
 				                <li>
 					               <a href="/Usuario/Entrar" >Acesso</a>
 				                </li>
@@ -265,7 +269,6 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                        {{$ctrl.perfil}}
                         <li ng-if="$ctrl.perfil == 'aluno'">
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Menu do Aluno <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -279,6 +282,31 @@
                                     <a href="/Matricula/Resultado">Resultado</a>
                                 </li>
                             </ul>
+<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Menu do Administrador <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/Registrodesala/Cadastrar">Solicitar Oferta</a>
+                                </li>
+                            <!-- /.nav-second-level -->
+                        </li>
+		<li ng-if="$ctrl.perfil == 'admin'">
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Menu do Aluno <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/Oferta/Solicitar">Solicitar Oferta</a>
+                                </li>
+                                <li>
+                                    <a href="/Matricula/Matricular">Matrícula</a>
+                                </li>
+                                <li>
+                                    <a href="/Matricula/Resultado">Resultado</a>
+                                </li>
+                            </ul>
+<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Menu do Administrador <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/Registrodesala/Cadastrar">Solicitar Oferta</a>
+                                </li>
                             <!-- /.nav-second-level -->
                         </li>
                     </ul>
