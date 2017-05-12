@@ -30,5 +30,4 @@ class Campus(Controller):
 	def Deletar(self,pedido_deletar):
 		campus = BDCampus().pegarCampus("WHERE id = %s ", (pedido_deletar.getId()))		
 		BDCampus().removerCampus(campus)
-		return RespostaDeletar("Campus Removido com sucesso!")
-
+                return RespostaDeletar("Campus Removido com sucesso!")
