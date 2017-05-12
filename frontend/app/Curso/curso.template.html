@@ -15,18 +15,12 @@
                                 <button class="btn btn-lg btn-success btn-block">Pesquisar</button>
                             </fieldset>
                         </form>
+
 <div class="table-responsive">
-    <table class = "table table-bordered table table-striped table table-hover">
-        <thead>
-                <tr>
-                    <th> {{$ctrl.num}}</th>
-                    <th> {{$crtl.cursos}}</th>
-                </tr>
-        </thead>
+    <table class = "table table-bordered table-striped table-hover">
         <tbody>
             <tr ng-repeat="curso in $ctrl.curso | filter: $ctrl.nome_curso">
-                <td> {{curso.id}} </td>
-                <td> {{curso.nome}} </td>
+                <td>{{curso.nome}} </td>
             </tr>
         </tbody>
     </table>
