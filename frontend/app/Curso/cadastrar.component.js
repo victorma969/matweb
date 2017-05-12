@@ -4,7 +4,7 @@ angular.
     templateUrl: '/app/Curso/cadastrar.template.html',
     controller: ['ApiCurso','$http','$location', 'MatWebGlobals',function Registrar(ApiCurso,$http,$location,MatWebGlobals) {
       var ctrl = this;
-      this.formulario = {'nome':'','codigo':'','permanencia_minima':'','permanencia_maxima':'','creditos_formatura':'','creditos_optativos_concentracao':'','creditos_optativos_conexa':'','creditos_livres_maximo':''};
+      this.formulario = {'nome':'','codigo':'','campus':'','grau':'','permanencia_minima':'','permanencia_maxima':'','creditos_formatura':'','creditos_optativos_concentracao':'','creditos_optativos_conexa':'','creditos_livres_maximo':''};
       this.cadastrar = function()
       {
           ApiAluno.Cadastrar(ctrl.formulario,function(data){
