@@ -11,3 +11,5 @@ class Curso(object):
                 self.creditos_optativos_concentracao = curso.getCreditos_optativos_concentracao()
                 self.creditos_optativos_conexa = curso.getCreditos_optativos_conexa()
                 self.creditos_livres_maximo = curso.getCreditos_livres_maximo()
+		self.mec = curso.getMec()
+
