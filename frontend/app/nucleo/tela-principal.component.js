@@ -1,7 +1,7 @@
 angular.
   module('nucleo').
   component('telaPrincipal', {
-    templateUrl: '/app/nucleo/tela-principal.template.html',
+    templateUrl: '/OLD/MatriculaWEB/index.html',
     controller: ['MatWebGlobals', function Menu(MatWebGlobals) {
       
     }]
