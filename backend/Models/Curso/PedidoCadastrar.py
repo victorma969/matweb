@@ -6,7 +6,7 @@ class PedidoCadastrar(Pedido):
 	def __init__(self,variaveis_do_ambiente):
 		super(PedidoCadastrar, self).__init__(variaveis_do_ambiente)
 		try:
-			
+			self.mec = self.corpo['mec']
 			self.nome = self.corpo['nome']
 			self.codigo = self.corpo['codigo']
 			self.id_grau = self.corpo['id_grau']
@@ -49,4 +49,7 @@ class PedidoCadastrar(Pedido):
         
 	def getCreditos_livres_maximo(self):
                 return self.creditos_livres_maximo 
+	
+	def getMec(self):
+                return self.mec
 		
