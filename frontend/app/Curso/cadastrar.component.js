@@ -1,8 +1,8 @@
 angular.
   module('Curso').
   component('cadastrarCurso', {
-    templateUrl: '/app/Curso/cadastrar.template.html',
-    controller: ['ApiCurso','$http','$location', 'MatWebGlobals',function Registrar(ApiCurso,MatWebGlobals) {
+    templateUrl: '/app/Curso/Cadastrar/cadastrar.template.html',
+    controller: ['ApiCurso', 'MatWebGlobals',function Registrar(ApiCurso,MatWebGlobals) {
       var ctrl = this;
       this.formulario = {'nome':'','codigo':'','campus':'','grau':'','permanencia_minima':'','permanencia_maxima':'','creditos_formatura':'','creditos_optativos_concentracao':'','creditos_optativos_conexa':'','creditos_livres_maximo':''};
       this.cadastrar = function()
