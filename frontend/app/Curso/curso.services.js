@@ -1,5 +1,5 @@
 angular.
-  module('Curso')
+  module('Curso').
   factory('ApiCurso', ['$resource',
     function($resource) {
       return $resource('/api/Curso/Listar', {}, {
