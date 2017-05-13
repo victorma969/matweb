@@ -16,6 +16,7 @@ class Curso(object):
                         self.creditos_optativos_concentracao = dados ['creditos_optativos_concentracao']
                         self.creditos_optativos_conexa = dados ['creditos_optativos_conexa']
                         self.creditos_livres_maximo = dados ['creditos_livres_maximo']
+			self.mec = dados ['mec']
 	
 	def getId(self):
 		return self.id
@@ -85,3 +86,9 @@ class Curso(object):
 	
 	def getCreditos_livres_maximo(self):
 		return self.creditos_livres_maximo
+	
+	def setMec(self,mec):
+		self.mec = mec
+	
+	def getMec(self):
+		return self.mec
