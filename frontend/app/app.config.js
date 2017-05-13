@@ -20,10 +20,7 @@ angular.
           template: '<listar-campus></listar-campus>'
         })
       $routeProvider.when('/Curso', {
-          template: '<curso-listar></curso-listar>'
-        })
-      $routeProvider.when('/Curso/Registrar', {
-          template: '<curso-registrar></curso-registrar>'
+          template: '<listar-curso></listar-curso>'
         })
       .otherwise('/');
     }
