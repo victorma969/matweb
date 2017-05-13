@@ -8,6 +8,7 @@ class PedidoListar(Pedido):
 		try:
 		        self.nome = self.corpo['nome']
 	       	        self.id_campus = self.corpo['id_campus']
+			self.id_grau = self.corpo['id_grau']
 			self.pagina = self.corpo['pagina']
 			self.quantidade = self.corpo['quantidade']
 		except:
@@ -21,6 +22,10 @@ class PedidoListar(Pedido):
 	def getId_campus(self):
 		return self.id_campus
 	
+	
+	def getId_grau(self)
+	        return self.id_grau
+
 	
 	def getPagina(self)
 	        return self.pagina
