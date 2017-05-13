@@ -8,9 +8,15 @@
                     <div class="panel-body">
                         <form role="form" ng-submit="$ctrl.entrar()">
                             <fieldset>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Matricula ou CPF" ng-model="$ctrl.formulario.usuario" type="text" autofocus>
-                                </div>
+
+
+        <div class="form-group" ng-class="{ 'has-error': form.formulario.usuario.$dirty && form.formulario.usuario.$error.required }">
+            <label for="username">Matrícula ou CPF</label>
+            <input type="text" name="formulario.usuario" id="predioName" class="form-control" ng-model="$ctrl.formulario.usuario" required />
+            <span ng-show="form.formulario.usuario.$dirty && form.formulario.usuario.$error.required" class="help-block">É obrigatório digiar Matrícula</span>
+        </div>
+
+
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Senha" ng-model="$ctrl.formulario.senha" type="password" value="">
                                 </div>
