@@ -9,7 +9,7 @@ angular.
 
    		}, function(erro){
    			this.erro = erro.data.mensagem
-   		} );
+   		};
    	  }
     }]
   });
