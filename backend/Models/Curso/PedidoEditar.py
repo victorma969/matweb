@@ -17,6 +17,7 @@ class PedidoEditar(Pedido):
 			self.creditos_optativos_conexa = self.corpo['creditos_optativos_conexa']
 			self.creditos_optativos_concentracao = self.corpo['creditos_optativos_concentracao']
 			self.creditos_livres_maximo = self.corpo['creditos_livres_maximo']
+			self.mec = self.corpo['mec']
 		except:
 			raise ErroNoHTTP(400)
 			
@@ -63,3 +64,7 @@ class PedidoEditar(Pedido):
 	
 	def getCreditos_livres_maximo(self)
 	        return self.creditos_livres_maximo
+	
+	
+	def getMec(self)
+	        return self.mec
