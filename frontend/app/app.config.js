@@ -26,8 +26,8 @@ angular.
           template: '<curso-registrar></curso-registrar>'
         })
       .otherwise('/');
-      $routeProvider.when('/Registrodesala', {
-          template: '<cadastro-sala></cadastro-sala>'
+      $routeProvider.when('/Registrodesala/Cadastrar', {
+          template: '<sala-registrar></sala-registrar>'
         })
     }
   ]).value('MatWebGlobals', {});
