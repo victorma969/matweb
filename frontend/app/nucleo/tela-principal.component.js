@@ -1,6 +1,7 @@
 angular.
   module('nucleo').
   component('telaPrincipal', {
-    $window.location.href = "../../MatWeb/index.html";
-    controller: ['MatWebGlobals', function Menu(MatWebGlobals) {}]
-  });
+    templateUrl: '/app/nucleo/tela-principal.template.html',
+    controller: ['MatWebGlobals', function Menu(MatWebGlobals) {  
+    }]
+});
