@@ -13,8 +13,7 @@ angular.
             ctrl.mensagem = "ERRO";
           });
        };
-       }
-    }]
+       }]
   }); 
 
 /*      self.id = curso.getId()
