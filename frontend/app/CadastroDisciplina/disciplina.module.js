@@ -1,3 +1,0 @@
-angular.module('CadastroDisciplina',[
-    'NgResource',
-]);

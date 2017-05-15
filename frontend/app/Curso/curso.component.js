@@ -1,6 +1,6 @@
 angular.
   module('Curso').
-  component('ofertaCurso', {
+  component('listarCurso', {
     templateUrl: '/app/Curso/curso.template.html',
     controller: ['ApiCurso', 'MatWebGlobals',function Entrar(ApiCurso,MatWebGlobals) {
       this.nome_curso = "";

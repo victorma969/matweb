@@ -14,11 +14,14 @@ class Horario(Controller):
 		return RespostaListar(BDHorario().pegarHorarios("",None))
 
 	def Ver(self, pedido_ver):
-		return RespostaVer(BDHorario().pegarHorarios("WHERE id = %s ", (pedido_ver.getId())))
+		return RespostaVer(BDHorario().pegarHorario("WHERE id = %s ", (str(pedido_ver.getId()),)))
 
 	def Cadastrar(self,pedido_cadastrar):
 		horario = ModelHorario()
-		horario.setNome(pedido_cadastrar.getNome())
+		horario.setTurno(pedido_cadastrar.getTurno())
+		horario.setInicio(pedido_cadastrar.getInicio())
+		horario.setFim(pedido_cadastrar.getFim())
+		horario.setDia(pedido_cadastrar.getDia())
 		return RespostaCadastrar(BDHorario().inserirHorario(horario))
 
 	def Editar(self,pedido_editar):

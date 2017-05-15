@@ -8,21 +8,16 @@ class PedidoCadastrar(Pedido):
 		try:
 			self.id_departamento= self.corpo['id_departamento']
 			self.nome = self.corpo['nome']
-                        self.codigo = self.corpo['codigo']
+			self.codigo = self.corpo['codigo']
+
 		except:
 			raise ErroNoHTTP(400)
 		
-	def getId(self):
-		return self.id
-
-	def setNome(self,nome):
-		self.nome = nome
+	def getId_departamento(self):
+		return self.id_departamento
 
 	def getNome(self):
 		return self.nome
-
-        def setCodigo(self,codigo):
-                self.codigo = codigo
 		
 	def getCodigo(self):
-                return self.codigo	
+		return self.codigo
