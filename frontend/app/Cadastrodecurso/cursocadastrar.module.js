@@ -1,3 +1,3 @@
-angular.module('Curso', [
+angular.module('Cadastrarcurso', [
 	'ngResource',
 	]);

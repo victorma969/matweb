@@ -1,5 +1,5 @@
 angular.
-  module('Curso').
+  module('Cadastrarcurso').
   factory('ApiCurso', ['$resource',
     function($resource) {
       return $resource('/api/Curso/:operaçao', {}, {

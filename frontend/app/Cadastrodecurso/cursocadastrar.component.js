@@ -1,5 +1,5 @@
 angular.
-  module('Curso').
+  module('Cadastrarcurso').
   component('cadastrarCurso', {
     templateUrl: '/app/Curso/Cadastrar/cadastrar.template.html',
     controller: ['ApiCurso', 'MatWebGlobals',function Registrar(ApiCurso,MatWebGlobals) {
