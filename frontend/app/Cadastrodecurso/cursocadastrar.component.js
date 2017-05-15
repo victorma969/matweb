@@ -1,7 +1,7 @@
 angular.
   module('Cadastrarcurso').
   component('cadastrarCurso', {
-    templateUrl: '/app/Curso/Cadastrar/cadastrar.template.html',
+    templateUrl: '/app/Cadastrodecurso/cadastrar.template.html',
     controller: ['ApiCurso', 'MatWebGlobals',function Registrar(ApiCurso,MatWebGlobals) {
       var ctrl = this;
       this.formulario = {'nome':'','codigo':'','campus':'','grau':'','permanencia_minima':'','permanencia_maxima':'','creditos_formatura':'','creditos_optativos_concentracao':'','creditos_optativos_conexa':'','creditos_livres_maximo':''};
