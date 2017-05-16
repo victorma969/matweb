@@ -20,3 +20,5 @@ class PedidoCadastrar(Pedido):
 	
 	def getId_predio(self):
 		return self.id_predio
+
+#abcd
