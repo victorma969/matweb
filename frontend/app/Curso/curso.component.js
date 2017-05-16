@@ -2,7 +2,7 @@ angular.
   module('Curso').
   component('listarCurso', {
     templateUrl: '/app/Curso/curso.template.html',
-    controller: ['ApiCurso', 'MatWebGlobals',function Entrar(ApiCurso,MatWebGlobals) {
+    controller: ['ApiCurhjbchjxxhjso', 'MatWebGlobals',function Entrar(ApiCurso,MatWebGlobals) {
       this.nome_curso = "";
 	var ctrl = this;
 	ctrl.cursos = [];
