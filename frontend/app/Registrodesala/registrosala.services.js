@@ -2,11 +2,8 @@ angular.
   module('Registrodesala').
   factory('ApiSala', ['$resource',
     function($resource) {
-      return $resource('/api/Sala/Cadastrar', {}, {
+      return $resource('/api/Disciplina/Listar', {}, {
         Cadastrar: { method: 'POST' },
-        Editar: { method: 'POST' },
-        Listar: { method: 'POST' },
-        Excluir: { method: 'POST' },
       });
     }
   ]);
