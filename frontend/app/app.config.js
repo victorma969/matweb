@@ -17,8 +17,20 @@ angular.
           template: '<oferta-cursos></oferta-cursos>'
         })
       $routeProvider.when('/Campus', {
-          template: '<oferta-campus></oferta-campus>'
+          template: '<listar-campus></listar-campus>'
+        })
+      $routeProvider.when('/Curso', {
+          template: '<curso-listar></curso-listar>'
+        })
+      $routeProvider.when('/Curso/Registrar', {
+          template: '<curso-registrar></curso-registrar>'
+        })
+      $routeProvider.when('/CadastroDisciplina', {
+          template: '<cadastrar-disciplina></cadastrar-disciplina>'
         })
       .otherwise('/');
+      $routeProvider.when('/Registrodesala/Cadastrar', {
+          template: '<sala-registrar></sala-registrar>'
+        })
     }
   ]).value('MatWebGlobals', {});

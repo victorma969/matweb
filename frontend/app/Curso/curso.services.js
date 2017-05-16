@@ -1,13 +1,10 @@
 angular.
-  module('Curso').
+  module('Curso')
   factory('ApiCurso', ['$resource',
     function($resource) {
-      return $resource('/api/Curso/Listar', {}, {
-        Cadastrar: { method: 'POST' },
-        Editar: { method: 'POST' },
+      return $resource('/api/Curso/:operacao', {}, {
         Listar: { method: 'POST' },
-        Excluir: { method: 'POST' },
-
+        Cadastrar: { method: 'POST', params: {'operacao': "Cadastrar"} },
       });
     }
   ]);
