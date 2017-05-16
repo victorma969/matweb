@@ -10,29 +10,24 @@
 <div class="col-md-6 col-md-offset-3">
     <h2>Register</h2>
     <form name="form" ng-submit="vm.register()" role="form">
-        <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
+        <div class="form-group" ng-class="{ 'has-error': form.predioName.$dirty && form.predioName.$error.required }">
             <label for="username">First name</label>
-            <input type="text" name="firstName" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
-            <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>
+            <input type="text" name="predioName" id="predioName" class="form-control" ng-model="vm.user.predioName" required />
+            <span ng-show="form.predioName.$dirty && form.predioName.$error.required" class="help-block">Nome do Prédio é Obrigatório</span>
         </div>
-        <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
-            <label for="username">Last name</label>
-            <input type="text" name="lastName" id="Text1" class="form-control" ng-model="vm.user.lastName" required />
-            <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>
+        <div class="form-group" ng-class="{ 'has-error': form.corredorNumber.$dirty && form.corredorNumber.$error.required }">
+            <label for="username">Numero do carredor</label>
+            <input type="text" name="corredorNumber" id="corredorNumber" class="form-control" ng-model="vm.user.corredorNumber" required />
+            <span ng-show="form.corredorNumber.$dirty && form.corredorNumber.$error.required" class="help-block">Numero do corredor é obrigatório</span>
         </div>
-        <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" class="form-control" ng-model="vm.user.username" required />
-            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" class="form-control" ng-model="vm.user.password" required />
-            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+        <div class="form-group" ng-class="{ 'has-error': form.salaname.$dirty && form.salaname.$error.required }">
+            <label for="salaname">Password</label>
+            <input type="password" name="salaname" id="salaname" class="form-control" ng-model="vm.user.salaname" required />
+            <span ng-show="form.salaname.$dirty && form.salaname.$error.required" class="help-block">Nome da Sala é importante</span>
         </div>
         <div class="form-actions">
-            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Register</button>
-            <a href="#!/login" class="btn btn-link">Cancel</a>
+            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Registrar</button>
+            <a href="#!/login" class="btn btn-link">Cancelar</a>
         </div>
     </form>
 </div>
