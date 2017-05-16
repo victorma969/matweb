@@ -21,8 +21,8 @@
             <span ng-show="form.corredorNumber.$dirty && form.corredorNumber.$error.required" class="help-block">Numero do corredor é obrigatório</span>
         </div>
         <div class="form-group" ng-class="{ 'has-error': form.salaname.$dirty && form.salaname.$error.required }">
-            <label for="salaname">Password</label>
-            <input type="password" name="salaname" id="salaname" class="form-control" ng-model="vm.user.salaname" required />
+            <label for="salaname">Nome da Sala</label>
+            <input type="text" name="salaname" id="salaname" class="form-control" ng-model="vm.user.salaname" required />
             <span ng-show="form.salaname.$dirty && form.salaname.$error.required" class="help-block">Nome da Sala é importante</span>
         </div>
         <div class="form-actions">
