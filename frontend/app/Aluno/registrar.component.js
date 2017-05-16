@@ -1,10 +1,11 @@
 angular.
   module('Aluno').
-  component('usuarioRegistrar', {
-    templateUrl: '/app/Aluno/cadastrar.template.html',
+  component('alunoRegistrar', {
+    templateUrl: '/app/Aluno/aluno.registrar.html',
     controller: ['ApiAluno','$http','$location', 'MatWebGlobals',function Registrar(ApiAluno,$http,$location,MatWebGlobals) {
       var ctrl = this;
-      this.formulario = {'nome':'','matricula':'','cpf':'','identidade':'','email':'','sexo':'','uf':'','cor':'','nivel':'','conclusao':'','nomepai':'','nomemae':'','senha':''};
+      this.formulario = {'nome':'','matricula':'','cpf':'','identidade':'','email':'','sexo':'','uf':'','cor':'','nivel':'','conclusao':'','nome_pai':'','nome_mae':'','senha':'','cep':'','complemento':'','numero_telefone':'','numero_lote':'','id_raca_cor':'','
+,'id_nivel':'','ano_conclusao':'','tipo_escola':''};
       this.cadastrar = function()
       {
           ApiAluno.Cadastrar(ctrl.formulario,function(data){
