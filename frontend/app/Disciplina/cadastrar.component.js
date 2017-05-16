@@ -2,9 +2,9 @@ angular.
   module('Disciplina').
   component('cadastrarDisciplina', {
     templateUrl: '/app/Disciplina/cadastrar.template.html',
-    controller: ['ApiDisciplina', 'MatWebGlobals',function Cadastro(ApiDisciplina,MatWebGlobals) 
+    controller: ['ApiDisciplina', 'MatWebGlobals',function Entrar(ApiDisciplina,MatWebGlobals) 
 {
-    
+
     var ctrl = this;
     var nome_disciplin = "";
     var codigo_disciplin = "";
