@@ -7,7 +7,7 @@ angular.
       this.formulario = {'nome':'','codigo':'','campus':'','grau':'','permanencia_minima':'','permanencia_maxima':'','creditos_formatura':'','creditos_optativos_concentracao':'','creditos_optativos_conexa':'','creditos_livres_maximo':''};
       this.cadastrar = function()
       {
-          ApiAluno.Cadastrar(ctrl.formulario,function(data){
+          ApiCurso.Cadastrar(ctrl.formulario,function(data){
             ctrl.mensagem = "Curso registrado com sucesso";
           },function(data){
             ctrl.mensagem = "ERRO";
@@ -16,9 +16,9 @@ angular.
        }]
   }); 
 
-/*      self.id = curso.getId()
-    self.nome = curso.getNome()
-    self.id_campus = curso.getId_campus()
+/*              self.id = curso.getId()
+                self.nome = curso.getNome()
+                self.id_campus = curso.getId_campus()
                 self.id_grau = curso.getId_grau()
                 self.codigo = curso.getCodigo()
                 self.permanencia_minima = curso.getPermanencia_minima()
