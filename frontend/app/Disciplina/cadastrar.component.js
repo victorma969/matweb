@@ -10,8 +10,8 @@ angular.
     var codigo_disciplin = "";
     this.formulario = {nome: nome_disciplin, codigo: codigo_disciplin, id_departamento: 95 }
     this.cadastrardisciplina = function()
-    console.log("Se funfo")
     {
+      console.log("Se funfo")
 
       ApiDisciplina.Cadastrar(ctrl.formulario, function(data)
       {
