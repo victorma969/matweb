@@ -5,6 +5,5 @@ angular.module('MatWeb', [
   'Oferta',
   'Campus',
   'Curso',
-  'Cadastrarcurso',
   'ui.bootstrap',
 ]);
