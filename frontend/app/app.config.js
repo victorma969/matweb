@@ -21,7 +21,10 @@ angular.
         })
       $routeProvider.when('/Curso', {
           template: '<listar-curso></listar-curso>'
-        })
+        })   
+      $routeProvider.when('/Curso/Cadastrar', {
+          template: '<cadastrar-curso></cadastrar-curso>'
+        })   
       .otherwise('/');
     }
   ]).value('MatWebGlobals', {});
