@@ -5,12 +5,12 @@ angular.
     controller: ['ApiPredio', 'MatWebGlobals',function Entrar(ApiPredio,MatWebGlobals) {
       this.nome_predio = "";
 	var ctrl = this;
-	ctrl.predio = [];
+	ctrl.predios = [];
       this.pesquisar = function()
       {
-       	ApiPredio.Listar({id_campus: 95 , nome: ctrl.nome_predio, pagina: 0, quantidade: 1000 },function(resultado) {
-		          ctrl.predio = resultado.corpo
-			console.log(ctrl.predio)
+       	ApiPredio.Listar({id_campus: 2 , nome: ctrl.nome_predio, pagina: 0, quantidade: 1000 },function(resultado) {
+		          ctrl.predios = resultado.corpo
+			console.log(ctrl.predios)
 		}, function(erro){
    			ctrl.erro = erro.data.mensagem
 			console.log(ctrl.erro)
