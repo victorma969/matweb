@@ -8,7 +8,7 @@ angular.
 	ctrl.predios = [];
       this.pesquisar = function()
       {
-       	ApiPredio.Listar({id_campus: 2 , nome: ctrl.nome_predio, pagina: 0, quantidade: 1000 },function(resultado) {
+       	ApiPredio.Listar({id_campus: 1, nome: ctrl.nome_predio, pagina: 0, quantidade: 1000 },function(resultado) {
 		          ctrl.predios = resultado.corpo
 			console.log(ctrl.predios)
 		}, function(erro){
