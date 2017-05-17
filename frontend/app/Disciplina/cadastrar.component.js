@@ -2,7 +2,7 @@ angular.
   module('Disciplina').
   component('cadastrarDisciplina', {
     templateUrl: '/app/Disciplina/cadastrar.template.html',
-    controller: ['ApiDisciplina', 'MatWebGlobals',function Cadastro(ApiDisciplina,MatWebGlobals) 
+    controller: ['ApiDisciplina', 'MatWebGlobals',function (ApiDisciplina,MatWebGlobals) 
 {
 
     var ctrl = this;
