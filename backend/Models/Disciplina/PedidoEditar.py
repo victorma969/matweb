@@ -10,6 +10,9 @@ class PedidoEditar(Pedido):
 			self.id_departamento= self.corpo['id_departamento']
 			self.nome = self.corpo['nome']
 			self.codigo = self.corpo['codigo']
+			self.nivel = self.nivel['nivel']
+			self.ementa = self.nivel['ementa']
+			self.creditos = self.nivel['creditos']
 		except:
 			raise ErroNoHTTP(400)
 
@@ -24,3 +27,12 @@ class PedidoEditar(Pedido):
 		
 	def getCodigo(self):
 		return self.codigo
+	
+	def getNivel(self):
+		return self.nivel
+	
+	def getEmenta(self):
+		return self.ementa
+	
+	def getCreditos(self):
+		return self.creditos
