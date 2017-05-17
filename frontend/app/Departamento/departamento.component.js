@@ -5,12 +5,12 @@ angular.
     controller: ['ApiDepartamento', 'MatWebGlobals',function Entrar(ApiDepartamento,MatWebGlobals) {
       this.nome_departamento = "";
 	var ctrl = this;
-	ctrl.departamento = [];
+	ctrl.departamentos = [];
       this.pesquisar = function()
       {
        	ApiDepartamento.Listar({id_campus: 1 , nome: ctrl.nome_departamento, pagina: 0, quantidade: 1000 },function(resultado) {
-		          ctrl.departamento = resultado.corpo
-			console.log(ctrl.departamento)
+		          ctrl.departamentos = resultado.corpo
+			console.log(ctrl.departamentos)
 		}, function(erro){
    			ctrl.erro = erro.data.mensagem
 			console.log(ctrl.erro)
