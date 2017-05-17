@@ -2,7 +2,7 @@ angular.
   module('Predio').
   factory('ApiPredio', ['$resource',
     function($resource) {
-      return $resource('/api/Disciplina/Listar', {}, {
+      return $resource('/api/Predio/Listar', {}, {
         Listar: { method: 'POST' },
       });
     }

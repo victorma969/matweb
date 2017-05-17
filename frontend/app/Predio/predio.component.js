@@ -2,7 +2,7 @@ angular.
   module('Predio').
   component('listarPredio', {
     templateUrl: '/app/Predio/predio.template.html',
-    controller: ['ApiPredio', 'MatWebGlobals',function Entrar(ApiOferta,MatWebGlobals) {
+    controller: ['ApiPredio', 'MatWebGlobals',function Entrar(ApiPredio,MatWebGlobals) {
       this.nome_predio = "";
 	var ctrl = this;
 	ctrl.predio = [];
