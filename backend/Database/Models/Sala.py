@@ -14,7 +14,7 @@ class Sala(object):
 		return self.id
 
 	def setId_resp_sala(self,resp_sala):
-		self.id_resp_sala = (Resp_sala().pegarResp_sala('nome = %s',(resp_sala,))).getId()
+		self.id_resp_sala = (Resp_sala().pegarResp_sala('nome = %s',(id_resp_sala,))).getId()
 
 	def getId_resp_sala(self):
 		return self.id_resp_sala
