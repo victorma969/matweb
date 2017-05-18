@@ -3,7 +3,7 @@ class Disciplina(object):
 		self.id = disciplina.getId()
 		self.nome = disciplina.getNome()
 		self.codigo = disciplina.getCodigo()
-		self.id_departamento = disciplina.getId_departamento()
+		#self.id_departamento = disciplina.getId_departamento()
 		self.nivel = disciplina.getNivel()
 		self.ementa = disciplina.getEmenta()
 		self.creditos = disciplina.getCreditos()
