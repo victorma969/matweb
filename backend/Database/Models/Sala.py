@@ -13,8 +13,8 @@ class Sala(object):
 	def getId(self):
 		return self.id
 
-	def setId_resp_sala(self,resp_sala):
-		self.id_resp_sala = (Resp_sala().pegarResp_sala('nome = %s',(id_resp_sala,))).getId()
+	def setId_resp_sala(self,id_resp_sala):
+		self.id_resp_sala = id_resp_sala
 
 	def getId_resp_sala(self):
 		return self.id_resp_sala
@@ -28,8 +28,8 @@ class Sala(object):
 	def getCodigo(self):
 		return self.codigo
 		
-	def setId_predio(self,predio):
-		self.id_predio = (Predio().pegarPredio('nome = %s',(predio,))).getId()
+	def setId_predio(self,id_predio):
+		self.id_predio = id_predio
 		
 	def getId_predio(self):
 		return self.id_predio
