@@ -1,155 +1,56 @@
--<!DOCTYPE html>
--<html ng-app="">
--<meta name="viewport" content="width=device-width, initial-scale=1">
--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
--<meta charset="utf-8">
--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<menu-principal></menu-principal>
+    <div class="page-wrapper">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Registrar</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" ng-submit="$ctrl.registrar()">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nome" ng-model="$ctrl.Nome" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Matricula" ng-model="$ctrl.Matricula" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="CPF" ng-model="$ctrl.cpf" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Identidade" ng-model="$ctrl.identidade" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="email" ng-model="$ctrl.email" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Sexo" ng-model="$ctrl.sexo" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="uf" ng-model="$ctrl.uf" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Raça/Cor" ng-model="$ctrl.id_raca_cor" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Ano conclusão" ng-model="$ctrl.ano_conclusao" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nome do pai" ng-model="$ctrl.nome_pai" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nome da mãe" ng-model="$ctrl.nome_mae" type="text" value="">
+                                </div>
 
-
-<body>
-
-<head>
-	<title>Cadastro</title>
-
-</head>
-
-    <header class="w3-container w3-teal">
-     <h1>Cadastro do Aluno</h1>
-    </header>
-  
-
-<div class="container">
-  <h2></h2>
-  <form class="form-horizontal" action="/action_page.php">
-    <div class="form-group">
-      
-
-
-
-      <label class="control-label col-sm-2" for="nome">Nome Completo:</label >
-      <div class="col-sm-4" >
-        <input type="text" class="form-control" ng-model="$ctrl.nome" placeholder="Nome" >
-      </div>
-    <div class="form-group">
-</div>
-
-
-      <label class="control-label col-sm-2" for="matricula">Matricula:</label>
-      <div class="col-sm-4">
-         <input type="text" class="form-control" ng-model="$ctrl.matricula" maxlength=9 placeholder="Matricula">
-      </div>
-    <div class="form-group">
+                                    <input class="form-control" placeholder="Senha" ng-model="$ctrl.formulario.senha" type="password" value="">
+                                </div>
+                                <button class="btn btn-lg btn-success btn-block">Registrar</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-     
-      <label class="control-label col-sm-2" for="cpf">CPF:</label>
-      <div class="col-sm-4">
-         <input type="text" class="form-control" ng-model="$ctrl.cpf" maxlength=11 placeholder="CPF">
-      </div>
-    </div>
-    <div class="form-group"> 
-
-       <label class="control-label col-sm-2" for="identidade">Identidade:</label>
-      <div class="col-sm-4">
-         <input type="text" class="form-control" ng-model="$ctrl.identidade" maxlength=7 placeholder="Identidade">
-      </div>
-    </div>
-    <div class="form-group">    
-
-      <label class="control-label col-sm-2" for="email">Email:</label>
-
-      <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.email" placeholder="Email">
-      </div>
-    </div>
-    <div class="form-group">
-
-    
-           <label class=" control-label col-sm-2" ng-model="$ctrl.sexo">Sexo:</label>
-           <div class="col-sm-4">
-      <label><input type="radio" name="optsexo">Masculino</label>
-      <label><input type="radio" name="optsexo">Feminino</label>
-    </div>
-  </div>
-  <div class="form-group">
-
-
-        <label class=" control-label col-sm-2" for="uf">UF:</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.uf" maxlength=2 placeholder="UF">
-    </div>
-  </div>
-  <div class="form-group">
-
-
-
-  
-   <label class=" control-label col-sm-2" ng-model="$ctrl.id_raca_cor" for="id_raca_cor ">Raça/cor:</label>
-  <div class="col-sm-4">
-   <select class="w3-select" name="option">
-    <option value="" disabled selected>Raça/cor:</option>
-    <option value="2">Amarela</option>
-    <option value="3">Branca</option>
-    <option value="4">Indigena</option>
-    <option value="5">Parda</option>
-    <option value="6">Não declarar</option>
-  </select>
-    </div>
-  </div>
-  <div class="form-group">
-
-     
-
-        <label class=" control-label col-sm-2" for="nivelt">Nivel:</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.id_nivel" placeholder="Nivel">
-    </div>
-  </div>
-  <div class="form-group">
-
-        <label class=" control-label col-sm-2" for="ano_conclusao">Ano de conclusão do ensino médio:</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.ano_conclusao" maxlength=4 placeholder="Ano">
-    </div>
-  </div>
-  <div class="form-group">
-
-        <label class=" control-label col-sm-2" for="nome_pai">Nome do pai:</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.nome_pai" placeholder="Nome do pai">
-      </div>
-    </div>
-  <div class="form-group">
-
-        <label class=" control-label col-sm-2" for="nome_mae">Nome da mãe:</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.nome_mae" placeholder="Nome da Mãe">
-    </div>
-  </div>
-  <div class="form-group">
-  
-          <label class=" control-label col-sm-2" for="tipo_escola">Tipo Escola:</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.tipo_escola" placeholder="Privada ou Pública">
-    </div>
-  </div>
-  <div class="form-group">
-    
-  
-       <label class="control-label col-sm-2" for="pwd">Senha:</label>
-    	  <div class="col-sm-4">          
-       		 <input type="password" class="form-control" placeholder="Senha" ng-model="$ctrl.senha">
-      </div>
-    <div class="form-group">    
-
-
-     
-    </div>
-    </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-      <button class="w3-button w3-white w3-border">Cadastrar</button>
-
-      </div>
-
-<body>
