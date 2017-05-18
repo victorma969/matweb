@@ -4,7 +4,7 @@ angular.
     templateUrl: '/app/Cadastrar/cadastrar.template.html',
     controller: ['ApiSexo','$http','$location', 'MatWebGlobals',function(ApiSexo,$http,$location,MatWebGlobals) {
       var ctrl = this;
-      this.formulario = {'depName':''};
+      this.formulario = {'nome':''};
       this.cadastrar = function()
       {
           ApiSexo.Cadastrar(ctrl.formulario,function(data){
