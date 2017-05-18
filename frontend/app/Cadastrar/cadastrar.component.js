@@ -4,9 +4,7 @@ module('Cadastrar').
     templateUrl: '/app/Cadastrar/cadastrar.template.html',
     controller: ['ApiDepartamento','$http','$location', 'MatWebGlobals',function registrarDepartamento(ApiDepartamento,$http,$location,MatWebGlobals) {
         var ctrl = this;
-       this.formulario = {'depName':'','idNumber':''};
         ctrl.cadastrar = cadastrar;
-
         function cadastrar() {
             ctrl.mensagem = true;
             ApiDepartamento.Create(ctrl.formulario)
