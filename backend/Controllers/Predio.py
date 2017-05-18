@@ -27,9 +27,9 @@ class Predio(Controller):
 	def Editar(self,pedido_editar):
 		predio = BDPredio().pegarPredio("WHERE id = %s ", (str(pedido_editar.getId()),))
 		predio.setNome(pedido_editar.getNome())
-		predio.setSigla(pedido_cadastrar.getSigla())
-		predio.setLatitude(pedido_cadastrar.getLatitude())
-		predio.setLongitude(pedido_cadastrar.getLongitude())
+		predio.setSigla(pedido_editar.getSigla())
+		predio.setLatitude(pedido_editar.getLatitude())
+		predio.setLongitude(pedido_editar.getLongitude())
 		BDPredio().alterarPredio(predio)
 		return RespostaEditar("Predio Editado com sucesso!")
 
