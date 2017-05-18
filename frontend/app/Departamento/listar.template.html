@@ -18,7 +18,7 @@
 <div class="table-responsive">
     <table class = "table table-bordered table-striped table-hover">
         <tbody>
-            <tr ng-repeat="departamento in $ctrl.departamento | filter: $ctrl.nome_departamento">
+            <tr ng-repeat="departamento in $ctrl.departamentos | filter: $ctrl.nome_departamento">
                 <td> {{departamento.nome}} </td>
                 <td> {{departamento.sigla}} </td>
             </tr>
