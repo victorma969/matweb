@@ -9,7 +9,7 @@
     <form role="form" ng-submit="$ctrl.cadastrar()">
         <div class="form-group" ng-class="{ 'has-error': form.nome.$dirty && form.nome.$error.required }">
             <label for="username">Nome do Departamento</label>
-            <input type="text" name="nome" id="nome" class="form-control" ng-model="$ctlr.formulario.nome" required />
+            <input type="text" name="nome" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" required />
             <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Departamento é Obrigatório</span>
         </div>
         <div class="form-actions">
