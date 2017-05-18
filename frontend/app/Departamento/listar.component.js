@@ -9,7 +9,7 @@ angular.
   ctrl.departamento = [];
       this.pesquisar = function()
       {
-        ApiDepartamento.Listar({sigla: ctrl.sigla_departamento, nome: ctrl.nome_departamento, pagina: 0, quantidade: 1000 },function(resultado) {
+        ApiDepartamento.Listar({nome: ctrl.nome_departamento, pagina: 0, quantidade: 1000 },function(resultado) {
               ctrl.departamento = resultado.corpo
       console.log(ctrl.departamento)
     }, function(erro){
