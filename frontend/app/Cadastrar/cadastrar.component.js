@@ -9,15 +9,15 @@ angular.
  function.registrar(){
   ctrl.mensagem = true;
   ApiDepartamento.Create(ctrl.formulario)
-  .then(function (data)){ 
+  .then(function (data){ 
     if(data.success){
 MatWebGlobals.Success('registro feito com sucesso', true);
 $http.path('/Cadastrar');
 } else{
-  MatWebGlobals.Error(data.messagem)
+  MatWebGlobals.Error(data.messagem);
 ctrl.mensagem = false;
 }
-};
+});
 
     }]
-})
+}
