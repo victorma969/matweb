@@ -7,7 +7,7 @@ angular.
       this.formulario = {'depName':'','idNumber':''};
       this.cadastrar = function()
       {
-          ApiDepartamento.Cadastrar(ctrl.formulario,function(data){
+          ApiDepartamento.cadastrar(ctrl.formulario,function(data){
             ctrl.mensagem = "Departamento cadastrado com sucesso";
           },function(data){
             ctrl.mensagem = "ERRO";
