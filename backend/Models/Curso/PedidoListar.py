@@ -19,11 +19,11 @@ class PedidoListar(Pedido):
 		return self.nome
 		
 		
-	def getId_campus(self):
+	def getIdCampus(self):
 		return self.id_campus
 	
 	
-	def getId_grau(self):
+	def getIdGrau(self):
 	        return self.id_grau
 
 	
