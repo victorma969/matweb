@@ -2,11 +2,11 @@ angular.
   module('Cadastrar').
   component('registrarDepartamento', {
     templateUrl: '/app/Cadastrar/cadastrar.template.html',
-    controller: ['ApiDepartamento','$http','$location', 'MatWebGlobals',function(ApiDepartamento,$http,$location,MatWebGlobals) {
+    controller: ['ApiDepartamento','$http','$location', 'MatWebGlobals',function registrarDepartamento(ApiDepartamento,$http,$location,MatWebGlobals) {
       var ctrl = this;
-      this.cadastrar = cadastrar;
+      ctrl.registrar = registrar;
       this.formulario = {'depName':'','idNumber':''};
- function.cadastrar(){
+ function.registrar(){
   ctrl.mensagem = true;
   ApiDepartamento.Create(ctrl.formulario)
   .then(function (data)){ 
