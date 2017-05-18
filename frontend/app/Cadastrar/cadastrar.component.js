@@ -1,5 +1,5 @@
 angular.
-  module('Departamento').
+  module('Cadastrar').
   component('registrarDepartamento', {
     templateUrl: '/app/Cadastrar/cadastrar.template.html',
     controller: ['ApiDepartamento','$http','$location', 'MatWebGlobals',function(ApiDepartamento,$http,$location,MatWebGlobals) {

@@ -1,3 +1,3 @@
-angular.module('Departamento', [
+angular.module('Cadastrar', [
 	'ngResource',
 	]);

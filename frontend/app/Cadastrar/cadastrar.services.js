@@ -1,5 +1,5 @@
 angular.
-  module('Departamento').
+  module('Cadastrar').
   factory('ApiDepartamento', ['$resource',
     function($resource) {
       return $resource('/api/Departamento/Cadastrar', {}, {
