@@ -1,4 +1,4 @@
-angular
+angular.
 module('Cadastrar').
   component('registrarDepartamento', {
     templateUrl: '/app/Cadastrar/cadastrar.template.html',
@@ -19,5 +19,6 @@ module('Cadastrar').
                         ctrl.mensagem = false;
                     }
                 })
-        }
-  }];
+          };
+    }]
+});
