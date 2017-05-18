@@ -6,11 +6,11 @@ class PedidoEditar(Pedido):
 	def __init__(self,variaveis_do_ambiente):
 		super(PedidoEditar, self).__init__(variaveis_do_ambiente)
 		try:
-			self.id = dados ['id']		
-			self.turno = dados ['turno']
-			self.inicio = dados ['inicio']
-			self.fim = dados ['fim']
-			self.dia = dados ['dia']
+			self.id = self.corpo['id']		
+			self.turno = self.corpo['turno']
+			self.inicio = self.corpo['inicio']
+			self.fim = self.corpo['fim']
+			self.dia = self.corpo['dia']
 		except:
 			raise ErroNoHTTP(400)
 			

@@ -23,15 +23,15 @@ class PedidoListar(Pedido):
 		return self.id_campus
 	
 	
-	def getId_grau(self)
+	def getId_grau(self):
 	        return self.id_grau
 
 	
-	def getPagina(self)
+	def getPagina(self):
 	        return self.pagina
 	
 	
-        def getQuantidade(self)
+        def getQuantidade(self):
 	        return self.quantidade
 
 	

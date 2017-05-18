@@ -1,6 +1,11 @@
 from Framework.Controller import Controller
 from Database.Controllers.Sala import Sala as BDSala
 from Models.Sala.RespostaListar import RespostaListar
+from Models.Sala.RespostaEditar import RespostaEditar
+from Models.Sala.RespostaCadastrar import RespostaCadastrar
+from Models.Sala.RespostaVer import RespostaVer
+from Models.Sala.RespostaDeletar import RespostaDeletar
+from Database.Models.Sala import Sala as ModelSala
 
 class Sala(Controller):
 

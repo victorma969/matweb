@@ -32,4 +32,3 @@ class Disciplina(object):
 		
 	def getDepartamento(self):
 		return (Departamento().pegarDepartamento('id = %s',(self.id_departamento,))).getNome()
-	
