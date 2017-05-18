@@ -1,14 +1,14 @@
 angular.
   module('Cadastrar').
-  component('resgistrarDepartamento', {
+  component('registrarDepartamento', {
     templateUrl: '/app/Cadastrar/cadastrar.template.html',
-    controller: ['ApiDepartamentoRegistrar','$http','$location', 'MatWebGlobals',function(ApiDepartamentoRegistrar,$http,$location,MatWebGlobals) {
+    controller: ['ApiSexo','$http','$location', 'MatWebGlobals',function(ApiSexo,$http,$location,MatWebGlobals) {
       var ctrl = this;
       this.formulario = {'depName':''};
       this.cadastrar = function()
       {
-          ApiDepartamentoRegistrar.Cadastrar(ctrl.formulario,function(data){
-            ctrl.mensagem = "Departamento cadastrado com sucesso";
+          ApiSexo.Cadastrar(ctrl.formulario,function(data){
+            ctrl.mensagem = "Sala cadastrada com sucesso";
           },function(data){
             ctrl.mensagem = "ERRO";
           });
