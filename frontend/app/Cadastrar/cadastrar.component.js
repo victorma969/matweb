@@ -20,4 +20,4 @@ module('Cadastrar').
                     }
                 })
         }
-    };
+    }
