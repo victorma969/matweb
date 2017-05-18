@@ -11,7 +11,7 @@ angular.
       {
         ApiCurso.Listar({sigla: ctrl.sigla_departamento, nome: ctrl.nome_departamento, pagina: 0, quantidade: 1000 },function(resultado) {
               ctrl.departamento = resultado.corpo
-      console.log(ctrl.cursos)
+      console.log(ctrl.departamento)
     }, function(erro){
         ctrl.erro = erro.data.mensagem
       console.log(ctrl.erro)
