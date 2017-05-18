@@ -13,20 +13,14 @@ angular.
       $routeProvider.when('/', {
           template: '<tela-principal></tela-principal>'
         })
-      $routeProvider.when('/Disciplina/Oferta', {
-          template: '<oferta-disciplina></oferta-disciplina>'
+      $routeProvider.when('/Oferta', {
+          template: '<oferta-cursos></oferta-cursos>'
         })
       $routeProvider.when('/Campus', {
           template: '<oferta-campus></oferta-campus>'
         })
-      $routeProvider.when('/Cursos', {
-          template: '<oferta-curso></oferta-curso>'
-      })
-      $routeProvider.when('/Disciplina/Cadastrar', {
+      $routeProvider.when('/Disciplina', {
           template: '<cadastrar-disciplina></cadastrar-disciplina>'
-        })
-       $routeProvider.when('/Departamento', {
-          template: '<listar-departamento></listar-departamento>'
         })
       .otherwise('/');
     }

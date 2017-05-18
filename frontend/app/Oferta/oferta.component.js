@@ -1,7 +1,7 @@
 angular.
-  module('Disciplina').
-  component('ofertaDisciplina', {
-    templateUrl: '/app/Disciplina/oferta.template.html',
+  module('Oferta').
+  component('ofertaCursos', {
+    templateUrl: '/app/Oferta/oferta.template.html',
     controller: ['ApiDisciplina', 'MatWebGlobals',function Entrar(ApiDisciplina,MatWebGlobals) {
       this.nome_disciplina = "";
 	var ctrl = this;
