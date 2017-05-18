@@ -11,7 +11,7 @@ from Database.Models.Disciplina import Disciplina as ModelDisciplina
 class Disciplina(Controller):
 
 	def Listar(self,pedido_listar):
-		return RespostaListar(BDDisciplina().pegarDisciplinas("WHERE id_departamento = %s AND nome LIKE %s LIMIT %s OFFSET %s",(str(pedido_listar.getIdDepartamento()),"%"+pedido_listar.getNome().replace(' ','%')+"%",str(pedido_listar.getQuantidade()),(str(pedido_listar.getQuantidade()*pedido_listar.getPagina())))))
+		return RespostaListar(BDDisciplina().pegarDisciplinas("WHERE id_departamento = %s AND nome LIKE %s LIMIT %s OFFSET %s",(str(pedido_listar.getId_departamento()),"%"+pedido_listar.getNome().replace(' ','%')+"%",str(pedido_listar.getQuantidade()),(str(pedido_listar.getQuantidade()*pedido_listar.getPagina())))))
 	
 	def Ver(self, pedido_ver):
 		return RespostaVer(BDDisciplina().pegarDisciplina("WHERE id = %s ", (str(pedido_ver.getId()),)))
