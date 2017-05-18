@@ -28,6 +28,9 @@ angular.
       $routeProvider.when('/Departamento', {
           template: '<listar-departamento></listar-departamento>'
         })
+        $routeProvider.when('/Cadastrar/Registrar', {
+          template: '<registrar-departamento></registrar-departamento>'
+        })
       $routeProvider.when('/CadastroDisciplina', {
           template: '<cadastrar-disciplina></cadastrar-disciplina>'
         })

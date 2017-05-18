@@ -1,0 +1,34 @@
+<menu-principal></menu-principal>
+    <div class="page-wrapper">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Registrar Departamento</h3>
+ 
+
+<div class="col-md-6 col-md-offset-3">
+    <form role="form" ng-submit="$ctrl.cadastrar()">
+        <div class="form-group" ng-class="{ 'has-error': form.depName.$dirty && form.depName.$error.required }">
+            <label for="username">Nome do Departamento</label>
+            <input type="text" name="depName" id="depName" class="form-control" ng-model="vm.user.depName" required />
+            <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Departamento é Obrigatório</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.idNumber.$dirty && form.idNumber.$error.required }">
+            <label for="username">Id do departamento</label>
+            <input type="text" name="idNumber" id="idNumber" class="form-control" ng-model="user.idNumber" required />
+            <span ng-show="form.idNumber.$dirty && form.idNumber.$error.required" class="help-block">Numero do id é obrigatório</span>
+        </div>
+        <div class="form-actions">
+           <button class="btn btn-lg btn-success btn-block">Registrar</button>
+            <a href="#!/login" class="btn btn-link">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
