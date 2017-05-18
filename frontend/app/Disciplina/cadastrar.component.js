@@ -8,7 +8,8 @@ angular.
     var ctrl = this;
     var nome_disciplin = "";
     var codigo_disciplin = "";
-    this.formulario = {nome: nome_disciplin, codigo: codigo_disciplin, id_departamento: 95 }
+    var id = "";
+    this.formulario = {nome: nome_disciplin, codigo: codigo_disciplin, id_departamento: id }
     this.cadastrardisciplina = function()
     {
       console.log("Se funfo")
