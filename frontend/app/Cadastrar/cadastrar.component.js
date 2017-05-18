@@ -20,6 +20,4 @@ this.formulario = {'depName':'','idNumber':''};
                     }
                 });
         }
-    }
-
-};
+    };
