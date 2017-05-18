@@ -9,9 +9,6 @@ class PedidoCadastrar(Pedido):
 			self.id_departamento= self.corpo['id_departamento']
 			self.nome = self.corpo['nome']
 			self.codigo = self.corpo['codigo']
-			self.nivel = self.corpo['nivel']
-			self.ementa = self.corpo['ementa']
-			self.creditos = self.corpo['creditos']
 
 		except:
 			raise ErroNoHTTP(400)
@@ -24,12 +21,3 @@ class PedidoCadastrar(Pedido):
 		
 	def getCodigo(self):
 		return self.codigo
-	
-	def getNivel(self):
-		return self.nivel
-	
-	def getEmenta(self):
-		return self.ementa
-	
-	def getCreditos(self):
-		return self.creditos
