@@ -8,7 +8,7 @@ class PedidoEditar(Pedido):
 		try:
 			self.id = self.corpo['id']
 			self.nome = self.corpo['nome']
-                        self.sigla = self.corpo['sigla']
+			self.sigla = self.corpo['sigla']
 			self.latitude = self.corpo['latitude']
 			self.longitude = self.corpo['longitude']
 		except:
@@ -21,7 +21,7 @@ class PedidoEditar(Pedido):
 		return self.sigla
 		
 	def getLatitude(self):
-		return self.latitude	
+		return self.latitude
 	
 	def getLongitude(self):
 		return self.longitude
