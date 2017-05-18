@@ -1,6 +1,6 @@
 angular.
   module('Cadastrar').
-  factory('ApiDepartamento', ['$resource',
+  factory('ApiDepartamentoRegistrar', ['$resource',
     function($resource) {
       return $resource('/api/Departamento/Cadastrar', {}, {
         Cadastrar: { method: 'POST' },
