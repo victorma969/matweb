@@ -5,8 +5,8 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Departamentos</h3> 
                     </div>
-                    <div class="panel-body">
-                        <form role="form" ng-submit="$ctrl.pesquisar()">
+                        <div class="panel-body">
+                            <form role="form" ng-submit="$ctrl.pesquisar()">
                             <fieldset>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Nome do departamento" ng-model="ctrl.nome_departamento" type="text" autofocus>
@@ -19,8 +19,8 @@
     <table class = "table table-bordered table-striped table-hover">
         <tbody>
             <tr ng-repeat="departamento in $ctrl.departamento | filter: $ctrl.nome_departamento">
-                <td> {{$crtl.nome}} {{departamento.nome}} </td>
-                <td> {{$crtl.sigla}} {{departamento.sigla}} </td>
+                <td> {{departamento.nome}} </td>
+                <td> {{departamento.sigla}} </td>
             </tr>
         </tbody>
     </table>
