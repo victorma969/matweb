@@ -9,24 +9,28 @@ from Database.Models.Sala import Sala as ModelSala
 
 class Sala(Controller):
 
-    def Listar(self,pedido_listar):
+	def Listar(self,pedido_listar):
         return RespostaListar(BDSala().pegarSalas("WHERE id_predio = %s AND codigo LIKE %s LIMIT %s OFFSET %s",(pedido_listar.getIdPredio(),"%" + pedido_listar.getCodigo().replace(' ','%') + "%",pedido_listar.getQuantidade(),(pedido_listar.getQuantidade()*pedido_listar.getPagina()))))
 
-        def Ver(self, pedido_ver):
-		return RespostaVer(BDSala().pegarSala("WHERE id = %s ", (pedido_ver.getId())))
+	def Ver(self, pedido_ver):
+		return RespostaVer(BDSala().pegarSala("WHERE id = %s ", (str(pedido_ver.getId()),)))
 
 	def Cadastrar(self,pedido_cadastrar):
 		sala = ModelSala()
 		sala.setCodigo(pedido_cadastrar.getCodigo())
+		sala.setId_resp_sala(pedido_cadastrar.getId_resp_sala())
+		sala.setId_predio(pedido_cadastrar.getId_predio())
 		return RespostaCadastrar(BDSala().inserirSala(sala))
 
 	def Editar(self,pedido_editar):
-		sala = BDSala().pegarSala("WHERE id = %s ", (pedido_editar.getId()))
+		sala = BDSala().pegarSala("WHERE id = %s ", (str(pedido_editar.getId()),))
 		sala.setCodigo(pedido_editar.getCodigo())
+		sala.setId_resp_sala(pedido_editar.getId_resp_sala())
+		sala.setId_predio(pedido_editar.getId_predio())
 		BDSala().alterarSala(sala)
 		return RespostaEditar("Sala Editado com sucesso!")
 
 	def Deletar(self,pedido_deletar):
-		sala = BDSala().pegarSala("WHERE id = %s ", (pedido_deletar.getId()))		
+		sala = BDSala().pegarSala("WHERE id = %s ", (str(pedido_deletar.getId()),))		
 		BDSala().removerSala(sala)
 		return RespostaDeletar("Sala Removido com sucesso!")  
