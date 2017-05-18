@@ -1,12 +1,10 @@
 (function () {
 'use strict';
 angular
-        .module('Cadastrar')
-        .controller('registrarDepartamento', registrarDepartamento)
-        templateUrl: '/app/Cadastrar/cadastrar.template.html',
-
-    registrarDepartamento.$inject = ['ApiDepartamento', '$http', '$location', 'MatWebGlobals'];
-    function registrarDepartamento(ApiDepartamento, $http, $location, MatWebGlobals) {
+module('Cadastrar').
+  component('registrarDepartamento', {
+    templateUrl: '/app/Cadastrar/cadastrar.template.html',
+    controller: ['ApiDepartamento','$http','$location', 'MatWebGlobals',function registrarDepartamento(ApiDepartamento,$http,$location,MatWebGlobals) {
         var ctrl = this;
 this.formulario = {'depName':'','idNumber':''};
         ctrl.cadastrar = cadastrar;
