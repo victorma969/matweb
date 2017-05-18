@@ -1,16 +1,17 @@
 angular.
   module('Departamento').
-  component('ofertaDepartamento', {
-    templateUrl: '/app/Departamento/departamento.template.html',
+  component('listarDepartamento', {
+    templateUrl: '/app/Departamento/listar.template.html',
     controller: ['ApiDepartamento', 'MatWebGlobals',function Entrar(ApiDepartamento,MatWebGlobals) {
-      this.nome_Departamento = "";
+      this.nome_departamento = "";
+      this.sigla_departamento = "Sigla";
   var ctrl = this;
   ctrl.departamento = [];
       this.pesquisar = function()
       {
-        ApiDepartamento.Listar({id_departamento: 95 , nome: ctrl.nome_departamento, pagina: 0, quantidade: 1000 },function(resultado) {
+        ApiCurso.Listar({sigla: ctrl.sigla_departamento, nome: ctrl.nome_departamento, pagina: 0, quantidade: 1000 },function(resultado) {
               ctrl.departamento = resultado.corpo
-      console.log(ctrl.departamento)
+      console.log(ctrl.cursos)
     }, function(erro){
         ctrl.erro = erro.data.mensagem
       console.log(ctrl.erro)
