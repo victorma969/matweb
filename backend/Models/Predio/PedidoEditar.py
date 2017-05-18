@@ -7,6 +7,7 @@ class PedidoEditar(Pedido):
 		super(PedidoEditar, self).__init__(variaveis_do_ambiente)
 		try:
 			self.id = self.corpo['id']
+			self.id_campus = self.corpo['id_campus']
 			self.nome = self.corpo['nome']
 			self.sigla = self.corpo['sigla']
 			self.latitude = self.corpo['latitude']
@@ -14,6 +15,9 @@ class PedidoEditar(Pedido):
 		except:
 			raise ErroNoHTTP(400)
 		
+	def getId(self):
+		return self.id
+
 	def getNome(self):
 		return self.nome
 		
@@ -26,5 +30,5 @@ class PedidoEditar(Pedido):
 	def getLongitude(self):
 		return self.longitude
 	
-	def getId(self):
-		return self.id
+	def getId_campus(self):
+		return self.id_campus
