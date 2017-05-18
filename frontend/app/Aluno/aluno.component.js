@@ -24,8 +24,7 @@ angular.
       var tipo_escola
 
 
-      this.formulario = {nome: nome,matricula: matricula, cpf: cpf,identidade: identidade,email: email,sexo: sexo,uf: uf, Raca: Raca, id_nivel: id_nivel, ano_conclusao: ano_conclusao, nome_pai: nome_pai,nome_mae: nome_mae,senha: senha, cep: cep, complemento: complemento, numero_telefone: numero_telefone, numero_lote: numero_lote,
-,ano_conclusao: ano_conclusao, tipo_escola: tipo_escola};
+      this.formulario = {nome: nome,matricula: matricula, cpf: cpf,identidade: identidade,email: email,sexo: sexo,uf: uf, id_raca_cor: id_raca_cor, id_nivel: id_nivel, ano_conclusao: ano_conclusao, nome_pai: nome_pai,nome_mae: nome_mae,senha: senha, cep: cep, complemento: complemento, numero_telefone: numero_telefone, numero_lote: numero_lote, tipo_escola: tipo_escola};
       this.cadastrar = function()
       {
           ApiAluno.Cadastrar(ctrl.formulario,function(data){
