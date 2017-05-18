@@ -31,8 +31,7 @@ angular.
             ctrl.mensagem = "Cadastrado com sucesso";
           },function(data){
             ctrl.mensagem = "ERRO";
-          });
-   		};
-   	  }
+      } );
+      }
     }]
   });
