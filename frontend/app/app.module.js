@@ -3,6 +3,7 @@ angular.module('MatWeb', [
   'nucleo',
   'Usuario',
   'Campus',
+  'Curso',
   'Disciplina',
   'Departamento',
   'ui.bootstrap',
