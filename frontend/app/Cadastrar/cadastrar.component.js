@@ -6,7 +6,7 @@ angular.
       var ctrl = this;
       ctrl.registrar = registrar;
       this.formulario = {'depName':'','idNumber':''};
- function.registrar(){
+ function.registrar(){}
   ctrl.mensagem = true;
   ApiDepartamento.Create(ctrl.formulario)
   .then(function (data){ 
