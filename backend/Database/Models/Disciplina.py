@@ -8,6 +8,7 @@ class Disciplina(object):
 			self.nome = dados ['nome']
 			self.codigo = dados ['codigo']
 			self.id_departamento = dados ['id_departamento']
+			self.b = dados ['b']
 			
 	def getId(self):
 		return self.id
@@ -32,3 +33,9 @@ class Disciplina(object):
 		
 	def getDepartamento(self):
 		return (Departamento().pegarDepartamento('id = %s',(self.id_departamento,))).getNome()
+
+	def setB(self,b):
+		self.b = b
+
+	def getB(self):
+		return self.b
