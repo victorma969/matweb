@@ -22,7 +22,7 @@
 
       <label class="control-label col-sm-2" for="nome">Nome Completo:</label >
       <div class="col-sm-4" >
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.nome" placeholder="Nome" >
+        <input type="text" class="form-control" ng-model="$ctrl.nome" placeholder="Nome" >
       </div>
     <div class="form-group">
 </div>
@@ -30,21 +30,21 @@
 
       <label class="control-label col-sm-2" for="matricula">Matricula:</label>
       <div class="col-sm-4">
-         <input type="text" class="form-control" ng-model="$ctrl.formulario.matricula" maxlength=9 placeholder="Matricula">
+         <input type="text" class="form-control" ng-model="$ctrl.matricula" maxlength=9 placeholder="Matricula">
       </div>
     <div class="form-group">
     </div>
      
       <label class="control-label col-sm-2" for="cpf">CPF:</label>
       <div class="col-sm-4">
-         <input type="text" class="form-control" ng-model="$ctrl.formulario.cpf" maxlength=11 placeholder="CPF">
+         <input type="text" class="form-control" ng-model="$ctrl.cpf" maxlength=11 placeholder="CPF">
       </div>
     </div>
     <div class="form-group"> 
 
        <label class="control-label col-sm-2" for="identidade">Identidade:</label>
       <div class="col-sm-4">
-         <input type="text" class="form-control" ng-model="$ctrl.formulario.identidade" maxlength=7 placeholder="Identidade">
+         <input type="text" class="form-control" ng-model="$ctrl.identidade" maxlength=7 placeholder="Identidade">
       </div>
     </div>
     <div class="form-group">    
@@ -52,13 +52,13 @@
       <label class="control-label col-sm-2" for="email">Email:</label>
 
       <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.email" placeholder="Email">
+        <input type="text" class="form-control" ng-model="$ctrl.email" placeholder="Email">
       </div>
     </div>
     <div class="form-group">
 
     
-           <label class=" control-label col-sm-2" for="$ctrl.formulario.sexo">Sexo:</label>
+           <label class=" control-label col-sm-2" ng-model="$ctrl.sexo">Sexo:</label>
            <div class="col-sm-4">
       <label><input type="radio" name="optsexo">Masculino</label>
       <label><input type="radio" name="optsexo">Feminino</label>
@@ -69,7 +69,7 @@
 
         <label class=" control-label col-sm-2" for="uf">UF:</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.uf" maxlength=2 placeholder="UF">
+        <input type="text" class="form-control" ng-model="$ctrl.uf" maxlength=2 placeholder="UF">
     </div>
   </div>
   <div class="form-group">
@@ -77,7 +77,7 @@
 
 
   
-   <label class=" control-label col-sm-2" for="Raça/cor">Raça/cor:</label>
+   <label class=" control-label col-sm-2" ng-model="$ctrl.id_raca_cor" for="Raça/cor">Raça/cor:</label>
   <div class="col-sm-4">
    <select class="w3-select" name="option">
     <option value="" disabled selected>Raça/cor:</option>
@@ -95,28 +95,28 @@
 
         <label class=" control-label col-sm-2" for="nivelt">Nivel:</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.nivel" placeholder="Nivel">
+        <input type="text" class="form-control" ng-model="$ctrl.id_nivel" placeholder="Nivel">
     </div>
   </div>
   <div class="form-group">
 
         <label class=" control-label col-sm-2" for="conclusao">Ano de conclusão do ensino médio:</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.conclusao" maxlength=4 placeholder="Ano">
+        <input type="text" class="form-control" ng-model="$ctrl.ano_conclusao" maxlength=4 placeholder="Ano">
     </div>
   </div>
   <div class="form-group">
 
-        <label class=" control-label col-sm-2" for="nome do pai">Nome do pai:</label>
+        <label class=" control-label col-sm-2" for="nomepai">Nome do pai:</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.nome do pai" placeholder="Nome do pai">
+        <input type="text" class="form-control" ng-model="$ctrl.nome_pai" placeholder="Nome do pai">
       </div>
     </div>
   <div class="form-group">
 
-        <label class=" control-label col-sm-2" for="nome da mãe">Nome da mãe:</label>
+        <label class=" control-label col-sm-2" for="nomemae">Nome da mãe:</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.nome da mae" placeholder="Nome da Mãe">
+        <input type="text" class="form-control" ng-model="$ctrl.nome_mae" placeholder="Nome da Mãe">
     </div>
   </div>
   <div class="form-group">
@@ -125,7 +125,7 @@
   
        <label class="control-label col-sm-2" for="pwd">Senha:</label>
     	  <div class="col-sm-4">          
-       		 <input type="password" class="form-control" placeholder="Senha" ng-model="$ctrl.formulario.senha">
+       		 <input type="password" class="form-control" placeholder="Senha" ng-model="$ctrl.senha">
       </div>
     <div class="form-group">    
 
