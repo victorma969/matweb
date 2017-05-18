@@ -1,5 +1,3 @@
-(function () {
-'use strict';
 angular
 module('Cadastrar').
   component('registrarDepartamento', {
@@ -24,4 +22,4 @@ this.formulario = {'depName':'','idNumber':''};
         }
     }
 
-})();
+};
