@@ -7,7 +7,7 @@ module('Cadastrar').
         ctrl.cadastrar = cadastrar;
         function cadastrar() {
             ctrl.mensagem = true;
-            ApiDepartamentoRegistrar.Create(ctrl.formulario)
+            ApiDepartamentoRegistrar.cadastrar(ctrl.formulario)
                 .then(function (data) {
                     if (data.success) {
                         MatWebGlobals.Success('Registration successful', true);
