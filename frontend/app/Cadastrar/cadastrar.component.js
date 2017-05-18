@@ -18,7 +18,6 @@ module('Cadastrar').
                         MatWebGlobals.Error(data.mensagem);
                         ctrl.mensagem = false;
                     }
-                });
+                })
         }
-    }
-;
+    };
