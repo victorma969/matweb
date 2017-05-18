@@ -10,7 +10,6 @@ class PedidoListar(Pedido):
 			self.nome = self.corpo['nome']
 			self.pagina = self.corpo['pagina']
 			self.quantidade = self.corpo['quantidade']
-			self.ementa = self.corpo['ementa']
 		except:
 			raise ErroNoHTTP(400)
 
@@ -25,6 +24,3 @@ class PedidoListar(Pedido):
 
 	def getQuantidade(self):
 		return self.quantidade
-
-	def getEmenta(self):
-		return self.ementa
