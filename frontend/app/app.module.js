@@ -8,5 +8,6 @@ angular.module('MatWeb', [
   'Predio',
   'Departamento',
   'Registrodesala',
+  'Curso'
   'ui.bootstrap',
 ]);

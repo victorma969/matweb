@@ -20,10 +20,10 @@ angular.
           template: '<listar-campus></listar-campus>'
         })
       $routeProvider.when('/Curso', {
-          template: '<curso-listar></curso-listar>'
+          template: '<listar-curso></listar-curso>'
         })
       $routeProvider.when('/Curso/Registrar', {
-          template: '<curso-registrar></curso-registrar>'
+          template: '<registrar-curso></registrar-curso>'
         })
       $routeProvider.when('/Departamento', {
           template: '<listar-departamento></listar-departamento>'
@@ -32,7 +32,7 @@ angular.
           template: '<registrar-departamento></registrar-departamento>'
         })
       $routeProvider.when('/CadastroDisciplina', {
-          template: '<cadastrar-disciplina></cadastrar-disciplina>'
+          template: '<registrar-disciplina></registrar-disciplina>'
         })
       $routeProvider.when('/Predio', {
           template: '<listar-predio></listar-predio>'

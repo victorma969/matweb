@@ -8,7 +8,7 @@ angular.
 	ctrl.cursos = [];
       this.pesquisar = function()
       {
-       	ApiCurso.Listar({id_departamento: 95 , nome: ctrl.nome_curso, pagina: 0, quantidade: 1000 },function(resultado) {
+       	ApiCurso.Listar({id_campus: 1 , nome: ctrl.nome_curso, pagina: 0, quantidade: 1000 },function(resultado) {
 		          ctrl.cursos = resultado.corpo
 			console.log(ctrl.cursos)
 		}, function(erro){
