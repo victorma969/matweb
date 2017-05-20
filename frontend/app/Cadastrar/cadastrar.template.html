@@ -13,14 +13,14 @@
             <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Departamento é Obrigatório</span>
         </div>
             <div class="form-group" ng-class="{ 'has-error': form.id_campus.$dirty && form.id_campus.$error.required }">
-            <label for="username">Nome do Departamento</label>
+            <label for="username">ID do Campus(1=D,2=C,3=P,4=G)</label>
             <input type="text" name="id_campus" id="id_campus" class="form-control" ng-model="$ctrl.formulario.id_campus" required />
-            <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Departamento é Obrigatório</span>
+            <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Id do Campus é Obrigatório</span>
 
             <div class="form-group" ng-class="{ 'has-error': form.sigla.$dirty && form.sigla.$error.required }">
-            <label for="username">Nome do Departamento</label>
+            <label for="username">Sigla do Departamento</label>
             <input type="text" name="sigla" id="sigla" class="form-control" ng-model="$ctrl.formulario.sigla" required />
-            <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Departamento é Obrigatório</span>
+            <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Sigla do Departamento é Obrigatório</span>
         </div>
         </div>
         <div class="form-actions">

@@ -8,35 +8,52 @@
                     </div>
                     <div class="panel-body">
                         <form role="form" ng-submit="$ctrl.registrar()">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Nome" ng-model="$ctrl.formulario.nome" type="." autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Código" ng-model="$ctrl.formulario.codigo" type="." autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Permanencia Mínima" ng-model="$ctrl.formulario.permanencia_minima" type="." value="">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Permanencia Máxima" ng-model="$ctrl.formulario.permanencia_maxima" type="." value="">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Créditos Formatura" ng-model="$ctrl.formulario.creditos_formatura" type="." value="">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Creditos Optativos Concentração" ng-model="$ctrl.formulario.creditos_optativos_concentracao" type="." value="">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Creditos Optativos Conexa" ng-model="$ctrl.formulario.creditos_optativos_conexa" type="." value="">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Creditos Livres Máximo" ng-model="$ctrl.formulario.creditos_livres_maximo" type="." value="">
-                                </div>
+        <div class="form-group" ng-class="{ 'has-error': form.nome.$dirty && form.nome.$error.required }">
+            <label for="username">Nome do Departamento</label>
+            <input type="text" name="nome" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" required />
+            <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Departamento é Obrigatório</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.codigo.$dirty && form.codigo.$error.required }">
+            <label for="username">Código</label>
+            <input type="text" name="codigo" id="codigo" class="form-control" ng-model="$ctrl.formulario.codigo" required />
+            <span ng-show="form.codigo.$dirty && form.codigo.$error.required" class="help-block">Código é Obrigatório</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.permanencia_minima.$dirty && form.permanencia_minima.$error.required }">
+            <label for="username">Permanencia Mínima</label>
+            <input type="text" name="permanencia_minima" id="permanencia_minima" class="form-control" ng-model="$ctrl.formulario.permanencia_minima" required />
+            <span ng-show="form.permanencia_minima.$dirty && form.permanencia_minima.$error.required" class="help-block">Permanencia Mínima é Obrigatório</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.permanencia_maxima.$dirty && form.permanencia_maxima.$error.required }">
+            <label for="username">Permanencia Máxima</label>
+            <input type="text" name="permanencia_maxima" id="permanencia_maxima" class="form-control" ng-model="$ctrl.formulario.permanencia_maxima" required />
+            <span ng-show="form.permanencia_maxima.$dirty && form.permanencia_maxima.$error.required" class="help-block">Permanencia Máxima é Obrigatório</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.creditos_formatura.$dirty && form.creditos_formatura.$error.required }">
+            <label for="username">Créditos Formatura</label>
+            <input type="text" name="creditos_formatura" id="creditos_formatura" class="form-control" ng-model="$ctrl.formulario.creditos_formatura" required />
+            <span ng-show="form.creditos_formatura.$dirty && form.creditos_formatura.$error.required" class="help-block">Créditos Formatura é obrigatório.</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.creditos_optativos_concentracao.$dirty && form.creditos_optativos_concentracao.$error.required }">
+            <label for="username">Creditos Optativos Concentração</label>
+            <input type="text" name="creditos_optativos_concentracao" id="creditos_optativos_concentracao" class="form-control" ng-model="$ctrl.formulario.creditos_optativos_concentracao" required />
+            <span ng-show="form.creditos_optativos_concentracao.$dirty && form.creditos_optativos_concentracao.$error.required" class="help-block">Creditos Optativos Concentração é obrigatório.</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.creditos_optativos_conexa.$dirty && form.creditos_optativos_conexa.$error.required }">
+            <label for="username">Creditos Optativos Conexa</label>
+            <input type="text" name="creditos_optativos_conexa" id="creditos_optativos_conexa" class="form-control" ng-model="$ctrl.formulario.creditos_optativos_conexa" required />
+            <span ng-show="form.creditos_optativos_conexa.$dirty && form.creditos_optativos_conexa.$error.required" class="help-block">Creditos Optativos Conexa é obrigatório.</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.creditos_livres_maximo.$dirty && form.creditos_livres_maximo.$error.required }">
+            <label for="username">Creditos Livres Máximo</label>
+            <input type="text" name="creditos_livres_maximo" id="creditos_livres_maximo" class="form-control" ng-model="$ctrl.formulario.creditos_livres_maximo" required />
+            <span ng-show="form.creditos_livres_maximo.$dirty && form.creditos_livres_maximo.$error.required" class="help-block">Creditos Livres Máximo é obrigatório.</span>
+        </div>
                                 <button class="btn btn-lg btn-success btn-block">Registrar</button>
-                                <h1>{{$ctrl.mensagem}}</h1>
-                            </fieldset>
-                        </form>
+           <h1>{{$ctrl.mensagem}}</h1> <meta http-equiv="refresh" content="30">
+            <a href="#!/login" class="btn btn-link">Cancelar</a>
+        </div>
+    </form>
+</div>
                     </div>
                 </div>
             </div>
