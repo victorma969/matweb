@@ -6,36 +6,25 @@
                     </div>
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <form role="form" name = "{{$ctrl.campos}}" ng-submit="$ctrl.cadastrardisciplina()" novalidate>
+                        <form role="form" ng-submit="$ctrl.cadastrardisciplina()">
                             <fieldset>
                                 <div class="form-group">
                                     <label class = "control-label"> Nome: </label>
                                     <input class="form-control" id="nome" name="nome" placeholder = "Nome da disciplina" ng-model="$ctrl.formulario.nome" type="text" required>
-                                    <div ng-if= "(campos.nome.$touched || campos.$submitted) && campos.nome.$invalid">
-                                    <span ng-if="campos.nome.$error.required"> Este campo é obrigatório! </span>
-                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label class = "control-label"> Código: </label>
-                                    <input class="form-control" id="codigo" name="codigo" placeholder = "Código da disciplina" ng-model="$ctrl.formulario.codigo" type="text" required>
-                                    <div ng-if= "(campos.codigo.$touched || campos.$submitted) && campos.codigo.$invalid">
-                                    <span ng-if="campos.codigo.$error.required"> Este campo é obrigatório! </span>
-                                    </div>
+                                    <input class="form-control" id="codigo" name="codigo" placeholder = "Código da disciplina" ng-model="$ctrl.formulario.codigo" type="text" required> 
                                 </div>
                                 <div class="form-group">
                                     <label class = "control-label"> Id: </label>
                                     <input class="form-control" id="id_departamento" name="id_departamento" placeholder = "Id da disciplina" ng-model="$ctrl.formulario.id_departamento" type="text" required>
-                                    <div ng-if= "(campos.id_departamento.$touched || campos.$submitted) && campos.id_departamento.$invalid">
-                                    <span ng-if="campos.id_departamento.$error.required"> Este campo é obrigatório! </span>
-                                    </div>
                                 </div>
                                 
                                 <button class="btn btn-lg btn-success btn-block">Cadastrar</button>
-                               
-                                <button type ="reset" ng-click="limparForm()">Limpar</button>
 
                                 <div> {{$ctrl.mensagem}}</div>  
-                                            
+
                             </fieldset>
                         </form>
                     </div>

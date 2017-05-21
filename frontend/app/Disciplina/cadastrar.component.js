@@ -6,19 +6,8 @@ angular.
 
     var ctrl = this;
     this.formulario = {'nome':'', 'codigo': '', 'id_departamento':''}
-    this.campos = "";
 
-    this.limparForm = function(){  
-      ctrl.campos.$setPristine();
-      ctrl.campos.$setUntouched();
-    }
-    
     this.cadastrardisciplina = function(){
-      
-      ctrl.campos.$setDirty();
-
-      if(ctrl.campos.$invalid)
-      return;
 
       console.log("Se funfo")
 
