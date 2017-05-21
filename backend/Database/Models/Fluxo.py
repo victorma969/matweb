@@ -9,7 +9,7 @@ class Fluxo(object):
 			self.periodo_inicio = dados ['periodo_inicio']
 			self.periodo_fim = dados ['periodo_fim']
 			self.id_curso = dados ['id_curso']
-		        self.id_opcao = dados ['id_opcao']
+		   self.id_opcao = dados ['id_opcao']
 	
 	def getId(self):
 		return self.id

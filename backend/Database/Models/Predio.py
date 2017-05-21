@@ -38,8 +38,8 @@ class Predio(object):
 	def getLongitude(self):
 		return self.longitude
 		
-	def setId_campus(self,id_campus):
-		self.id_campus = id_campus
+	def setId_campus(self,campus):
+		self.id_campus = (Campus().pegarCampus('nome = %s',(campus,))).getId()
 		
 	def getId_campus(self):
 		return self.id_campus

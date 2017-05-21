@@ -24,11 +24,12 @@ class Disciplina(object):
 	def getCodigo(self):
 		return self.codigo
 		
-	def setId_departamento(self,id_departamento):
-		self.id_departamento = id_departamento
-
+	def setId_departamento(self,departamento):
+		self.id_departamento = (Departamento().pegarDepartamento('nome = %s',(departamento,))).getId()
+		
 	def getId_departamento(self):
 		return self.id_departamento
 		
 	def getDepartamento(self):
 		return (Departamento().pegarDepartamento('id = %s',(self.id_departamento,))).getNome()
+	

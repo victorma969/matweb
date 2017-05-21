@@ -6,10 +6,10 @@ class PedidoCadastrar(Pedido):
 	def __init__(self,variaveis_do_ambiente):
 		super(PedidoCadastrar, self).__init__(variaveis_do_ambiente)
 		try:						
-			self.turno = self.corpo['turno']
-			self.inicio = self.corpo['inicio']
-			self.fim = self.corpo['fim']
-			self.dia = self.corpo['dia']
+			self.turno = dados ['turno']
+			self.inicio = dados ['inicio']
+			self.fim = dados ['fim']
+			self.dia = dados ['dia']
 		except:
 			raise ErroNoHTTP(400)
 		
