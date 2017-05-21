@@ -7,8 +7,13 @@ angular.
 
     var ctrl = this;
     this.formulario = {'nome':'', 'codigo': '', 'id_departamento':''}
+    this.campos = "";
     this.cadastrardisciplina = function()
     {
+
+      if(ctrl.campos.$invalidade)
+      return;
+      
       console.log("Se funfo")
       console.log(cadastrardisciplina)
 
