@@ -2,8 +2,8 @@ angular.module('MatWeb', [
   'ngRoute',
   'nucleo',
   'Usuario',
-  'Campus',
   'Oferta',
+  'Campus',
   'Disciplina',
   'ui.bootstrap',
 ]);

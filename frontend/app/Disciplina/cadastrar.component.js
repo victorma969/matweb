@@ -1,8 +1,8 @@
 angular.
   module('Disciplina').
   component('cadastrarDisciplina', {
-    templateUrl: '/app/Disciplina/disciplina.template.html',
-    controller: ['ApiDisciplina', 'MatWebGlobals',function Register(ApiDisciplina,MatWebGlobals) 
+    templateUrl: '/app/Disciplina/cadastrar.template.html',
+    controller: ['ApiDisciplina', 'MatWebGlobals',function Cadastro(ApiDisciplina,MatWebGlobals) 
 {
 
     var ctrl = this;
@@ -19,7 +19,7 @@ angular.
         ctrl.mensagem = "Cadastro de disciplina realizado com sucesso !";
         console.log("Se foi cadastrado")
       }, function(data){
-        ctrl.mensagem = "Erro ao cadastrar disciplina!";
+        crtl.mensagem = "Erro ao cadastrar disciplina!";
         console.log("Se n foi cadastrado")
                         }                       );
 
