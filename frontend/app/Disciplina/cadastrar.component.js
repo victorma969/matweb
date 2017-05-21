@@ -7,13 +7,20 @@ angular.
     var ctrl = this;
     this.formulario = {'nome':'', 'codigo': '', 'id_departamento':''}
     this.campos = "";
-    this.cadastrardisciplina = function(){
 
-      if(ctrl.campos.$invalidade)
-      return;
+    this.limparForm = function(){  
+      ctrl.campos.$setPristine();
+      ctrl.campos.$setUntouched();
+    }
+    
+    this.cadastrardisciplina = function(){
       
+      ctrl.campos.$setDirty();
+
+      if(ctrl.campos.$invalid)
+      return;
+
       console.log("Se funfo")
-      console.log(cadastrardisciplina)
 
       ApiDisciplina.Cadastrar(ctrl.formulario, function(data){
         ctrl.mensagem = "Cadastro de disciplina realizado com sucesso !";
