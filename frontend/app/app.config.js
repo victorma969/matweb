@@ -21,10 +21,25 @@ angular.
         })
       $routeProvider.when('/Curso', {
           template: '<listar-curso></listar-curso>'
-        })   
-      $routeProvider.when('/Curso/Cadastrar', {
-          template: '<cadastrar-curso></cadastrar-curso>'
-        })   
+
+      $routeProvider.when('/Curso/Registrar', {
+          template: '<registrar-curso></registrar-curso>'
+        })
+      $routeProvider.when('/Departamento', {
+          template: '<listar-departamento></listar-departamento>'
+        })
+        $routeProvider.when('/Cadastrar', {
+          template: '<registrar-departamento></registrar-departamento>'
+        })
+      $routeProvider.when('/CadastroDisciplina', {
+          template: '<registrar-disciplina></registrar-disciplina>'
+        })
+      $routeProvider.when('/Predio', {
+          template: '<listar-predio></listar-predio>'
+        })
       .otherwise('/');
+      $routeProvider.when('/Registrodesala/Cadastrar', {
+          template: '<sala-registrar></sala-registrar>'
+        })
     }
   ]).value('MatWebGlobals', {});
