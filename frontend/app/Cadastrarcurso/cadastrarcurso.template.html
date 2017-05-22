@@ -17,7 +17,7 @@
     <form role="form" ng-submit="$ctrl.cadastrar()">
         <div class="form-group" ng-class="{ 'has-error': form.id_campus.$dirty && form.id_campus.$error.required }">
             <label for="username">Id Campus</label>
-            <input type="text" name="id_campus" id="id_campus" class="form-control" ng-model="$ctrl.formulario.id_campus" required />
+            <input type="text" name="id_campus" id="id_campus" class="form-control" ng-model="$ctrl.formulario.id_campus" required > </input>
             <span ng-show="form.id_campus.$dirty && form.id_campus.$error.required" class="help-block">Id Campus é Obrigatório</span>
         </div>
 
