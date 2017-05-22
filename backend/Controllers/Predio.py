@@ -13,7 +13,7 @@ class Predio(Controller):
 		return RespostaListar(BDPredio().pegarPredios("WHERE id_campus = %s AND nome LIKE %s LIMIT %s OFFSET %s",(pedido_listar.getIdCampus(),"%"+pedido_listar.getNome().replace(' ','%')+"%",pedido_listar.getQuantidade(),(pedido_listar.getQuantidade()*pedido_listar.getPagina()))))
 
 	def Ver(self, pedido_ver):     
-		return RespostaVer(BDPredio().pegarPredio("WHERE id = %s ", (pedido_ver.getId())))
+		return RespostaVer(BDPredio().pegarPredio("WHERE id = %s ", (str(pedido_ver.getId()),)))
 
 	def Cadastrar(self,pedido_cadastrar):
 		predio = ModelPredio()
@@ -25,15 +25,15 @@ class Predio(Controller):
 		return RespostaCadastrar(BDPredio().inserirPredio(predio))
 
 	def Editar(self,pedido_editar):
-		predio = BDPredio().pegarPredio("WHERE id = %s ", (pedido_editar.getId()))
+		predio = BDPredio().pegarPredio("WHERE id = %s ", (str(pedido_editar.getId()),))
 		predio.setNome(pedido_editar.getNome())
-		predio.setSigla(pedido_cadastrar.getSigla())
-		predio.setLatitude(pedido_cadastrar.getLatitude())
-		predio.setLongitude(pedido_cadastrar.getLongitude())
+		predio.setSigla(pedido_editar.getSigla())
+		predio.setLatitude(pedido_editar.getLatitude())
+		predio.setLongitude(pedido_editar.getLongitude())
 		BDPredio().alterarPredio(predio)
 		return RespostaEditar("Predio Editado com sucesso!")
 
 	def Deletar(self,pedido_deletar):
-		predio = BDPredio().pegarPredio("WHERE id = %s ", (pedido_deletar.getId()))		
+		predio = BDPredio().pegarPredio("WHERE id = %s ", (str(pedido_deletar.getId()),))		
 		BDPredio().removerPredio(predio)
 		return RespostaDeletar("Predio Removido com sucesso!")
