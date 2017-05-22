@@ -2,7 +2,7 @@ angular.
   module('Campus').
   component('ofertaCampus', {
     templateUrl: '/app/Campus/campus.template.html',
-    controller: ['ApiCampus', 'MatWebGlobals',function Entrar(ApiOCampus,MatWebGlobals) {
+    controller: ['ApiCampus', 'MatWebGlobals',function Entrar(ApiCampus,MatWebGlobals) {
   var ctrl = this;
   ctrl.campus = [];
       this.pesquisar = function()
