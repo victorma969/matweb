@@ -1,74 +1,161 @@
-    <div class="page-wrapper">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Registrar Curso </h3>
-<div class="col-md-6 col-md-offset-3">
-    <form role="form" ng-submit="$ctrl.cadastrar()">
-        <div class="form-group" ng-class="{ 'has-error': form.nome.$dirty && form.nome.$error.required }">
-            <label for="username">Nome do Curso</label>
-            <input type="text" name="nome" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" required />
-            <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Curso é Obrigatório</span>
-        </div>
-        <div class="col-md-6 col-md-offset-3">
-    <form role="form" ng-submit="$ctrl.cadastrar()">
-        <div class="form-group" ng-class="{ 'has-error': form.id_campus.$dirty && form.id_campus.$error.required }">
-            <label for="username">Id Campus</label>
-            <input type="id_campus" class="form-control" id="id_campus" ng-model="$ctrl.formulario.id_campus" required />
-            <span ng-show="form.id_campus.$dirty && form.id_campus.$error.required" class="help-block">Id Campus é Obrigatório</span>
-        </div>
-        <div class="col-md-6 col-md-offset-3">
-    <form role="form" ng-submit="$ctrl.cadastrar()">
-        <div class="form-group" ng-class="{ 'has-error': form.id_grau.$dirty && form.id_grau.$error.required }">
-            <label for="username">Id Grau</label>
-            <input type="text" name="id_grau" id="id_grau" class="form-control" ng-model="$ctrl.formulario.id_grau" required />
-            <span ng-show="form.id_grau.$dirty && form.id_grau.$error.required" class="help-block">Id Grau é Obrigatório</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.codigo.$dirty && form.codigo.$error.required }">
-            <label for="username">Código</label>
-            <input type="text" name="codigo" id="codigo" class="form-control" ng-model="$ctrl.formulario.codigo" required />
-            <span ng-show="form.codigo.$dirty && form.codigo.$error.required" class="help-block">Código é Obrigatório</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.permanencia_minima.$dirty && form.permanencia_minima.$error.required }">
-            <label for="username">Permanencia Mínima</label>
-            <input type="text" name="permanencia_minima" id="permanencia_minima" class="form-control" ng-model="$ctrl.formulario.permanencia_minima" required />
-            <span ng-show="form.permanencia_minima.$dirty && form.permanencia_minima.$error.required" class="help-block">Permanencia Mínima é Obrigatório</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.permanencia_maxima.$dirty && form.permanencia_maxima.$error.required }">
-            <label for="username">Permanencia Máxima</label>
-            <input type="text" name="permanencia_maxima" id="permanencia_maxima" class="form-control" ng-model="$ctrl.formulario.permanencia_maxima" required />
-            <span ng-show="form.permanencia_maxima.$dirty && form.permanencia_maxima.$error.required" class="help-block">Permanencia Máxima é Obrigatório</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.creditos_formatura.$dirty && form.creditos_formatura.$error.required }">
-            <label for="username">Créditos Formatura</label>
-            <input type="text" name="creditos_formatura" id="creditos_formatura" class="form-control" ng-model="$ctrl.formulario.creditos_formatura" required />
-            <span ng-show="form.creditos_formatura.$dirty && form.creditos_formatura.$error.required" class="help-block">Créditos Formatura é obrigatório.</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.creditos_optativos_concentracao.$dirty && form.creditos_optativos_concentracao.$error.required }">
-            <label for="username">Creditos Optativos Concentração</label>
-            <input type="text" name="creditos_optativos_concentracao" id="creditos_optativos_concentracao" class="form-control" ng-model="$ctrl.formulario.creditos_optativos_concentracao" required />
-            <span ng-show="form.creditos_optativos_concentracao.$dirty && form.creditos_optativos_concentracao.$error.required" class="help-block">Creditos Optativos Concentração é obrigatório.</span>
-        </div>
-         <div class="form-group" ng-class="{ 'has-error': form.creditos_optativos_conexa.$dirty && form.creditos_optativos_conexa.$error.required }">
-            <label for="username">Creditos Optativos Conexa</label>
-            <input type="text" name="creditos_optativos_conexa" id="creditos_optativos_conexa" class="form-control" ng-model="$ctrl.formulario.creditos_optativos_conexa" required />
-            <span ng-show="form.creditos_optativos_conexa.$dirty && form.creditos_optativos_conexa.$error.required" class="help-block">Creditos Optativos Conexa é obrigatório.</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.creditos_livres_maximo.$dirty && form.creditos_livres_maximo.$error.required }">
-            <label for="username">Creditos Livres Máximo</label>
-            <input type="text" name="creditos_livres_maximo" id="creditos_livres_maximo" class="form-control" ng-model="$ctrl.formulario.creditos_livres_maximo" required />
-            <span ng-show="form.creditos_livres_maximo.$dirty && form.creditos_livres_maximo.$error.required" class="help-block">Creditos Livres Máximo é obrigatório.</span>
-        </div>
-            <button class="btn btn-lg btn-success btn-block">Registrar</button>
-            <h1>{{$ctrl.mensagem}}</h1>
-            
-            <a href="<menu-principal></menu-principal>" class="btn btn-link">Cancelar</a>
-        </div>
-    </form>
+   <!DOCTYPE html>
+<html ng-app="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+
+<body>
+
+
+<head>
+    <title>Cadastro</title>
+
+</head>
+<style>
+h1 {
+    text-align: center;
+}
+ 
+</style>
+
+    <header class="w3-container w3-teal">
+     <h1>Cadastro do Aluno</h1>
+    </header>
+  
+
+<div class="container">
+  <h2></h2>
+  <form class="form-horizontal" action="/action_page.php">
+    <div class="form-group">
+      
+
+
+
+      <label class="control-label col-sm-2" for="nome">Nome Completo:</label >
+      <div class="col-sm-4" >
+        <input type="text" class="form-control" ng-model="$ctrl.formulario.nome" placeholder="Nome" >
+      </div>
+    <div class="form-group">
 </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+      <label class="control-label col-sm-2" for="matricula">Matricula:</label>
+      <div class="col-sm-4">
+         <input type="text" class="form-control" ng-model="$ctrl.formulario.matricula" maxlength=9 placeholder="Matricula">
+      </div>
+    <div class="form-group">
     </div>
+     
+      <label class="control-label col-sm-2" for="cpf">CPF:</label>
+      <div class="col-sm-4">
+         <input type="text" class="form-control" ng-model="$ctrl.formulario.cpf" maxlength=11 placeholder="CPF">
+      </div>
+    </div>
+    <div class="form-group"> 
+
+       <label class="control-label col-sm-2" for="identidade">Identidade:</label>
+      <div class="col-sm-4">
+         <input type="text" class="form-control" ng-model="$ctrl.formulario.identidade" maxlength=7 placeholder="Identidade">
+      </div>
+    </div>
+    <div class="form-group">    
+
+      <label class="control-label col-sm-2" for="email">Email:</label>
+
+      <div class="col-sm-4">
+        <input type="text" class="form-control" ng-model="$ctrl.formulario.email" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group">
+
+    
+           <label class=" control-label col-sm-2" for="$ctrl.formulario.sexo">Sexo:</label>
+           <div class="col-sm-4">
+      <label><input type="radio" name="optsexo">Masculino</label>
+      <label><input type="radio" name="optsexo">Feminino</label>
+    </div>
+  </div>
+  <div class="form-group">
+
+
+        <label class=" control-label col-sm-2" for="uf">UF:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" ng-model="$ctrl.formulario.uf" maxlength=2 placeholder="UF">
+    </div>
+  </div>
+  <div class="form-group">
+
+
+
+  
+   <label class=" control-label col-sm-2" for="Raça/cor">Raça/cor:</label>
+  <div class="col-sm-4">
+   <select class="w3-select" name="option" ng-model="$ctrl.formulario.cor">
+    <option value="" disabled selected>Raça/cor:</option>
+    <option value="2">Amarela</option>
+    <option value="3">Branca</option>
+    <option value="4">Indigena</option>
+    <option value="5">Parda</option>
+    <option value="6">Não declarar</option>
+  </select>
+    </div>
+  </div>
+  <div class="form-group">
+
+     
+
+        <label class=" control-label col-sm-2" for="nivelt">Nivel:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" ng-model="$ctrl.formulario.nivel" placeholder="Nivel">
+    </div>
+  </div>
+  <div class="form-group">
+
+        <label class=" control-label col-sm-2" for="conclusao">Ano de conclusão do ensino médio:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" ng-model="$ctrl.formulario.conclusao" maxlength=4 placeholder="Ano">
+    </div>
+  </div>
+  <div class="form-group">
+
+        <label class=" control-label col-sm-2" for="nome do pai">Nome do pai:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" ng-model="$ctrl.formulario.nomepai" placeholder="Nome do pai">
+      </div>
+    </div>
+  <div class="form-group">
+
+        <label class=" control-label col-sm-2" for="nome da mãe">Nome da mãe:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" ng-model="$ctrl.formulario.nomemae" placeholder="Nome da Mãe">
+    </div>
+  </div>
+  <div class="form-group">
+  
+    
+  
+       <label class="control-label col-sm-2" for="pwd">Senha:</label>
+          <div class="col-sm-4">          
+             <input type="password" class="form-control" placeholder="Senha" ng-model="$ctrl.formulario.senha">
+      </div>
+    <div class="form-group">    
+
+
+     
+    </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+      <button class="w3-button w3-white w3-border">Cadastrar</button>
+
+      </div>
+
+<body>
+
+
+
+
+ 
