@@ -4,7 +4,6 @@ angular.
     function($resource) {
       return $resource('/api/Campus/Listar', {}, {
         Listar: { method: 'POST' }
-
       });
     }
   ]);
