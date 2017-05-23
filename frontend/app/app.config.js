@@ -43,6 +43,9 @@ angular.
       $routeProvider.when('/Predio', {
           template: '<listar-predio></listar-predio>'
         })
+      $routeProvider.when('/Predio/Cadastrar', {
+          template: '<listar-predio></listar-predio>'
+        })
       .otherwise('/');
       $routeProvider.when('/Registrodesala/Cadastrar', {
           template: '<sala-registrar></sala-registrar>'

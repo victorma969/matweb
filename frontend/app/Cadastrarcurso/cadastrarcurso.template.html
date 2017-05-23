@@ -5,6 +5,8 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Registrar Curso</h3>
+<div class="col-md-6 col-md-offset-3">
+    <form role="form" ng-submit="$ctrl.cadastrar()">
 <div class="form-group">
                                     <input class="form-control" placeholder="Nome do Campi" ng-model="$ctrl.formulario.nome" type="text" autofocus>
                                 </div>
@@ -12,9 +14,6 @@
 <div class="form-group">
                                     <input class="form-control" placeholder="Id Campus" ng-model="$ctrl.formulario.id_campus" type="text" autofocus>
                                 </div>
-
-        <div class="col-md-6 col-md-offset-3">
-    <form role="form" ng-submit="$ctrl.cadastrar()">
         <div class="form-group" ng-class="{ 'has-error': form.id_grau.$dirty && form.id_grau.$error.required }">
             <label for="username">Id Grau</label>
             <input type="text" name="id_grau" id="id_grau" class="form-control" ng-model="$ctrl.formulario.id_grau" autofocus required />

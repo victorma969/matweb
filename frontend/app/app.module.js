@@ -4,6 +4,7 @@ angular.module('MatWeb', [
   'Cadastrar',
   'Cadastrarcurso',
   'Cadastrarusuario',
+  'Cadastrarpredio',
   'Home',
   'Usuario',
   'Oferta',
