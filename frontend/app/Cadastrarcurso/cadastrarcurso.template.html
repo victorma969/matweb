@@ -9,11 +9,16 @@
                         
 <div class="col-md-6 col-md-offset-3">
     <form role="form" ng-submit="$ctrl.cadastrar()">
-        <div class="form-group" ng-class="{ 'has-error': form.nome.$dirty && form.nome.$error.required }">
-            <label for="username">Nome do Departamento</label>
-            <input type="text" name="nome" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" required />
-            <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Departamento é Obrigatório</span>
-        </div>
+        <div class="form-group">
+          <label class=" control-label col-sm-2" for="id_campus">Campi:</label>
+          <div class="col-sm-4">
+            <select class="w3-select" name="option" ng-model="$ctrl.formulario.id_campus">
+          <option value="1">Darcy Ribeiro</option>
+          <option value="2">Ceilândia</option>
+          <option value="3">Gama</option>
+          <option value="4">Planaltina</option>
+            </select>
+</div>
             <div class="form-group" ng-class="{ 'has-error': form.id_campus.$dirty && form.id_campus.$error.required }">
             <label for="username">ID do Campus</label>
             <input type="text" name="id_campus" id="id_campus" class="form-control" ng-model="$ctrl.formulario.id_campus" required />
@@ -23,7 +28,6 @@
             <label for="username">Sigla do Departamento</label>
             <input type="text" name="sigla" id="sigla" class="form-control" ng-model="$ctrl.formulario.sigla" required />
             <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Sigla do Departamento é Obrigatório</span>
-        </div>
         </div>
         <div class="form-actions">
            <button class="btn btn-lg btn-success btn-block">Registrar</button>
@@ -43,15 +47,7 @@
  
 
 
-   <div class="form-group">
-   <label class=" control-label col-sm-2" for="id_campus">Campi:</label>
-  <div class="col-sm-4">
-   <select class="w3-select" name="option" ng-model="$ctrl.formulario.id_campus">
-    <option value="1">Darcy Ribeiro</option>
-    <option value="2">Ceilândia</option>
-    <option value="3">Gama</option>
-    <option value="4">Planaltina</option>
-  </select>
+
     </div>
   </div>
    <div class="form-group">
