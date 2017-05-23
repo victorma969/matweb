@@ -36,7 +36,7 @@
 
         <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
             <label for="username">Email do Aluno</label>
-            <input type="text" name="email" id="Identidade" class="form-control" ng-model="$ctrl.formulario.email" maxlength= 40 required />
+            <input type="text" name="email" id="email" class="form-control" ng-model="$ctrl.formulario.email" maxlength= 40 required />
             <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">Email é Obrigatório</span>
         </div>
 
