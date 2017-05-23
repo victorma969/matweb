@@ -34,14 +34,31 @@ h1 {
 
 
   <div class="form-group">
-   <label class=" control-label col-sm-2" for="Raça/cor">Campi:</label>
+   <label class=" control-label col-sm-2" for="id_campus">Campi:</label>
   <div class="col-sm-4">
-   <select class="w3-select" name="option" ng-model="$ctrl.formulario.cor">
+   <select class="w3-select" name="option" ng-model="$ctrl.formulario.id_campus">
     <option value="1">Darcy Ribeiro</option>
     <option value="2">Ceilândia</option>
     <option value="3">Gama</option>
     <option value="4">Planaltina</option>
   </select>
+    </div>
+  </div>
+   <div class="form-group">
+   <label class=" control-label col-sm-2" for="id_grau">Grau:</label>
+  <div class="col-sm-4">
+   <select class="w3-select" name="option" ng-model="$ctrl.formulario.id_grau">
+    <option value="1">Bacharel</option>
+    <option value="2">Licenciatura</option>
+    <option value="3">Bacharel/Licenciatura</option>
+    <option value="4">Engenheiro</option>
+  </select>
+    </div>
+  </div>
+     <label class=" control-label col-sm-2" for="mec">Reconhecido pelo Mec?:</label>
+           <div class="col-sm-4">
+      <label><input type="radio" name="optsexo">Sim</label ng-model="$ctrl.formulario.mec">
+      <label><input type="radio" name="optsexo">Não</label ng-model="$ctrl.formulario.mec">
     </div>
   </div>
       <label class="control-label col-sm-2" for="nome">Nome do Curso:</label >
@@ -52,101 +69,64 @@ h1 {
 </div>
 
 
-      <label class="control-label col-sm-2" for="matricula">R:</label>
+      <label class="control-label col-sm-2" for="permanencia_minima">Permanencia Mínima:</label>
       <div class="col-sm-4">
-         <input type="text" class="form-control" ng-model="$ctrl.formulario.matricula" maxlength=9 placeholder="Matricula">
+         <input type="text" class="form-control" ng-model="$ctrl.formulario.permanencia_minima" maxlength=2 placeholder="Matricula">
       </div>
     <div class="form-group">
     </div>
      
-      <label class="control-label col-sm-2" for="cpf">CPF:</label>
+      <label class="control-label col-sm-2" for="permanencia_maxima">Permanencia Máxima:</label>
       <div class="col-sm-4">
-         <input type="text" class="form-control" ng-model="$ctrl.formulario.cpf" maxlength=11 placeholder="CPF">
+         <input type="text" class="form-control" ng-model="$ctrl.formulario.permanencia_maxima" maxlength=2 placeholder="permanencia_maxima">
       </div>
     </div>
     <div class="form-group"> 
 
-       <label class="control-label col-sm-2" for="identidade">Identidade:</label>
+       <label class="control-label col-sm-2" for="creditos_formatura">Créditos para se formar:</label>
       <div class="col-sm-4">
-         <input type="text" class="form-control" ng-model="$ctrl.formulario.identidade" maxlength=7 placeholder="Identidade">
+         <input type="text" class="form-control" ng-model="$ctrl.formulario.creditos_formatura" maxlength=3 placeholder="creditos_formatura">
       </div>
     </div>
-    <div class="form-group">    
+    <div class="form-group"> 
 
-      <label class="control-label col-sm-2" for="email">Email:</label>
-
+       <label class="control-label col-sm-2" for="creditos_optativos_concentracao">Créditos OPT Concentrados:</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.email" placeholder="Email">
+         <input type="text" class="form-control" ng-model="$ctrl.formulario.creditos_optativos_concentracao" maxlength=3 placeholder="creditos_optativos_concentracao">
       </div>
     </div>
-    <div class="form-group">
-
-    
-           <label class=" control-label col-sm-2" for="$ctrl.formulario.mec">Reconhecido pelo Mec?:</label>
-           <div class="col-sm-4">
-      <label><input type="radio" name="optsexo">Sim</label>
-      <label><input type="radio" name="optsexo">Não</label>
-    </div>
-  </div>
   <div class="form-group">
 
 
-        <label class=" control-label col-sm-2" for="uf">UF:</label>
+        <label class=" control-label col-sm-2" for="creditos_optativos_conexa">réditos OPT Conexos:</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.uf" maxlength=2 placeholder="UF">
+        <input type="text" class="form-control" ng-model="$ctrl.formulario.creditos_optativos_conexa" maxlength=2 placeholder="creditos_optativos_conexa">
     </div>
   </div>
   <div class="form-group">
 
      
 
-        <label class=" control-label col-sm-2" for="nivelt">Nivel:</label>
+        <label class=" control-label col-sm-2" for="creditos_livres_maximo">Créditos de ML:</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.nivel" placeholder="Nivel">
+        <input type="text" class="form-control" ng-model="$ctrl.formulario.creditos_livres_maximo" maxlength=2 placeholder="creditos_livres_maximo">
     </div>
   </div>
   <div class="form-group">
 
-        <label class=" control-label col-sm-2" for="conclusao">Ano de conclusão do ensino médio:</label>
+        <label class=" control-label col-sm-2" for="codigo">Código do Curso</label>
       <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.conclusao" maxlength=4 placeholder="Ano">
+        <input type="text" class="form-control" ng-model="$ctrl.formulario.codigo" maxlength=4 placeholder="codigo">
     </div>
   </div>
-  <div class="form-group">
-
-        <label class=" control-label col-sm-2" for="nome do pai">Nome do pai:</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.nomepai" placeholder="Nome do pai">
-      </div>
-    </div>
-  <div class="form-group">
-
-        <label class=" control-label col-sm-2" for="nome da mãe">Nome da mãe:</label>
-      <div class="col-sm-4">
-        <input type="text" class="form-control" ng-model="$ctrl.formulario.nomemae" placeholder="Nome da Mãe">
-    </div>
-  </div>
-  <div class="form-group">
-  
-    
-  
-       <label class="control-label col-sm-2" for="pwd">Senha:</label>
-          <div class="col-sm-4">          
-             <input type="password" class="form-control" placeholder="Senha" ng-model="$ctrl.formulario.senha">
-      </div>
-    <div class="form-group">    
-
-
-     
     </div>
     </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-      <button class="w3-button w3-white w3-border">Cadastrar</button>
-
-      </div>
-
-<body>
+    <div class="form-actions">
+           <button class="btn btn-lg btn-success btn-block">Registrar</button>
+           <h1>{{$ctrl.mensagem}}</h1>
+            <a href="#!/login" class="btn btn-link">Cancelar</a>
+        </div>
+</body>
 
 
 
