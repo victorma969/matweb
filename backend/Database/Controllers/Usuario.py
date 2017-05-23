@@ -18,7 +18,7 @@ class Usuario(object):
 			return None
 	
 	def inserirUsuario(self, usuario):
-		BancoDeDados().executar("INSERT INTO usuario (matricula, nome, cpf, perfil, senha, email, sexo, nome_pai, nome_mae, id_raca_cor, id_nivel, ano_conclusao, cep, numero_lote, complemento, numero_telefone, tipo_escola) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) RETURNING id", (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha, usuario.email, usuario.sexo, usuario.nome_pai, usuario.nome_mae, usuario.id_raca_cor, usuario.id_nivel, usuario.ano_conclusao, usuario.cep, usuario.numero_lote, usuario.complemento, usuario.numero_telefone, usuario.tipo_escola))
+		BancoDeDados().executar("INSERT INTO usuario (matricula, nome, cpf, perfil, senha, email, identidade, sexo, nome_pai, nome_mae, ano_conclusao) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) RETURNING id", (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha, usuario.email, usuario.sexo, usuario.nome_pai, usuario.nome_mae, usuario.id_raca_cor, usuario.id_nivel, usuario.ano_conclusao, usuario.cep, usuario.numero_lote, usuario.complemento, usuario.numero_telefone, usuario.tipo_escola))
 		usuario.id = BancoDeDados().pegarUltimoIDInserido()
 		return usuario
 		
@@ -26,5 +26,5 @@ class Usuario(object):
 		BancoDeDados().executar("DELETE FROM usuario WHERE id = %s", (str(usuario.id)))
 		
 	def alterarUsuario(self, usuario):
-		SQL = "UPDATE usuario SET matricula = %s, nome = %s, cpf = %s, perfil = %s, senha = %s email = %s sexo = %s nome_pai = %s nome_mae = %s id_raca_cor = %s id_nivel = %s ano_conclusao = %s cep = %s numero_lote = %s complemento = %s numero_telefone = %s tipo_escola = %s WHERE id = %s"
-		BancoDeDados().executar(SQL, (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha, usuario.email, usuario.sexo, usuario.nome_pai, usuario.nome_mae, usuario.id_raca_cor, usuario.id_nivel, usuario.ano_conclusao, usuario.cep, usuario.numero_lote, usuario.complemento, usuario.numero_telefone, usuario.tipo_escola usuario.id))
+		SQL = "UPDATE usuario SET matricula = %s, nome = %s, cpf = %s, perfil = %s, senha = %s email = %s identidade = %s sexo = %s nome_pai = %s nome_mae = %s ano_conclusao = %s WHERE id = %s"
+		BancoDeDados().executar(SQL, (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha, usuario.email, usuario.sexo, usuario.nome_pai, usuario.nome_mae, usuario.identidade, usuario.ano_conclusao, usuario.id))
