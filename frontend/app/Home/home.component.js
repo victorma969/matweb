@@ -5,4 +5,5 @@ angular.
     controller: ['ApiHome', 'MatWebGlobals',function Entrar(ApiHome,MatWebGlobals) {
       this.nome_usuario = "";
 	var ctrl = this;
-	ctrl.disciplinas = [];
+	    }]
+  });
