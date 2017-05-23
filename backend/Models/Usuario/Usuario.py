@@ -7,7 +7,7 @@ class Usuario(object):
 		self.identidade = usuario.getIdentidade()
 		self.cpf = usuario.getCpf()
 		self.perfil = usuario.getPerfil()
-		self.senha = usuario.getSenha(
+		self.senha = usuario.getSenha()
 		self.email = usuario.getEmail()
 		self.sexo = usuario.getSexo()
 		self.nome_pai = usuario.getNome_pai()

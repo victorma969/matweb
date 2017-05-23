@@ -18,7 +18,7 @@ class Usuario(object):
 			return None
 	
 	def inserirUsuario(self, usuario):
-		BancoDeDados().executar("INSERT INTO usuario (matricula, nome, cpf, perfil, senha, email, identidade, sexo, nome_pai, nome_mae, ano_conclusao) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) RETURNING id", (usuario.matricula, usuario.nome, usuario.cpf, usuario.identidade, usuario.perfil, usuario.senha, usuario.email, usuario.sexo, usuario.nome_pai, usuario.nome_mae, usuario.id, usuario.ano_conclusao))
+		BancoDeDados().executar("INSERT INTO usuario (matricula, nome, cpf, perfil, senha, email, identidade, sexo, nome_pai, nome_mae, ano_conclusao) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) RETURNING id", (usuario.matricula, usuario.nome, usuario.cpf, usuario.identidade, usuario.perfil, usuario.senha, usuario.email, usuario.sexo, usuario.nome_pai, usuario.nome_mae, usuario.ano_conclusao))
 		usuario.id = BancoDeDados().pegarUltimoIDInserido()
 		return usuario
 		
@@ -27,4 +27,4 @@ class Usuario(object):
 		
 	def alterarUsuario(self, usuario):
 		SQL = "UPDATE usuario SET matricula = %s, nome = %s, cpf = %s, perfil = %s, senha = %s email = %s identidade = %s sexo = %s nome_pai = %s nome_mae = %s ano_conclusao = %s WHERE id = %s"
-		BancoDeDados().executar(SQL, (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha, usuario.email, usuario.sexo, usuario.nome_pai, usuario.nome_mae, usuario.identidade, usuario.ano_conclusao, usuario.id))
+		BancoDeDados().executar(SQL, (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha, usuario.email, usuario.identidade, usuario.sexo, usuario.nome_pai, usuario.nome_mae, usuario.ano_conclusao, usuario.id))
