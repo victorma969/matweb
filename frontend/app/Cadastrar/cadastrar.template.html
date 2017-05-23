@@ -13,8 +13,8 @@
             <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Departamento é Obrigatório</span>
         </div>
         
-  <div class="form-group" ng-class="{ 'has-error': form.formulario.sigla.$dirty && form.formulario.sigla.$error.required }">
-   <label for="id_campus">Campi:</label>
+   <div class="form-group">
+   <label class=" control-label col-sm-2" for="id_campus">Campi:</label>
   <div class="col-sm-4">
    <select class="w3-select" name="option" ng-model="$ctrl.formulario.id_campus">
     <option value="1">Darcy Ribeiro</option>
@@ -27,7 +27,7 @@
         <div class="form-group" ng-class="{ 'has-error': form.formulario.sigla.$dirty && form.formulario.sigla.$error.required }">
             <label for="username">Matrícula</label>
             <input type="text" name="formulario.sigla" id="predioName" class="form-control" ng-model="$ctrl.formulario.sigla" required />
-            <span ng-show="form.formulario.sigla.$dirty && form.formulario.usuario.$error.required" class="help-block">É obrigatório digiar Matrícula</span>
+            <span ng-show="form.formulario.sigla.$dirty && form.formulario.sigla.$error.required" class="help-block">É obrigatório digiar Matrícula</span>
         </div>
         <div class="form-actions">
            <button class="btn btn-lg btn-success btn-block">Registrar</button>
