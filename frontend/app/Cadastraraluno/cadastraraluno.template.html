@@ -28,10 +28,10 @@
         </div>
 
 
-        <div class="form-group" ng-class="{ 'has-error': form.Identidade.$dirty && form.Identidade.$error.required }">
+        <div class="form-group" ng-class="{ 'has-error': form.identidade.$dirty && form.identidade.$error.required }">
             <label for="username">Identidade do Aluno</label>
-            <input type="text" name="Identidade" id="Identidade" class="form-control" ng-model="$ctrl.formulario.Identidade" maxlength= 9 required />
-            <span ng-show="form.Identidade.$dirty && form.Identidade.$error.required" class="help-block">Identidade é Obrigatório</span>
+            <input type="text" name="identidade" id="identidade" class="form-control" ng-model="$ctrl.formulario.identidade" maxlength= 9 required />
+            <span ng-show="form.identidade.$dirty && form.identidade.$error.required" class="help-block">Identidade é Obrigatório</span>
         </div>
 
         <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
