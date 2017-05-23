@@ -5,6 +5,8 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Registrar Curso</h3>
+                        <div class="col-md-6 col-md-offset-3">
+    <form role="form" ng-submit="$ctrl.cadastrar()">
 <div class="form-group">
                                     <input class="form-control" placeholder="Nome do Curso" ng-model="$ctrl.formulario.nome" type="text" autofocus>
                                 </div>
@@ -49,7 +51,6 @@
 <div class="form-group">
                                     <input class="form-control" placeholder="Créditos Módulo Livre" ng-model="$ctrl.formulario.creditos_livres_maximo" type="text" autofocus>
                                 </div>
-
             <button class="btn btn-lg btn-success btn-block">Registrar</button>
             <h1>{{$ctrl.mensagem}}</h1>
             <a href="#!/login" class="btn btn-link">Cancelar</a>
