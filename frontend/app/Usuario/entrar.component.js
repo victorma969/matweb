@@ -10,7 +10,7 @@ angular.
           MatWebGlobals.usuarioLogado = resultado.corpo.usuario;
        		$http.defaults.headers.common.Authorization = resultado.corpo.token;
        		window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
-       		$location.path("/Home/home.template.html")
+       		$location.path('/Home/home.template.html')
    		}, function(erro){
    			this.erro = erro.data.mensagem
    		} );
