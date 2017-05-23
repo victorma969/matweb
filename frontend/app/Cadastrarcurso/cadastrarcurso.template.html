@@ -9,7 +9,7 @@
     <form role="form" ng-submit="$ctrl.cadastrar()">
         <div class="form-group" ng-class="{ 'has-error': form.nome.$dirty && form.nome.$error.required }">
             <label for="username">Nome do Curso</label>
-            <input type="text" name="nome" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" required />
+            <input type="text" name="nome" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" autofocus/>
             <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Curso é Obrigatório</span>
         </div>
 
@@ -17,7 +17,7 @@
     <form role="form" ng-submit="$ctrl.cadastrar()">
         <div class="form-group" ng-class="{ 'has-error': form.id_campus.$dirty && form.id_campus.$error.required }">
             <label for="username">Id Campus</label>
-            <input type="id_campus" class="form-control" id="id_campus" ng-model="$ctrl.formulario.id_campus" required />
+            <input type="id_campus" class="form-control" id="id_campus" ng-model="$ctrl.formulario.id_campus" required autofocus/>
             <span ng-show="form.id_campus.$dirty && form.id_campus.$error.required" class="help-block">Id Campus é Obrigatório</span>
         </div>
 
@@ -25,7 +25,7 @@
     <form role="form" ng-submit="$ctrl.cadastrar()">
         <div class="form-group" ng-class="{ 'has-error': form.id_grau.$dirty && form.id_grau.$error.required }">
             <label for="username">Id Grau</label>
-            <input type="text" name="id_grau" id="id_grau" class="form-control" ng-model="$ctrl.formulario.id_grau" required />
+            <input type="text" name="id_grau" id="id_grau" class="form-control" ng-model="$ctrl.formulario.id_grau" autofocus required />
             <span ng-show="form.id_grau.$dirty && form.id_grau.$error.required" class="help-block">Id Grau é Obrigatório</span>
         </div>
 
