@@ -6,7 +6,7 @@ class Usuario(object):
 			self.nome = dados['nome']
 			self.matricula = dados['matricula']
 			self.cpf = dados['cpf']
-			self.identidade = dados['identidade']
+		#	self.identidade = dados['identidade']
 			self.perfil = dados['perfil']
 			self.senha = dados['senha']
 			self.email = dados['email']
@@ -37,11 +37,11 @@ class Usuario(object):
 	def getMatricula(self):
 		return self.matricula
 
-	def setIdentidade(self,identidade):
-		self.identidade = identidade
+#	def setIdentidade(self,identidade):
+#		self.identidade = identidade
 		
-	def getIdentidade(self):
-		return self.identidade
+#	def getIdentidade(self):
+#		return self.identidade
 
 	def setPerfil (self,perfil):
 		self.perfil = perfil
