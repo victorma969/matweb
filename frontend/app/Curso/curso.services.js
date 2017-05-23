@@ -6,7 +6,5 @@ angular.
       return $resource('/api/Curso/Listar', {}, {
         Listar: { method: 'POST' },
       });
-      console.log(x);
-      return x;
     }
-  ]);
+]);
