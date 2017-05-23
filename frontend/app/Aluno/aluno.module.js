@@ -1,3 +1,3 @@
-angular.module('Aluno', [
+angular.module('Cadastrarusuario', [
 	'ngResource',
 	]);
