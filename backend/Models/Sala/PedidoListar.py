@@ -13,7 +13,7 @@ class PedidoListar(Pedido):
 		except:
 			raise ErroNoHTTP(400)
 
-	def getId_Predio(self):
+	def getId_predio(self):
 		return self.id_predio
 
 	def getCodigo(self):
