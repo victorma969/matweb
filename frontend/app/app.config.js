@@ -10,6 +10,9 @@ angular.
       $routeProvider.when('/Usuario/Entrar', {
           template: '<usuario-entrar></usuario-entrar>'
         })
+      $routeProvider.when('/Usuario/Cadastrar', {
+          template: '<registrar-usuario></registrar-usuario>'
+        })
       $routeProvider.when('/', {
           template: '<tela-principal></tela-principal>'
         })
