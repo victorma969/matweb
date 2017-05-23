@@ -14,14 +14,14 @@ angular.
           template: '<tela-principal></tela-principal>'
         })
       $routeProvider.when('/Oferta', {
-          template: '<oferta-cursos></oferta-cursos>'
+          template: '<oferta-disciplina></oferta-disciplina>'
         })
       $routeProvider.when('/Campus', {
           template: '<listar-campus></listar-campus>'
         })
       $routeProvider.when('/Curso', {
           template: '<listar-curso></listar-curso>'
-
+        })
       $routeProvider.when('/Curso/Registrar', {
           template: '<registrar-curso></registrar-curso>'
         })
