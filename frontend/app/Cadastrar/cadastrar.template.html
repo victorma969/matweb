@@ -22,12 +22,11 @@
     <option value="3">Gama</option>
     <option value="4">Planaltina</option>
   </select>
-
-            <div class="form-group" ng-class="{ 'has-error': form.sigla.$dirty && form.sigla.$error.required }">
-            <label for="username">Sigla do Departamento</label>
-            <input type="text" name="sigla" id="sigla" class="form-control" ng-model="$ctrl.formulario.sigla" required />
-            <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Sigla do Departamento é Obrigatório</span>
-        </div>
+</div>
+        <div class="form-group" ng-class="{ 'has-error': form.formulario.sigla.$dirty && form.formulario.sigla.$error.required }">
+            <label for="username">Matrícula</label>
+            <input type="text" name="formulario.sigla" id="predioName" class="form-control" ng-model="$ctrl.formulario.sigla" required />
+            <span ng-show="form.formulario.sigla.$dirty && form.formulario.sigla.$error.required" class="help-block">É obrigatório digiar Matrícula</span>
         </div>
         <div class="form-actions">
            <button class="btn btn-lg btn-success btn-block">Registrar</button>
