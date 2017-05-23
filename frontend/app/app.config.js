@@ -19,7 +19,7 @@ angular.
       $routeProvider.when('/Campus', {
           template: '<oferta-campus></oferta-campus>'
         })
-      $routeProvider.when('/Aluno/Registrar', {
+      $routeProvider.when('/Usuario/Registrar', {
           template: '<aluno-registrar></aluno-registrar>'
         })
       .otherwise('/');
