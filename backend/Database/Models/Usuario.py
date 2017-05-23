@@ -9,7 +9,7 @@ class Usuario(object):
 			self.perfil = dados['perfil']
 			self.senha = dados['senha']
 			self.email = dados['email']
-		#	self.sexo = dados['sexo']
+			self.sexo = dados['sexo']
 			self.nome_pai = dados['nome_pai']
 			self.nome_mae = dados['nome_mae']
 		#	self.id_raca_cor = dados['id_raca_cor']
@@ -60,11 +60,11 @@ class Usuario(object):
 	def setEmail(self,email):
 		self.email = email
 
-#	def getSexo(self):
-#		return self.sexo
+	def getSexo(self):
+		return self.sexo
 
-#	def setSexo(self,sexo):
-#		self.sexo = sexo
+	def setSexo(self,sexo):
+		self.sexo = sexo
 
 	def getNome_pai(self):
 		return self.nome_pai

@@ -38,7 +38,7 @@ class Usuario(Controller):
 		usuario.setPerfil(pedido_cadastrar.getPerfil())
 		usuario.setSenhaHashed(bcrypt.hashpw(pedido_cadastrar.getSenha().encode('utf-8'), bcrypt.gensalt()))
 		usuario.setEmail(pedido_cadastrar.getEmail())
-	#	usuario.setSexo(pedido_cadastrar.getSexo())
+		usuario.setSexo(pedido_cadastrar.getSexo())
 		usuario.setNome_pai(pedido_cadastrar.getNome_pai())
 		usuario.setNome_mae(pedido_cadastrar.getNome_mae())
 	#	usuario.setId_raca_cor(pedido_cadastrar.getId_raca_cor())
