@@ -1,6 +1,6 @@
 angular.
   module('Cadastrarpredio').
-  component('registrarCurso', {
+  component('cadastrarPredio', {
     templateUrl: '/app/Cadastrarpredio/cadastrarpredio.template.html',
     controller: ['ApiRegistroPredio','$http','$location', 'MatWebGlobals',function(ApiRegistroPredio,$http,$location,MatWebGlobals) {
       var ctrl = this;
@@ -8,7 +8,7 @@ angular.
       this.cadastrar = function()
       {
           ApiRegistroPredio.Cadastrar(ctrl.formulario,function(data){
-            ctrl.mensagem = "Curso cadastrado com sucesso";
+            ctrl.mensagem = "Prédio cadastrado com sucesso";
           },function(data){
             ctrl.mensagem = "ERRO";
           });
