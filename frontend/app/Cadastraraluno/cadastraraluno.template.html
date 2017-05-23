@@ -23,19 +23,19 @@
 
                 <div class="form-group" ng-class="{ 'has-error': form.cpf.$dirty && form.cpf.$error.required }">
             <label for="username">CPF do Aluno</label>
-            <input type="text" name="cpf" id="cpf" class="form-control" ng-model="$ctrl.formulario.cpf" required />
+            <input type="text" name="cpf" id="cpf" class="form-control" ng-model="$ctrl.formulario.cpf" maxlength= 11 required />
             <span ng-show="form.cpf.$dirty && form.cpf.$error.required" class="help-block">CPF é Obrigatório</span>
         </div>
 
                 <div class="form-group" ng-class="{ 'has-error': form.perfil.$dirty && form.perfil.$error.required }">
             <label for="username">Perfil do Usuário</label> 
-            <input type="text" name="perfil" id="perfil" class="form-control" ng-model="$ctrl.formulario.perfil"  required />
+            <input type="text" name="perfil" id="perfil" class="form-control" ng-model="$ctrl.formulario.perfil" maxlength= 1 required />
             <span ng-show="form.perfil.$dirty && form.perfil.$error.required" class="help-block">Perfil do Usuário é Obrigatório</span>
         </div>
 
             <div class="form-group" ng-class="{ 'has-error': form.senha.$dirty && form.senha.$error.required }">
-            <label for="username">Senha do Usuário</label>
-            <input type="text" name="senha" id="senha" class="form-control" ng-model="$ctrl.formulario.senha" required />
+            <label for="username">Senha do Usuário(máximo 15 letras)</label>
+            <input type="password" name="senha" id="senha" class="form-control" ng-model="$ctrl.formulario.senha" maxlength= 15 required />
             <span ng-show="form.senha.$dirty && form.senha.$error.required" class="help-block">Senha é Obrigatório</span>
         </div>
         <div class="form-actions">
