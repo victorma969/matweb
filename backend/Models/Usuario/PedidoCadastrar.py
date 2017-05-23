@@ -8,6 +8,7 @@ class PedidoCadastrar(Pedido):
 		try:
 			self.nome = self.corpo['nome']
 			self.matricula = self.corpo['matricula']
+			self.identidade = self.corpo['identidade']
 			self.cpf = self.corpo['cpf']
 			self.perfil = self.corpo['perfil']
 			self.senha = self.corpo['senha']
@@ -31,6 +32,9 @@ class PedidoCadastrar(Pedido):
 
 	def getMatricula(self):
 		return self.matricula
+
+	def getIdentidade(self):
+		return self.identidade		
 
 	def getCpf(self):
 		return self.cpf
