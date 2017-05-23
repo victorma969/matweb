@@ -2,49 +2,54 @@
     <div class="page-wrapper">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
-                <div class="panel panel-default">
+                <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Registrar Departamento</h3>
+                        <h3 class="panel-title">Registrar</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" ng-submit="$ctrl.registrar()">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nome" ng-model="$ctrl.nome" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Matricula" ng-model="$ctrl.matricula" type="text" autofocus>
+                                </div>
+                                <div class="form-group">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="CPF" ng-model="$ctrl.cpf" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Identidade" ng-model="$ctrl.identidade" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Perfil" ng-model="$ctrl.perfil" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="email" ng-model="$ctrl.email" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Sexo" ng-model="$ctrl.sexo" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="uf" ng-model="$ctrl.uf" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Ano conclusão" ng-model="$ctrl.ano_conclusao" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nome do pai" ng-model="$ctrl.nome_pai" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nome da mãe" ng-model="$ctrl.nome_mae" type="text" value="">
+                                </div>
 
-                        
-<div class="col-md-6 col-md-offset-3">
-    <form role="form" ng-submit="$ctrl.cadastrar()">
-        <div class="form-group" ng-class="{ 'has-error': form.nome.$dirty && form.nome.$error.required }">
-            <label for="username">Nome do Aluno</label>
-            <input type="text" name="nome" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" required />
-            <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Aluno é Obrigatório</span>
-        </div>
-
-        <div class="form-group" ng-class="{ 'has-error': form.matricula.$dirty && form.matricula.$error.required }">
-            <label for="username">Número da Matrícula Departamento</label>
-            <input type="text" name="matricula" id="matricula" class="form-control" ng-model="$ctrl.formulario.matricula" maxlength= 9 required />
-            <span ng-show="form.matricula.$dirty && form.matricula.$error.required" class="help-block">Matrícula do Aluno é Obrigatório</span>
-        </div>
-
-                <div class="form-group" ng-class="{ 'has-error': form.cpf.$dirty && form.cpf.$error.required }">
-            <label for="username">CPF do Aluno</label>
-            <input type="text" name="cpf" id="cpf" class="form-control" ng-model="$ctrl.formulario.cpf" maxlength= 11 required />
-            <span ng-show="form.cpf.$dirty && form.cpf.$error.required" class="help-block">CPF é Obrigatório</span>
-        </div>
-
-                <div class="form-group" ng-class="{ 'has-error': form.perfil.$dirty && form.perfil.$error.required }">
-            <label for="username">Perfil do Usuário</label> 
-            <input type="text" name="perfil" id="perfil" class="form-control" ng-model="$ctrl.formulario.perfil" maxlength= 1 required />
-            <span ng-show="form.perfil.$dirty && form.perfil.$error.required" class="help-block">Perfil do Usuário é Obrigatório</span>
-        </div>
-
-            <div class="form-group" ng-class="{ 'has-error': form.senha.$dirty && form.senha.$error.required }">
-            <label for="username">Senha do Usuário(máximo 15 letras)</label>
-            <input type="password" name="senha" id="senha" class="form-control" ng-model="$ctrl.formulario.senha" maxlength= 15 required />
-            <span ng-show="form.senha.$dirty && form.senha.$error.required" class="help-block">Senha é Obrigatório</span>
-        </div>
-        <div class="form-actions">
-           <button class="btn btn-lg btn-success btn-block">Registrar</button>
-           <h1>{{$ctrl.mensagem}}</h1>
-            <a href="#!/login" class="btn btn-link">Cancelar</a>
-        </div>
-    </form>
-</div>
+                                    <input class="form-control" placeholder="Senha" ng-model="$ctrl.formulario.senha" type="password" value="">
+                                </div>
+                                <button class="btn btn-lg btn-success btn-block">Registrar</button>
+                                <h1>{{$ctrl.mensagem}}</h1>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
             </div>
