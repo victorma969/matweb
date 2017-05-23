@@ -19,9 +19,10 @@ angular.
       $routeProvider.when('/Campus', {
           template: '<oferta-campus></oferta-campus>'
         })
-      $routeProvider.when('/Aluno/Registrar', {
-          template: '<aluno-registrar></aluno-registrar>'
+      $routeProvider.when('/Usuario/Cadastrar', {
+          template: '<registrar-usuario></registrar-usuario>'
         })
+      
       .otherwise('/');
     }
   ]).value('MatWebGlobals', {});
