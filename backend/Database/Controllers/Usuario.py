@@ -18,7 +18,7 @@ class Usuario(object):
 			return None
 	
 	def inserirUsuario(self, usuario):
-		BancoDeDados().executar("INSERT INTO usuario (matricula, nome, cpf, perfil, senha, email, identidade, sexo, nome_pai, nome_mae, ano_conclusao) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) RETURNING id", (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha, usuario.email, usuario.sexo, usuario.nome_pai, usuario.nome_mae, usuario.id_raca_cor, usuario.id_nivel, usuario.ano_conclusao, usuario.cep, usuario.numero_lote, usuario.complemento, usuario.numero_telefone, usuario.tipo_escola))
+		BancoDeDados().executar("INSERT INTO usuario (matricula, nome, cpf, perfil, senha, email, identidade, sexo, nome_pai, nome_mae, ano_conclusao) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) RETURNING id", (usuario.matricula, usuario.nome, usuario.cpf, usuario.perfil, usuario.senha, usuario.email, usuario.sexo, usuario.nome_pai, usuario.nome_mae, usuario.identidade, usuario.ano_conclusao))
 		usuario.id = BancoDeDados().pegarUltimoIDInserido()
 		return usuario
 		
