@@ -8,7 +8,7 @@ angular.
       this.cadastrar = function()
       {
           ApiSexo.Cadastrar(ctrl.formulario,function(data){
-            ctrl.mensagem = "Sala cadastrada com sucesso";
+            ctrl.mensagem = "Departamento cadastrado com sucesso";
           },function(data){
             ctrl.mensagem = "ERRO";
           });

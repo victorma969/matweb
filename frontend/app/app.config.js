@@ -10,6 +10,12 @@ angular.
       $routeProvider.when('/Usuario/Entrar', {
           template: '<usuario-entrar></usuario-entrar>'
         })
+      $routeProvider.when('/Usuario/Cadastrar', {
+          template: '<registrar-usuario></registrar-usuario>'
+        })
+      $routeProvider.when('/Usuario/Home', {
+          template: '<casa-usuario></casa-usuario>'
+        })
       $routeProvider.when('/', {
           template: '<tela-principal></tela-principal>'
         })
@@ -36,6 +42,9 @@ angular.
         })
       $routeProvider.when('/Predio', {
           template: '<listar-predio></listar-predio>'
+        })
+      $routeProvider.when('/Predio/Cadastrar', {
+          template: '<cadastrar-predio></cadastrar-predio>'
         })
       .otherwise('/');
       $routeProvider.when('/Registrodesala/Cadastrar', {
