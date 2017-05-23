@@ -44,8 +44,8 @@ class PedidoCadastrar(Pedido):
 	def getEmail(self):
 		return self.email
 	
-	def getSexo(self):
-		return self.sexo
+#	def getSexo(self):
+#		return self.sexo
 
 	def getNome_pai(self):
 		return self.nome_pai
