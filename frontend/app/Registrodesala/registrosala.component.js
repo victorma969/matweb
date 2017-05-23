@@ -1,10 +1,10 @@
 angular.
   module('Registrodesala').
   component('salaRegistrar', {
-    templateUrl: '/app/Registrodesala/registrodesala.template.html',
+    templateUrl: '/app/Registrodesala/registrosala.template.html',
     controller: ['ApiSala','$http','$location', 'MatWebGlobals',function(ApiSala,$http,$location,MatWebGlobals) {
       var ctrl = this;
-      this.formulario = {'predioName':'','corredorNumber':'','salaname':''};
+      this.formulario = {'id_resp_sala':'','id_predio':'','codigo':''};
       this.cadastrar = function()
       {
           ApiSala.Cadastrar(ctrl.formulario,function(data){
