@@ -119,12 +119,6 @@ class Usuario(object):
 
 #	def setNumero_telefone(self,numero_telefone):
 #		self.numero_telefone = numero_telefone
-	
-	def getAno_conclusao(self):
-		return self.ano_conclusao
-
-	def setAno_conclusao(self,ano_conclusao):
-		self.ano_conclusao = ano_conclusao
 
 #	def getTipo_escola(self):
 #		return self.tipo_escola
