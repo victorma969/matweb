@@ -5,13 +5,9 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Registrar Curso</h3>
-<div class="col-md-6 col-md-offset-3">
-    <form role="form" ng-submit="$ctrl.cadastrar()">
-        <div class="form-group" ng-class="{ 'has-error': form.nome.$dirty && form.nome.$error.required }">
-            <label for="username">Nome do Curso</label>
-            <input type="text" name="nome" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" autofocus/>
-            <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Curso é Obrigatório</span>
-        </div>
+<div class="form-group">
+                                    <input class="form-control" placeholder="Nome da disciplina" ng-model="$ctrl.formulario.nome" type="text" autofocus>
+                                </div>
 
         <div class="col-md-5 col-md-offset-2">
     <form role="form" ng-submit="$ctrl.cadastrar()">
