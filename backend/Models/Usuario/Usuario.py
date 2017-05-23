@@ -4,7 +4,7 @@ class Usuario(object):
 		self.id = usuario.getId()
 		self.nome = usuario.getNome()
 		self.matricula = usuario.getMatricula()
-#		self.identidade = usuario.getIdentidade()
+		self.identidade = usuario.getIdentidade()
 		self.cpf = usuario.getCpf()
 		self.perfil = usuario.getPerfil()
 		self.senha = usuario.getSenha(

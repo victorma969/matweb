@@ -34,7 +34,7 @@ class Usuario(Controller):
 		usuario = ModelUsuario()
 		usuario.setNome(pedido_cadastrar.getNome())
 		usuario.setMatricula(pedido_cadastrar.getMatricula())
-	#	usuario.setIdentidade(pedido_cadastrar.getIdentidade())
+		usuario.setIdentidade(pedido_cadastrar.getIdentidade())
 		usuario.setCpf(pedido_cadastrar.getCpf())
 		usuario.setPerfil(pedido_cadastrar.getPerfil())
 		usuario.setSenhaHashed(bcrypt.hashpw(pedido_cadastrar.getSenha().encode('utf-8'), bcrypt.gensalt()))
