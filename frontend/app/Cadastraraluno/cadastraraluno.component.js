@@ -11,8 +11,9 @@ angular.
             ctrl.mensagem = "Aluno cadastrado com sucesso";
 
           },function(data){
-            console.log(data);
-            ctrl.mensagem = "ERRO";
+            ctrl.mensagem = console.log(data);
+
+            //ctrl.mensagem = "ERRO";
           });
     };
     }]
