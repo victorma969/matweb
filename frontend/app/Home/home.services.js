@@ -3,7 +3,7 @@ angular.
   factory('ApiHome', ['$resource',
     function($resource) {
       return $resource('/api/Disciplina/Mostrar', {}, {
-        Mostrar: { method: },
+        Mostrar: {},
       });
     }
   ]);
