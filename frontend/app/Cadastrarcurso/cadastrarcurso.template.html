@@ -18,6 +18,18 @@
           <option value="3">Gama</option>
           <option value="4">Planaltina</option>
             </select>
+          </div>
+</div>
+     <div class="form-group">
+          <label class=" control-label col-sm-2" for="id_grau">Grau:</label>
+            <div class="col-sm-4">
+              <select class="w3-select" name="option" ng-model="$ctrl.formulario.id_grau">
+            <option value="1">Bacharel</option>
+            <option value="2">Licenciatura</option>
+            <option value="3">Bacharel/Licenciatura</option>
+            <option value="4">Engenheiro</option>
+              </select>
+    </div>
 </div>
             <div class="form-group" ng-class="{ 'has-error': form.id_campus.$dirty && form.id_campus.$error.required }">
             <label for="username">ID do Campus</label>
@@ -48,20 +60,7 @@
 
 
 
-    </div>
-  </div>
-   <div class="form-group">
-   <label class=" control-label col-sm-2" for="id_grau">Grau:</label>
-  <div class="col-sm-4">
-   <select class="w3-select" name="option" ng-model="$ctrl.formulario.id_grau">
-    <option value="1">Bacharel</option>
-    <option value="2">Licenciatura</option>
-    <option value="3">Bacharel/Licenciatura</option>
-    <option value="4">Engenheiro</option>
-  </select>
-    </div>
-  </div>
-        <label class="control-label col-sm-2" for="nome">Nome do Curso:</label >
+        <label class="control-label col-sm-2" for="nome">Nome do Departamento:</label >
       <div class="col-sm-4" >
         <input type="text" class="form-control" ng-model="$ctrl.formulario.nome" placeholder="Nome" >
       </div>
