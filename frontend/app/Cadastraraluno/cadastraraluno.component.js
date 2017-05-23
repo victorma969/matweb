@@ -9,7 +9,9 @@ angular.
       {
           ApiUsuarioCadastrar.Cadastrar(ctrl.formulario,function(data){
             ctrl.mensagem = "Aluno cadastrado com sucesso";
+
           },function(data){
+            console.log(data);
             ctrl.mensagem = "ERRO";
           });
     };
