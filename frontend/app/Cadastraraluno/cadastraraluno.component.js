@@ -4,7 +4,7 @@ angular.
     templateUrl: '/app/Cadastraraluno/cadastraraluno.template.html',
     controller: ['ApiUsuarioCadastrar','$http','$location', 'MatWebGlobals',function(ApiUsuarioCadastrar,$http,$location,MatWebGlobals) {
       var ctrl = this;
-      this.formulario = {'nome':'','matricula':'','cpf':'','perfil':'','senha':'','email':'','sexo':'','ano_conclusao':'','nome_pai':'','nome_mae':''};
+      this.formulario = {'usuario':'','senha':'','email':''};
       this.cadastrar = function()
       {
           ApiUsuarioCadastrar.Cadastrar(ctrl.formulario,function(data){
