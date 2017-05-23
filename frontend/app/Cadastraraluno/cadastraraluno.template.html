@@ -7,40 +7,44 @@
                         <h3 class="panel-title">Registrar</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" ng-submit="$ctrl.cadastrar()">
+                        <form role="form" ng-submit="$ctrl.registrar()">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Nome" ng-model="$ctrl.formulario.nome" name="nome" id="nome" type="text" autofocus>
+                                    <input class="form-control" placeholder="Nome" ng-model="$ctrl.nome" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Matricula" ng-model="$ctrl.formulario.matricula" name="matricula" id="matricula" type="text" autofocu>
+                                    <input class="form-control" placeholder="Matricula" ng-model="$ctrl.matricula" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="CPF" ng-model="$ctrl.formulario.cpf" name="cpf" id="cpf" type="text" value="">
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="CPF" ng-model="$ctrl.cpf" type="text" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Identidade" ng-model="$ctrl.formulario.identidade" name="identidade" id="identidade" type="text" value="">
+                                    <input class="form-control" placeholder="Identidade" ng-model="$ctrl.identidade" type="text" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Perfil" ng-model="$ctrl.formulario.perfil" name="perfil" id="perfil" type="text" value="">
+                                    <input class="form-control" placeholder="Perfil" ng-model="$ctrl.perfil" type="text" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="email" ng-model="$ctrl.formulario.email" name="email" id="email" type="text" value="">
+                                    <input class="form-control" placeholder="email" ng-model="$ctrl.email" type="text" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="uf" ng-model="$ctrl.formulario.uf" name="uf" id="uf" type="text" value="">
+                                    <input class="form-control" placeholder="Sexo" ng-model="$ctrl.sexo" type="text" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Ano conclusão" ng-model="$ctrl.formulario.ano_conclusao" name="ano_conclusao" id="ano_conclusao" type="text" value="">
+                                    <input class="form-control" placeholder="uf" ng-model="$ctrl.uf" type="text" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Nome do pai" ng-model="$ctrl.formulario.nome_pai" name="nome_pai" id="nome_pai" type="text" value="">
+                                    <input class="form-control" placeholder="Ano conclusão" ng-model="$ctrl.ano_conclusao" type="text" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Nome da mãe" ng-model="$ctrl.formulario.nome_mae" name="nome_mae" id="nome_mae" type="text" value="">
+                                    <input class="form-control" placeholder="Nome do pai" ng-model="$ctrl.nome_pai" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Nome da mãe" ng-model="$ctrl.nome_mae" type="text" value="">
                                 </div>
 
-                                    <input class="form-control" placeholder="Senha" ng-model="$ctrl.formulario.senha" type="password" name="senha" id="senha" value="">
+                                    <input class="form-control" placeholder="Senha" ng-model="$ctrl.formulario.senha" type="password" value="">
                                 </div>
                                 <button class="btn btn-lg btn-success btn-block">Registrar</button>
                                 <h1>{{$ctrl.mensagem}}</h1>
