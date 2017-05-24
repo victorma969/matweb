@@ -14,7 +14,7 @@
     <section id="content">
         <form action="">
             <h1>Entrar</h1>
-            <div class="panel-body">
+                    <div class="panel-body">
                         <form role="form" ng-submit="$ctrl.entrar()">
                             <fieldset>
         <div class="form-group" ng-class="{ 'has-error': form.formulario.usuario.$dirty && form.formulario.usuario.$error.required }">
@@ -27,16 +27,14 @@
             <input type="password" name="password" id="password" class="form-control" ng-model="$ctrl.formulario.senha" required />
             <span ng-show="form.formulario.senha.$dirty && form.formulario.senha.$error.required" class="help-block">É obrigatório sua Senha</span>
         </div>
-            <div>
-            <button class="btn btn-lg btn-success btn-block">Entrar</button>
+                                <button class="btn btn-lg btn-success btn-block">Entrar</button>
                             </fieldset>
+                        </form>
+                    </div>
                 <a href="#">Lost your password?</a>
                 <a href="#">Register</a>
             </div>
-        </form><!-- form -->
-</div>
-    </div>
-            <a href="#">asdasda</a>
+        </form>
     </section><!-- content -->
 </div><!-- container -->
 </body>
