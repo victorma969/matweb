@@ -1,7 +1,7 @@
  <html >   
  <head>
   <meta charset="UTF-8">
-  <title>Cadastrar Usuário</title>
+  <title>Cadastrar Curso</title>
   </head>
 <link rel="stylesheet" href="css/style.css">
     <div class="page-wrapper">
@@ -12,10 +12,14 @@
                     <section id="content">
                         <form role="form" ng-submit="$ctrl.cadastrar()">
                             <fieldset>
- <h1>Cadastrar Usuário</h1>
+ <h1>Cadastrar Cursoo</h1>
             <div>
                 <input type="text" name="formulario.nome" placeholder="Nome" required="" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" required />
             </div>
+            <div>
+                <input type="text" name="formulario.sigla" placeholder="Sigla" required="" id="sigla" class="form-control" ng-model="$ctrl.formulario.sigla" required />
+            </div>
+            <br></br>
    <div class="form-group">
    <label class=" control-label col-sm-2" for="id_campus">Campi:</label>
   <div class="col-sm-4">
@@ -27,9 +31,6 @@
   </select>
 </div>
 </div>
-            <div>
-                <input type="text" name="formulario.sigla" placeholder="Sigla" required="" id="sigla" class="form-control" ng-model="$ctrl.formulario.sigla" required />
-            </div>
             <div>
                 <input type="submit" value="Log in" />
                 <a href="/Curso">Cancelar</a>
