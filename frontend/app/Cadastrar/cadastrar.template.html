@@ -19,16 +19,17 @@
             <div>
                 <input type="text" name="formulario.sigla" placeholder="Sigla" required="" id="sigla" class="form-control" ng-model="$ctrl.formulario.sigla" required />
             </div>
+            <div>
+                <input type="text" name="formulario.campi" placeholder="Campi" required="" id="campi" class="form-control" ng-model="$ctrl.formulario.id_campus" required />
+            </div>
    <div class="form-group">
-   <label class=" control-label col-sm-2" for="id_campus">Campi:</label>
-  <div class="col-sm-4">
+   <label for="id_campus" >Campi:</label>
    <select class="w3-select" name="option" ng-model="$ctrl.formulario.id_campus">
     <option value="1">Darcy Ribeiro</option>
     <option value="2">Ceilândia</option>
     <option value="3">Gama</option>
     <option value="4">Planaltina</option>
   </select>
-</div>
 </div>
             <div>
                 <input type="submit" value="Cadastrar" />
