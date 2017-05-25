@@ -1,7 +1,7 @@
 angular.
   module('Admin').
   component('adminEntrar', {
-    templateUrl: '/app/Admin/index.html',
+    templateUrl: '/app/Admin/entrar.template.html',
     controller: ['ApiAdmin','$http','$location', 'MatWebGlobals',function Entrar(ApiAdmin,$http,$location,MatWebGlobals) {
       this.formulario = {'usuario':'','senha':''};
       this.entrar = function()
