@@ -7,8 +7,20 @@ angular.
       $httpProvider.defaults.headers.common.Authorization = window.localStorage.getItem('token_de_acesso');
       $httpProvider.defaults.headers.post = { 'Content-Type' : 'application/json; charset=UTF-8' }
 
+      $routeProvider.when('/Admin/Entrar', {
+          template: '<admin-entrar></admin-entrar>'
+        })
+      $routeProvider.when('/Admin', {
+          template: '<admin-usuario></admin-usuario>'
+        })
       $routeProvider.when('/Usuario/Entrar', {
           template: '<usuario-entrar></usuario-entrar>'
+        })
+      $routeProvider.when('/Usuario/Cadastrar', {
+          template: '<registrar-usuario></registrar-usuario>'
+        })
+      $routeProvider.when('/Usuario/Home', {
+          template: '<casa-usuario></casa-usuario>'
         })
       $routeProvider.when('/', {
           template: '<tela-principal></tela-principal>'
@@ -31,11 +43,14 @@ angular.
         $routeProvider.when('/Cadastrar', {
           template: '<registrar-departamento></registrar-departamento>'
         })
-      $routeProvider.when('/CadastroDisciplina', {
+      $routeProvider.when('/Cadastro/Disciplina', {
           template: '<registrar-disciplina></registrar-disciplina>'
         })
       $routeProvider.when('/Predio', {
           template: '<listar-predio></listar-predio>'
+        })
+      $routeProvider.when('/Predio/Cadastrar', {
+          template: '<cadastrar-predio></cadastrar-predio>'
         })
       .otherwise('/');
       $routeProvider.when('/Registrodesala/Cadastrar', {
