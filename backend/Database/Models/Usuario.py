@@ -11,15 +11,8 @@ class Usuario(object):
 			self.sexo = dados['sexo']
 			self.nome_pai = dados['nome_pai']
 			self.nome_mae = dados['nome_mae']
-		#	self.id_raca_cor = dados['id_raca_cor']
-		#	self.id_nivel = dados['id_nivel']
 			self.ano_conclusao = dados['ano_conclusao']
 			self.identidade = dados['identidade']
-		#	self.cep = dados['cep']
-		#	self.numero_lote = dados['numero_lote']
-		#	self.complemento = dados['complemento']
-		#	self.numero_telefone = dados['numero_telefone']
-		#	self.tipo_escola = dados['tipo_escola']
 			self.senha = dados['senha']
 
 	def getId(self):
@@ -79,18 +72,6 @@ class Usuario(object):
 	def setNome_mae(self,nome_mae):
 		self.nome_mae = nome_mae
 
-#	def getId_raca_cor(self):
-#		return self.raca_cor	
-
-#	def setId_raca_cor(self,id_raca_cor):
-#		self.id_raca_cor = id_raca_cor
-	
-#	def getId_nivel(self):
-#		return self.nivel
-
-#	def setNivel(self,nivel):
-#		self.nivel = nivel
-
 	def getAno_conclusao(self):
 		return self.ano_conclusao
 
@@ -102,33 +83,3 @@ class Usuario(object):
 		
 	def getIdentidade(self):
 		return self.identidade
-
-#	def getCep(self):
-#		return self.cep
-
-#	def setCep(self,cep):
-#		self.cep = cep
-
-#	def getNumero_lote(self):
-#		return self.numero_lote
-
-#	def setNumero_lote(self,numero_lote):
-#		self.numero_lote = numero_lote
-
-#	def getComplemento(self):
-#		return self.complemento
-
-#	def setComplemento(self,complemento):
-#		self.complemento = complemento
-	
-#	def getNumero_telefone(self):
-#		return self.numero_telefone
-
-#	def setNumero_telefone(self,numero_telefone):
-#		self.numero_telefone = numero_telefone
-
-#	def getTipo_escola(self):
-#		return self.tipo_escola
-
-#	def setTipo_escola(self,tipo_escola):
-#		self.tipo_escola = tipo_escola
