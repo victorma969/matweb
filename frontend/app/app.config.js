@@ -25,6 +25,9 @@ angular.
       $routeProvider.when('/', {
           template: '<tela-principal></tela-principal>'
         })
+      $routeProvider.when('/Oferta/Cadastrar', {
+          template: '<registrar-oferta></registrar-oferta>'
+        })
       $routeProvider.when('/Oferta', {
           template: '<oferta-disciplina></oferta-disciplina>'
         })
