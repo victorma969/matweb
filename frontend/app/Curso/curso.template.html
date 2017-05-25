@@ -16,22 +16,23 @@
                             </fieldset>
                         </form>
 <div class="table-responsive">
-    <table class = "table table-bordered table-striped table-hover">
-        <tbody>
-            <tr ng-repeat="curso in $ctrl.cursos | filter: $ctrl.nome_curso">
-            <td> {{curso.id}} </td>
-                <td><a ng-href="https://matriculaweb.unb.br/graduacao/curso_rel.aspx?cod=1">{{curso.nome}}</a> </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div class="table-responsive">
 
     <table class = "table table-bordered table-hover">
         <tbody>
             <tr ng-repeat="curso in $ctrl.cursos | filter: $ctrl.nome_curso">
                 <td> {{curso.id}} </td>
                 <td> {{curso.nome}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="table-responsive">
+    <table class = "table table-bordered table-striped table-hover">
+        <tbody>
+            <tr ng-repeat="curso in $ctrl.cursos | filter: $ctrl.nome_curso">
+            <td> {{curso.id}} </td>
+                <td><a ng-href="https://matriculaweb.unb.br/graduacao/curso_rel.aspx?cod=1">{{curso.nome}}</a> </td>
             </tr>
         </tbody>
     </table>
