@@ -7,6 +7,9 @@ angular.
       $httpProvider.defaults.headers.common.Authorization = window.localStorage.getItem('token_de_acesso');
       $httpProvider.defaults.headers.post = { 'Content-Type' : 'application/json; charset=UTF-8' }
 
+      $routeProvider.when('/Admin/Entrar', {
+          template: '<admin-entrar></admin-entrar>'
+        })
       $routeProvider.when('/Usuario/Entrar', {
           template: '<usuario-entrar></usuario-entrar>'
         })
@@ -37,7 +40,7 @@ angular.
         $routeProvider.when('/Cadastrar', {
           template: '<registrar-departamento></registrar-departamento>'
         })
-      $routeProvider.when('/CadastroDisciplina', {
+      $routeProvider.when('/Cadastro/Disciplina', {
           template: '<registrar-disciplina></registrar-disciplina>'
         })
       $routeProvider.when('/Predio', {
