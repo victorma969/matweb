@@ -1,6 +1,6 @@
 angular.
   module('nucleoadmin').
-  component('menuPrincipal', {
+  component('adminUsuario', {
     templateUrl: '/app/Menuprincipaladmin/menu-principal.template.html',
     controller: ['MatWebGlobals', function Menu(MatWebGlobals) {
       if (typeof MatWebGlobals.usuarioLogado !== 'undefined') {
