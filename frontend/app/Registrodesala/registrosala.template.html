@@ -1,38 +1,42 @@
-<menu-principal></menu-principal>
+<html >   
+ <head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Salas</title>
+  </head>
+<link rel="stylesheet" href="css/style.css">
     <div class="page-wrapper">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Registrar Sala</h3>
-<div class="col-md-6 col-md-offset-3">
-    <form role="form" ng-submit="$ctrl.cadastrar()">
-        <div class="form-group" ng-class="{ 'has-error': form.id_resp_sala.$dirty && form.id_resp_sala.$error.required }">
-            <label for="username">Id da Sala</label>
-            <input type="id_resp_sala" class="form-control" id="id_resp_sala" ng-model="$ctrl.formulario.id_resp_sala" required />
-            <span ng-show="form.id_resp_sala.$dirty && form.id_resp_sala.$error.required" class="help-block">Id Campus é Obrigatório</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.id_predio.$dirty && form.id_predio.$error.required }">
-            <label for="username">Id do Prédio</label>
-            <input type="id_predio" class="form-control" id="id_predio" ng-model="$ctrl.formulario.id_predio" required />
-            <span ng-show="form.id_predio.$dirty && form.id_predio.$error.required" class="help-block">Id Predio é Obrigatório</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.codigo.$dirty && form.codigo.$error.required }">
-            <label for="username">Código da Sala</label>
-            <input type="codigo" class="form-control" id="codigo" ng-model="$ctrl.formulario.codigo" required />
-            <span ng-show="form.codigo.$dirty && form.codigo.$error.required" class="help-block">Código é Obrigatório</span>
-        </div>
-        <div class="form-actions">
-           <button class="btn btn-lg btn-success btn-block">Registrar</button>
-           <h1>{{$ctrl.mensagem}}</h1>
-            <a href="#!/login" class="btn btn-link">Cancelar</a>
-        </div>
-    </form>
-</div>
-
-
-                    </div>
-                </div>
+                    <div class="panel-body">
+                    <body>
+                       <body>
+                       <div class="container">
+                    <section id="content">
+                        <form role="form" ng-submit="$ctrl.cadastrar()">
+                            <fieldset>
+ <h1>Cadastrar Salas</h1>
+            <div>
+                <input type="text" name="formulario.rs" placeholder="Resp Sala" required="" id="rs" class="form-control" ng-model="$ctrl.formulario.id_resp_sala" required />
             </div>
+
+            <div>
+                <input type="text" name="predio" placeholder="Id do Prédio" required="" id="predio" class="form-control" ng-model="$ctrl.formulario.id_predio" maxlength=1/>
+            </div>
+            <div>
+                <input type="text" name="codigo" placeholder="Código" required="" id="codigo" class="form-control" ng-model="$ctrl.formulario.codigo" maxlength=3/>
+            </div>                                  
+            <div>
+                <input type="submit" value="Cadastrar" />
+                <a href="/Admin">Cancelar</a>
+            </div>
+        </form>
+        <div class="button">
+        <h1>{{$ctrl.mensagem}}</h1>
         </div>
+                            </fieldset>
+                        </form>
+                    </div>
     </div>
+    </div>
+    </section>
+    </body>
+</body>
+</html>
