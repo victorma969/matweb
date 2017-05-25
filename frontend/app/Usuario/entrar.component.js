@@ -11,11 +11,9 @@ angular.
        		$http.defaults.headers.common.Authorization = resultado.corpo.token;
        		window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
        		$location.path('/Usuario/Home')
-   		}, function(erro){
-        ctrl.mensagem = "ERRO";
-        ctrl.erro = erro.erro.mensagem
-      console.log(ctrl.erro)
-      } );
+   		}, ,function(data){
+            ctrl.mensagem = "Usuário ou Senha Incorretos";
+          } );
    	  }
     }]
   });
