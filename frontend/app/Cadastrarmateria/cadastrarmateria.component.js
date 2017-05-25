@@ -8,7 +8,7 @@ angular.
       this.cadastrar = function()
       {
           ApiRegistrarOferta.Cadastrar(ctrl.formulario,function(data){
-            ctrl.mensagem = "Departamento cadastrado com sucesso";
+            ctrl.mensagem = "Disciplina cadastrada com sucesso";
           },function(data){
             ctrl.mensagem = "ERRO";
           });
