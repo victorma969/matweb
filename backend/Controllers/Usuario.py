@@ -33,11 +33,9 @@ class Usuario(Controller):
 	def Cadastrar(self,pedido_cadastrar):
 		usuario = ModelUsuario()
 		usuario.setNome(pedido_cadastrar.getNome())
-		usuario.setMatricula(pedido_cadastrar.getMatricula())
-		usuario.setIdentidade(pedido_cadastrar.getIdentidade())
+		usuario.setMatricula(pedido_cadastrar.getMatricula())		
 		usuario.setCpf(pedido_cadastrar.getCpf())
 		usuario.setPerfil(pedido_cadastrar.getPerfil())
-		usuario.setSenhaHashed(bcrypt.hashpw(pedido_cadastrar.getSenha().encode('utf-8'), bcrypt.gensalt()))
 		usuario.setEmail(pedido_cadastrar.getEmail())
 		usuario.setSexo(pedido_cadastrar.getSexo())
 		usuario.setNome_pai(pedido_cadastrar.getNome_pai())
@@ -45,11 +43,13 @@ class Usuario(Controller):
 	#	usuario.setId_raca_cor(pedido_cadastrar.getId_raca_cor())
 	#	usuario.setId_nivel(pedido_cadastrar.getId_nivel())
 		usuario.setAno_conclusao(pedido_cadastrar.getAno_conclusao())
+		usuario.setIdentidade(pedido_cadastrar.getIdentidade())
 	#	usuario.setCep(pedido_cadastrar.getCep())
 	#	usuario.setNumero_lote(pedido_cadastrar.getNumero_lote())
 	#	usuario.setComplemento(pedido_cadastrar.getComplemento())
 	#	usuario.setNumero_telefone(pedido_cadastrar.getNumero_telefone())
 	#	usuario.setTipo_escola(pedido_cadastrar.getTipo_escola())
+		usuario.setSenhaHashed(bcrypt.hashpw(pedido_cadastrar.getSenha().encode('utf-8'), bcrypt.gensalt()))
 		return RespostaCadastrar(BDUsuario().inserirUsuario(usuario))
 
 

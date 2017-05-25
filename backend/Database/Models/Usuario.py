@@ -6,9 +6,7 @@ class Usuario(object):
 			self.nome = dados['nome']
 			self.matricula = dados['matricula']
 			self.cpf = dados['cpf']
-			self.identidade = dados['identidade']
 			self.perfil = dados['perfil']
-			self.senha = dados['senha']
 			self.email = dados['email']
 			self.sexo = dados['sexo']
 			self.nome_pai = dados['nome_pai']
@@ -16,11 +14,13 @@ class Usuario(object):
 		#	self.id_raca_cor = dados['id_raca_cor']
 		#	self.id_nivel = dados['id_nivel']
 			self.ano_conclusao = dados['ano_conclusao']
+			self.identidade = dados['identidade']
 		#	self.cep = dados['cep']
 		#	self.numero_lote = dados['numero_lote']
 		#	self.complemento = dados['complemento']
 		#	self.numero_telefone = dados['numero_telefone']
 		#	self.tipo_escola = dados['tipo_escola']
+			self.senha = dados['senha']
 
 	def getId(self):
 		return self.id
@@ -36,12 +36,6 @@ class Usuario(object):
 		
 	def getMatricula(self):
 		return self.matricula
-
-	def setIdentidade(self,identidade):
-		self.identidade = identidade
-		
-	def getIdentidade(self):
-		return self.identidade
 
 	def setPerfil (self,perfil):
 		self.perfil = perfil
@@ -102,6 +96,12 @@ class Usuario(object):
 
 	def setAno_conclusao(self,ano_conclusao):
 		self.ano_conclusao = ano_conclusao
+
+	def setIdentidade(self,identidade):
+		self.identidade = identidade
+		
+	def getIdentidade(self):
+		return self.identidade
 
 #	def getCep(self):
 #		return self.cep
