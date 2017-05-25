@@ -5,6 +5,16 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Ofertas de Cursos</h3>
+                        <div class="table-responsive">
+    <table class = "table table-bordered table-striped table-hover">
+        <tbody>
+            <tr ng-repeat="curso in $ctrl.cursos | filter: $ctrl.nome_curso">
+            <td> {{curso.id}} </td>
+                <td><a ng-href="https://matriculaweb.unb.br/graduacao/curso_rel.aspx?cod=1">{{curso.nome}}</a> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
                     </div>
                     <div class="panel-body">
                         <form role="form" ng-submit="$ctrl.pesquisar()">
@@ -22,17 +32,6 @@
             <tr ng-repeat="curso in $ctrl.cursos | filter: $ctrl.nome_curso">
                 <td> {{curso.id}} </td>
                 <td> {{curso.nome}} </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<div class="table-responsive">
-    <table class = "table table-bordered table-striped table-hover">
-        <tbody>
-            <tr ng-repeat="curso in $ctrl.cursos | filter: $ctrl.nome_curso">
-            <td> {{curso.id}} </td>
-                <td><a ng-href="https://matriculaweb.unb.br/graduacao/curso_rel.aspx?cod=1">{{curso.nome}}</a> </td>
             </tr>
         </tbody>
     </table>
