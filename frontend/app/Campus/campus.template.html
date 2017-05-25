@@ -11,18 +11,20 @@
     </head>
     <body>
 
-
-<div class="table-responsive">
-    <table class = "table table-bordered table-striped table-hover">
-        <tbody>
-            <tr ng-repeat="campus in $ctrl.campus | filter: $ctrl.nome_campus">
-            <td> {{campus.id}} </td>
-                <td><a ng-href="https://matriculaweb.unb.br/graduacao/curso_rel.aspx?cod=1">{{campus.nome}}</a> </td>
-            </tr>
-        </tbody>
-    </table>
+<div>
+    <div>
+        <div class="table-responsive">
+            <table class = "table table-bordered table-striped table-hover">
+                <tbody>
+                        <tr ng-repeat="campus in $ctrl.campus | filter: $ctrl.nome_campus">
+                        <td> {{campus.id}} </td>
+                        <td><a ng-href="https://matriculaweb.unb.br/graduacao/curso_rel.aspx?cod=1">{{campus.nome}}</a> </td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
-
         <!-- Sidebar -->
             <div id="sidebar">
 
