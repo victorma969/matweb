@@ -16,12 +16,5 @@ angular.
 			console.log(ctrl.erro)
    		} );
    	  }
-        ApiOferta.Listar({ nome: "", pagina: 0, quantidade: 1000 },function(resultado) {
-              ctrl.disciplinas = resultado.corpo
-      console.log(ctrl.disciplinas)
-    }, function(erro){
-        ctrl.erro = erro.data.mensagem
-      console.log(ctrl.erro)
-      } );
     }]
   });
