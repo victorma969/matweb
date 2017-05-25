@@ -1,3 +1,8 @@
+<html >   
+ <head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Curso</title>
+  </head>
      <link rel="stylesheet" href="lol/css/style.css">
 <nav class="nav nav-aberta">
 			<div class="wrap">
@@ -14,5 +19,47 @@
 				</ul>
 			</div>
 		</nav>
-<script src="lol/js/menu.js"></script>
 <img src="http://placehold.it/1920x800/&text=Conteúdo" alt="" class="foto">
+
+    <div class="page-wrapper">
+                    <div class="panel-body">
+                    <body>
+                       <body>
+                       <div class="container">
+                    <section id="content">
+                        <form role="form" ng-submit="$ctrl.cadastrar()">
+                            <fieldset>
+ <h1>Cadastrar Curso</h1>
+            <div>
+                <input type="text" name="formulario.nome" placeholder="Nome" required="" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" required />
+            </div>
+            <div>
+                <input type="text" name="formulario.sigla" placeholder="Sigla" required="" id="sigla" class="form-control" ng-model="$ctrl.formulario.sigla" required />
+            </div>
+   <div class="form-group">
+   <label for="id_campus" >Campi:</label>
+   <select class="w3-select" name="option" ng-model="$ctrl.formulario.id_campus">
+    <option value="1">Darcy Ribeiro</option>
+    <option value="2">Ceilândia</option>
+    <option value="3">Gama</option>
+    <option value="4">Planaltina</option>
+  </select>
+</div>
+            <div>
+                <input type="submit" value="Cadastrar" />
+                <a href="/Curso">Cancelar</a>
+            </div>
+        </form>
+        <div class="button">
+        <h1>{{$ctrl.mensagem}}</h1>
+        </div>
+                            </fieldset>
+                        </form>
+                    </div>
+    </div>
+    </div>
+    </section>
+    </body>
+<script src="lol/js/menu.js"></script>
+</body>
+</html>
