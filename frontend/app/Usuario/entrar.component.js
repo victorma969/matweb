@@ -12,8 +12,10 @@ angular.
        		window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
        		$location.path('/Usuario/Home')
    		}, function(erro){
-   			this.erro = erro.data.mensagem
-   		} );
+        ctrl.mensagem = "ERRO";
+        ctrl.erro = erro.erro.mensagem
+      console.log(ctrl.erro)
+      } );
    	  }
     }]
   });
