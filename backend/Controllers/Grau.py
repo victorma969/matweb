@@ -16,7 +16,7 @@ class Grau(Controller):
 	def Ver(self, pedido_ver):
 		return RespostaVer(BDGrau().pegarGrau("WHERE id = %s ", (str(pedido_ver.getId()),)))
 
-	def Cadastrar(self,pedido_cadastrar):
+	def Cadastrar(self, pedido_cadastrar):
 		grau = ModelGrau()
 		grau.setNome(pedido_cadastrar.getNome())
 		return RespostaCadastrar(BDGrau().inserirGrau(grau))
