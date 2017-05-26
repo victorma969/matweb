@@ -11,7 +11,7 @@ from Database.Models.Grau import Grau as ModelGrau
 class Grau(Controller):
 
 	def Listar(self,pedido_listar):
-		return RespostaListar(BDGrau().pegarMultiplosGraus("WHERE nome LIKE %s LIMIT %s OFFSET %s",("%"+pedido_listar.getNome().replace(' ','%')+"%",str(pedido_listar.getQuantidade()),(str(pedido_listar.getQuantidade()*pedido_listar.getPagina())))))
+		return RespostaListar(BDGrau().pegarGraus("WHERE nome LIKE %s LIMIT %s OFFSET %s",("%"+pedido_listar.getNome().replace(' ','%')+"%",str(pedido_listar.getQuantidade()),(str(pedido_listar.getQuantidade()*pedido_listar.getPagina())))))
 
 	def Ver(self, pedido_ver):
 		return RespostaVer(BDGrau().pegarGrau("WHERE id = %s ", (str(pedido_ver.getId()),)))
