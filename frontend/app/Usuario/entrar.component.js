@@ -13,6 +13,8 @@ angular.
        		$location.path('/Usuario/Home')
    		}, function(error){
             console.log(error.data.mensagem);
+            console.log($scope);
+            $scope.erro = error.data.mensagem;
    		} );
    	  }
     }]
