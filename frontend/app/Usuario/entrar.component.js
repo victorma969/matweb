@@ -12,8 +12,6 @@ angular.
        		window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
        		$location.path('/Usuario/Home')
    		}, function(error){
-   			$scope.erro = error.data.mensagem;
-            console.log($scope.erro);
             console.log(error);
    		} );
    	  }
