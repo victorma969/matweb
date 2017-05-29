@@ -12,7 +12,7 @@ angular.
        		window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
        		$location.path('/Usuario/Home')
    		}, function(error){
-            console.log(error);
+            console.log(error.data.mensagem);
    		} );
    	  }
     }]
