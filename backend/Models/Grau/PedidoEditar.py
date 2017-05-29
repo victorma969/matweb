@@ -7,13 +7,16 @@ class PedidoEditar(Pedido):
 		super(PedidoEditar, self).__init__(variaveis_do_ambiente)
 		try:
 			self.nome = self.corpo['nome']
-			
+			self.id = self.corpo['id']
 		except:
 			raise ErroNoHTTP(400)
 		
 	
 	def getNome(self):
 		return self.nome
+	
+	def getId(self):
+		return self.id
 
 	
 	
