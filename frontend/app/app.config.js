@@ -60,5 +60,4 @@ angular.
           template: '<sala-registrar></sala-registrar>'
         })
     }
-  ])
-    .value('MatWebGlobals', {});
+  ]).value('MatWebGlobals', {});
