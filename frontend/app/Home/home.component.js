@@ -3,6 +3,7 @@ angular.
   component('casaUsuario', {
     templateUrl: '/app/Home/index.html',
     controller: ['ApiHome', 'MatWebGlobals',function Entrar(ApiHome,MatWebGlobals) {
+        console.log(MatWebGlobals);
       this.nome_usuario = "";
 	var ctrl = this;
 	ctrl.usuarios = [];
