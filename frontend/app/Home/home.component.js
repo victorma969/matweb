@@ -5,7 +5,7 @@ angular.
     controller: ['ApiHome', 'MatWebGlobals', '$scope', function Entrar(ApiHome,MatWebGlobals,$scope) {
       this.nome_usuario = "";
       $scope.nomeUsuario = MatWebGlobals.usuarioLogado.nome;
-      console.log(MatWebGlobals.nome);
+      console.log($scope.nomeUsuario);
 	var ctrl = this;
 	ctrl.usuarios = [];
 	      this.pesquisar = function()
