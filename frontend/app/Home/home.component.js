@@ -2,7 +2,7 @@ angular.
   module('Home').
   component('casaUsuario', {
     templateUrl: '/app/Home/index.html',
-    controller: ['ApiHome', 'MatWebGlobals', $scope, function Entrar(ApiHome,MatWebGlobals,$scope) {
+    controller: ['ApiHome', 'MatWebGlobals', '$scope', function Entrar(ApiHome,MatWebGlobals,$scope) {
       this.nome_usuario = "";
       $scope.nomeUsuario = MatWebGlobals.usuarioLogado.nome;
       console.log(MatWebGlobals.nome);
