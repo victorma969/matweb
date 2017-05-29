@@ -20,12 +20,16 @@ angular.
           template: '<registrar-usuario></registrar-usuario>'
         })
       $routeProvider.when('/Usuario/Home', {
-          if(MatWebGlobals.hasOwnProperty('usuarioLogado')) {
-              template: '<usuario-entrar></usuario-entrar>'
-          }else{
-          template: '<casa-usuario></casa-usuario>'
-      }
-        })
+          template: '<casa-usuario></casa-usuario>',
+          resolve:{ 
+              "check":function('MatWebGlobals',$location){
+                  if (MatWebGlobals.hasOwnProperty('usuarioLogado')) {
+                      
+                  } else {
+                      $location.path('/Usuario/Entrar');
+                  }
+              }
+      }})
       $routeProvider.when('/', {
           template: '<tela-principal></tela-principal>'
         })
@@ -64,4 +68,8 @@ angular.
           template: '<sala-registrar></sala-registrar>'
         })
     }
-  ]).value('MatWebGlobals', {});
+  ])
+    .value('MatWebGlobals', {})
+    .factory('checkUser',['MatWebGlobals', function('MatWebGlobals'){
+        
+    }]);
