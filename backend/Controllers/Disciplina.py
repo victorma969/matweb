@@ -27,6 +27,7 @@ class Disciplina(Controller):
 		disciplina = BDDisciplina().pegarDisciplina("WHERE id = %s ", (str(pedido_editar.getId()),))
 		disciplina.setNome(pedido_editar.getNome())
 		disciplina.setCodigo(pedido_editar.getCodigo())
+		disciplina.setId_departamento(pedido_editar.getId_departamento())
 		BDDisciplina().alterarDisciplina(disciplina)
 		return RespostaEditar("Disciplina Editado com sucesso!")
 	

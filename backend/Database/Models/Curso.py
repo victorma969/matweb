@@ -16,7 +16,8 @@ class Curso(object):
                         self.creditos_optativos_concentracao = dados ['creditos_optativos_concentracao']
                         self.creditos_optativos_conexa = dados ['creditos_optativos_conexa']
                         self.creditos_livres_maximo = dados ['creditos_livres_maximo']
-	
+			self.mec = dados ['mec']
+			
 	def getId(self):
 		return self.id
 
@@ -32,8 +33,8 @@ class Curso(object):
 	def getCodigo(self):
 		return self.codigo
 		
-	def setId_campus(self,campus):
-		self.id_campus = (Campus().pegarCampus('nome = %s',(campus))).getId()
+	def setId_campus(self,id_campus):
+		self.id_campus = id_campus
 		
 	def getId_campus(self):
 		return self.id_campus
@@ -41,8 +42,8 @@ class Curso(object):
 	def getCampus(self):
 		return (Campus().pegarCampus('id = %s',(self.id_campus))).getNome()
 	
-	def setId_grau(self,grau):
-		self.id_grau = (Grau().pegarGrau('nome = %s',(grau))).getId()
+	def setId_grau(self,id_grau):
+		self.id_grau = id_grau
 		
 	def getId_grau(self):
 		return self.id_grau
@@ -85,3 +86,9 @@ class Curso(object):
 	
 	def getCreditos_livres_maximo(self):
 		return self.creditos_livres_maximo
+	
+	def setMec(self,mec):
+		self.mec = mec
+	
+	def getMec(self):
+		return self.mec

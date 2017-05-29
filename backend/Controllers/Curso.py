@@ -11,7 +11,7 @@ from Database.Models.Curso import Curso as ModelCurso
 class Curso(Controller):
 
 	def Listar(self,pedido_listar):
-		return RespostaListar(BDCurso().pegarCursos("WHERE id_campus = %s AND nome LIKE %s LIMIT %s OFFSET %s",(str(pedido_listar.getIdCampus()),"%"+pedido_listar.getNome().replace(' ','%')+"%",str(pedido_listar.getQuantidade()),(str(pedido_listar.getQuantidade()*pedido_listar.getPagina())))))
+		return RespostaListar(BDCurso().pegarCursos("WHERE id_campus = %s AND id_grau = %s AND nome LIKE %s LIMIT %s OFFSET %s",(str(pedido_listar.getIdCampus()),str(pedido_listar.getIdGrau()),"%"+pedido_listar.getNome().replace(' ','%')+"%",str(pedido_listar.getQuantidade()),(str(pedido_listar.getQuantidade()*pedido_listar.getPagina())))))
 
 	def Ver(self, pedido_ver):
 		return RespostaVer(BDCurso().pegarCurso("WHERE id = %s ", (str(pedido_ver.getId()),)))
@@ -28,6 +28,7 @@ class Curso(Controller):
 		curso.setCreditos_optativos_concentracao(pedido_cadastrar.getCreditos_optativos_concentracao())
 		curso.setCreditos_optativos_conexa(pedido_cadastrar.getCreditos_optativos_conexa())
 		curso.setCreditos_livres_maximo(pedido_cadastrar.getCreditos_livres_maximo())
+		curso.setMec(pedido_cadastrar.getMec())
 		return RespostaCadastrar(BDCurso().inserirCurso(curso))
 
 	def Editar(self,pedido_editar):
@@ -42,6 +43,7 @@ class Curso(Controller):
 		curso.setCreditos_optativos_concentracao(pedido_editar.getCreditos_optativos_concentracao())
 		curso.setCreditos_optativos_conexa(pedido_editar.getCreditos_optativos_conexa())
 		curso.setCreditos_livres_maximo(pedido_editar.getCreditos_livres_maximo())
+		curso.setMec(pedido_editar.getMec())
 		BDCurso().alterarCurso(curso)
 		return RespostaEditar("Curso Editado com sucesso!")
 
