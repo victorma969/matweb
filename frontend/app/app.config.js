@@ -1,7 +1,7 @@
 angular.
   module('MatWeb').
-  config(['$locationProvider', '$routeProvider', '$httpProvider', 'MatWebGlobals',
-    function config($locationProvider, $routeProvider, $httpProvider, MatWebGlobals) {
+  config(['$locationProvider', '$routeProvider', '$httpProvider',
+    function config($locationProvider, $routeProvider, $httpProvider) {
       $locationProvider.html5Mode(true).hashPrefix('!');
       
       $httpProvider.defaults.headers.common.Authorization = window.localStorage.getItem('token_de_acesso');
