@@ -2,7 +2,7 @@ angular.
   module('Home').
   component('casaUsuario', {
     templateUrl: '/app/Home/index.html',
-    controller: ['ApiHome', 'MatWebGlobals', '$scope', function Entrar(ApiHome,MatWebGlobals,$scope) {
+    controller: ['ApiHome', 'MatWebGlobals', '$scope', '$location', function Entrar(ApiHome,MatWebGlobals,$scope,$location) {
         if (MatWebGlobals.hasOwnProperty('usuarioLogado')) {
             $scope.nomeUsuario = MatWebGlobals.usuarioLogado.nome;
         } else {
