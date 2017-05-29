@@ -69,7 +69,4 @@ angular.
         })
     }
   ])
-    .value('MatWebGlobals', {})
-    .factory('checkUser',['MatWebGlobals', function('MatWebGlobals'){
-        
-    }]);
+    .value('MatWebGlobals', {});
