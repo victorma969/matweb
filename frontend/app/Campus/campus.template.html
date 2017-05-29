@@ -8,12 +8,16 @@
                     </div>
                     <div class="panel-body">
 
-<ul>
-    <li ng-repeat="campus in $ctrl.campus">
-          <p>{{campus.id}}</p>
-          <p>{{campus.nome}}</p>
-    </li>
-</ul>
+<div class="table-responsive">
+    <table class = "table table-bordered table-hover">
+        <tbody>
+            <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
+                <td> {{campus.id}} </td>
+                <td> {{campus.nome}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
                     </div>
                 </div>
