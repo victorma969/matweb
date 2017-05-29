@@ -7,12 +7,14 @@
                         <h3 class="panel-title">Lista de Campus</h3>
                     </div>
                     <div class="panel-body">
-                    
+
 <div class="table-responsive">
     <table class = "table table-bordered table-hover">
         <tbody>
             <tr ng-repeat="campus in $ctrl.campus">
-                <td> {{campus.id}} </td>
+                <td> ID do campus </td>
+                <td> Nome </td>
+                <td>  {{campus.id}} </td>
                 <td> {{campus.nome}} </td>
             </tr>
         </tbody>
@@ -24,3 +26,5 @@
             </div>
         </div>
     </div>
+
+
