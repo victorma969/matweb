@@ -21,15 +21,7 @@ angular.
         })
       $routeProvider.when('/Usuario/Home', {
           template: '<casa-usuario></casa-usuario>',
-          resolve:{ 
-              "check":function($location){
-                  if (MatWebGlobals.hasOwnProperty('usuarioLogado')) {
-                      
-                  } else {
-                      $location.path('/Usuario/Entrar');
-                  }
-              }
-      }})
+          })
       $routeProvider.when('/', {
           template: '<tela-principal></tela-principal>'
         })
