@@ -2,9 +2,10 @@ angular.
   module('Home').
   component('casaUsuario', {
     templateUrl: '/app/Home/index.html',
-    controller: ['ApiHome', 'MatWebGlobals',function Entrar(ApiHome,MatWebGlobals) {
+    controller: ['ApiHome', 'MatWebGlobals', $scope, function Entrar(ApiHome,MatWebGlobals,$scope) {
       this.nome_usuario = "";
-      console.log(MatWebGlobals);
+      $scope.nomeUsuario = MatWebGlobals.usuarioLogado.nome;
+      console.log(MatWebGlobals.nome);
 	var ctrl = this;
 	ctrl.usuarios = [];
 	      this.pesquisar = function()
