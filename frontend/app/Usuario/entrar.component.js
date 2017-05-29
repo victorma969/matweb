@@ -14,7 +14,6 @@ angular.
    		}, function(error){
             $scope.erro = error.data.mensagem;
             $scope.$digest();
-            console.log($scope.erro);
    		} );
    	  }
     }]
