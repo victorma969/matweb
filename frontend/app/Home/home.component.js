@@ -4,6 +4,7 @@ angular.
     templateUrl: '/app/Home/index.html',
     controller: ['ApiHome', 'MatWebGlobals',function Entrar(ApiHome,MatWebGlobals) {
       this.nome_usuario = "";
+      console.log(MatWebGlobals);
 	var ctrl = this;
 	ctrl.usuarios = [];
 	      this.pesquisar = function()
