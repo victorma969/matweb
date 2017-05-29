@@ -3,9 +3,12 @@ angular.
   component('casaUsuario', {
     templateUrl: '/app/Home/index.html',
     controller: ['ApiHome', 'MatWebGlobals', '$scope', function Entrar(ApiHome,MatWebGlobals,$scope) {
-      this.nome_usuario = "";
-      $scope.nomeUsuario = MatWebGlobals.usuarioLogado.nome;
-      console.log($scope.nomeUsuario);
+        if (MatWebGlobals.hasOwnProperty('usuarioLogado')) {
+            $scope.nomeUsuario = MatWebGlobals.usuarioLogado.nome;
+        } else {
+            $location.path('/Usuario/Entrar');
+        }
+        
 	var ctrl = this;
 	ctrl.usuarios = [];
 	      this.pesquisar = function()
