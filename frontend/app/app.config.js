@@ -22,7 +22,7 @@ angular.
       $routeProvider.when('/Usuario/Home', {
           template: '<casa-usuario></casa-usuario>',
           resolve:{ 
-              "check":function('MatWebGlobals',$location){
+              "check":function($location){
                   if (MatWebGlobals.hasOwnProperty('usuarioLogado')) {
                       
                   } else {
