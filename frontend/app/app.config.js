@@ -20,7 +20,7 @@ angular.
           template: '<registrar-usuario></registrar-usuario>'
         })
       $routeProvider.when('/Usuario/Home', {
-          if( MatWebGlobals.usuarioLogado === undefined ) {
+          if( MatWebGlobals === undefined ) {
               template: '<usuario-entrar></usuario-entrar>'
           }else{
           template: '<casa-usuario></casa-usuario>'
