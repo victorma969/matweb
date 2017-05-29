@@ -11,10 +11,10 @@ angular.
        		$http.defaults.headers.common.Authorization = resultado.corpo.token;
        		window.localStorage.setItem('token_de_acesso', resultado.corpo.token);
        		$location.path('/Usuario/Home')
-   		}, function(erro){
-   			$scope.erro = erro.data.mensagem;
+   		}, function(error){
+   			$scope.erro = error.data.mensagem;
             console.log($scope.erro);
-            console.log(erro);
+            console.log(error);
    		} );
    	  }
     }]
