@@ -1,91 +1,47 @@
-<menu-principal></menu-principal>
+ <html >   
+ <head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Usuário</title>
+  </head>
+<link rel="stylesheet" href="css/style.css">
     <div class="page-wrapper">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="login-panel panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Registrar</h3>
-
-                        
-                    <div class="col-md-6 col-md-offset-4">
-                          <form role="form" ng-submit="$ctrl.cadastrar()">
-                           <div class="form-group" ng-class="{ 'has-error': form.nome.$dirty && form.nome.$error.required }">
-                          <label for="username">Nome do Aluno</label>
-                           <input type="text" name="nome" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" required />
-                        <span ng-show="form.depName.$dirty && form.depName.$error.required" class="help-block">Nome do Aluno é Obrigatório</span>
-                   </div>
-
-        <div class="form-group" ng-class="{ 'has-error': form.matricula.$dirty && form.matricula.$error.required }">
-            <label for="username">Número da Matrícula</label>
-            <input type="text" name="matricula" id="matricula" class="form-control" ng-model="$ctrl.formulario.matricula" maxlength= 9 required />
-            <span ng-show="form.matricula.$dirty && form.matricula.$error.required" class="help-block">Matrícula do Aluno é Obrigatório</span>
-        </div>
-
-        <div class="form-group" ng-class="{ 'has-error': form.cpf.$dirty && form.cpf.$error.required }">
-            <label for="username">CPF do Aluno</label>
-            <input type="text" name="cpf" id="cpf" class="form-control" ng-model="$ctrl.formulario.cpf" maxlength= 11 required />
-           <span ng-show="form.cpf.$dirty && form.cpf.$error.required" class="help-block">CPF é Obrigatório</span>
-        </div>
-
-
-         <div class="form-group" ng-class="{ 'has-error': form.identidade.$dirty && form.identidade.$error.required }">
-            <label for="username">Identidade do Aluno</label>
-            <input type="text" name="identidade" id="identidade" class="form-control" ng-model="$ctrl.formulario.identidade" maxlength= 9 required />
-            <span ng-show="form.identidade.$dirty && form.identidade.$error.required" class="help-block">Identidade é Obrigatório</span>
-        </div>
-
-        <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
-            <label for="username">Email do Aluno</label>
-            <input type="text" name="email" id="email" class="form-control" ng-model="$ctrl.formulario.email" maxlength= 40 required />
-            <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">Email é Obrigatório</span>
-        </div>
-
-
-         <div class="form-group" ng-class="{ 'has-error': form.nome_pai.$dirty && form.nome_pai.$error.required }">
-            <label for="username">Nome do pai do Aluno</label>
-            <input type="text" name="nome_pai" id="nome_pai" class="form-control" ng-model="$ctrl.formulario.nome_pai" maxlength= 80 required />
-            <span ng-show="form.nome_pai.$dirty && form.nome_pai.$error.required" class="help-block">Nome pai do aluno é Obrigatório</span>
-        </div>
-
-        <div class="form-group" ng-class="{ 'has-error': form.nome_mae.$dirty && form.nome_mae.$error.required }">
-            <label for="username">Nome da mae do Aluno</label>
-            <input type="text" name="nome_mae" id="nome_mae" class="form-control" ng-model="$ctrl.formulario.nome_mae" maxlength= 80 required />
-            <span ng-show="form.nome_mae.$dirty && form.nome_mae.$error.required" class="help-block">Nome mae do aluno é Obrigatório</span>
-        </div>
-
-        <div class="form-group" ng-class="{ 'has-error': form.sexo.$dirty && form.sexo.$error.required }">
-            <label for="username">Sexo do Aluno</label>
-            <input type="text" name="sexo" id="sexo" class="form-control" ng-model="$ctrl.formulario.sexo" maxlength= 1 required />
-            <span ng-show="form.sexo.$dirty && form.sexo.$error.required" class="help-block">Sexo do aluno é Obrigatório</span>
-        </div>
-
-        <div class="form-group" ng-class="{ 'has-error': form.ano_conclusao.$dirty && form.ano_conclusao.$error.required }">
-            <label for="username">Ano conclusao do ensino medio do Aluno</label>
-            <input type="text" name="ano_conclusao" id="ano_conclusao" class="form-control" ng-model="$ctrl.formulario.ano_conclusao" maxlength= 4 required />
-            <span ng-show="form.ano_conclusao.$dirty && form.ano_conclusao.$error.required" class="help-block">Ano de conclusao é Obrigatório</span>
-        </div>
-
-
-        <div class="form-group" ng-class="{ 'has-error': form.perfil.$dirty && form.perfil.$error.required }">
-            <label for="username">Perfil do Usuário</label> 
-            <input type="text" name="perfil" id="perfil" class="form-control" ng-model="$ctrl.formulario.perfil" maxlength= 15 required />
-            <span ng-show="form.perfil.$dirty && form.perfil.$error.required" class="help-block">Perfil do Usuário é Obrigatório</span>
-        </div>
-
-            <div class="form-group" ng-class="{ 'has-error': form.senha.$dirty && form.senha.$error.required }">
-            <label for="username">Senha do Usuário(máximo 15 letras)</label>
-            <input type="password" name="senha" id="senha" class="form-control" ng-model="$ctrl.formulario.senha" maxlength= 15 required />
-            <span ng-show="form.senha.$dirty && form.senha.$error.required" class="help-block">Senha é Obrigatório</span>
-        </div>
-        <div class="form-actions">
-           <button class="btn btn-lg btn-success btn-block">Registrar</button>
-           <h1>{{$ctrl.mensagem}}</h1>
-            <a href="#!/login" class="btn btn-link">Cancelar</a>
-        </div>
-    </form>
-                        </div>
-                    </div>
-                </div>
+                    <div class="panel-body">
+                    <body>
+                       <body>
+                       <div class="container">
+                    <section id="content">
+                        <form role="form" ng-submit="$ctrl.cadastrar()">
+                            <fieldset>
+ <h1>Cadastrar Usuário</h1>
+            <div>
+                <input type="text" name="formulario.nome" placeholder="Nome" required="" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" required />
             </div>
+
+            <div>
+                <input type="text" name="matricula" placeholder="Matricula" required="" id="matricula" class="form-control" ng-model="$ctrl.formulario.matricula" maxlength=9/>
+            </div>
+            <div>
+                <input type="text" name="cpf" placeholder="CPF" required="" id="cpf" class="form-control" ng-model="$ctrl.formulario.cpf" maxlength=11/>
+            </div>
+            <div>
+                <input type="text" name="perfil" placeholder="Perfil" required="" id="perfil" class="form-control" ng-model="$ctrl.formulario.perfil" />
+            </div>             <div>
+                <input type="password" name="password" placeholder="Password" required="" id="password" class="form-control" ng-model="$ctrl.formulario.senha" />
+            </div>                              
+            <div>
+                <input type="submit" value="Cadastrar" />
+                <a href="/Admin">Cancelar</a>
+            </div>
+        </form>
+        <div class="button">
+        <h1>{{$ctrl.mensagem}}</h1>
         </div>
+                            </fieldset>
+                        </form>
+                    </div>
     </div>
+    </div>
+    </section>
+    </body>
+</body>
+</html>
