@@ -2,9 +2,14 @@ angular.
   module('Exibir').
   component('materiaInfo', {
     templateUrl: '/app/Exibir/exibir.template.html',
-    controller: ['ApiExibir', 'MatWebGlobals',function Entrar(ApiExibir,MatWebGlobals) {
-      var param1 = $MatWebGlobals.param1;
-      var param2 = $MatWebGlobals.param2;
+    controller: ['ApiExibir','$http','$location', 'MatWebGlobals', '$scope',function Entrar(ApiExibir,$http,$location,MatWebGlobals,$scope) {
+      $location.when('/Disciplina/:Info?id=/:codigo', {
+            controller: 'PagesCtrl'
+        });
+      $MatWebGlobals.html5Mode(true);
+    controller('PagesCtrl', function ($routeParams) {
+        console.log($location.id, $location.nome);
+    });
       this.nome_disciplina = "";
 	var ctrl = this;
 	ctrl.disciplinas = [];
