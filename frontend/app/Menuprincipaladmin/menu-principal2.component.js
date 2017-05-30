@@ -2,11 +2,25 @@ angular.
   module('nucleoadmin').
   component('adminUsuario', {
     templateUrl: '/app/Menuprincipaladmin/index.html',
-    controller: ['MatWebGlobals', function Menu(MatWebGlobals) {
-      if (typeof MatWebGlobals.usuarioLogado !== 'undefined') {
-        this.perfil = MatWebGlobals.usuarioLogado.perfil;
-      }else{
-        this.perfil = ""
+    controller: ['ApiMenuAdmin', 'MatWebGlobals', '$scope', '$location', function Entrar(ApiMenuAdmin,MatWebGlobals,$scope,$location) {
+        if (MatWebGlobals.hasOwnProperty('usuarioLogado')) {
+            $scope.nomeUsuario = MatWebGlobals.usuarioLogado.nome;
+            $scope.cpfUsuario = MatWebGlobals.usuarioLogado.cpf;
+        } else {
+            $location.path('/Usuario/Entrar');
+        }
+        
+  var ctrl = this;
+  ctrl.usuarios = [];
+        this.pesquisar = function()
+      {
+        ApiMenuAdmin.Listar({},function(resultado) {
+              ctrl.usuarios = resultado.corpo
+      console.log(ctrl.usuarios)
+    }, function(erro){
+        ctrl.erro = erro.data.mensagem
+      console.log(ctrl.erro)
+      } );
       }
     }]
-  });
+});
