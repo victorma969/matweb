@@ -17,5 +17,6 @@ angular.module('MatWeb', [
   'Registrodesala',
   'Sala',
   'Curso',
+  'DadosUsuario',
   'ui.bootstrap',
 ]);
