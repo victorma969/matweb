@@ -33,7 +33,7 @@
                                     <table class = "table table-bordered table-hover">
                                         <tbody>
                                             <tr ng-repeat="predio in $ctrl.predios | filter: $ctrl.nome_predio">
-                                                <td><a ng-href="https://google.com">{{nomePredio}}</a> </td>
+                                                <td><a ng-href="#">{{predio.nome}}</a> </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -48,6 +48,10 @@
         <!-- Sidebar -->
             <div id="sidebar">
             
+<form>  
+<input type="button" value="LogOut" onClick="history.go(0)"> 
+<br></br>
+</form>
                 <!-- Logo -->
                     <h1 id="logo"><a href="/Usuario/Home">Matweb</a></h1>
 
@@ -68,11 +72,10 @@
 
 
                 <!-- Recent Posts -->
-                <section>
-                        <header>
-                            <h2>Menu do Aluno</h2>
-                        </header>
-                </section>
+                       <section>
+                            <header>
+                                <h2>Menu do Aluno</h2>
+                            </header>
                             <nav id="nav">
                                 <ul>
                                     <li><a href="#">Histórico escolar</a></li>
@@ -83,10 +86,9 @@
                             </nav>
                         </section>
 
-                    <section>
-                        <form>  
-                            <input type="button" value="LogOut" onClick="history.go(0)"> 
-                            <br></br>
+                    <section class="box search">
+                        <form method="post" action="#">
+                            <input type="text" class="text" name="search" placeholder="Search" />
                         </form>
                     </section>
 
