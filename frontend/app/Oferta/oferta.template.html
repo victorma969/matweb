@@ -36,7 +36,7 @@
                                                 <tbody>
                                                     <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
                                                         <td> {{disciplina.nome}} </td>
-                                                        <td><input type="button" value="Matricular" onClick="history.go(0)"></td>
+                                                        <td><input type="button" value="Matricular" href="{{disciplina.nome}}" onClick="history.go(0)"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
