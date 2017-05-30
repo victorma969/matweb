@@ -5,6 +5,7 @@ angular.
     controller: ['ApiHome', 'MatWebGlobals', '$scope', '$location', function Entrar(ApiHome,MatWebGlobals,$scope,$location) {
         if (MatWebGlobals.hasOwnProperty('usuarioLogado')) {
             $scope.nomeUsuario = MatWebGlobals.usuarioLogado.nome;
+            $scope.cpfUsuario = MatWebGlobals.usuarioLogado.cpf;
         } else {
             $location.path('/Usuario/Entrar');
         }
