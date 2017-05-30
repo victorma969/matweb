@@ -7,7 +7,7 @@ angular.
             $scope.nomeUsuario = MatWebGlobals.usuarioLogado.nome;
             $scope.cpfUsuario = MatWebGlobals.usuarioLogado.cpf;
         } else {
-            $location.path('/Usuario/Entrar');
+            $location.path('/Admin/Entrar');
         }
         
   var ctrl = this;
