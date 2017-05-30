@@ -16,7 +16,7 @@
 
                         <article class="box post post-excerpt">
                             <header>
-                                <h2><p>Pesquise as Disciplinas.</p></h2>
+                                <h2><p>Pesquise de Salas.</p></h2>
                             </header>
 
 
@@ -24,18 +24,18 @@
                         <form role="form" ng-submit="$ctrl.pesquisar()">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Nome da disciplina" ng-model="$ctrl.nome_disciplina" type="text" autofocus>
+                                    <input class="form-control" placeholder="Nome da sala" ng-model="$ctrl.nome_sala" type="text" autofocus>
                                 </div>
                                 <button class="btn btn-lg btn btn-block">Pesquisar</button>
-                                <td> {{disciplina.nome}} </td>
+                                <td> {{sala.codigo}} </td>
                             </fieldset>
                         </form>
 
                                         <div class="table-responsive">
                                             <table class = "table table-bordered table-hover">
                                                 <tbody>
-                                                    <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
-                                                        <td> {{disciplina.nome}} </td>
+                                                    <tr ng-repeat="sala in $ctrl.salas | filter: $ctrl.nome_disciplina">
+                                                        <td> {{sala.codigo}} </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
