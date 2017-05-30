@@ -4,6 +4,9 @@
     <title>Sexo</title>
 </head>
 <body>
-{{disciplina.nome}}
+$MatWebGlobals.html5Mode(true);
+    controller('PagesCtrl', function ($routeParams) {
+        console.log($location.id, $location.nome);
+    });
 </body>
 </html>
