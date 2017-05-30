@@ -33,8 +33,8 @@
                                     <table class = "table table-bordered table-hover">
                                         <tbody>
                                             <tr ng-repeat="predio in $ctrl.predios | filter: $ctrl.nome_predio">
-                                                <td><a ng-href="#">{{predio.sigla}}</a> </td>
-                                                <td><a ng-href="#">{{predio.nome}}</a> </td>
+                                                <td>{{predio.sigla}} </td>
+                                                <td>{{predio.nome}} </td>
                                                 <td><input type="button" value="Ver Salas" onClick="history.go(0)"></td>
                                             </tr>
                                         </tbody>
