@@ -1,6 +1,6 @@
 angular.
   module('Grade').
-  component('usuarioDados', {
+  component('usuarioGrade', {
     templateUrl: '/app/Grade/grade.template.html',
     controller: ['ApiGrade', 'MatWebGlobals', '$scope', '$location', function Entrar(ApiGrade,MatWebGlobals,$scope,$location) {
         if (MatWebGlobals.hasOwnProperty('usuarioLogado')) {
@@ -11,12 +11,12 @@ angular.
         }
         
   var ctrl = this;
-  ctrl.grades = [];
+  ctrl.usuarios = [];
         this.pesquisar = function()
       {
         ApiGrade.Listar({},function(resultado) {
-              ctrl.grade = resultado.corpo
-      console.log(ctrl.grades)
+              ctrl.usuarios = resultado.corpo
+      console.log(ctrl.usuarios)
     }, function(erro){
         ctrl.erro = erro.data.mensagem
       console.log(ctrl.erro)
