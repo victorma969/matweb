@@ -35,7 +35,7 @@
                                             <table class = "table table-bordered table-hover">
                                                 <tbody>
                                                     <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
-                                                        <td> {{disciplina.nome}} </td>
+                                                        <td> {{disciplina.nome}} <input type="button" value="Matricular" onClick="history.go(0)"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
