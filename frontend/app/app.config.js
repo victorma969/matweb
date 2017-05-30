@@ -59,5 +59,8 @@ angular.
       $routeProvider.when('/Registrodesala/Cadastrar', {
           template: '<sala-registrar></sala-registrar>'
         })
+      $routeProvider.when('/Salas', {
+          template: '<listar-salas></listar-salas>'
+        })
     }
   ]).value('MatWebGlobals', {});
