@@ -2,7 +2,7 @@ angular.
   module('Predio').
   component('listarPredio', {
     templateUrl: '/app/Predio/predio.template.html',
-    controller: ['ApiPredio', 'MatWebGlobals',function Entrar(ApiPredio,MatWebGlobals) {
+    controller: ['ApiPredio', 'MatWebGlobals',function Entrar(ApiPredio,MatWebGlobals,$scope) {
       this.nome_predio = "";
 	var ctrl = this;
 	ctrl.predios = [];
@@ -16,5 +16,9 @@ angular.
 			console.log(ctrl.erro)
    		} );
    	  }
+      if (MatWebGlobals.hasOwnProperty('predio')) {
+            $scope.nomePredio = MatWebGlobals.predio.nome;
+        } 
+        }
     }]
   });
