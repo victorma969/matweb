@@ -6,6 +6,10 @@ angular.
         if (MatWebGlobals.hasOwnProperty('usuarioLogado')) {
             $scope.nomeUsuario = MatWebGlobals.usuarioLogado.nome;
             $scope.cpfUsuario = MatWebGlobals.usuarioLogado.cpf;
+            $scope.perfilUsuario = MatWebGlobals.usuarioLogado.perfil;
+            $scope.matriculaUsuario = MatWebGlobals.usuarioLogado.matricula;
+            $scope.cpfUsuario = MatWebGlobals.usuarioLogado.cpf;
+
         } else {
             $location.path('/Usuario/Entrar');
         }
