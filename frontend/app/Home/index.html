@@ -16,7 +16,7 @@
 
 						<article class="box post post-excerpt">
 							<header>
-								<h2><p>Seja Bem-Vindo, {{nomeUsuario}}!!</p></h2>
+								<h2><p>Seja Bem-Vindo, {{nomeUsuario}}!! CPF:{{cpfUsuario}}</p></h2>
 								<p>Um novo jeito de se matricular!</p>
 							</header>
 							<a class="image featured"><img src="app/Home/images/UnB1.jpg" alt="" /></a>
@@ -34,7 +34,11 @@
 			<div id="sidebar">
 
 				<!-- Logo -->
-				
+				<form>  
+<input type="button" value="LogOut" onClick="history.go(0)"> 
+<br></br>
+</form>
+
 					<h1 id="logo"><a href="/Usuario/Home">Matweb</a></h1>
 
 				<!-- Nav -->
@@ -62,15 +66,17 @@
 							<li><a href="#">Histórico escolar</a></li>
 							<li><a href="#">Grade Horária</a></li>
 							<li><a href="#">Quadro-resumo</a></li>
-							<li><a href="dadospessoais.template.html">Dados pessoais</a></li>
+							<li><a href="Dados">Dados pessoais</a></li>
 						</ul>
 					</nav>
 
 
-				<form>  
-<input type="button" value="LogOut" onClick="history.go(0)"> 
-<br></br>
-</form>
+					<section class="box search">
+						<form method="post" action="#">
+							<input type="text" class="text" name="search" placeholder="Search" />
+						</form>
+					</section>
+
 
 			</div>
 
