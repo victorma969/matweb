@@ -11,12 +11,12 @@ angular.
         }
         
   var ctrl = this;
-  ctrl.usuarios = [];
+  ctrl.grades = [];
         this.pesquisar = function()
       {
         ApiGrade.Listar({},function(resultado) {
-              ctrl.usuarios = resultado.corpo
-      console.log(ctrl.usuarios)
+              ctrl.grade = resultado.corpo
+      console.log(ctrl.grades)
     }, function(erro){
         ctrl.erro = erro.data.mensagem
       console.log(ctrl.erro)
