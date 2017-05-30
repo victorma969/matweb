@@ -1,62 +1,18 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>Admin</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="app/Menuprincipaladmin/assets/css/main.css" />
-    </head>
-    <body>
-
-        <!-- Header -->
-            <div id="header">
-
-                <div class="top">
-
-                    <!-- Logo -->
-                        <div id="logo">
-                            <span class="image avatar48"><img src="app/Menuprincipaladmin/images/avatar.jpg" alt="" /></span>
-                            <h1 id="title">Administrador</h1>
-                            <p>UnB</p>
-                        </div>
-
-                    <!-- Nav -->
-                        <nav id="nav">
-                            
-                            <ul>
-                                <li><a href="/Admin" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Inicial</span></a></li>
-                                <li><a href="/Curso/Registrar" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Cad Curso</span></a></li>
-                                <li><a href="/Usuario/Cadastrar" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Cad Usuário</span></a></li>
-                                <li><a href="/Oferta/Cadastrar" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Cad Matéria</span></a></li>
-                                <li><a href="/Cadastrar" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Cad Depart</span></a></li>
-                                <li><a href="/Predio/Cadastrar" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Cad Prédio</span></a></li>
-                                <li><a href="/Registrodesala/Cadastrar" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Cad Sala</span></a></li>
-                                <li>
-                                <li><a href="#" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Matricular</span></a></li>
-                                <li>
-                                <li><a href="#" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Alunos</span></a></li>
-                                <li>
-                                <li><a href="#" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Central</span></a></li>
-                                <form>  
-                                <br></br>
-<input type="button" value="LogOut" onClick="history.go(0)"> 
-<br></br>
-</form>
-                            </ul>
-                        </nav>
-                </div>
-            </div>       
-            <div id="main">
-
-                
-                    <section id="top" class="one dark cover">
-                        <div class="container">
-
-                            <header>
-<form role="form" ng-submit="$ctrl.cadastrar()">
-                            <header>
+ <html >   
+ <head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Cursos</title>
+  </head>
+<link rel="stylesheet" href="css/style.css">
+    <div class="page-wrapper">
+                    <div class="panel-body">
+                    <body>
+                       <body>
+                       <div class="container">
+                    <section id="content">
+                        <form role="form" ng-submit="$ctrl.cadastrar()">
                             <fieldset>
- <h1>Cadastrar Usuário</h1>
+<h1>Cadastrar Usuário</h1>
             <div>
                 <input type="text" name="formulario.nome" placeholder="Nome" required="" id="nome" class="form-control" ng-model="$ctrl.formulario.nome" required />
             </div>
@@ -74,26 +30,18 @@
             </div>                              
             <div>
                 <input type="submit" value="Cadastrar" />
-                <a href="/Admin">Voltar</a>
                 <a href="/Admin">Cancelar</a>
             </div>
-
+        </form>
+        <div class="button">
+        <h1>{{$ctrl.mensagem}}</h1>
+        </div>
                             </fieldset>
-                            </header>
                         </form>
-</body>
-</html></p>
-                            </header>
-
-
-                        </div>
-                    </section>
-            <script src="app/Menuprincipaladmin/assets/js/jquery.min.js"></script>
-            <script src="app/Menuprincipaladmin/assets/js/jquery.scrolly.min.js"></script>
-            <script src="app/Menuprincipaladmin/assets/js/jquery.scrollzer.min.js"></script>
-            <script src="app/Menuprincipaladmin/assets/js/skel.min.js"></script>
-            <script src="app/Menuprincipaladmin/assets/js/util.js"></script>-->
-            <script src="app/Menuprincipaladmin/assets/js/main.js"></script>
-
+                    </div>
+    </div>
+    </div>
+    </section>
     </body>
+</body>
 </html>
