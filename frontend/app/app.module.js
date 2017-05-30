@@ -19,5 +19,6 @@ angular.module('MatWeb', [
   'Curso',
   'Grade',
   'DadosUsuario',
+  'Exibir',
   'ui.bootstrap',
 ]);

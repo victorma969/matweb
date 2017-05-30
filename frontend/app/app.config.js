@@ -22,6 +22,9 @@ angular.
       $routeProvider.when('/Usuario/Cadastrar', {
           template: '<registrar-usuario></registrar-usuario>'
         })
+      $routeProvider.when('/Disciplina/Info', {
+          template: '<materia-info></materia-info>'
+        })
       $routeProvider.when('/Usuario/Home', {
           template: '<casa-usuario></casa-usuario>'
         })
