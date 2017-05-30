@@ -8,7 +8,6 @@ angular.
             $scope.cpfUsuario = MatWebGlobals.usuarioLogado.cpf;
             $scope.perfilUsuario = MatWebGlobals.usuarioLogado.perfil;
             $scope.matriculaUsuario = MatWebGlobals.usuarioLogado.matricula;
-            $scope.cpfUsuario = MatWebGlobals.usuarioLogado.cpf;
 
         } else {
             $location.path('/Usuario/Entrar');
