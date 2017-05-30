@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Grade Horaria</title>
+		<title>Grade Usuário</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -16,25 +16,44 @@
 
 						<article class="box post post-excerpt">
 							<header>
-								<h2><p><CENTER>Grade Horaria.</p></h2>
+							<CENTER><h2><p>Grade Horaria</p></h2>
 							</header>
-<div>
-    <div>
-        <div class="table-responsive">
-            <table class = "table table-bordered table-striped table-hover">
-                <tbody>
-                        <tr ng-repeat="campus in $ctrl.campus | filter: $ctrl.nome_campus">
-                        <td> {{horario.id}} </td>
-                        <td>{{disiplina.nome}}</td>
-                        </tr>
-                </tbody>
-            </table>
-        </div>
+
+						<div class="container">
+  <h1 class="page-header">Tabelas com Bootstrap</h1>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Coluna 01</th>
+          <th>Coluna 02</th>
+          <th>Coluna 03</th>
+          <th>Coluna 04</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td>Conteúdo</td>
+          <td>Conteúdo</td>
+          <td>Conteúdo</td>
+          <td>Conteúdo</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>Conteúdo</td>
+          <td>Conteúdo</td>
+          <td>Conteúdo</td>
+          <td>Conteúdo</td>
+        </tr>
+      </tbody>
+    </table>
     </div>
 </div>
-        
-
-
+<div class="container">
+  &copy; 2016 - Web Dev Academy
+</div>
 						</article>
 				</div>
 			</div>
