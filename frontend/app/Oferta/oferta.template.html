@@ -13,15 +13,16 @@
                                     <input class="form-control" placeholder="Nome da disciplina" ng-model="$ctrl.nome_disciplina" type="text" autofocus>
                                 </div>
                                 <button class="btn btn-lg btn-success btn-block">Pesquisar</button>
+                                <td> {{disciplina.nome}} </td>
                             </fieldset>
                         </form>
 
 <div class="table-responsive">
-    <table class = "table table-bordered table-striped table-hover">
+    <table class = "table table-bordered table-hover">
         <tbody>
             <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
-                <td> {{$crtl.nume}} {{disciplina.id}} </td>
-                <td> {{$crtl.mat}} {{disciplina.nome}} </td>
+                <td> {{disciplina.id}} </td>
+                <td> {{disciplina.nome}} </td>
             </tr>
         </tbody>
     </table>

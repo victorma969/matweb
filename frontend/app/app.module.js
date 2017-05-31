@@ -1,10 +1,20 @@
+
 angular.module('MatWeb', [
   'ngRoute',
   'nucleo',
+  'nucleoadmin',
+  'Cadastrar',
+  'Cadastrarcurso',
+  'Cadastrarusuario',
+  'Cadastrarpredio',
+  'Home',
   'Usuario',
+  'Admin',
   'Oferta',
   'Campus',
+  'Predio',
+  'Departamento',
+  'Registrodesala',
   'Curso',
-  'Cadastrarcurso',
   'ui.bootstrap',
-]);
+]); 

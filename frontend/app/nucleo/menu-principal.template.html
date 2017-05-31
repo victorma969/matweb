@@ -244,28 +244,28 @@
                                  <li>
                                     <a href="/Campus">Campus</a>
                                 </li>
-				                <li>
-					               <a href="/Usuario/Entrar" >Acesso</a>
-				                </li>
                                 <li>
-					               <a href="/Usuario/Registro" >Registro</a>
-				                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Pós-Graduação <span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="/PosGraduacao/Curso/Listar">Curso</a>
+                                   <a href="/Departamento" >Departamento</a>
                                 </li>
                                 <li>
-                                    <a href="/PosGraduacao/Oferta/Listar">Oferta</a>
+                                   <a href="/Predio" >Listar Predio</a>
+                                </li>
+                                <li>
+                                   <a href="/Predio" >Matricula</a>
+                                </li>
+                                <li>
+                                   <a href="/Predio" >Matricula Vinculada</a>
+                                </li>
+                                <li>
+                                   <a href="/Predio" >Histórico Escolar</a>
+                                </li>
+                                <li>
+                                   <a href="/Predio" >Central</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
+                            {{$ctrl.perfil}}
                         </li>
-                        {{$ctrl.perfil}}
                         <li ng-if="$ctrl.perfil == 'aluno'">
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Menu do Aluno <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -286,4 +286,5 @@
                 <!-- /.sidebar-collapse -->
             </div>
             <!-- /.navbar-static-side -->
-        </nav>
+</nav>
+                      
