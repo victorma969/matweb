@@ -2,7 +2,7 @@ from Framework.Resposta import Resposta
 from Models.Sala.Sala import Sala as ModelSala
 class RespostaListar(Resposta):
 
-	def __init__(self,salas):
+	def __init__(self,sala):
 		self.corpo = []
 		for sala in salas:
 			self.corpo.append(ModelSala(sala))
