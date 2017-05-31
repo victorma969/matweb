@@ -1,3 +1,4 @@
+
 angular.module('MatWeb', [
   'ngRoute',
   'nucleo',
@@ -16,4 +17,4 @@ angular.module('MatWeb', [
   'Registrodesala',
   'Curso',
   'ui.bootstrap',
-]);
+]); 
