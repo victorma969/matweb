@@ -7,7 +7,6 @@ class PedidoListar(Pedido):
 		super(PedidoListar, self).__init__(variaveis_do_ambiente)
 		try:
 			self.id_disc_pre = self.corpo['disciplina']
-			self.grupo = self.corpo['grupo']
 			self.pagina = self.corpo['pagina']
 			self.quantidade = self.corpo['quantidade']
 		except:
@@ -15,9 +14,6 @@ class PedidoListar(Pedido):
 
 	def getIdDisc_pre(self):
 		return self.disciplina
-
-	def getGrupo(self):
-		return self.grupo
 
 	def getPagina(self):
 		return self.pagina
