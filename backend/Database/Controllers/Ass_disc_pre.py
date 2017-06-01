@@ -10,7 +10,7 @@ class Ass_disc_pre(object):
 			associacoes.append(ModelAss_disc_pre(associacao))
 		return associacoes
 	
-	def pegarResumo_ass(self, condicao, valores):
+	def pegarResumoAss(self, condicao, valores):
 		associacoes = []
 		for associacao in BancoDeDados().consultarMultiplos("SELECT disciplina.nome, (SELECT nome AS prereq FROM disciplina WHERE id = prereq.id_disc_pre), prereq.grupo FROM disciplina INNER JOIN ass_disc_pre ON ass_disc_pre.id_disciplina=disciplina.id AND %s INNER JOIN prereq ON ass_disc_pre.id_prereq=prereq.id" % (condicao),(valores)):		
 			associacoes.append(associacao)
