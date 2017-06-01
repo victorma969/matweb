@@ -22,9 +22,6 @@ angular.
       $routeProvider.when('/Disciplina/Cadastrar', {
           template: '<cadastrar-disciplina></cadastrar-disciplina>'
         })
-      $routeProvider.when('/Disciplina/Editar', {
-          template: '<editar-disciplina></cadastrar-disciplina>'
-        })
       .otherwise('/');
     }
   ]).value('MatWebGlobals', {});
