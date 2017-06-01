@@ -3,13 +3,20 @@ angular.
   component('ofertaDisciplina', {
     templateUrl: '/app/Oferta/oferta.template.html',
     controller: ['ApiOferta', 'MatWebGlobals',function Entrar(ApiOferta,MatWebGlobals) {
+      this.nome_disciplina = "";
+
       
+
+
 it('should check ng-click', function() {
   expect(element(by.binding('count')).getText()).toMatch('0');
   element(by.css('button')).click();
   expect(element(by.binding('count')).getText()).toMatch('1');
 });
-      this.nome_disciplina = "";
+
+
+
+
 	var ctrl = this;
 	ctrl.disciplinas = [];
       this.pesquisar = function()
