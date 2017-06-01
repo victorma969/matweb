@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Campus</title>
+        <title>Sala</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -16,30 +16,25 @@
 
                         <article class="box post post-excerpt">
                             <header>
-                                <h2><p>Pesquise de Salas.</p></h2>
-                            </header>
+                                <div class="panel-body">
+                                            <form role="form" ng-submit="$ctrl.pesquisar()">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <input class="form-control" placeholder="Nome da Sala" ng-model="$ctrl.nome_sala" type="text" autofocus>
+                                                    </div>
+                                                    <button class="btn btn-lg btn btn-block">Pesquisar</button>
+                                                </fieldset>
+                                            </form>
 
-
-                    <div class="panel-body">
-                        <form role="form" ng-submit="$ctrl.pesquisar()">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Nome da sala" ng-model="$ctrl.nome_sala" type="text" autofocus>
-                                </div>
-                                <button class="btn btn-lg btn btn-block">Pesquisar</button>
-                                <td> {{sala.codigo}} </td>
-                            </fieldset>
-                        </form>
-
-                                        <div class="table-responsive">
-                                            <table class = "table table-bordered table-hover">
-                                                <tbody>
-                                                    <tr ng-repeat="sala in $ctrl.salas | filter: $ctrl.nome_sala">
-                                                        <td> {{sala.codigo}} </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                            <div class="table-responsive">
+                                                <table class = "table table-bordered table-hover">
+                                                    <tbody>
+                                                        <tr ng-repeat="sala in $ctrl.salas | filter: $ctrl.nome_sala">
+                                                            <td> {{sala.codigo}} </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                     </div>
                 </div>
             </div>

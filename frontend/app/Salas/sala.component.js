@@ -8,7 +8,7 @@ angular.
 	ctrl.salas = [];
       this.pesquisar = function()
       {
-       	ApiSalas.Listar({id_predio: 1 ,'codigo':'', pagina: 0, quantidade: 1000 },function(resultado) {
+       	ApiSalas.Listar({id_predio: 5 , codigo:'', pagina: 0, quantidade: 1000 },function(resultado) {
 		          ctrl.salas = resultado.corpo
 			console.log(ctrl.salas)
 		}, function(erro){
