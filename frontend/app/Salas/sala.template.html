@@ -20,7 +20,7 @@
                                             <form role="form" ng-submit="$ctrl.pesquisar()">
                                                 <fieldset>
                                                     <div class="form-group">
-                                                        <input class="form-control" placeholder="Nome da Sala" ng-model="$ctrl.nome_sala" type="text" autofocus>
+                                                        <input class="form-control" placeholder="Nome da Sala" ng-model="$ctrl.codigo_sala" type="text" autofocus>
                                                     </div>
                                                     <button class="btn btn-lg btn btn-block">Pesquisar</button>
                                                 </fieldset>
@@ -29,7 +29,7 @@
                                             <div class="table-responsive">
                                                 <table class = "table table-bordered table-hover">
                                                     <tbody>
-                                                        <tr ng-repeat="sala in $ctrl.salas | filter: $ctrl.nome_sala">
+                                                        <tr ng-repeat="sala in $ctrl.salas | filter: $ctrl.codigo_sala">
                                                             <td> {{sala.codigo}} </td>
                                                         </tr>
                                                     </tbody>
