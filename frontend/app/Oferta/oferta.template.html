@@ -37,6 +37,9 @@
                                                     <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
                                                         <td> {{disciplina.nome}} </td>
                                         <td><button ng-click="count = count + 1" ng-init="count=0">Increment
+                                        <span>
+  count: {{count}}
+</span>
 </button>></td>
                                                     </tr>
                                                 </tbody>
