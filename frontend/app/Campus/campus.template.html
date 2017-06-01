@@ -16,8 +16,8 @@
                 <td> <strong> Nome </strong> </td>
             </tr>
             <tr ng-repeat="campus in $ctrl.campus">
-                <td>  {{campus.id}} </td>
-                <td> {{campus.nome}} </td>
+                <td> {{campus.id}} </td>
+                <td> <a href="#" ng-click = "$ctrl.abrir()"> {{campus.nome}} </a> </td>
             </tr>
         </tbody>
     </table>

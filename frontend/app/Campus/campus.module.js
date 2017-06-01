@@ -1,3 +1,5 @@
 angular.module('Campus', [
-	'ngResource',
+	'ngResource', 
+	'ngSanitize',
+	'ModalCampus',
 	]);
