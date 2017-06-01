@@ -13,17 +13,17 @@ class Ass_disc_pre(object):
 		return self.id
 
 	def setId_disciplina(self,disciplina):
-		self.id_disciplina = (Disciplina().pegarDisciplina('nome = %s',(disciplina,))).getId()
+		self.id_disciplina = (Disciplina().pegarDisciplina('WHERE nome = %s',(disciplina,))).getId()
 
 	def getId_disciplina(self):
 		return self.id_disciplina
 		
 	def getDisciplina(self):
-		return (Disciplina().pegarDisciplina('id = %s',(self.id_disciplina,))).getNome()
+		return (Disciplina().pegarDisciplina('WHERE id = %s',(self.id_disciplina,))).getNome()
 
 	def setId_prereq(self,disciplina_requisito,grupo):
-		id_disc_pre = (Disciplina().pegarDisciplina('nome = %s',(disciplina_requisito,))).getId()
-		self.id_prereq = (Prereq().pegarPrereq('id_disc_pre = %s AND grupo = %s',(id_disc_pre,grupo))).getId()
+		id_disc_pre = (Disciplina().pegarDisciplina('WHERE nome = %s',(disciplina_requisito,))).getId()
+		self.id_prereq = (Prereq().pegarPrereq('WHERE id_disc_pre = %s AND grupo = %s',(id_disc_pre,grupo))).getId()
 		
 	def getId_prereq(self):
 		return self.id_prereq
