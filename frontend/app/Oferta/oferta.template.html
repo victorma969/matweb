@@ -36,7 +36,9 @@
                                                 <tbody>
                                                     <tr ng-repeat="disciplina in $ctrl.disciplinas | filter: $ctrl.nome_disciplina">
                                                         <td> {{disciplina.nome}} </td>
-                                                        <td><a href="/Disciplina/Info?ID={{disciplina.id}}CÓDIGO={{disciplina.codigo}}" target="_blank">Matricular</a></td>
+                                                        <td><a <button ng-click="count = count + 1" ng-init="count=0">
+  Increment
+</button>Matricular</a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
