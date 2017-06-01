@@ -6,7 +6,7 @@ class PedidoListar(Pedido):
 	def __init__(self,variaveis_do_ambiente):
 		super(PedidoListar, self).__init__(variaveis_do_ambiente)
 		try:
-			self.id_disc_pre = self.corpo['id_disc_pre']
+			self.id_disc_pre = self.corpo['id_disciplina']
 			self.grupo = self.corpo['grupo']
 			self.pagina = self.corpo['pagina']
 			self.quantidade = self.corpo['quantidade']
@@ -14,10 +14,10 @@ class PedidoListar(Pedido):
 			raise ErroNoHTTP(400)
 
 	def getIdDisc_pre(self):
-		return self.id_disc_pre
+		return self.id_disciplina
 
 	def getGrupo(self):
-		return self.Grupo
+		return self.grupo
 
 	def getPagina(self):
 		return self.pagina
