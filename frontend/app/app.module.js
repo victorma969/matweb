@@ -16,6 +16,7 @@ angular.module('MatWeb', [
   'Cadastrarmateria',
   'Predio',
   'Departamento',
+  'Disciplina',
   'Registrodesala',
   'Curso',
   'ui.bootstrap',
