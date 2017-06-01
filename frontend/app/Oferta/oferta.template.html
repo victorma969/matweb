@@ -10,15 +10,7 @@
                         <form role="form" ng-submit="$ctrl.pesquisar()">
                             <fieldset>
                                 <div class="form-group">
-                                    <label class = "control-label"> Departamentos </label>
-                                     <select class="w3-select" name="option" ng-model="$ctrl.id">
-                                        <option value="93">Unb - Faculdade de Planaltina</option>
-                                        <option value="94">Unb - Faculdade de Ceilândia</option>
-                                        <option value="95">Unb - Faculdade do Gama</option>
-                                    </select required>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Nome da disciplina" ng-model="$ctrl.nome_disciplina" type="text">
+                                    <input class="form-control" placeholder="Nome da disciplina" ng-model="$ctrl.nome_disciplina" type="text" autofocus>
                                 </div>
                                 <button class="btn btn-lg btn-success btn-block">Pesquisar</button>
                             </fieldset>
