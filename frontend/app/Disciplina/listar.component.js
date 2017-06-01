@@ -2,7 +2,7 @@ angular.
   module('Disciplina').
   component('disciplinaListar', {
     templateUrl: '/app/Disciplina/listar.template.html',
-    controller: ['ApiDisciplina','$location', 'MatWebGlobals', '$scope',function Entrar(ApiDisciplina,$location,MatWebGlobals,$scope) {
+    controller: ['ApiDisciplina','$location', 'MatWebGlobals', '$scope', function Listar(ApiDisciplina,$location,MatWebGlobals,$scope) {
       this.formulario = {'id_departamento':'','nome':''};
       this.listar = function()
       {
