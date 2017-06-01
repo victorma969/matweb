@@ -1,6 +1,6 @@
 angular.
   module('Exibir').
-  component('ofertaDisciplina', {
+  component('materiaInfo', {
     templateUrl: '/app/Exibir/exibir.template.html',
     controller: ['ApiExibir', 'MatWebGlobals',function Entrar(ApiExibir,MatWebGlobals) {
 if (MatWebGlobals.hasOwnProperty('usuarioOferta')) {
